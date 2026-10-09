@@ -1,5 +1,60 @@
 {
+ "brigitte-macaron": {
+  "accent": "#F28A92",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "don-gorillo-mkrtchyan": {
+  "accent": "#F06A3E",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "milton-bumford": {
+  "accent": "#E2B33C",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "sickman": {
+  "accent": "#A9B6C6",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "cuca-beludo": {
+  "accent": "#63B86A",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "percival-ashcroft": {
+  "accent": "#8FA37A",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "vulu-zamal": {
+  "accent": "#E58466",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "don-nuger": {
+  "accent": "#F2A653",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "pik-vik": {
+  "accent": "#7CC3E0",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "lil-miquela": {
+  "accent": "#F6A65C",
+  "avatar": true,
+  "source": "instagram"
+ },
  "charles-robinson": {
+  "accent": "#5ED3F3",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "gru": {
   "accent": "#5ED3F3",
   "avatar": true,
   "source": "instagram"

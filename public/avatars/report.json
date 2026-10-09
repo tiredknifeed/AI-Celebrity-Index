@@ -243,5 +243,149 @@
    "heavy enlargement (3.4x native)"
   ],
   "origin": "Instagram profile picture, captured 2026-10-09"
+ },
+ {
+  "slug": "brigitte-macaron",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.38,
+  "notes": [
+   "heavy enlargement (3.4x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "don-gorillo-mkrtchyan",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 4.3,
+  "notes": [
+   "scaled up so the body reaches the bottom edge",
+   "heavy enlargement (4.3x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "milton-bumford",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 2.94,
+  "notes": [
+   "heavy enlargement (2.9x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "sickman",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 2.99,
+  "notes": [
+   "heavy enlargement (3.0x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "cuca-beludo",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 4.02,
+  "notes": [
+   "heavy enlargement (4.0x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "percival-ashcroft",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 4.15,
+  "notes": [
+   "heavy enlargement (4.1x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "vulu-zamal",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.42,
+  "notes": [
+   "heavy enlargement (3.4x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "don-nuger",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 4.3,
+  "notes": [
+   "hair touches the top edge",
+   "heavy enlargement (4.3x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "pik-vik",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.07,
+  "notes": [
+   "heavy enlargement (3.1x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "lil-miquela",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 1.32,
+  "notes": [],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "gru",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 2.85,
+  "notes": [
+   "scaled up so the body reaches the bottom edge",
+   "heavy enlargement (2.9x native)"
+  ],
+  "origin": "Instagram profile picture"
  }
 ]
