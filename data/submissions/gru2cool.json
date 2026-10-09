@@ -1,0 +1,255 @@
+{
+  "schema": 1,
+  "handle": "gru2cool",
+  "profileUrl": "https://www.instagram.com/gru2cool/",
+  "submittedAt": "2026-10-09T17:46:46.182Z",
+  "capturedAt": "2026-10-09",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "payment": null,
+  "submissionId": "free_89a2987fdc49",
+  "profile": {
+    "fullName": "Gru",
+    "biography": "Made in @higgsfield.ai\nEmail: gruiscool1@outlook.com\n \nCoin coming soon minions 😈 ↓",
+    "externalUrl": "https://x.com/gru2cool4u",
+    "verified": false,
+    "private": false,
+    "followers": 12607,
+    "following": 1,
+    "postsCount": 15
+  },
+  "posts": [
+    {
+      "url": "https://www.instagram.com/p/DeQbBo4sYOS/",
+      "timestamp": "2026-10-09T02:23:30.000Z",
+      "likes": 6965,
+      "comments": 42,
+      "caption": "Since yall wanted more of dr nefarious 🤷‍♂️",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeP2fGGSVNx/",
+      "timestamp": "2026-10-08T21:01:50.000Z",
+      "likes": 10951,
+      "comments": 52,
+      "caption": "we made up to film this one #despicable #vector #gru #motion",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeONZwvOLYc/",
+      "timestamp": "2026-10-08T05:44:59.000Z",
+      "likes": 1383,
+      "comments": 8,
+      "caption": "Do yall want to see more of Dr. Nefario? 👨‍🔬",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeLj0QetTuZ/",
+      "timestamp": "2026-10-07T05:02:01.000Z",
+      "likes": 345,
+      "comments": 7,
+      "caption": "Eating canes with the boys 🍗",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeJSXoKhKVl/",
+      "timestamp": "2026-10-06T07:50:53.000Z",
+      "likes": 892787,
+      "comments": 1900,
+      "caption": "Up in the gru mobile 🚗",
+      "pinned": true,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeIECMGPMf6/",
+      "timestamp": "2026-10-05T20:26:43.000Z",
+      "likes": 1138,
+      "comments": 15,
+      "caption": "Papoi 🗣️ @higgsfield.ai #higgsfieldcreator",
+      "pinned": false,
+      "type": "Video",
+      "mentions": [
+        "higgsfield.ai"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeGvQ88vujB/",
+      "timestamp": "2026-10-05T08:06:18.000Z",
+      "likes": 1663,
+      "comments": 17,
+      "caption": "They call me despicable 🔥",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd_xN7jRx74/",
+      "timestamp": "2026-10-02T15:08:38.000Z",
+      "likes": 804,
+      "comments": 12,
+      "caption": "Feel evil, might steal the moon later 👀 (Link in bio 🌙)",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd-Jd5vpxfb/",
+      "timestamp": "2026-10-02T00:03:10.000Z",
+      "likes": 131160,
+      "comments": 636,
+      "caption": "Pretty grusome 🧏‍♂️",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd8AqGEPxTw/",
+      "timestamp": "2026-10-01T04:05:49.000Z",
+      "likes": 316258,
+      "comments": 1687,
+      "caption": "Feeling gruvy 🕺",
+      "pinned": true,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd7gk1UB-AD/",
+      "timestamp": "2026-09-30T23:25:27.000Z",
+      "likes": 1108,
+      "comments": 16,
+      "caption": "Guess you could say i’m a bad guy 😈",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd52uVEg63n/",
+      "timestamp": "2026-09-30T08:01:39.000Z",
+      "likes": 1527,
+      "comments": 14,
+      "caption": "Feeling evilllll",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd48lFAhITq/",
+      "timestamp": "2026-09-29T23:32:15.000Z",
+      "likes": 7261,
+      "comments": 17,
+      "caption": "Wearing my supervillain fit ⌚️",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd4l9wBBFbU/",
+      "timestamp": "2026-09-29T20:16:32.000Z",
+      "likes": 167068,
+      "comments": 386,
+      "caption": "About to blast him with my freeze ray 😤",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd3X0xvh2wt/",
+      "timestamp": "2026-09-29T08:52:13.000Z",
+      "likes": 427112,
+      "comments": 1708,
+      "caption": "I’m having, a bad bad day 😈",
+      "pinned": true,
+      "type": "Video",
+      "mentions": []
+    }
+  ],
+  "metrics": {
+    "postsAnalysed": 15,
+    "fullHistory": true,
+    "firstPost": "2026-09-29",
+    "lastPost": "2026-10-09",
+    "daysSinceFirst": 10,
+    "daysSinceLast": 1,
+    "posts7d": 7,
+    "posts14d": 12,
+    "posts30d": 12,
+    "avgLikes12": 27614,
+    "medianLikes12": 1595,
+    "avgComments12": 102,
+    "likesHidden12": 0,
+    "avgLikes14d": 27614,
+    "maxLikes": 892787,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeJSXoKhKVl/",
+      "date": "2026-10-06",
+      "likes": 892787,
+      "comments": 1900,
+      "caption": "Up in the gru mobile 🚗"
+    },
+    "top14dPost": {
+      "url": "https://www.instagram.com/p/Dd4l9wBBFbU/",
+      "date": "2026-09-29",
+      "likes": 167068
+    },
+    "engagementRate": 2.1984810026175934
+  },
+  "scores": {
+    "fame": 41.9,
+    "momentum": 64.7,
+    "fameParts": {
+      "followers": 0.27515293820844744,
+      "engagement": 0.6102823301286939,
+      "viral": 0.737686964453772,
+      "consistency": 0.6,
+      "longevity": 0.07043650362227254,
+      "recognizability": 0
+    },
+    "momentumParts": {
+      "engagement": 0.6102823301286939,
+      "viral": 0.5557233184064962,
+      "frequency": 0.8571428571428571,
+      "growth": 0.4402447011335161,
+      "recency": 1
+    },
+    "provisional": true,
+    "note": "Recognizability, distinctiveness and the index score are set by an analyst during review."
+  },
+  "token": {
+    "verification": "NONE",
+    "ticker": null,
+    "contract": null,
+    "url": null,
+    "evidence": null
+  },
+  "links": [],
+  "sufficiency": {
+    "VERIFIED IDENTITY": "PARTIAL",
+    "FAME SCORE": "YES",
+    "LIVE STATUS": "YES",
+    "CAREER TIMELINE": "YES",
+    "SOCIAL GRAPH": "NO"
+  },
+  "review": {
+    "include": false,
+    "name": "Gru",
+    "characterType": null,
+    "universe": null,
+    "parodyOf": null,
+    "recognizability": null,
+    "distinct": {
+      "visual": null,
+      "personality": null,
+      "lore": null,
+      "crossCharacter": null
+    },
+    "notes": ""
+  }
+}
