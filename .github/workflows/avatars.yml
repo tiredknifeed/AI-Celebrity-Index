@@ -45,6 +45,24 @@ jobs:
           mkdir -p ~/.u2net
           test -f ~/.u2net/EDSR_x4.pb || curl -sSL -o ~/.u2net/EDSR_x4.pb https://raw.githubusercontent.com/Saafke/EDSR_Tensorflow/master/models/EDSR_x4.pb
 
+      - name: Fetch missing pictures through the site
+        # Instagram refuses GitHub's runners; the site fetches pictures with its own
+        # Apify key and commits them (POST /api/avatars/backfill/, idempotent)
+        continue-on-error: true
+        env:
+          SITE: ${{ vars.SITE_URL || 'https://aiindexse.netlify.app' }}
+        run: |
+          curl -s -o /dev/null -w "site check: /tools/avatars/ -> HTTP %{http_code}\n" "$SITE/tools/avatars/" || true
+          curl -s -m 30 "$SITE/api/submit/health/" && echo || true
+          for i in $(seq 1 10); do
+            r=$(curl -s -m 75 -X POST "$SITE/api/avatars/backfill/" || true)
+            echo "backfill: $r"
+            echo "$r" | grep -q '"remaining"' || break
+            echo "$r" | grep -q '"remaining":0' && break
+            echo "$r" | grep -q '"added":\[\],"skipped":\[\]' && break
+          done
+          git pull --rebase --autostash || true
+
       - name: Normalize avatars
         env:
           # optional repository secret: lets the job fetch a fresh profile picture
