@@ -66,7 +66,15 @@ Until the Apify and GitHub keys (plus the Stripe keys in paid mode) are set, `/s
 
 Hosting needs server functions (e.g. Vercel): the site is no longer a pure static export. The submit and webhook routes set `maxDuration = 300` (free submissions are analyzed inside the request); on plans with a shorter limit the status endpoint finishes missed work.
 
-To make approved submissions appear automatically, run `npm run data` as part of the build (or in a GitHub Action on merge) so the merged JSON lands in `src/data/generated/index.json`.
+`netlify.toml` already runs `npm run data` before `next build` (Python + `requirements.txt`), so an approved submission appears with the build that the merge triggers. Deploy previews for `submission/*` branches are skipped to keep the build queue free. On other hosts, run `npm run data` as part of the build.
+
+## Approving a submission
+
+1. Open the submission PR on GitHub, then **Files changed → ⋯ → Edit file** on `data/submissions/<handle>.json` (or edit it on the default branch after merging).
+2. Fill the `review` block: `name`, `characterType`, `universe` (a key from the universe list, e.g. `higgsfield-network`, or anything else for Independents), `parodyOf` if it imitates a real person or IP, `recognizability` and the four `distinct` ratings (0-5), and set `"include": true`.
+3. Commit and merge. Netlify rebuilds once (a few minutes) and the character is ranked on the site.
+
+A file with `"include": false` or any rating left empty is ignored by the build, so merging an unreviewed PR is harmless.
 
 ## Checks
 

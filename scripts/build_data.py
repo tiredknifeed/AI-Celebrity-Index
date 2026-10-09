@@ -504,7 +504,7 @@ def submission_character(rec, next_id, asof):
     return {
         "id": next_id, "slug": slugify(name), "name": display_name(name), "fullName": name, "handle": rec["handle"],
         "profileUrl": rec["profileUrl"], "group": "SUBMITTED", "inclusion": "INCLUDED", "caveat": None,
-        "characterType": rv.get("characterType") or "", "origin": "Paid submission", "kind": "human", "virtual": False,
+        "characterType": rv.get("characterType") or "", "origin": "Community submission", "kind": "human", "virtual": False,
         "universe": rv.get("universe") if rv.get("universe") in UNIVERSES else "independents", "universeNote": rv.get("universe"),
         "identity": "PARODY" if rv.get("parodyOf") else ("VERIFIED" if p["verified"] else "UNVERIFIED"),
         "identityFlag": flags.get("VERIFIED IDENTITY"), "verifiedBadge": p["verified"], "parodyOf": rv.get("parodyOf"),

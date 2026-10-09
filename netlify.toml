@@ -1,0 +1,8 @@
+# Netlify build. `npm run data` rebuilds src/data/generated/index.json from the
+# workbook plus every approved data/submissions/*.json, so merging a submission
+# PR is enough to put the character on the site (one automatic build).
+[build]
+  command = "(python3 -c 'import openpyxl' 2>/dev/null || python3 -m pip install -q -r requirements.txt) && npm run data && npm run build"
+  # Skip deploy previews for submission PRs: each one would otherwise queue a
+  # full build before the review is even done.
+  ignore = "bash -c '[[ \"$CONTEXT\" == \"deploy-preview\" && \"$HEAD\" == submission/* ]]'"
