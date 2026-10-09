@@ -61,9 +61,12 @@ export async function POST(req: Request) {
   } catch (e) {
     if (e instanceof SubmissionError) return NextResponse.json({ error: e.message }, { status: 422 });
     console.error(`free submission @${handle} failed:`, e);
-    const msg = (e as Error).message;
+    const msg = (e as Error).message.replace(/token=[^&\s]+/g, "token=***");
     return NextResponse.json(
-      { error: /not found|not public/i.test(msg) ? "We could not find a public Instagram profile with that handle." : "The analysis failed. Please try again later." },
+      {
+        error: /not found|not public/i.test(msg) ? "We could not find a public Instagram profile with that handle." : "The analysis failed. Please try again later.",
+        detail: msg.slice(0, 300),
+      },
       { status: 502 },
     );
   }

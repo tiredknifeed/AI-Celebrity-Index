@@ -41,7 +41,7 @@ export default function SubmitForm({ known, price, free }: { known: KnownAccount
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ url, email: email || undefined, website: website || undefined }),
       });
-      const json = (await res.json().catch(() => ({}))) as { checkoutUrl?: string; id?: string; handle?: string; error?: string; missing?: string[] };
+      const json = (await res.json().catch(() => ({}))) as { checkoutUrl?: string; id?: string; handle?: string; error?: string; missing?: string[]; detail?: string };
       if (res.ok && json.checkoutUrl) {
         window.location.href = json.checkoutUrl;
         return;
@@ -53,7 +53,13 @@ export default function SubmitForm({ known, price, free }: { known: KnownAccount
       setError(
         res.status === 503
           ? `Submissions are not open yet. Check back soon.${json.missing?.length ? ` (Site owner: set ${json.missing.join(" and ")} on the server.)` : ""}`
-          : (json.error ?? `Something went wrong (HTTP ${res.status}).`),
+          : json.error
+            ? `${json.error}${json.detail ? ` (${json.detail})` : ""}`
+            : res.status === 404 || res.status === 405
+              ? `The submission API is not deployed on this host (HTTP ${res.status}). The site needs a host that runs Next.js server routes, e.g. Vercel.`
+              : res.status === 504
+                ? "The analysis took too long and the server stopped it (HTTP 504). Raise the function time limit on the host or try again."
+                : `Something went wrong (HTTP ${res.status}).`,
       );
     } catch {
       setError("Could not reach the submission service.");
