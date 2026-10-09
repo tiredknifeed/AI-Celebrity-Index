@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f4f1ea;
+  --ink: #141414;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--paper);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #c6f432;
+  color: #141414;
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10;
+  }
+  .kicker {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-muted;
+  }
+  .display {
+    @apply font-display font-extrabold uppercase leading-[0.86] tracking-[-0.035em];
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1 font-mono text-[10.5px] font-medium uppercase tracking-[0.08em];
+  }
+  .panel {
+    @apply rounded-4xl bg-card shadow-card;
+  }
+  .link-u {
+    @apply underline decoration-ink/25 decoration-2 underline-offset-4 transition-colors hover:decoration-ink;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .grain {
+    background-image: radial-gradient(rgba(20, 20, 20, 0.06) 1px, transparent 1px);
+    background-size: 6px 6px;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
