@@ -38,7 +38,7 @@ const str = (...vals: unknown[]) => {
 };
 
 async function runActor(actor: string, input: unknown): Promise<Obj[]> {
-  const url = `https://api.apify.com/v2/acts/${actor}/run-sync-get-dataset-items?token=${encodeURIComponent(config.apifyToken)}&timeout=120`;
+  const url = `${config.apifyApi}/v2/acts/${actor}/run-sync-get-dataset-items?token=${encodeURIComponent(config.apifyToken)}&timeout=120`;
   const res = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(input) });
   if (!res.ok) throw new Error(`Apify ${actor} failed: HTTP ${res.status}`);
   const items = (await res.json()) as unknown;

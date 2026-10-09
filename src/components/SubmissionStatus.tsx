@@ -35,18 +35,26 @@ export default function SubmissionStatus() {
   const [report, setReport] = useState<Report | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const [free, setFree] = useState(false);
+
   useEffect(() => {
-    const id = new URLSearchParams(window.location.search).get("session_id");
-    if (!id) {
+    const p = new URLSearchParams(window.location.search);
+    const id = p.get("session_id");
+    const freeId = p.get("id");
+    const freeHandle = p.get("handle");
+    const query = freeId && freeHandle ? `id=${encodeURIComponent(freeId)}&handle=${encodeURIComponent(freeHandle)}` : id ? `session_id=${encodeURIComponent(id)}` : null;
+    if (freeId) setFree(true);
+    if (freeHandle) setHandle(freeHandle);
+    if (!query) {
       setState("error");
-      setError("This link is missing its checkout session.");
+      setError("This status link is incomplete.");
       return;
     }
     let stop = false;
     let timer: ReturnType<typeof setTimeout>;
     const poll = async () => {
       try {
-        const res = await fetch(`/api/submit/status/?session_id=${encodeURIComponent(id)}`, { cache: "no-store" });
+        const res = await fetch(`/api/submit/status/?${query}`, { cache: "no-store" });
         const json = (await res.json()) as { state?: State; handle?: string; report?: Report | null; error?: string };
         if (stop) return;
         if (json.handle) setHandle(json.handle);
@@ -70,7 +78,9 @@ export default function SubmissionStatus() {
     };
   }, []);
 
-  const reached = ORDER.indexOf(state);
+  const steps = free ? STEPS.filter((s) => s.key !== "unpaid") : STEPS;
+  const order = free ? ORDER.filter((s) => s !== "unpaid") : ORDER;
+  const reached = order.indexOf(state);
   return (
     <div className="grid gap-6 lg:grid-cols-12">
       <div className="panel p-6 sm:p-8 lg:col-span-7">
@@ -82,10 +92,10 @@ export default function SubmissionStatus() {
             person). Your analysis below is still yours.
           </p>
         )}
-        {state === "unconfigured" && <p className="mt-4 rounded-3xl bg-paper p-4 text-sm">Paid submissions are not open yet.</p>}
+        {state === "unconfigured" && <p className="mt-4 rounded-3xl bg-paper p-4 text-sm">Submissions are not open yet.</p>}
         {state === "error" && <p className="mt-4 rounded-3xl bg-[#FFE4E1] p-4 text-sm text-[#8a1c1c]">{error}</p>}
         <ol className="mt-6 space-y-4">
-          {STEPS.map((s, i) => {
+          {steps.map((s, i) => {
             const done = reached > i || state === "added";
             const now = reached === i && state !== "added";
             return (

@@ -1,4 +1,4 @@
-// The review queue is a GitHub pull request per paid submission: the worker
+// The review queue is a GitHub pull request per submission: the worker
 // commits data/submissions/<handle>.json on its own branch and opens a PR.
 // An analyst fills in the review block and merges; the next deploy adds the
 // character to the index. Closing the PR rejects it.
@@ -6,7 +6,7 @@
 import { config } from "./config";
 
 async function gh(path: string, init: { method?: string; body?: unknown } = {}): Promise<unknown> {
-  const res = await fetch(`https://api.github.com/repos/${config.githubRepo}/${path}`, {
+  const res = await fetch(`${config.githubApi}/repos/${config.githubRepo}/${path}`, {
     method: init.method ?? "GET",
     headers: {
       authorization: `Bearer ${config.githubToken}`,
@@ -72,4 +72,26 @@ export async function readSubmission(branch: string, handle: string): Promise<Re
   } catch {
     return null;
   }
+}
+
+/** Open submission PRs (the review queue), for de-duplication and the free-mode queue cap. */
+export async function openSubmissions(): Promise<{ handle: string; branch: string; url: string }[]> {
+  const out: { handle: string; branch: string; url: string }[] = [];
+  for (let page = 1; page <= 3; page++) {
+    const list = (await gh(`pulls?state=open&per_page=100&page=${page}`)) as
+      | { html_url: string; title: string; head: { ref: string } }[]
+      | null;
+    if (!list?.length) break;
+    for (const pr of list) {
+      const m = pr.title.match(/^Submission: @([a-z0-9._]+)$/i);
+      if (m && pr.head.ref.startsWith("submission/")) out.push({ handle: m[1].toLowerCase(), branch: pr.head.ref, url: pr.html_url });
+    }
+    if (list.length < 100) break;
+  }
+  return out;
+}
+
+/** The submission id encoded in a branch name (its last 8 characters of the id). */
+export function idSuffix(branch: string) {
+  return branch.slice(branch.lastIndexOf("-") + 1);
 }

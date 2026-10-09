@@ -15,7 +15,10 @@ export interface SubmissionRecord {
   submittedAt: string;
   capturedAt: string;
   source: string;
-  payment: { provider: "stripe"; session: string; amount: number; currency: string };
+  /** null for free submissions. */
+  payment: { provider: "stripe"; session: string; amount: number; currency: string } | null;
+  /** Submission id: the Stripe session (paid) or a random free_… id. */
+  submissionId: string;
   profile: Omit<RawProfile, "posts" | "handle">;
   posts: RawPost[];
   metrics: {
@@ -87,7 +90,13 @@ function tokenSignals(p: RawProfile): SubmissionRecord["token"] {
 
 export function analyze(
   raw: RawProfile,
-  opts: { session: string; amount: number; currency: string; knownHandles: string[]; now?: Date; source: string },
+  opts: {
+    id: string;
+    payment: { session: string; amount: number; currency: string } | null;
+    knownHandles: string[];
+    now?: Date;
+    source: string;
+  },
 ): SubmissionRecord {
   const now = opts.now ?? new Date();
   const t = now.getTime();
@@ -159,7 +168,8 @@ export function analyze(
     submittedAt: now.toISOString(),
     capturedAt: now.toISOString().slice(0, 10),
     source: opts.source,
-    payment: { provider: "stripe", session: opts.session, amount: opts.amount, currency: opts.currency },
+    payment: opts.payment ? { provider: "stripe", ...opts.payment } : null,
+    submissionId: opts.id,
     profile,
     posts: posts.slice(0, 60),
     metrics,

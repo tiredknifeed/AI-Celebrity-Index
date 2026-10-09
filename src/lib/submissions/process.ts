@@ -1,5 +1,6 @@
-// The paid-submission pipeline: payment -> Instagram data -> analysis -> PR.
+// The submission pipeline: (payment ->) Instagram data -> analysis -> PR.
 
+import { randomBytes } from "node:crypto";
 import { characters } from "../data";
 import { analyze, type SubmissionRecord } from "./analyze";
 import { config } from "./config";
@@ -14,7 +15,9 @@ function fmt(n: number | null | undefined) {
 function summary(r: SubmissionRecord): string {
   const m = r.metrics;
   return [
-    `Paid submission for [@${r.handle}](${r.profileUrl}) · Stripe \`${r.payment.session}\``,
+    r.payment
+      ? `Paid submission for [@${r.handle}](${r.profileUrl}) · Stripe \`${r.payment.session}\``
+      : `Free submission for [@${r.handle}](${r.profileUrl}) · \`${r.submissionId}\``,
     "",
     "| | |",
     "|---|---|",
@@ -34,23 +37,39 @@ function summary(r: SubmissionRecord): string {
     "- [ ] Rate `recognizability` and the four `distinct` inputs (0-5)",
     "- [ ] Set `review.include` to `true`",
     "",
-    "Merging adds the character on the next deploy. Closing the PR rejects it (refund through Stripe if needed).",
+    r.payment
+      ? "Merging adds the character on the next deploy. Closing the PR rejects it (refund through Stripe if needed)."
+      : "Merging adds the character on the next deploy. Closing the PR rejects it.",
   ].join("\n");
 }
 
-export async function processSubmission(sessionId: string): Promise<string> {
-  const s = await getCheckout(sessionId);
-  if (!s.paid || !s.handle) throw new Error("Session is not paid");
-  const existing = await findPR(branchFor(s.handle, s.id));
+async function run(handle: string, id: string, payment: SubmissionRecord["payment"]) {
+  const existing = await findPR(branchFor(handle, id));
   if (existing) return existing.url;
-  const raw = await fetchProfile(s.handle);
-  if (raw.private) throw new Error("Profile is private");
+  const raw = await fetchProfile(handle);
+  if (raw.private) throw new SubmissionError("This profile is private. Only public profiles can be analyzed.");
   const record = analyze(raw, {
-    session: s.id,
-    amount: s.amount,
-    currency: s.currency,
+    id,
+    payment: payment ? { session: payment.session, amount: payment.amount, currency: payment.currency } : null,
     knownHandles: characters.map((c) => c.handle),
     source: `apify:${config.apifyProfileActor}+${config.apifyPostsActor}`,
   });
-  return openSubmissionPR(s.handle, s.id, record, summary(record));
+  return openSubmissionPR(handle, id, record, summary(record));
+}
+
+/** An error whose message is safe to show to the submitter. */
+export class SubmissionError extends Error {}
+
+/** Paid mode: runs after Stripe confirms the payment. */
+export async function processSubmission(sessionId: string): Promise<string> {
+  const s = await getCheckout(sessionId);
+  if (!s.paid || !s.handle) throw new Error("Session is not paid");
+  return run(s.handle, s.id, { provider: "stripe", session: s.id, amount: s.amount, currency: s.currency });
+}
+
+/** Free mode: runs right away. Returns the id the status page polls with. */
+export async function processFreeSubmission(handle: string): Promise<{ id: string; prUrl: string }> {
+  const id = `free_${randomBytes(6).toString("hex")}`;
+  const prUrl = await run(handle, id, null);
+  return { id, prUrl };
 }

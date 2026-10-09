@@ -6,15 +6,21 @@ import { characters, dataset, meta } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Add an AI celebrity" };
 
+const FREE = (process.env.SUBMISSIONS_FREE ?? "true").toLowerCase() !== "false";
+
 function priceLabel() {
+  if (FREE) return "Free";
   const cents = Number(process.env.SUBMISSION_PRICE_CENTS ?? 4900);
   const cur = (process.env.SUBMISSION_CURRENCY ?? "usd").toUpperCase();
   return new Intl.NumberFormat("en-US", { style: "currency", currency: cur, maximumFractionDigits: cents % 100 ? 2 : 0 }).format(cents / 100);
 }
 
+const PAY_STEP = ["Pay once", "Checkout through Stripe. Payment covers the full analysis."] as const;
+const FREE_STEP = ["Free for now", "No payment and no account. One submission per character; a duplicate joins the existing review."] as const;
+
 const STEPS = [
   ["Paste the link", "Any public Instagram profile of an AI or fictional character."],
-  ["Pay once", "Checkout through Stripe. Payment covers the full analysis."],
+  FREE ? FREE_STEP : PAY_STEP,
   ["We pull the data", "Followers, up to 60 recent posts, likes, comments, dates, bio, tags and token signals from the public profile."],
   ["Scores are computed", "Fame and Momentum with exactly the same formulas as every other character, plus links to characters already in the index."],
   ["Analyst review", "A person checks it is a real AI character (not a copycat or a real person), rates distinctiveness and assigns a universe."],
@@ -48,11 +54,11 @@ export default function SubmitPage() {
       />
       <section className="wrap grid gap-6 lg:grid-cols-12">
         <div className="lg:col-span-7">
-          <SubmitForm known={known} price={price} />
+          <SubmitForm known={known} price={price} free={FREE} />
         </div>
         <aside className="flex flex-col gap-4 lg:col-span-5">
           <div className="rounded-5xl bg-ink p-6 text-white sm:p-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C6F432]">One-time · {price}</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C6F432]">{FREE ? "Free during launch" : `One-time · ${price}`}</p>
             <p className="display mt-3 text-5xl">What you get</p>
             <ul className="mt-5 space-y-2.5 text-[15px] text-white/85">
               <li>★ Provisional Fame and Momentum scores</li>
@@ -62,12 +68,11 @@ export default function SubmitPage() {
               <li>◆ Analyst review for inclusion in the public index</li>
             </ul>
             <p className="mt-6 text-xs leading-relaxed text-white/50">
-              Payment covers the analysis. Inclusion in the public index depends on the review against the{" "}
+              {FREE ? "Submitting is free while the index grows. " : "Payment covers the analysis. "}Inclusion in the public index depends on the review against the{" "}
               <Link href="/methodology/" className="underline">
                 methodology
               </Link>
-              : characters must be AI or fictional, public, and not copycats or real people. Scores are never sold or edited for
-              payment.
+              : characters must be AI or fictional, public, and not copycats or real people. Scores are never sold or edited.
             </p>
           </div>
         </aside>

@@ -12,9 +12,10 @@ export interface KnownAccount {
   reason: string | null;
 }
 
-export default function SubmitForm({ known, price }: { known: KnownAccount[]; price: string }) {
+export default function SubmitForm({ known, price, free }: { known: KnownAccount[]; price: string; free: boolean }) {
   const [url, setUrl] = useState("");
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
@@ -38,14 +39,18 @@ export default function SubmitForm({ known, price }: { known: KnownAccount[]; pr
       const res = await fetch("/api/submit/", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ url, email: email || undefined }),
+        body: JSON.stringify({ url, email: email || undefined, website: website || undefined }),
       });
-      const json = (await res.json().catch(() => ({}))) as { checkoutUrl?: string; error?: string };
+      const json = (await res.json().catch(() => ({}))) as { checkoutUrl?: string; id?: string; handle?: string; error?: string };
       if (res.ok && json.checkoutUrl) {
         window.location.href = json.checkoutUrl;
         return;
       }
-      setError(res.status === 503 ? "Paid submissions are not open yet. Check back soon." : (json.error ?? `Something went wrong (HTTP ${res.status}).`));
+      if (res.ok && json.id && json.handle) {
+        window.location.href = `/submit/status/?id=${encodeURIComponent(json.id)}&handle=${encodeURIComponent(json.handle)}`;
+        return;
+      }
+      setError(res.status === 503 ? "Submissions are not open yet. Check back soon." : (json.error ?? `Something went wrong (HTTP ${res.status}).`));
     } catch {
       setError("Could not reach the submission service.");
     }
@@ -87,7 +92,7 @@ export default function SubmitForm({ known, price }: { known: KnownAccount[]; pr
         )}
         {match?.state === "WATCHLIST" && (
           <span className="text-[#7a5a00]">
-            <span className="font-mono">@{handle}</span> is on the watchlist ({match.reason}). A paid analysis re-checks it with fresh data.
+            <span className="font-mono">@{handle}</span> is on the watchlist ({match.reason}). A new analysis re-checks it with fresh data.
           </span>
         )}
         {match?.state === "EXCLUDED" && (
@@ -97,16 +102,29 @@ export default function SubmitForm({ known, price }: { known: KnownAccount[]; pr
         )}
       </div>
 
-      <label htmlFor="em" className="kicker mt-4 block">
-        Email for the report (optional)
-      </label>
+      {!free && (
+        <>
+          <label htmlFor="em" className="kicker mt-4 block">
+            Email for the report (optional)
+          </label>
+          <input
+            id="em"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@example.com"
+            className="mt-2 w-full rounded-3xl bg-paper px-5 py-4 font-mono text-base outline-none ring-ink/20 focus:ring-2"
+          />
+        </>
+      )}
       <input
-        id="em"
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="you@example.com"
-        className="mt-2 w-full rounded-3xl bg-paper px-5 py-4 font-mono text-base outline-none ring-ink/20 focus:ring-2"
+        aria-hidden
+        tabIndex={-1}
+        autoComplete="off"
+        value={website}
+        onChange={(e) => setWebsite(e.target.value)}
+        name="website"
+        className="absolute -left-[9999px] h-px w-px opacity-0"
       />
 
       <button
@@ -114,9 +132,15 @@ export default function SubmitForm({ known, price }: { known: KnownAccount[]; pr
         disabled={!handle || match?.state === "INCLUDED" || busy}
         className="mt-6 w-full rounded-full bg-ink px-6 py-4 font-mono text-[13px] font-medium uppercase tracking-[0.14em] text-white transition-transform enabled:hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        {busy ? "Opening checkout…" : handle ? `Analyze @${handle} · ${price}` : `Analyze · ${price}`}
+        {busy ? (free ? "Analyzing the profile… up to 2 min" : "Opening checkout…") : handle ? `Analyze @${handle} · ${price}` : `Analyze · ${price}`}
       </button>
-      <p className="mt-3 text-center text-xs text-muted">Secure checkout by Stripe. You will be redirected to pay.</p>
+      <p className="mt-3 text-center text-xs text-muted">
+        {free
+          ? busy
+            ? "Pulling the public profile and computing the scores. Keep this page open."
+            : "Free, no account needed. You get a status page with the provisional scores."
+          : "Secure checkout by Stripe. You will be redirected to pay."}
+      </p>
       {notice && <p className="mt-4 rounded-3xl bg-paper p-4 text-sm">{notice}</p>}
       {error && <p className="mt-4 rounded-3xl bg-[#FFE4E1] p-4 text-sm text-[#8a1c1c]">{error}</p>}
     </form>

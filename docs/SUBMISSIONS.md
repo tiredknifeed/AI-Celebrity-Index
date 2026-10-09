@@ -1,10 +1,29 @@
-# Paid submissions
+# Submissions
 
-Anyone can paste an Instagram link on `/submit`, pay once, and get the
-profile analyzed with the index methodology. Approved characters join the
-index; the database grows without anyone editing the workbook.
+Anyone can paste an Instagram link on `/submit` and get the profile analyzed
+with the index methodology. Approved characters join the index; the database
+grows without anyone editing the workbook.
 
-## Flow
+There are two modes, switched with `SUBMISSIONS_FREE`:
+
+- **Free (default, `SUBMISSIONS_FREE=true`).** No payment. `POST /api/submit/`
+  runs the analysis right away (about 1-2 minutes), opens the review PR and
+  returns an id; the submitter lands on `/submit/status/?id=…&handle=…`.
+  Needs only `APIFY_TOKEN` and `GITHUB_TOKEN`.
+- **Paid (`SUBMISSIONS_FREE=false`).** Stripe Checkout first; the flow below.
+
+### Free-mode guards
+
+- One review per character: if an open submission PR already exists for the
+  handle, the submitter is sent to that PR's status page instead of a new one.
+- Queue cap: no new submissions while `SUBMISSION_QUEUE_LIMIT` (default 40)
+  PRs wait for review, so Apify costs and the review backlog stay bounded.
+- Per-IP limit: `SUBMISSION_IP_HOURLY` (default 3) attempts per hour. Best
+  effort: kept in memory per server instance.
+- Honeypot form field against simple bots; already-ranked handles, private
+  profiles and unknown handles are refused before anything is opened.
+
+## Paid flow
 
 ```
 /submit  ──POST /api/submit/──▶  Stripe Checkout  ──paid──▶  /api/stripe/webhook/
@@ -35,15 +54,17 @@ Copy `.env.example` to `.env` (or set the variables on the host):
 
 | Variable | Purpose |
 | --- | --- |
-| `SITE_URL` | Public URL, used for Stripe success / cancel redirects |
+| `SUBMISSIONS_FREE` | `true` (default) for free submissions, `false` for paid |
+| `SUBMISSION_QUEUE_LIMIT`, `SUBMISSION_IP_HOURLY` | Free-mode guards (defaults 40 and 3) |
+| `SITE_URL` | Public URL, used for Stripe success / cancel redirects (paid) |
 | `SUBMISSION_PRICE_CENTS`, `SUBMISSION_CURRENCY` | Price (default 4900 = $49) |
-| `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | Stripe API key and the signing secret of a webhook pointing to `<SITE_URL>/api/stripe/webhook/` (note the trailing slash) for `checkout.session.completed` |
+| `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | Paid mode only. Stripe API key and the signing secret of a webhook pointing to `<SITE_URL>/api/stripe/webhook/` (note the trailing slash) for `checkout.session.completed` |
 | `APIFY_TOKEN`, `APIFY_PROFILE_ACTOR`, `APIFY_POSTS_ACTOR` | Apify token and the actors that return the public profile and posts |
 | `GITHUB_TOKEN`, `GITHUB_REPO`, `GITHUB_BASE_BRANCH` | Token with contents + pull-request write access to the data repository |
 
-Until the Stripe, Apify and GitHub keys are set, `/submit` stays visible but the API answers "Submissions are not open yet" and nothing is charged.
+Until the Apify and GitHub keys (plus the Stripe keys in paid mode) are set, `/submit` stays visible but the API answers "Submissions are not open yet".
 
-Hosting needs server functions (e.g. Vercel): the site is no longer a pure static export. The webhook route sets `maxDuration = 300`; on plans with a shorter limit the status endpoint finishes missed work.
+Hosting needs server functions (e.g. Vercel): the site is no longer a pure static export. The submit and webhook routes set `maxDuration = 300` (free submissions are analyzed inside the request); on plans with a shorter limit the status endpoint finishes missed work.
 
 To make approved submissions appear automatically, run `npm run data` as part of the build (or in a GitHub Action on merge) so the merged JSON lands in `src/data/generated/index.json`.
 
@@ -54,5 +75,5 @@ To make approved submissions appear automatically, run `npm run data` as part of
 
 ## Notes
 
-- Instagram data is collected from public profiles through a third-party provider. Make sure this fits Instagram's terms and the provider's terms in your jurisdiction before opening payments.
-- Payment buys the analysis, not a placement: inclusion is decided by review, and scores are never edited for payment. Decide and publish a refund policy for rejected or private accounts.
+- Instagram data is collected from public profiles through a third-party provider. Make sure this fits Instagram's terms and the provider's terms in your jurisdiction before opening submissions.
+- In paid mode, payment buys the analysis, not a placement: inclusion is decided by review, and scores are never edited for payment. Decide and publish a refund policy for rejected or private accounts.
