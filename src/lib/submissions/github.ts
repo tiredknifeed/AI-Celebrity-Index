@@ -1,7 +1,6 @@
-// The review queue is a GitHub pull request per submission: the worker
-// commits data/submissions/<handle>.json on its own branch and opens a PR.
-// An analyst fills in the review block and merges; the next deploy adds the
-// character to the index. Closing the PR rejects it.
+// GitHub is the submissions store. Free mode commits data/submissions/<handle>.json
+// straight to the default branch (the site reads it at request time, see
+// src/lib/live.ts). Paid mode opens a pull request per submission for review.
 
 import { config } from "./config";
 
@@ -24,7 +23,7 @@ async function gh(path: string, init: { method?: string; body?: unknown } = {}):
 
 let baseBranch: string | null = null;
 /** GITHUB_BASE_BRANCH, or the repository's default branch. */
-async function base(): Promise<string> {
+export async function base(): Promise<string> {
   if (config.githubBase) return config.githubBase;
   if (baseBranch) return baseBranch;
   const repo = (await gh("")) as { default_branch?: string } | null;
@@ -114,4 +113,30 @@ export async function openSubmissions(): Promise<{ handle: string; branch: strin
 /** The submission id encoded in a branch name (its last 8 characters of the id). */
 export function idSuffix(branch: string) {
   return branch.slice(branch.lastIndexOf("-") + 1);
+}
+
+/**
+ * Commits one file to the default branch. "[skip netlify]" in the message keeps
+ * Netlify from rebuilding: the site picks the change up at request time.
+ */
+export async function commitFile(path: string, base64: string, message: string): Promise<void> {
+  const branch = await base();
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const current = (await gh(`contents/${path}?ref=${encodeURIComponent(branch)}`)) as { sha?: string } | null;
+    try {
+      await gh(`contents/${path}`, {
+        method: "PUT",
+        body: { message: `${message} [skip netlify]`, content: base64, branch, ...(current?.sha ? { sha: current.sha } : {}) },
+      });
+      return;
+    } catch (e) {
+      // another commit landed in between: retry with the new sha
+      if (attempt === 2 || !/sha|conflict|409/i.test((e as Error).message)) throw e;
+    }
+  }
+}
+
+/** A submission file on the default branch, or null. */
+export async function readLiveSubmission(handle: string): Promise<Record<string, unknown> | null> {
+  return readSubmission(await base(), handle);
 }

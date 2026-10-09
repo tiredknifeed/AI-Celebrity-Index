@@ -41,7 +41,24 @@ export default function SubmitForm({ known, price, free }: { known: KnownAccount
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ url, email: email || undefined, website: website || undefined }),
       });
-      const json = (await res.json().catch(() => ({}))) as { checkoutUrl?: string; id?: string; handle?: string; error?: string; missing?: string[]; detail?: string };
+      const json = (await res.json().catch(() => ({}))) as {
+        checkoutUrl?: string;
+        id?: string;
+        handle?: string;
+        slug?: string;
+        published?: boolean;
+        error?: string;
+        missing?: string[];
+        detail?: string;
+      };
+      if (res.ok && json.published && json.slug) {
+        window.location.href = `/c/${json.slug}/?new=1`;
+        return;
+      }
+      if (res.status === 409 && json.slug) {
+        window.location.href = `/c/${json.slug}/`;
+        return;
+      }
       if (res.ok && json.checkoutUrl) {
         window.location.href = json.checkoutUrl;
         return;
@@ -148,7 +165,7 @@ export default function SubmitForm({ known, price, free }: { known: KnownAccount
         {free
           ? busy
             ? "Pulling the public profile and computing the scores. Keep this page open."
-            : "Free, no account needed. You get a status page with the provisional scores."
+            : "Free, no account needed. The character goes live on the site as soon as the analysis is done."
           : "Secure checkout by Stripe. You will be redirected to pay."}
       </p>
       {notice && <p className="mt-4 rounded-3xl bg-paper p-4 text-sm">{notice}</p>}

@@ -7,9 +7,9 @@
 // the workbook marks the look as UNKNOWN we draw a neutral placeholder instead
 // of inventing a face.
 //
-// User-added characters get their spec from src/data/generated/portraits.json,
-// written by scripts/build_data.py once scripts/avatars/auto.py has normalized
-// their Instagram profile picture.
+// User-added characters get their spec from src/data/generated/portraits.json
+// (avatars that were deployed) or, between deploys, from the live registry that
+// src/lib/live.ts fills on the server and PortraitRegistry fills in the browser.
 
 import submitted from "./generated/portraits.json";
 
@@ -61,6 +61,10 @@ export interface PortraitSpec {
   avatar?: boolean;
   /** Where the avatar came from. */
   source?: "x-avatar" | "promo-still" | "editor" | "instagram";
+  /** Avatar files served from elsewhere than public/avatars/<slug>/ (URL prefix). */
+  base?: string;
+  /** Raw picture shown until the normalized avatar exists. */
+  pending?: string;
   art?: Art;
   /** How the look was established: OBSERVED in posts, or INFERRED from captions. */
   basis?: "OBSERVED" | "INFERRED";
@@ -288,8 +292,14 @@ export const portraits: Record<string, PortraitSpec> = {
 
 const FALLBACK: PortraitSpec = { accent: "#CFC8BA", art: UNKNOWN };
 
+let live: Record<string, PortraitSpec> = {};
+/** Registers the portraits of user-added characters known at request time. */
+export function setLivePortraits(map: Record<string, PortraitSpec>) {
+  live = map;
+}
+
 export function portraitOf(slug: string): PortraitSpec {
-  return portraits[slug] ?? (submitted as Record<string, PortraitSpec>)[slug] ?? FALLBACK;
+  return portraits[slug] ?? (submitted as Record<string, PortraitSpec>)[slug] ?? live[slug] ?? FALLBACK;
 }
 
 function mix(hex: string, to: number, t: number): string {

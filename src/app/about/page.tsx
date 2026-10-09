@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHead from "@/components/PageHead";
-import { meta } from "@/lib/data";
+import { getData } from "@/lib/live";
+
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
 
 export const metadata: Metadata = { title: "About" };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const { meta } = await getData();
   return (
     <>
       <PageHead

@@ -14,7 +14,7 @@ Built with Next.js (App Router; pages pre-rendered, API routes for submissions),
 | `/network/` | The Universe: an interactive force graph. Node size = Fame, pulse = Momentum, lines = relationships. Pick a universe to isolate it. Deep links: `?u=ai-fight-league`, `?focus=derek-mercer` |
 | `/discover/` | Visual discovery with search and filters (AI humans, AI animals, parody, crypto, virtual, verified, tokenized, active, rising) |
 | `/c/[slug]/` | Character profile: overview, career arc, fame history, network, posts, token, sources |
-| `/submit/` | Submissions (free for now; paid mode available): paste an Instagram link, get the analysis; approved characters join the index ([docs/SUBMISSIONS.md](docs/SUBMISSIONS.md)) |
+| `/submit/` | Submissions (free for now; paid mode available): paste an Instagram link and the character is live on the site within seconds, no rebuild ([docs/SUBMISSIONS.md](docs/SUBMISSIONS.md)) |
 | `/methodology/`, `/sources/`, `/about/` | How scores work, every source, house rules |
 
 ## Data

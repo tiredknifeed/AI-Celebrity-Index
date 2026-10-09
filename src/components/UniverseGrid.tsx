@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Portrait from "./Portrait";
 import { avatarBg } from "@/data/portraits";
-import { bySlug } from "@/lib/data";
-import type { Universe } from "@/lib/types";
+import type { Character, Universe } from "@/lib/types";
 
 /** Character ecosystems as clusters of faces. */
-export default function UniverseGrid({ universes }: { universes: Universe[] }) {
+export default function UniverseGrid({ universes, bySlug }: { universes: Universe[]; bySlug: (slug: string) => Character | undefined }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {universes.map((u) => {

@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import PageHead from "@/components/PageHead";
 import BreakoutCard from "@/components/BreakoutCard";
-import { breakout } from "@/lib/data";
+import { getData } from "@/lib/live";
+
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
 
 export const metadata: Metadata = { title: "Breaking the internet" };
 
-export default function BreakoutPage() {
+export default async function BreakoutPage() {
+  const { breakout } = await getData();
   const hot = breakout.filter((c) => c.scores.momentum >= 58);
   const rest = breakout.filter((c) => c.scores.momentum < 58);
   return (

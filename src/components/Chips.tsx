@@ -77,7 +77,7 @@ const IDENTITY_STYLE: Record<Identity, { cls: string; label: string; long: strin
   COMMUNITY: {
     cls: "bg-[#DCE8FF] text-ink",
     label: "Added by a user",
-    long: "Added by a user through the submission form. The data is pulled automatically from the public Instagram profile and checked by the editors; the identity is not verified by the index.",
+    long: "Added by a user through the submission form. The data is pulled automatically from the public Instagram profile; the identity is not verified by the index.",
     glyph: "+",
   },
   UNKNOWN: { cls: "bg-ink/[0.05] text-muted", label: "Unknown", long: "Identity could not be checked", glyph: "?" },

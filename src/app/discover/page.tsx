@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import DiscoverGrid from "@/components/DiscoverGrid";
 import PageHead from "@/components/PageHead";
-import { ranked, toCard, watchlist } from "@/lib/data";
+import { getData } from "@/lib/live";
+
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
 
 export const metadata: Metadata = { title: "Discover AI celebrities" };
 
-export default function DiscoverPage() {
+export default async function DiscoverPage() {
+  const { ranked, toCard, watchlist } = await getData();
   return (
     <>
       <PageHead

@@ -25,12 +25,26 @@ export default function Portrait({
   size?: 160 | 512 | 1024;
 }) {
   const spec = portraitOf(c.slug);
+  if (spec.pending) {
+    // the raw profile picture, shown until the normalized avatar is ready
+    const img = (cls: string) => (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={spec.pending} alt={`${c.name} profile picture`} loading={priority ? "eager" : "lazy"} draggable={false} className={cls} />
+    );
+    if (variant === "compact") return img(`object-cover ${className}`);
+    return (
+      <div className={`flex items-end justify-center ${className}`}>
+        {img("aspect-square max-h-[85%] max-w-[85%] rounded-[2rem] object-cover shadow-card ring-4 ring-white")}
+      </div>
+    );
+  }
   if (spec.avatar) {
     const compact = variant === "compact";
+    const base = spec.base ?? `/avatars/${c.slug}/`;
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
-        src={compact ? `/avatars/${c.slug}/avatar-${size}.webp` : `/avatars/${c.slug}/cutout-1024.webp`}
+        src={compact ? `${base}avatar-${size}.webp` : `${base}cutout-1024.webp`}
         alt={`${c.name} avatar`}
         loading={priority ? "eager" : "lazy"}
         draggable={false}
@@ -54,7 +68,7 @@ export function portraitCredit(slug: string): string {
     return {
       "x-avatar": "Official X avatar · normalized",
       editor: "Editor-supplied portrait · normalized",
-      instagram: "Instagram profile picture · normalized",
+      instagram: spec.pending ? "Instagram profile picture · styling in progress" : "Instagram profile picture · normalized",
       "promo-still": "Promo still · normalized",
     }[spec.source ?? "promo-still"];
   if (!spec.art || spec.art.kind === "unknown") return "Portrait not captured";

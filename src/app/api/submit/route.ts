@@ -1,9 +1,11 @@
+import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
-import { byHandle } from "@/lib/data";
+import { getData, LIVE_TAG } from "@/lib/live";
 import { config, missingConfig } from "@/lib/submissions/config";
-import { idSuffix, openSubmissions } from "@/lib/submissions/github";
+import { idSuffix, openSubmissions, readLiveSubmission } from "@/lib/submissions/github";
 import { parseInstagram } from "@/lib/submissions/handle";
-import { processFreeSubmission, SubmissionError } from "@/lib/submissions/process";
+import { slugify } from "@/lib/submissions/merge";
+import { publishFreeSubmission, SubmissionError } from "@/lib/submissions/process";
 import { createCheckout } from "@/lib/submissions/stripe";
 
 export const dynamic = "force-dynamic";
@@ -21,9 +23,9 @@ function limited(ip: string) {
 }
 
 /**
- * Starts a submission. Free mode (default): analyzes the profile right away and
- * opens the review PR, then returns the status-page id. Paid mode: returns a
- * Stripe Checkout URL; the webhook does the rest.
+ * Starts a submission. Free mode (default): analyzes the profile, publishes it
+ * on GitHub and refreshes the site's data at once; returns the new profile's
+ * slug. Paid mode: returns a Stripe Checkout URL; the webhook does the rest.
  */
 export async function POST(req: Request) {
   const body = (await req.json().catch(() => ({}))) as { url?: string; email?: string; website?: string };
@@ -31,11 +33,12 @@ export async function POST(req: Request) {
   if (body.website) return NextResponse.json({ error: "Rejected." }, { status: 400 });
   const handle = parseInstagram(body.url ?? "");
   if (!handle) return NextResponse.json({ error: "That does not look like an Instagram profile link." }, { status: 400 });
-  const known = byHandle(handle);
-  if (known && known.inclusion === "INCLUDED")
-    return NextResponse.json({ error: "Already in the index.", slug: known.slug }, { status: 409 });
   const missing = missingConfig();
   if (missing.length) return NextResponse.json({ error: "Submissions are not open yet.", missing }, { status: 503 });
+  const data = await getData();
+  const known = data.byHandle(handle);
+  if (known && known.inclusion === "INCLUDED")
+    return NextResponse.json({ error: "Already in the index.", slug: known.slug }, { status: 409 });
 
   if (!config.free) {
     const email = typeof body.email === "string" && /.+@.+\..+/.test(body.email) ? body.email : null;
@@ -48,16 +51,27 @@ export async function POST(req: Request) {
   }
 
   try {
-    // Someone already submitted it: point to the same review instead of a duplicate.
-    const queue = await openSubmissions();
-    const dup = queue.find((q) => q.handle === handle);
+    // an editor set include:false on this account: it stays off the site
+    const prior = (await readLiveSubmission(handle)) as { review?: { include?: boolean } } | null;
+    if (prior && prior.review?.include === false)
+      return NextResponse.json({ error: "This account was reviewed and removed from the index by the editors." }, { status: 409 });
+    // a submission still waiting in a review PR (from paid mode or earlier)
+    const dup = (await openSubmissions()).find((q) => q.handle === handle);
     if (dup) return NextResponse.json({ handle, id: idSuffix(dup.branch), duplicate: true });
-    if (queue.length >= config.queueLimit)
-      return NextResponse.json({ error: "The review queue is full right now. Please try again in a few days." }, { status: 429 });
+    const userAdded = data.characters.filter((c) => c.group === "SUBMITTED").length;
+    if (userAdded >= config.maxLive)
+      return NextResponse.json({ error: "The index is not accepting new characters right now. Please try again later." }, { status: 429 });
     const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim() || "unknown";
     if (limited(ip)) return NextResponse.json({ error: "Too many submissions from your network. Try again in an hour." }, { status: 429 });
-    const { id } = await processFreeSubmission(handle);
-    return NextResponse.json({ handle, id });
+
+    const record = await publishFreeSubmission(handle, data.characters.map((c) => c.handle));
+    // the next request reads the new file instead of the cached listing
+    revalidateTag(LIVE_TAG);
+    revalidatePath("/", "layout");
+    const base = slugify(record.review.name || handle);
+    const taken = data.bySlug(base);
+    const slug = taken && taken.handle !== handle ? `${base}-${slugify(handle)}` : base;
+    return NextResponse.json({ handle, slug, published: true });
   } catch (e) {
     if (e instanceof SubmissionError) return NextResponse.json({ error: e.message }, { status: 422 });
     console.error(`free submission @${handle} failed:`, e);

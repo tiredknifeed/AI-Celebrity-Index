@@ -1,10 +1,11 @@
-// The submission pipeline: (payment ->) Instagram data -> analysis -> PR.
+// The submission pipeline. Free: Instagram data -> analysis -> published on the
+// default branch. Paid: payment -> Instagram data -> analysis -> review PR.
 
 import { randomBytes } from "node:crypto";
 import { characters } from "../data";
 import { analyze, type SubmissionRecord } from "./analyze";
 import { config } from "./config";
-import { branchFor, findPR, openSubmissionPR } from "./github";
+import { branchFor, commitFile, findPR, openSubmissionPR } from "./github";
 import { fetchProfile } from "./instagram";
 import { getCheckout } from "./stripe";
 
@@ -43,26 +44,69 @@ function summary(r: SubmissionRecord): string {
   ].join("\n");
 }
 
-async function run(handle: string, id: string, payment: SubmissionRecord["payment"]) {
-  const existing = await findPR(branchFor(handle, id));
-  if (existing) return existing.url;
+async function analyzeProfile(handle: string, id: string, payment: SubmissionRecord["payment"], knownHandles: string[]) {
   const raw = await fetchProfile(handle);
   if (raw.private) throw new SubmissionError("This profile is private. Only public profiles can be analyzed.");
   const record = analyze(raw, {
     id,
     payment: payment ? { session: payment.session, amount: payment.amount, currency: payment.currency } : null,
-    knownHandles: characters.map((c) => c.handle),
+    knownHandles,
     source: `apify:${config.apifyProfileActor}+${config.apifyPostsActor}`,
   });
   // The CDN link expires, so the picture itself is committed with the submission.
   const pic = raw.profilePicUrl ? await downloadImage(raw.profilePicUrl) : null;
-  const extra = [];
+  const extra: { path: string; base64: string; message: string }[] = [];
   if (pic) {
     const path = `data/avatars/source/${handle}.${pic.ext}`;
     record.avatar = { path, origin: "Instagram profile picture", capturedAt: record.capturedAt };
     extra.push({ path, base64: pic.base64, message: `Add profile picture for @${handle}` });
   }
+  return { raw, record, extra };
+}
+
+async function run(handle: string, id: string, payment: SubmissionRecord["payment"]) {
+  const existing = await findPR(branchFor(handle, id));
+  if (existing) return existing.url;
+  const { record, extra } = await analyzeProfile(handle, id, payment, characters.map((c) => c.handle));
   return openSubmissionPR(handle, id, record, summary(record), extra);
+}
+
+/**
+ * Free mode: no review queue. Provisional analyst inputs are filled in
+ * automatically (and labelled as such on the site); an editor can refine them
+ * or remove the character later by editing data/submissions/<handle>.json.
+ */
+function autoReview(record: SubmissionRecord, bio: string): SubmissionRecord["review"] {
+  const links = record.links.length;
+  return {
+    include: true,
+    auto: true,
+    name: record.review.name || record.handle,
+    characterType: "User-added AI character",
+    universe: /higgsfield/i.test(bio) ? "higgsfield-network" : null,
+    parodyOf: null,
+    recognizability: 1,
+    distinct: { visual: 2, personality: 2, lore: 2, crossCharacter: Math.min(4, links + 1) },
+    notes: "Published automatically from a user submission. Recognizability and distinctiveness are provisional defaults until an editor reviews them.",
+  } as SubmissionRecord["review"];
+}
+
+/** Free mode: analyze, publish straight to the default branch, return the new character's handle. */
+export async function publishFreeSubmission(handle: string, knownHandles: string[]): Promise<SubmissionRecord> {
+  const id = `free_${randomBytes(6).toString("hex")}`;
+  const { raw, record, extra } = await analyzeProfile(handle, id, null, knownHandles);
+  if (raw.followers < config.minFollowers)
+    throw new SubmissionError(`The index lists accounts with at least ${config.minFollowers.toLocaleString("en-US")} followers. @${handle} has ${raw.followers.toLocaleString("en-US")}.`);
+  if (record.metrics.postsAnalysed < 3) throw new SubmissionError("The profile needs at least 3 public posts to be scored.");
+  record.review = autoReview(record, raw.biography);
+  // picture first, so the character never appears without its photo
+  for (const f of extra) await commitFile(f.path, f.base64, f.message);
+  await commitFile(
+    `data/submissions/${handle}.json`,
+    Buffer.from(JSON.stringify(record, null, 2) + "\n").toString("base64"),
+    `Add user submission @${handle}`,
+  );
+  return record;
 }
 
 async function downloadImage(url: string): Promise<{ base64: string; ext: string } | null> {
@@ -88,9 +132,4 @@ export async function processSubmission(sessionId: string): Promise<string> {
   return run(s.handle, s.id, { provider: "stripe", session: s.id, amount: s.amount, currency: s.currency });
 }
 
-/** Free mode: runs right away. Returns the id the status page polls with. */
-export async function processFreeSubmission(handle: string): Promise<{ id: string; prUrl: string }> {
-  const id = `free_${randomBytes(6).toString("hex")}`;
-  const prUrl = await run(handle, id, null);
-  return { id, prUrl };
-}
+

@@ -8,8 +8,14 @@ export const config = {
   free: (process.env.SUBMISSIONS_FREE ?? "true").toLowerCase() !== "false",
   /** Free mode: submissions per IP per hour (best effort, per server instance). */
   perIpHourly: Number(process.env.SUBMISSION_IP_HOURLY ?? 3),
-  /** Free mode: stop accepting new submissions while this many are waiting for review. */
+  /** Paid mode: stop accepting new submissions while this many PRs wait for review. */
   queueLimit: Number(process.env.SUBMISSION_QUEUE_LIMIT ?? 40),
+  /** Free mode: profiles below this follower count are not published. */
+  minFollowers: Number(process.env.SUBMISSION_MIN_FOLLOWERS ?? 1000),
+  /** Free mode: total user-added characters the site accepts. */
+  maxLive: Number(process.env.SUBMISSION_MAX_LIVE ?? 300),
+  /** Seconds the site caches the live submissions list (a new submission also clears it). */
+  liveRevalidate: Number(process.env.LIVE_REVALIDATE_SECONDS ?? 30),
   priceCents: Number(process.env.SUBMISSION_PRICE_CENTS ?? 4900),
   currency: (process.env.SUBMISSION_CURRENCY ?? "usd").toLowerCase(),
   siteUrl: (process.env.SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),

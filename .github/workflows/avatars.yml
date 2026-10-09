@@ -1,13 +1,13 @@
-# Normalizes the Instagram profile picture of every approved user-added
-# character into the shared avatar style (scripts/avatars/auto.py), then
-# commits the result; the push triggers the site build.
+# Normalizes the Instagram profile picture of every user-added character into
+# the shared avatar style (scripts/avatars/auto.py) and commits the result with
+# [skip netlify]: the site serves the new files from GitHub at request time
+# (src/app/api/live-asset), so no rebuild is needed.
 name: Submission avatars
 
 on:
   push:
     paths:
       - "data/submissions/**"
-      - "data/avatars/source/**"
       - "scripts/avatars/**"
   workflow_dispatch:
 
@@ -60,5 +60,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/avatars scripts/avatars/avatars.json data/avatars/source src/data/generated
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
-          git commit -m "Normalize avatars for user-added characters"
-          git push
+          git commit -m "Normalize avatars for user-added characters [skip netlify]"
+          # a submission may have landed meanwhile
+          git pull --rebase --autostash && git push

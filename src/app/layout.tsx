@@ -3,8 +3,12 @@ import { Bricolage_Grotesque, DM_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { AS_OF, characters, universeOf } from "@/lib/data";
+import PortraitRegistry from "@/components/PortraitRegistry";
+import { getData, getLivePortraits } from "@/lib/live";
 import { longDate } from "@/lib/format";
+
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
 
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", weight: ["500", "700", "800"] });
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -18,7 +22,9 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: "#F4F1EA" };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const { AS_OF, characters, universeOf } = await getData();
+  const livePortraits = await getLivePortraits();
   const items = characters.map((c) => ({
     slug: c.slug,
     name: c.name,
@@ -29,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
       <body className="font-sans">
+        <PortraitRegistry map={livePortraits} />
         <Nav items={items.sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999))} asOf={longDate(AS_OF)} />
         <main>{children}</main>
         <Footer asOf={AS_OF} />

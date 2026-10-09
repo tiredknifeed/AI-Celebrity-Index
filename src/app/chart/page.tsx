@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import PageHead from "@/components/PageHead";
 import TopChart from "@/components/TopChart";
-import { AS_OF, meta, ranked, toCard, watchlist } from "@/lib/data";
+import { getData } from "@/lib/live";
 import { longDate } from "@/lib/format";
 import Link from "next/link";
 
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
+
 export const metadata: Metadata = { title: "The AI Top 100" };
 
-export default function ChartPage() {
+export default async function ChartPage() {
+  const { AS_OF, meta, ranked, toCard, watchlist } = await getData();
   return (
     <>
       <PageHead

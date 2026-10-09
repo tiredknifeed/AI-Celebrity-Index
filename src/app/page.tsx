@@ -10,23 +10,14 @@ import Marquee from "@/components/Marquee";
 import NetworkGraph from "@/components/NetworkGraph";
 import CharacterCard from "@/components/CharacterCard";
 import { CareerMoment, CoverStory, UniverseStory, type Fact, type ViralStep } from "@/components/Editorial";
-import {
-  AS_OF,
-  breakout,
-  bySlug,
-  characters,
-  edges,
-  meta,
-  ranked,
-  relationshipsOf,
-  rivalries,
-  stories,
-  toCard,
-  universes,
-} from "@/lib/data";
+import { getData } from "@/lib/live";
 import { compact, daysBetween, longDate, shortDate } from "@/lib/format";
 
-export default function Home() {
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
+
+export default async function Home() {
+  const { AS_OF, breakout, bySlug, characters, edges, meta, ranked, relationshipsOf, rivalries, stories, toCard, universes } = await getData();
   const cards = ranked.map(toCard);
   const lead = ranked[0];
 

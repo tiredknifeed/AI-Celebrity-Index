@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import NetworkGraph from "@/components/NetworkGraph";
 import UniverseGrid from "@/components/UniverseGrid";
-import { characters, edges, universes } from "@/lib/data";
+import { getData } from "@/lib/live";
+
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
 
 export const metadata: Metadata = { title: "The Universe" };
 
-export default function NetworkPage() {
+export default async function NetworkPage() {
+  const { bySlug, characters, edges, universes } = await getData();
   const linked = new Set(edges.flatMap((e) => [e.source, e.target]));
   const nodes = characters
     .filter((c) => c.inclusion === "INCLUDED" || linked.has(c.handle))
@@ -53,7 +57,7 @@ export default function NetworkPage() {
       </section>
       <section className="wrap mt-20">
         <h2 className="display mb-8 text-6xl">Universes</h2>
-        <UniverseGrid universes={universes} />
+        <UniverseGrid universes={universes} bySlug={bySlug} />
       </section>
     </>
   );

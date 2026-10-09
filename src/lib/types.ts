@@ -100,7 +100,7 @@ export interface Character {
   fullName: string;
   handle: string;
   profileUrl: string;
-  group: "SEED" | "DISCOVERED" | "REVIEWED";
+  group: "SEED" | "DISCOVERED" | "REVIEWED" | "SUBMITTED";
   inclusion: Inclusion;
   caveat: string | null;
   characterType: string;
@@ -168,6 +168,8 @@ export interface Character {
   ranks: { index: number; fame: number; momentum: number; distinctiveness: number } | null;
   degree: number;
   sources: number[];
+  /** User-added characters only. auto: published without an editor review. */
+  submission?: { capturedAt: string; source: string | null; auto: boolean };
   seed?: {
     recentActivity: string | null;
     debutNote: string | null;

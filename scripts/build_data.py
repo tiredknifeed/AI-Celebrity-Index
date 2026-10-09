@@ -475,8 +475,8 @@ def submission_character(rec, next_id, asof):
     d = rv["distinct"]
     cap = dt.date.fromisoformat(rec["capturedAt"])
     shift = (dt.date.fromisoformat(asof) - cap).days  # age the capture to the index date
-    days_first = None if m["daysSinceFirst"] is None else m["daysSinceFirst"] + shift
-    days_last = None if m["daysSinceLast"] is None else m["daysSinceLast"] + shift
+    days_first = None if m["daysSinceFirst"] is None else max(0, m["daysSinceFirst"] + shift)
+    days_last = None if m["daysSinceLast"] is None else max(0, m["daysSinceLast"] + shift)
     fame, momentum, fp, mp = py_score(
         p["followers"], p["postsCount"], m["avgLikes12"], m["avgLikes14d"], m["maxLikes"],
         (m.get("top14dPost") or {}).get("likes"), m["posts14d"], m["posts30d"], days_first, days_last,
@@ -535,8 +535,8 @@ def submission_character(rec, next_id, asof):
         "suggestedNeighbours": None,
         "outLinks": [{"handle": l["handle"], "count": l["count"], "note": "tag/mention"} for l in rec.get("links", [])],
         "inLinks": [], "externalLinks": [],
-        "sufficiency": {"flags": flags, "basis": "Automated checks on the submitted profile, confirmed in review"},
-        "submission": {"capturedAt": rec["capturedAt"], "source": rec.get("source")},
+        "sufficiency": {"flags": flags, "basis": "Automated checks on the submitted profile" + ("" if rv.get("auto") else ", confirmed in review")},
+        "submission": {"capturedAt": rec["capturedAt"], "source": rec.get("source"), "auto": bool(rv.get("auto"))},
     }
 
 # ---------------------------------------------------------------- build
@@ -857,6 +857,12 @@ def build(xlsx):
         ch = submission_character(rec, max(c["id"] for c in characters) + 1, asof)
         characters.append(ch)
         print(f"merged submission @{ch['handle']} (fame {ch['scores']['fame']}, momentum {ch['scores']['momentum']})")
+
+    seen_slugs = set()
+    for c in characters:  # one slug per character (same rule as src/lib/submissions/merge.ts)
+        if c["slug"] in seen_slugs:
+            c["slug"] = f"{c['slug']}-{slugify(c['handle'])}"
+        seen_slugs.add(c["slug"])
 
     included = [c for c in characters if c["inclusion"] == "INCLUDED"]
     by_handle = {c["handle"]: c for c in characters}

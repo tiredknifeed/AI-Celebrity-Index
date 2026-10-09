@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHead from "@/components/PageHead";
 import SubmitForm, { type KnownAccount } from "@/components/SubmitForm";
-import { characters, dataset, meta } from "@/lib/data";
+import { getData } from "@/lib/live";
+
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
 
 export const metadata: Metadata = { title: "Add an AI celebrity" };
 
@@ -16,18 +19,28 @@ function priceLabel() {
 }
 
 const PAY_STEP = ["Pay once", "Checkout through Stripe. Payment covers the full analysis."] as const;
-const FREE_STEP = ["Free for now", "No payment and no account. One submission per character; a duplicate joins the existing review."] as const;
+const FREE_STEP = ["Free for now", "No payment and no account. Public profiles with at least 1,000 followers and 3 posts."] as const;
 
-const STEPS = [
-  ["Paste the link", "Any public Instagram profile of an AI or fictional character."],
-  FREE ? FREE_STEP : PAY_STEP,
-  ["We pull the data", "Followers, up to 60 recent posts, likes, comments, dates, bio, tags and token signals from the public profile."],
-  ["Scores are computed", "Fame and Momentum with exactly the same formulas as every other character, plus links to characters already in the index."],
-  ["Analyst review", "A person checks it is a real AI character (not a copycat or a real person), rates distinctiveness and assigns a universe."],
-  ["Added to the index", "Approved characters get a ranked profile on the next update. You can follow every step on your status page."],
-] as const;
+const STEPS = FREE
+  ? ([
+      ["Paste the link", "Any public Instagram profile of an AI or fictional character."],
+      FREE_STEP,
+      ["We pull the data", "Followers, up to 60 recent posts, likes, comments, dates, bio, tags and token signals from the public profile."],
+      ["Scores are computed", "Fame and Momentum with exactly the same formulas as every other character, plus links to characters already in the index."],
+      ["Live in seconds", "The character is ranked on the site right away, labelled “Added by a user”. Its photo is restyled to match the index a minute later."],
+      ["Editors keep watch", "Editors refine the provisional ratings, and remove copycats, real people and spam."],
+    ] as const)
+  : ([
+      ["Paste the link", "Any public Instagram profile of an AI or fictional character."],
+      PAY_STEP,
+      ["We pull the data", "Followers, up to 60 recent posts, likes, comments, dates, bio, tags and token signals from the public profile."],
+      ["Scores are computed", "Fame and Momentum with exactly the same formulas as every other character, plus links to characters already in the index."],
+      ["Analyst review", "A person checks it is a real AI character (not a copycat or a real person), rates distinctiveness and assigns a universe."],
+      ["Added to the index", "Approved characters get a ranked profile on the next update. You can follow every step on your status page."],
+    ] as const);
 
-export default function SubmitPage() {
+export default async function SubmitPage() {
+  const { characters, dataset, meta } = await getData();
   const price = priceLabel();
   const known: KnownAccount[] = [
     ...characters.map((c) => ({
@@ -65,7 +78,7 @@ export default function SubmitPage() {
               <li>↗ Peak post, 14-day activity and live status</li>
               <li>✺ Links to characters already in the index</li>
               <li>◎ Token check: contract or ticker on the profile</li>
-              <li>◆ Analyst review for inclusion in the public index</li>
+              <li>◆ {FREE ? "A ranked profile on the site, live in seconds" : "Analyst review for inclusion in the public index"}</li>
             </ul>
             <p className="mt-6 text-xs leading-relaxed text-white/50">
               {FREE ? "Submitting is free while the index grows. " : "Payment covers the analysis. "}Inclusion in the public index depends on the review against the{" "}

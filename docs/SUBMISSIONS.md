@@ -6,22 +6,35 @@ grows without anyone editing the workbook.
 
 There are two modes, switched with `SUBMISSIONS_FREE`:
 
-- **Free (default, `SUBMISSIONS_FREE=true`).** No payment. `POST /api/submit/`
-  runs the analysis right away (about 1-2 minutes), opens the review PR and
-  returns an id; the submitter lands on `/submit/status/?id=…&handle=…`.
+- **Free (default, `SUBMISSIONS_FREE=true`).** No payment, no review queue.
+  `POST /api/submit/` analyzes the profile (about 1-2 minutes), commits the
+  picture and `data/submissions/<handle>.json` straight to the default branch
+  (message ends in `[skip netlify]`, so no rebuild), clears the site's data
+  cache and sends the submitter to the new profile. It is live at once.
   Needs only `APIFY_TOKEN` and `GITHUB_TOKEN`.
 - **Paid (`SUBMISSIONS_FREE=false`).** Stripe Checkout first; the flow below.
 
+### Free mode: live data without rebuilds
+
+Server pages call `getData()` (`src/lib/live.ts`) instead of importing the build-time data. It lists `data/submissions/` on GitHub (cached for `LIVE_REVALIDATE_SECONDS`, default 30, and cleared by the submit route), reads each file by blob sha (cached for good), and merges them into the build-time dataset with `src/lib/submissions/merge.ts`, the TypeScript twin of the Python merge (`npm run check:merge` compares the two). Pages are ISR (`revalidate = 30`), so edits made directly on GitHub show up within about 30 seconds too.
+
+Avatars: the picture saved with the submission is shown right away; the **Submission avatars** action restyles it a minute later and commits the files with `[skip netlify]`; `/api/live-asset/` serves them from GitHub until the next deploy bundles them.
+
+Free-mode submissions are published with provisional analyst inputs (`review.auto: true`: recognizability 1, distinctiveness 2/2/2 and cross-character from the observed links) and say so on the profile.
+
+### Moderation
+
+- **Refine** a character: edit `review` in `data/submissions/<handle>.json` on GitHub (set real ratings, universe, parody reference; set `"auto": false` once reviewed).
+- **Remove** it: set `"include": false` (it disappears and cannot be submitted again), or delete the file (it disappears and can be submitted again).
+- Both take effect within about 30 seconds, without a deploy.
+
 ### Free-mode guards
 
-- One review per character: if an open submission PR already exists for the
-  handle, the submitter is sent to that PR's status page instead of a new one.
-- Queue cap: no new submissions while `SUBMISSION_QUEUE_LIMIT` (default 40)
-  PRs wait for review, so Apify costs and the review backlog stay bounded.
-- Per-IP limit: `SUBMISSION_IP_HOURLY` (default 3) attempts per hour. Best
-  effort: kept in memory per server instance.
-- Honeypot form field against simple bots; already-ranked handles, private
-  profiles and unknown handles are refused before anything is opened.
+- Public profiles with at least `SUBMISSION_MIN_FOLLOWERS` (default 1,000) followers and 3 posts.
+- Characters already on the site are refused (the submitter is sent to the existing profile).
+- At most `SUBMISSION_MAX_LIVE` (default 300) user-added characters.
+- Per-IP limit: `SUBMISSION_IP_HOURLY` (default 3) attempts per hour, best effort (in memory per server instance).
+- Honeypot form field against simple bots.
 
 ## Paid flow
 
@@ -55,7 +68,9 @@ Copy `.env.example` to `.env` (or set the variables on the host):
 | Variable | Purpose |
 | --- | --- |
 | `SUBMISSIONS_FREE` | `true` (default) for free submissions, `false` for paid |
-| `SUBMISSION_QUEUE_LIMIT`, `SUBMISSION_IP_HOURLY` | Free-mode guards (defaults 40 and 3) |
+| `SUBMISSION_MIN_FOLLOWERS`, `SUBMISSION_MAX_LIVE`, `SUBMISSION_IP_HOURLY` | Free-mode guards (defaults 1000, 300, 3) |
+| `LIVE_REVALIDATE_SECONDS` | How long the site caches the live submissions list (default 30) |
+| `SUBMISSION_QUEUE_LIMIT` | Paid mode: open review PRs before new submissions pause (default 40) |
 | `SITE_URL` | Public URL, used for Stripe success / cancel redirects (paid) |
 | `SUBMISSION_PRICE_CENTS`, `SUBMISSION_CURRENCY` | Price (default 4900 = $49) |
 | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | Paid mode only. Stripe API key and the signing secret of a webhook pointing to `<SITE_URL>/api/stripe/webhook/` (note the trailing slash) for `checkout.session.completed` |
@@ -68,7 +83,7 @@ Hosting needs server functions (e.g. Vercel): the site is no longer a pure stati
 
 `netlify.toml` already runs `npm run data` before `next build` (Python + `requirements.txt`), so an approved submission appears with the build that the merge triggers. Deploy previews for `submission/*` branches are skipped to keep the build queue free. On other hosts, run `npm run data` as part of the build.
 
-## Approving a submission
+## Approving a submission (paid mode)
 
 1. Open the submission PR on GitHub, then **Files changed → ⋯ → Edit file** on `data/submissions/<handle>.json` (or edit it on the default branch after merging).
 2. Fill the `review` block: `name`, `characterType`, `universe` (a key from the universe list, e.g. `higgsfield-network`, or anything else for Independents), `parodyOf` if it imitates a real person or IP, `recognizability` and the four `distinct` ratings (0-5), and set `"include": true`.

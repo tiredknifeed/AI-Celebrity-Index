@@ -55,6 +55,8 @@ export interface SubmissionRecord {
   sufficiency: Record<"VERIFIED IDENTITY" | "FAME SCORE" | "LIVE STATUS" | "CAREER TIMELINE" | "SOCIAL GRAPH", "YES" | "PARTIAL" | "NO">;
   review: {
     include: boolean;
+    /** Published without an editor review (free mode); ratings are provisional defaults. */
+    auto?: boolean;
     name: string | null;
     characterType: string | null;
     universe: string | null;

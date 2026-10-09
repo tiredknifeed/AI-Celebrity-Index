@@ -12,29 +12,23 @@ import Linkify from "@/components/Linkify";
 import { FameDisc, MomentumBadge, SubBar } from "@/components/Scores";
 import { HeatChip, IdentityBadge, StatusChip, TrustTag, identityExplainer } from "@/components/Chips";
 import { avatarBg, portraitOf } from "@/data/portraits";
-import {
-  AS_OF,
-  EDGE_COLOR,
-  EDGE_LABEL,
-  bySlug,
-  careerArc,
-  ranked,
-  relationshipsOf,
-  sourcesOf,
-  toCard,
-  tokenCard,
-  universeOf,
-} from "@/lib/data";
+import { EDGE_COLOR, EDGE_LABEL, STATIC_DATA, tokenCard, type Relationship } from "@/lib/data";
+import { getData } from "@/lib/live";
 import { compact, full, longDate, pct, shortDate, stripTrust } from "@/lib/format";
 import type { Character } from "@/lib/types";
 
+// Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
+export const revalidate = 30;
+
+// Pre-render the characters known at build time; user-added ones render on
+// first request and are cached like the rest (dynamicParams).
 export function generateStaticParams() {
-  return ranked.map((c) => ({ slug: c.slug }));
+  return STATIC_DATA.ranked.map((c) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const c = bySlug(slug);
+  const c = (await getData()).bySlug(slug);
   if (!c) return {};
   return {
     title: `${c.name} (@${c.handle})`,
@@ -44,6 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProfilePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const { AS_OF, bySlug, careerArc, ranked, relationshipsOf, sourcesOf, toCard, universeOf } = await getData();
   const c = bySlug(slug);
   if (!c || !c.ranks) notFound();
   const spec = portraitOf(c.slug);
@@ -119,8 +114,9 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
           <div className="rounded-4xl bg-[#DCE8FF] p-5 shadow-card sm:flex sm:items-center sm:gap-5">
             <span className="display shrink-0 text-3xl">+ Added by a user</span>
             <p className="mt-2 text-sm leading-snug sm:mt-0">
-              This character was submitted by a visitor. The numbers come from its public Instagram profile and the entry was checked by the
-              editors, but the identity is not verified by the index.
+              {c.submission?.auto
+                ? "This character was submitted by a visitor and published automatically. The numbers come from its public Instagram profile; recognizability and distinctiveness are provisional until an editor reviews them, and the identity is not verified by the index."
+                : "This character was submitted by a visitor. The numbers come from its public Instagram profile and the entry was checked by the editors, but the identity is not verified by the index."}
               {c.parodyOf && <> Parody of {stripTrust(c.parodyOf)}; not affiliated with the person or IP referenced.</>}
             </p>
           </div>
@@ -529,7 +525,7 @@ function Stat({ label, value, sub }: { label: string; value: string; sub?: strin
   );
 }
 
-function RelationCard({ r }: { r: ReturnType<typeof relationshipsOf>[number] }) {
+function RelationCard({ r }: { r: Relationship }) {
   const o = r.other;
   const spec = portraitOf(o.slug);
   const inner = (
