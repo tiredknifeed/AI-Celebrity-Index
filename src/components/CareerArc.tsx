@@ -1,7 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import type { TimelineEvent, Trust } from "@/lib/types";
 import { TrustTag } from "./Chips";
 
@@ -10,23 +9,18 @@ export interface ArcEvent extends Omit<TimelineEvent, "kind"> {
   stage: string;
 }
 
-const KIND_STYLE: Record<ArcEvent["kind"], { bg: string; fg: string }> = {
-  debut: { bg: "#141414", fg: "#fff" },
-  viral: { bg: "#FF8A1F", fg: "#fff" },
-  peak: { bg: "#FF4D1F", fg: "#fff" },
-  token: { bg: "#F2B705", fg: "#141414" },
-  collab: { bg: "#18A957", fg: "#fff" },
-  milestone: { bg: "#5B8DEF", fg: "#fff" },
-  moment: { bg: "#FFFDF8", fg: "#141414" },
-  now: { bg: "#C6F432", fg: "#141414" },
+const KIND_STYLE: Record<ArcEvent["kind"], { bg: string; fg: string; icon: string }> = {
+  debut: { bg: "#141414", fg: "#fff", icon: "✦" },
+  viral: { bg: "#FF8A1F", fg: "#fff", icon: "↗" },
+  peak: { bg: "#FF4D1F", fg: "#fff", icon: "★" },
+  token: { bg: "#C6F432", fg: "#141414", icon: "◎" },
+  collab: { bg: "#18A957", fg: "#fff", icon: "⇄" },
+  milestone: { bg: "#5B8DEF", fg: "#fff", icon: "◆" },
+  moment: { bg: "#FFFDF8", fg: "#141414", icon: "·" },
+  now: { bg: "#F2B705", fg: "#141414", icon: "●" },
 };
 
 const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-function md(iso: string | null): { m: string; d: string } {
-  if (!iso) return { m: "", d: "—" };
-  const [, m, d] = iso.split("-");
-  return { m: MONTHS[Number(m) - 1], d };
-}
 
 function fmtValue(n: number | null): string | null {
   if (!n) return null;
@@ -35,79 +29,64 @@ function fmtValue(n: number | null): string | null {
   return `${n} likes`;
 }
 
-/** Editorial career arc: debut → first viral moment → breakthrough → crossovers → now. */
+/** Career story: debut → first viral post → breakout → collab → token → now. */
 export default function CareerArc({ events }: { events: ArcEvent[] }) {
-  const [open, setOpen] = useState<number | null>(null);
   return (
-    <div className="relative">
-      <div className="absolute left-0 right-0 top-[54px] hidden h-[3px] rounded-full bg-ink/10 md:block" />
-      <ol className="no-scrollbar -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4">
-        {events.map((e, i) => {
-          const s = KIND_STYLE[e.kind];
-          const { m, d } = md(e.date);
-          const isOpen = open === i;
-          const value = fmtValue(e.value);
-          return (
-            <motion.li
-              key={`${e.date}-${i}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-20px" }}
-              transition={{ type: "spring", stiffness: 260, damping: 24, delay: i * 0.05 }}
-              className="w-[230px] shrink-0 snap-start sm:w-[260px]"
+    <ol className="relative mx-auto max-w-5xl">
+      <span aria-hidden className="absolute bottom-6 left-[27px] top-6 w-1 rounded-full bg-gradient-to-b from-ink/10 via-ink/25 to-[#F2B705] md:left-1/2 md:-ml-0.5" />
+      {events.map((e, i) => {
+        const s = KIND_STYLE[e.kind];
+        const [, m, d] = (e.date ?? "--").split("-");
+        const value = fmtValue(e.value);
+        const right = i % 2 === 1;
+        return (
+          <motion.li
+            key={`${e.date}-${i}`}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ type: "spring", stiffness: 220, damping: 26 }}
+            className={`relative mb-8 flex items-start gap-5 pl-0 md:mb-10 md:w-1/2 ${right ? "md:ml-auto md:pl-12" : "md:flex-row-reverse md:pr-12 md:text-right"}`}
+          >
+            <span
+              className={`relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-full text-xl shadow-sticker md:absolute md:top-2 ${
+                right ? "md:-left-7" : "md:-right-7"
+              }`}
+              style={{ background: s.bg, color: s.fg, border: s.bg === "#FFFDF8" ? "2px solid #141414" : undefined }}
+              aria-hidden
             >
-              <div className="mb-3 flex items-end gap-2 pl-1">
-                <span className="font-mono text-xs text-muted">{m}</span>
-                <span className="display text-5xl leading-none">{d}</span>
+              {s.icon}
+            </span>
+            <div className="min-w-0 flex-1">
+              <div className={`flex items-baseline gap-2 ${right ? "" : "md:justify-end"}`}>
+                <span className="display text-5xl leading-none sm:text-6xl">{e.date ? d : "—"}</span>
+                <span className="font-mono text-sm text-muted">{e.date ? `${MONTHS[Number(m) - 1]} ${e.date.slice(0, 4)}` : "date unknown"}</span>
               </div>
-              <div className="relative mb-3 hidden h-3 md:block">
-                <span className="absolute left-3 top-0 h-3 w-3 rounded-full ring-4 ring-paper" style={{ background: s.bg === "#FFFDF8" ? "#141414" : s.bg }} />
+              <div className="mt-2 rounded-4xl p-5 shadow-card" style={{ background: s.bg === "#141414" ? "#FFFDF8" : s.bg === "#FFFDF8" ? "#FFFDF8" : `${s.bg}22` }}>
+                <div className={`flex flex-wrap items-center gap-2 ${right ? "" : "md:justify-end"}`}>
+                  <span className="rounded-full px-2.5 py-0.5 font-mono text-[10.5px] font-semibold uppercase tracking-[0.16em]" style={{ background: s.bg, color: s.fg }}>
+                    {e.stage}
+                  </span>
+                  <TrustTag trust={e.status as Trust} />
+                </div>
+                {value && <div className="display mt-3 text-4xl leading-none">{value}</div>}
+                <p className="mt-2 text-[16px] font-semibold leading-snug">{e.label}</p>
+                {e.note && <p className="mt-1 text-sm text-ink/60">{e.note}</p>}
+                {e.url && (
+                  <a
+                    href={e.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-block font-mono text-[11px] uppercase tracking-[0.12em] underline decoration-ink/30 underline-offset-4"
+                  >
+                    Source post ↗
+                  </a>
+                )}
               </div>
-              <button
-                onClick={() => setOpen(isOpen ? null : i)}
-                aria-expanded={isOpen}
-                className="block w-full rounded-4xl p-5 text-left shadow-card transition-transform hover:-translate-y-1"
-                style={{ background: s.bg, color: s.fg }}
-              >
-                <span className="font-mono text-[10.5px] font-semibold uppercase tracking-[0.18em] opacity-80">{e.stage}</span>
-                {value && <span className="display mt-2 block text-3xl leading-none">{value}</span>}
-                <span className={`mt-2 block text-[15px] font-semibold leading-snug ${isOpen ? "" : "line-clamp-3"}`}>{e.label}</span>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.span
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="block overflow-hidden"
-                    >
-                      <span className="mt-3 flex flex-wrap items-center gap-2 text-xs">
-                        <span className="rounded bg-white/90 px-1">
-                          <TrustTag trust={e.status as Trust} className="!border-0" />
-                        </span>
-                        {e.note && <span className="opacity-80">{e.note}</span>}
-                      </span>
-                      {e.url && (
-                        <a
-                          href={e.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(ev) => ev.stopPropagation()}
-                          className="mt-3 inline-block rounded-full bg-white/90 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.1em] text-ink"
-                        >
-                          Open post ↗
-                        </a>
-                      )}
-                    </motion.span>
-                  )}
-                </AnimatePresence>
-                <span className="mt-3 block font-mono text-[10px] uppercase tracking-[0.14em] opacity-60">
-                  {isOpen ? "Close" : "Tap for detail"}
-                </span>
-              </button>
-            </motion.li>
-          );
-        })}
-      </ol>
-    </div>
+            </div>
+          </motion.li>
+        );
+      })}
+    </ol>
   );
 }

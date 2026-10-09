@@ -35,13 +35,28 @@ The script needs Python 3 with `openpyxl`. It:
 
 `src/lib/data.ts` is the only module that imports the JSON. To move to a backend, return the same shape (`src/lib/types.ts`) from an API and swap that import.
 
-## Portraits
+## Avatars
 
-- Photo portraits in `public/portraits/` (and background-removed cutouts in `public/portraits/cutouts/`) are stills from the supplied promo video.
-- Everyone else gets a flat sticker illustration drawn from the look described in the workbook (`src/components/CharacterArt.tsx`). When the workbook marks the look as unknown, a neutral placeholder with initials is shown instead of an invented face.
+All portraits follow one profile-picture system, described in [`docs/AVATAR_STYLE.md`](docs/AVATAR_STYLE.md): same framing grid, accent-gradient background, colour grade, key light, contact shadow and white sticker outline.
+
+- Normalized avatars live in `public/avatars/<slug>/` (`avatar-1024/512/160.webp` plus a transparent `cutout-1024.webp`). They are produced from the official source images in `data/avatars/source/` by `scripts/avatars/normalize.py` (per-character anchors in `scripts/avatars/avatars.json`). `public/avatars/report.json` records the source and enlargement of each one.
+- Characters without an official image keep a flat sticker illustration (`src/components/CharacterArt.tsx`) on the same background system. When the look is unknown, a neutral placeholder with initials is shown instead of an invented face.
 - Each profile labels which kind of portrait it shows.
 
-To add a real image: put `<slug>.webp` in `public/portraits/` (and optionally a transparent `cutouts/<slug>.webp`), then set `photo: true` for that slug in `src/data/portraits.ts`. Accent colours also live there.
+To add an avatar: put the official image in `data/avatars/source/`, add its anchors to `avatars.json`, run the script and set `avatar: true` for the slug in `src/data/portraits.ts`.
+
+## Token layer
+
+Token data follows `token.verification` from the data pipeline:
+
+| Level | Meaning | What the UI shows |
+| --- | --- | --- |
+| `CONTRACT` | Full contract address in the character's own bio | Ticker, contract (copy), pump.fun link, live market data, optional DexScreener chart embed |
+| `PROFILE` | Ticker or pump.fun link on the profile, contract not captured | Ticker and link; no prices (they need the contract) |
+| `UNVERIFIED` | Ticker only reported off-Instagram or supplied with the brief | "Token status · unverified" with the mention; never linked or priced |
+| `NONE` | Nothing token-related found | "No verified token" |
+
+Live market data (market cap, 24h change, volume, liquidity, price path) is requested **from the visitor's browser** from DexScreener's public API (`src/lib/market.ts`) and cached for 5 minutes in session storage. If the request fails, the card says the data is unavailable; nothing is estimated. Holder counts are not available from this source.
 
 ## Develop
 

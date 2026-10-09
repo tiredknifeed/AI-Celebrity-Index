@@ -5,7 +5,7 @@ import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Portrait from "./Portrait";
 import { HEAT_STYLE } from "./Chips";
-import { portraitOf } from "@/data/portraits";
+import { avatarBg, portraitOf } from "@/data/portraits";
 import type { CardData } from "@/lib/data";
 import { STATUS_LABEL } from "@/lib/labels";
 
@@ -93,9 +93,9 @@ export default function IndexStrip({ cards }: { cards: CardData[] }) {
                     </motion.span>
                     <span
                       className="relative h-14 w-14 shrink-0 overflow-hidden rounded-2xl"
-                      style={{ background: portraitOf(c.slug).accent }}
+                      style={avatarBg(c.slug)}
                     >
-                      <Portrait c={c} className="absolute inset-0 h-full w-full" />
+                      <Portrait c={c} variant="compact" className="absolute inset-0 h-full w-full" />
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="line-clamp-2 block font-display text-[15px] font-extrabold uppercase leading-[1.05]">

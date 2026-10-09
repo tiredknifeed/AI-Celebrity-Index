@@ -1,11 +1,11 @@
 // Presentation layer for each character: accent colour and portrait source.
 //
-// Photo portraits are stills from the supplied promo video (public/portraits).
+// Characters with `avatar: true` use the normalized avatar family in
+// public/avatars/<slug>/ (see docs/AVATAR_STYLE.md and scripts/avatars/).
 // Everyone else gets a flat "sticker" illustration built from the visual
-// description in the research workbook. When the workbook marks the look as
-// UNKNOWN we draw a neutral placeholder instead of inventing a face.
-// To use real imagery later, add public/portraits/<slug>.webp (+ cutouts/) and
-// set `photo: true` here.
+// description in the research workbook, on the same background system. When
+// the workbook marks the look as UNKNOWN we draw a neutral placeholder instead
+// of inventing a face.
 
 export type HairStyle =
   | "bowl"
@@ -51,9 +51,10 @@ export interface PortraitSpec {
   accent: string;
   /** Text colour that reads on the accent. */
   onAccent?: string;
-  photo?: boolean;
-  /** CSS object-position for the photo crop, so faces stay in frame. */
-  photoPos?: string;
+  /** A normalized avatar exists in public/avatars/<slug>/. */
+  avatar?: boolean;
+  /** Where the avatar came from. */
+  source?: "x-avatar" | "promo-still";
   art?: Art;
   /** How the look was established: OBSERVED in posts, or INFERRED from captions. */
   basis?: "OBSERVED" | "INFERRED";
@@ -62,25 +63,8 @@ export interface PortraitSpec {
 const UNKNOWN: Art = { kind: "unknown" };
 
 export const portraits: Record<string, PortraitSpec> = {
-  "derek-mercer": {
-    accent: "#C6F432",
-    basis: "OBSERVED",
-    art: {
-      kind: "human",
-      skin: "#EBC3A1",
-      hair: { style: "emo", color: "#141414" },
-      outfit: { style: "tank", color: "#151515", accent: "#C6F432" },
-      body: "muscle",
-      eyes: "hidden",
-      mouth: "flat",
-    },
-  },
-  "abu-nutty": {
-    accent: "#FF5A36",
-    onAccent: "#fff",
-    basis: "INFERRED",
-    art: { kind: "monkey", primary: "#7A4A2A", secondary: "#E8C49A", accent: "#E63A2E" },
-  },
+  "derek-mercer": { accent: "#C6F432", avatar: true, source: "x-avatar" },
+  "abu-nutty": { accent: "#FF6A3D", onAccent: "#fff", avatar: true, source: "x-avatar" },
   "granny-spills": {
     accent: "#F7A1C4",
     basis: "INFERRED",
@@ -95,8 +79,8 @@ export const portraits: Record<string, PortraitSpec> = {
       extras: ["pearls", "earrings", "lipstick"],
     },
   },
-  "jean-phil": { accent: "#4F7FC4", onAccent: "#fff", photo: true },
-  "abu-shalab": { accent: "#EDB54F", photo: true, photoPos: "50% 25%" },
+  "jean-phil": { accent: "#6E9BD8", onAccent: "#fff", avatar: true, source: "x-avatar" },
+  "abu-shalab": { accent: "#EDB54F", avatar: true, source: "x-avatar" },
   "casper-the-italian-greyhound": {
     accent: "#9BCBB1",
     basis: "INFERRED",
@@ -115,28 +99,20 @@ export const portraits: Record<string, PortraitSpec> = {
       brows: "angry",
     },
   },
-  "mr-stretchy": {
-    accent: "#FFB547",
-    basis: "INFERRED",
-    art: { kind: "stretchy", primary: "#F6D7B8", secondary: "#3BA55C" },
-  },
+  "mr-stretchy": { accent: "#FFB547", avatar: true, source: "x-avatar" },
   "candy-the-greyhound": {
     accent: "#F4AE79",
     basis: "INFERRED",
     art: { kind: "greyhound", primary: "#C98B57", secondary: "#F3E3CF", accent: "#E5383B" },
   },
-  "nobody-sausage": {
-    accent: "#FF8A65",
-    basis: "INFERRED",
-    art: { kind: "sausage", primary: "#E4593B", secondary: "#FFB199" },
-  },
+  "nobody-sausage": { accent: "#5ED3F3", avatar: true, source: "x-avatar" },
   "sickman": {
     accent: "#A9B6C6",
     basis: "INFERRED",
     art: { kind: "catknight", primary: "#C7CED6", secondary: "#F08A24", accent: "#D7263D" },
   },
-  "benjamin-stachio": { accent: "#ECC660", photo: true },
-  "lord-farquaad": { accent: "#A3364A", onAccent: "#fff", photo: true, photoPos: "38% 0%" },
+  "benjamin-stachio": { accent: "#ECC660", avatar: true, source: "promo-still" },
+  "lord-farquaad": { accent: "#A3364A", onAccent: "#fff", avatar: true, source: "promo-still" },
   "caramelinho": {
     accent: "#43C06F",
     basis: "INFERRED",
@@ -279,12 +255,42 @@ export const portraits: Record<string, PortraitSpec> = {
       mouth: "smile",
     },
   },
-  "bill-smith-prince": { accent: "#6DB3AA", photo: true, photoPos: "50% 35%" },
-  "brigitte-macaron": { accent: "#E63946", onAccent: "#fff", photo: true },
+  "bill-smith-prince": { accent: "#6DB3AA", avatar: true, source: "promo-still" },
+  "brigitte-macaron": {
+    accent: "#F28A92",
+    basis: "OBSERVED",
+    art: {
+      kind: "human",
+      skin: "#F2D4C0",
+      hair: { style: "pinkbob", color: "#F3E9CF" },
+      glasses: { style: "round", color: "#7A4A22" },
+      outfit: { style: "suit", color: "#D7263D", accent: "#141414" },
+      mouth: "smirk",
+      brows: "raised",
+      extras: ["lipstick", "earrings"],
+    },
+  },
 };
 
 const FALLBACK: PortraitSpec = { accent: "#CFC8BA", art: UNKNOWN };
 
 export function portraitOf(slug: string): PortraitSpec {
   return portraits[slug] ?? FALLBACK;
+}
+
+function mix(hex: string, to: number, t: number): string {
+  const c = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
+  return `rgb(${c.map((v) => Math.round(v * (1 - t) + to * t)).join(",")})`;
+}
+
+/**
+ * The avatar background system in CSS: the same accent radial gradient that
+ * scripts/avatars/normalize.py bakes into the avatar files. Pair with the
+ * `grain` utility for the dot texture.
+ */
+export function avatarBg(slug: string): { background: string } {
+  const a = portraitOf(slug).accent;
+  return {
+    background: `radial-gradient(85% 80% at 50% 36%, ${mix(a, 255, 0.42)} 0%, ${mix(a, 0, 0.1)} 100%)`,
+  };
 }

@@ -43,8 +43,14 @@ export interface TrajectoryPoint {
   label: string;
 }
 
+export type TokenVerification = "CONTRACT" | "PROFILE" | "UNVERIFIED" | "NONE";
+
 export interface Token {
   status: "IG_OBSERVED" | "NONE";
+  /** CONTRACT: full address on the profile; PROFILE: ticker/link on the profile only. */
+  verification: TokenVerification;
+  /** Full contract address, only when shown on the character's own profile. */
+  contract: string | null;
   ticker: string | null;
   chain: "SOLANA" | null;
   contractInBio: boolean;

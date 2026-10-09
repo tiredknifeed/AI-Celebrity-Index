@@ -248,6 +248,32 @@ export interface CardData {
   daysSinceLastPost: number | null;
   maxLikes: number | null;
   characterType: string;
+  degree: number;
+  token: TokenCard;
+}
+
+/** What a card may show about a token. Only verified facts. */
+export interface TokenCard {
+  verification: Character["token"]["verification"];
+  ticker: string | null;
+  contract: string | null;
+  url: string | null;
+  chain: string | null;
+  /** Off-profile mention, shown only as "unverified". */
+  mention: string | null;
+}
+
+export function tokenCard(c: Character): TokenCard {
+  const t = c.token;
+  const mention = t.reported?.match(/\$[A-Za-z][A-Za-z0-9]*/)?.[0] ?? t.userSupplied ?? null;
+  return {
+    verification: t.verification,
+    ticker: t.verification === "CONTRACT" || t.verification === "PROFILE" ? t.ticker : null,
+    contract: t.verification === "CONTRACT" ? t.contract : null,
+    url: t.verification === "CONTRACT" || t.verification === "PROFILE" ? t.url : null,
+    chain: t.chain,
+    mention: t.verification === "UNVERIFIED" ? mention : null,
+  };
 }
 
 export function toCard(c: Character): CardData {
@@ -276,6 +302,8 @@ export function toCard(c: Character): CardData {
     daysSinceLastPost: c.daysSinceLastPost,
     maxLikes: c.maxLikes,
     characterType: c.characterType,
+    degree: c.degree,
+    token: tokenCard(c),
   };
 }
 
@@ -305,18 +333,18 @@ export function careerArc(c: Character): ArcStep[] {
         label = label.replace(/^approx\. first visible$/i, "First visible post (approximate debut)");
         break;
       case "peak":
-        stage = "Breakout moment";
+        stage = "Breakout";
         sawViral = true;
         break;
       case "viral":
-        stage = sawViral ? "Viral moment" : "First viral moment";
+        stage = sawViral ? "Viral post" : "First viral post";
         sawViral = true;
         break;
       case "collab":
-        stage = "Crossover";
+        stage = "Collab";
         break;
       case "token":
-        stage = "Token";
+        stage = "Token launch";
         break;
       case "milestone":
         stage = "Milestone";

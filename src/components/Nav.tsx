@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Portrait from "./Portrait";
-import { portraitOf } from "@/data/portraits";
+import { avatarBg, portraitOf } from "@/data/portraits";
 
 export interface SearchItem {
   slug: string;
@@ -162,9 +162,9 @@ function SearchOverlay({ items, onClose }: { items: SearchItem[]; onClose: () =>
               <Link href={`/c/${i.slug}/`} onClick={onClose} className="flex items-center gap-4 rounded-3xl p-2 pr-4 hover:bg-white">
                 <span
                   className="relative h-14 w-14 shrink-0 overflow-hidden rounded-2xl"
-                  style={{ background: portraitOf(i.slug).accent }}
+                  style={avatarBg(i.slug)}
                 >
-                  <Portrait c={i} className="absolute inset-0 h-full w-full" />
+                  <Portrait c={i} variant="compact" className="absolute inset-0 h-full w-full" />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate font-display text-lg font-extrabold uppercase leading-tight">{i.name}</span>

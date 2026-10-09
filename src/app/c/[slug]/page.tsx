@@ -7,10 +7,11 @@ import Parallax from "@/components/Parallax";
 import CareerArc from "@/components/CareerArc";
 import FameHistory from "@/components/FameHistory";
 import CharacterCard from "@/components/CharacterCard";
+import { TokenChip, TokenModule } from "@/components/Token";
 import Linkify from "@/components/Linkify";
 import { FameDisc, MomentumBadge, SubBar } from "@/components/Scores";
 import { HeatChip, IdentityBadge, StatusChip, TrustTag, identityExplainer } from "@/components/Chips";
-import { portraitOf } from "@/data/portraits";
+import { avatarBg, portraitOf } from "@/data/portraits";
 import {
   AS_OF,
   EDGE_COLOR,
@@ -21,6 +22,7 @@ import {
   relationshipsOf,
   sourcesOf,
   toCard,
+  tokenCard,
   universeOf,
 } from "@/lib/data";
 import { compact, full, longDate, pct, shortDate, stripTrust } from "@/lib/format";
@@ -59,13 +61,13 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
   return (
     <>
       {/* ---------------------------------------------------------- hero */}
-      <section className="relative overflow-hidden rounded-b-[3rem] pt-24" style={{ background: spec.accent, color: on }}>
+      <section className="relative overflow-hidden rounded-b-[3rem] pt-24" style={{ ...avatarBg(c.slug), color: on }}>
         <div className="grain absolute inset-0 opacity-60" />
         <span className="display pointer-events-none absolute -right-4 top-16 select-none text-[40vw] leading-none opacity-[0.09] lg:text-[26vw]" aria-hidden>
           {String(c.ranks.index).padStart(2, "0")}
         </span>
         <div className="wrap relative grid items-end gap-2 lg:min-h-[86svh] lg:grid-cols-12 lg:gap-6">
-          <div className="relative z-10 order-2 pb-10 lg:order-1 lg:col-span-7 lg:pb-16">
+          <div className="relative z-10 order-2 pb-10 lg:order-1 lg:col-span-6 lg:pb-16">
             <div className="mb-5 flex flex-wrap items-center gap-2">
               <span className="chip bg-ink text-white">#{String(c.ranks.index).padStart(2, "0")} Index</span>
               {momentumBadge && <span className="chip bg-fire text-white">{momentumBadge}</span>}
@@ -82,6 +84,12 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
             <a href={c.profileUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block font-mono text-base hover:underline sm:text-lg">
               @{c.handle} ↗
             </a>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <StatusChip code={c.status.code} solid className="!px-4 !py-2 !text-[13px]" />
+              <span className="font-mono text-xs uppercase tracking-[0.12em] opacity-75">
+                Last post {shortDate(c.lastPost)} · {c.posts7d ?? "—"} posts in 7 days
+              </span>
+            </div>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <FameDisc value={c.scores.fame} size={150} accent={spec.accent} />
               <MomentumBadge value={c.scores.momentum} heat={c.heat} />
@@ -91,8 +99,11 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
                 <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em]">{universe ? `✺ ${universe.name}` : ""}</div>
               </div>
             </div>
+            <a href="#token" className="mt-5 block max-w-md">
+              <TokenChip t={tokenCard(c)} />
+            </a>
           </div>
-          <div className="relative order-1 h-[54vh] lg:order-2 lg:col-span-5 lg:h-[82vh]">
+          <div className="relative order-1 h-[58vh] lg:order-2 lg:col-span-6 lg:h-[88vh]">
             <Parallax className="absolute inset-0">
               <Portrait c={c} variant="cutout" priority className="absolute inset-x-0 bottom-0 h-full w-full drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)]" />
             </Parallax>
@@ -115,7 +126,15 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
       )}
 
       <div className="h-8" />
-      <ProfileNav accent={spec.accent} />
+      <ProfileNav
+        accent={spec.accent}
+        slug={c.slug}
+        name={c.name}
+        fame={c.scores.fame}
+        momentum={c.scores.momentum}
+        heat={c.heat}
+        status={c.status.code}
+      />
 
       {/* ---------------------------------------------------------- overview */}
       <section id="overview" className="wrap scroll-mt-40 pt-12">
@@ -130,7 +149,10 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
               }`}
             >
               {(stripTrust(c.bio) || "—").split(" / ").map((line, i, all) => (
-                <span key={i} className="block">
+                <span
+                  key={i}
+                  className={`block ${/\S{25,}/.test(line) ? "mt-2 font-mono text-base font-normal normal-case tracking-normal sm:text-lg" : ""}`}
+                >
                   {i === 0 ? "“" : ""}
                   {line}
                   {i === all.length - 1 ? "”" : ""}
@@ -335,6 +357,13 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
         )}
       </section>
 
+      {/* ---------------------------------------------------------- token */}
+      <section id="token" className="wrap scroll-mt-40 pt-24">
+        <p className="kicker mb-3">◎ Token layer · verified only</p>
+        <h2 className="display mb-8 text-6xl sm:text-8xl">Token</h2>
+        <TokenModule t={tokenCard(c)} profileNote={c.token.note} />
+      </section>
+
       {/* ---------------------------------------------------------- posts */}
       <section id="posts" className="wrap scroll-mt-40 pt-24">
         <p className="kicker mb-3">Receipts</p>
@@ -398,13 +427,6 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
             ))}
           </div>
         )}
-      </section>
-
-      {/* ---------------------------------------------------------- token */}
-      <section id="token" className="wrap scroll-mt-40 pt-24">
-        <p className="kicker mb-3">Optional layer</p>
-        <h2 className="display mb-8 text-6xl sm:text-8xl">Token</h2>
-        <TokenPanel c={c} accent={spec.accent} />
       </section>
 
       {/* ---------------------------------------------------------- sources */}
@@ -508,8 +530,8 @@ function RelationCard({ r }: { r: ReturnType<typeof relationshipsOf>[number] }) 
   const spec = portraitOf(o.slug);
   const inner = (
     <>
-      <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-3xl" style={{ background: spec.accent }}>
-        <Portrait c={o} className="absolute inset-0 h-full w-full" />
+      <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-3xl" style={avatarBg(o.slug)}>
+        <Portrait c={o} variant="compact" className="absolute inset-0 h-full w-full" />
       </span>
       <span className="min-w-0 flex-1">
         <span className="flex flex-wrap items-center gap-1.5">
@@ -561,74 +583,5 @@ function PostCard({ title, post, accent, big = false }: { title: string; post: N
       </div>
       <span className="relative mt-6 font-mono text-xs uppercase tracking-[0.14em]">Open on Instagram ↗</span>
     </a>
-  );
-}
-
-function TokenPanel({ c, accent }: { c: Character; accent: string }) {
-  const t = c.token;
-  const verified = t.status === "IG_OBSERVED";
-  return (
-    <div className="grid gap-4 lg:grid-cols-12">
-      <div className={`panel relative overflow-hidden p-6 sm:p-8 lg:col-span-7 ${verified ? "" : "bg-paper2"}`}>
-        {verified ? (
-          <>
-            <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full opacity-50" style={{ background: accent }} />
-            <p className="kicker relative flex items-center gap-2">
-              Token linked on Instagram <TrustTag trust="OBSERVED" />
-            </p>
-            <p className="display relative mt-3 text-6xl sm:text-7xl">{t.ticker ?? "Contract in bio"}</p>
-            <div className="relative mt-3 flex flex-wrap gap-2">
-              {t.chain && <span className="chip bg-ink text-white">◎ {t.chain}</span>}
-              {t.contractInBio && <span className="chip bg-white ring-1 ring-ink/10">Contract address in bio</span>}
-            </div>
-            <p className="relative mt-4 text-sm text-ink/70">{t.note}</p>
-            {t.url && (
-              <a
-                href={t.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative mt-5 inline-block rounded-full bg-ink px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-white"
-              >
-                View token ↗
-              </a>
-            )}
-          </>
-        ) : (
-          <>
-            <p className="kicker">Token</p>
-            <p className="display mt-3 text-5xl text-ink/40 sm:text-6xl">No verified token</p>
-            <p className="mt-4 text-sm text-ink/70">
-              Nothing token-related was observed on this Instagram profile.{" "}
-              {t.note && !/^none/i.test(t.note) ? stripTrust(t.note) : ""}
-            </p>
-          </>
-        )}
-      </div>
-      <div className="panel p-6 lg:col-span-5">
-        <p className="kicker mb-3">Other mentions · not verified</p>
-        {t.reported || t.userSupplied ? (
-          <ul className="flex flex-col gap-3 text-sm">
-            {t.reported && (
-              <li>
-                <TrustTag trust="UNKNOWN" className="mr-2" />
-                Reported off-Instagram: {t.reported}
-              </li>
-            )}
-            {t.userSupplied && (
-              <li>
-                <TrustTag trust="UNKNOWN" className="mr-2" />
-                Ticker supplied with the research brief: <span className="font-mono">{t.userSupplied}</span>. Not seen on the profile.
-              </li>
-            )}
-          </ul>
-        ) : (
-          <p className="text-sm text-muted">None.</p>
-        )}
-        <p className="mt-5 text-xs leading-relaxed text-muted">
-          Tokens are a secondary layer. We only call a token verified when the character’s own Instagram shows it, and we never
-          invent tickers. Nothing here is financial advice.
-        </p>
-      </div>
-    </div>
   );
 }

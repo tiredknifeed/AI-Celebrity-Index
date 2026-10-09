@@ -2,47 +2,52 @@
 
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from "framer-motion";
-import type { PointerEvent } from "react";
+import type { CSSProperties, PointerEvent, ReactNode } from "react";
 import Portrait from "./Portrait";
-import { CountUp } from "./Scores";
-import { portraitOf } from "@/data/portraits";
+import { StatusChip } from "./Chips";
+import { FameDisc, MomentumBadge } from "./Scores";
+import { TokenChip } from "./Token";
+import { avatarBg, portraitOf } from "@/data/portraits";
 import type { CardData } from "@/lib/data";
 import { compact } from "@/lib/format";
-import { STATUS_LABEL } from "@/lib/labels";
 
-// Where the supporting cast sits around #1 (percent of the stage), and how
-// strongly each layer reacts to the cursor.
-const SLOTS = [
-  { left: "78%", top: "0%", size: "w-[22%]", depth: 26, rotate: 6 },
-  { left: "-3%", top: "33%", size: "w-[24%]", depth: 18, rotate: -5 },
-  { left: "80%", top: "33%", size: "w-[21%]", depth: 22, rotate: 4 },
-  { left: "3%", top: "0%", size: "w-[20%]", depth: 32, rotate: -8 },
-  { left: "1%", top: "71%", size: "w-[19%]", depth: 14, rotate: 3 },
+// The supporting cast: front row flanking #1, back row raised and smaller.
+const CAST = [
+  { left: "63%", bottom: "0%", width: "w-[44%] sm:w-[33%]", z: "z-20", depth: 18, hideMobile: false },
+  { left: "-4%", bottom: "0%", width: "w-[44%] sm:w-[33%]", z: "z-20", depth: 18, hideMobile: false },
+  { left: "81%", bottom: "27%", width: "w-[21%]", z: "z-10", depth: 30, hideMobile: true },
+  { left: "-6%", bottom: "29%", width: "w-[21%]", z: "z-10", depth: 30, hideMobile: true },
 ];
 
+export interface CoverLine {
+  kicker: string;
+  text: string;
+  href: string;
+}
+
+/** Magazine-cover hero: the characters answer the headline. */
 export default function Hero({
   lead,
   cast,
   peakLikes,
   asOf,
+  lines,
 }: {
   lead: CardData;
   cast: CardData[];
   peakLikes: number | null;
   asOf: string;
+  lines: CoverLine[];
 }) {
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const sx = useSpring(mx, { stiffness: 60, damping: 18 });
   const sy = useSpring(my, { stiffness: 60, damping: 18 });
-
   const onMove = (e: PointerEvent<HTMLElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
     mx.set((e.clientX - r.left) / r.width - 0.5);
     my.set((e.clientY - r.top) / r.height - 0.5);
   };
-
-  const leadSpec = portraitOf(lead.slug);
 
   return (
     <section
@@ -51,163 +56,112 @@ export default function Hero({
         mx.set(0);
         my.set(0);
       }}
-      className="relative min-h-[100svh] overflow-hidden pb-10 pt-24 sm:pt-28"
+      className="relative overflow-hidden pt-20"
+      style={avatarBg(lead.slug)}
     >
-      {/* giant rank numeral */}
-      <Layer x={sx} y={sy} depth={-10} className="pointer-events-none absolute -right-[6vw] top-[6vh] select-none">
-        <span className="display block text-[46vw] leading-none text-ink/[0.045] md:text-[34vw]">01</span>
-      </Layer>
+      <div className="grain pointer-events-none absolute inset-0 opacity-60" />
 
-      <div className="wrap relative grid items-center gap-8 lg:grid-cols-12">
-        <div className="relative z-20 lg:col-span-5">
-          <motion.p
-            className="kicker mb-5 flex items-center gap-2"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <span className="h-2 w-2 rounded-full bg-live" /> The live index of AI celebrities.
-          </motion.p>
-          <motion.h1
-            className="display text-[17vw] sm:text-[13vw] lg:text-[7.4vw] xl:text-[7rem]"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          >
-            Who owns
-            <br />
-            the internet
-            <br />
-            <span className="relative inline-block">
-              today?
-              <motion.svg
-                viewBox="0 0 300 30"
-                className="absolute -bottom-5 left-0 w-full"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-              >
-                <motion.path
-                  d="M4 20 C80 6 200 6 296 18"
-                  fill="none"
-                  stroke={leadSpec.accent}
-                  strokeWidth={9}
-                  strokeLinecap="round"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ delay: 0.6, duration: 0.8 }}
-                />
-              </motion.svg>
-            </span>
-          </motion.h1>
-          <p className="mt-8 max-w-md text-[17px] leading-relaxed text-ink/75">
-            AI characters are becoming internet celebrities. Some go viral overnight, some run whole universes, some
-            fight each other. This is where you find out who is big, who is growing, and who knows who.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/chart/"
-              className="rounded-full bg-ink px-7 py-4 font-mono text-[13px] font-medium uppercase tracking-[0.14em] text-white shadow-lift transition-transform hover:-translate-y-0.5"
-            >
-              View the index →
-            </Link>
-            <Link
-              href="/network/"
-              className="rounded-full border-2 border-ink px-7 py-[14px] font-mono text-[13px] font-medium uppercase tracking-[0.14em] transition-colors hover:bg-ink hover:text-white"
-            >
-              Explore the network
-            </Link>
-          </div>
-          <p className="kicker mt-6">Last updated {asOf}</p>
-        </div>
+      {/* masthead */}
+      <div className="wrap relative z-40 flex items-center justify-between pt-4 font-mono text-[10.5px] uppercase tracking-[0.2em] text-ink/70 sm:pt-6">
+        <span>The live index of AI celebrities</span>
+        <span className="hidden sm:inline">Issue · {asOf}</span>
+      </div>
 
-        {/* stage */}
-        <div className="relative z-10 mx-auto aspect-[1/1] w-full max-w-[760px] lg:col-span-7">
-          {cast.slice(0, SLOTS.length).map((c, i) => (
-            <Satellite key={c.slug} c={c} slot={SLOTS[i]} x={sx} y={sy} delay={0.15 + i * 0.08} />
-          ))}
+      {/* stage */}
+      <div className="relative mx-auto h-[500px] max-w-[1600px] sm:h-[min(80svh,900px)] sm:min-h-[560px]">
+        {/* the headline sits behind the heads */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute inset-x-0 top-[1%] z-0 select-none px-3 text-center"
+        >
+          <span className="display block whitespace-nowrap text-[16vw] leading-[0.8] text-ink sm:text-[15vw] xl:text-[14rem]">Who owns</span>
+          <span className="sr-only">the internet today?</span>
+        </motion.h1>
+        {/* second line rides in front of the cast, outlined so it reads over faces */}
+        <motion.p
+          aria-hidden
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
+          className="display pointer-events-none absolute inset-x-0 top-[13%] z-40 select-none px-3 text-center text-[9.5vw] leading-[0.85] text-white sm:top-[19%] sm:text-[6.6vw] xl:text-[6.2rem]"
+          style={{ WebkitTextStroke: "0.06em #141414", paintOrder: "stroke fill", textShadow: "0 8px 0 rgba(20,20,20,0.15)" }}
+        >
+          the internet today?
+        </motion.p>
 
-          <Layer x={sx} y={sy} depth={10} className="absolute left-[22%] top-[6%] w-[57%]">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92, y: 40 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <Link href={`/c/${lead.slug}/`} className="group relative block aspect-[4/5]" aria-label={`${lead.name} profile`}>
-                <div
-                  className="absolute inset-x-[2%] bottom-0 top-[14%] rounded-[44%_44%_2.5rem_2.5rem] shadow-lift"
-                  style={{ background: leadSpec.accent }}
+        {cast.slice(0, CAST.length).map((c, i) => (
+          <CastMember key={c.slug} c={c} slot={CAST[i]} x={sx} y={sy} delay={0.2 + i * 0.08} />
+        ))}
+
+        {/* cover star */}
+        <Layer x={sx} y={sy} depth={8} className="absolute bottom-0 left-[8%] z-30 w-[84%] sm:left-[27%] sm:w-[46%]">
+          <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}>
+            <Link href={`/c/${lead.slug}/`} className="group relative block aspect-square" aria-label={`${lead.name}, number one`}>
+              <Portrait c={lead} variant="cutout" priority className="absolute inset-0 h-full w-full transition-transform duration-700 group-hover:scale-[1.02]" />
+              <span className="absolute left-[4%] top-[16%] rotate-[-6deg] rounded-2xl bg-ink px-3 py-1.5 font-display text-3xl font-extrabold leading-none text-white shadow-sticker sm:text-6xl">
+                #01
+              </span>
+              {lead.status === "BREAKING_OUT" && (
+                <motion.span
+                  className="absolute right-[2%] top-[26%] rotate-6 rounded-2xl bg-fire px-3 py-1.5 font-display text-base font-extrabold uppercase text-white shadow-sticker sm:text-2xl"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 2.2, repeat: Infinity }}
                 >
-                  <div className="grain absolute inset-0 rounded-[inherit] opacity-70" />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 top-0 overflow-hidden rounded-b-[2.5rem]">
-                  <Portrait
-                    c={lead}
-                    variant="cutout"
-                    priority
-                    className="absolute inset-0 h-full w-full transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
-                </div>
-              </Link>
-            </motion.div>
+                  Breaking out ↑
+                </motion.span>
+              )}
+              {peakLikes && (
+                <span className="absolute bottom-[24%] right-[0%] hidden rotate-[4deg] rounded-2xl bg-white px-3 py-2 shadow-sticker sm:block">
+                  <span className="block font-display text-3xl font-extrabold leading-none">{compact(peakLikes)}</span>
+                  <span className="block font-mono text-[9.5px] uppercase tracking-[0.16em] text-muted">likes · peak post</span>
+                </span>
+              )}
+            </Link>
+          </motion.div>
+        </Layer>
 
-            {/* stickers */}
-            <motion.div
-              className="absolute -right-[4%] top-[18%] rotate-6 rounded-2xl bg-fire px-4 py-2 font-display text-xl font-extrabold uppercase text-white shadow-sticker"
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 2.4, repeat: Infinity }}
-            >
-              {lead.status === "BREAKING_OUT" ? "Breakout ↑" : STATUS_LABEL[lead.status]}
-            </motion.div>
-            {lead.verified && (
-              <div className="absolute -left-[5%] top-[30%] hidden -rotate-6 rounded-full bg-white px-3 py-1.5 sm:block font-mono text-xs font-medium uppercase tracking-[0.12em] shadow-sticker">
-                ✓ Verified
-              </div>
-            )}
-            {peakLikes && (
-              <div className="absolute -left-[8%] bottom-[30%] hidden rotate-[-3deg] rounded-2xl bg-ink px-4 py-3 text-white shadow-sticker sm:block">
-                <div className="font-display text-3xl font-extrabold leading-none">{compact(peakLikes)}</div>
-                <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/60">likes · peak post</div>
-              </div>
-            )}
-          </Layer>
-
-          {/* data overlay */}
-          <Layer x={sx} y={sy} depth={-6} className="absolute bottom-[0%] right-[0%] z-20 hidden w-[min(330px,62%)] lg:block">
-            <LeadCard lead={lead} />
-          </Layer>
+        {/* cover lines */}
+        <div className="absolute bottom-[40%] left-[2%] z-40 hidden w-[15%] flex-col gap-3 2xl:flex">
+          {lines.slice(0, 2).map((l) => (
+            <Link key={l.href + l.kicker} href={l.href} className="rounded-3xl bg-paper/90 p-3 shadow-card backdrop-blur transition-transform hover:-translate-y-1">
+              <span className="block font-mono text-[9.5px] uppercase tracking-[0.16em] text-fire">{l.kicker}</span>
+              <span className="mt-1 block font-display text-[15px] font-extrabold uppercase leading-tight">{l.text} →</span>
+            </Link>
+          ))}
         </div>
-        {/* phones: the data card sits under the stage */}
-        <div className="relative z-20 -mt-4 lg:hidden">
-          <LeadCard lead={lead} />
+      </div>
+
+      {/* cover-star bar */}
+      <div className="relative z-40 bg-ink text-white">
+        <div className="wrap grid items-center gap-5 py-5 md:grid-cols-[1fr_auto] lg:grid-cols-[1fr_auto_minmax(280px,auto)] lg:gap-8">
+          <div className="flex items-center gap-4">
+            <FameDisc value={lead.fame} size={104} accent={portraitOf(lead.slug).accent} />
+            <div className="min-w-0">
+              <div className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-white/60">#01 · Cover star</div>
+              <div className="display text-4xl leading-[0.9] sm:text-5xl">{lead.name}</div>
+              <div className="mt-1.5 flex flex-wrap items-center gap-2">
+                <span className="font-mono text-xs text-white/60">@{lead.handle}</span>
+                <StatusChip code={lead.status} solid />
+              </div>
+            </div>
+          </div>
+          <MomentumBadge value={lead.momentum} heat={lead.heat} size="sm" />
+          <div className="md:col-span-2 lg:col-span-1">
+            <TokenChip t={lead.token} dark />
+            <div className="mt-3 flex gap-2">
+              <Link href="/chart/" className="flex-1 rounded-full bg-white px-4 py-2.5 text-center font-mono text-[11.5px] uppercase tracking-[0.14em] text-ink">
+                View the index →
+              </Link>
+              <Link href="/network/" className="flex-1 rounded-full border border-white/30 px-4 py-2.5 text-center font-mono text-[11.5px] uppercase tracking-[0.14em]">
+                The universe
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function LeadCard({ lead }: { lead: CardData }) {
-  return (
-            <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.5, duration: 0.6 }}
-      className="rounded-4xl bg-paper/95 p-5 shadow-lift ring-1 ring-ink/5 backdrop-blur"
-    >
-      <div className="flex items-baseline justify-between">
-        <span className="display text-5xl">#01</span>
-        <span className="kicker">Index leader</span>
-      </div>
-      <div className="display mt-1 text-[34px] leading-[0.9]">{lead.name}</div>
-      <div className="mt-4 grid grid-cols-2 gap-3">
-        <div className="rounded-2xl bg-ink p-3 text-white">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">★ Fame</div>
-          <CountUp value={lead.fame} className="font-display text-4xl font-extrabold leading-none" />
-        </div>
-        <div className="rounded-2xl bg-fire p-3 text-white">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/80">Momentum</div>
-          <CountUp value={lead.momentum} className="font-display text-4xl font-extrabold leading-none" />
-        </div>
-      </div>
-    </motion.div>
   );
 }
 
@@ -216,26 +170,26 @@ function Layer({
   y,
   depth,
   className,
-  pos,
+  style,
   children,
 }: {
   x: MotionValue<number>;
   y: MotionValue<number>;
   depth: number;
   className?: string;
-  pos?: { left: string; top: string };
-  children: React.ReactNode;
+  style?: CSSProperties;
+  children: ReactNode;
 }) {
   const tx = useTransform(x, (v) => v * depth);
-  const ty = useTransform(y, (v) => v * depth);
+  const ty = useTransform(y, (v) => v * depth * 0.5);
   return (
-    <motion.div style={{ x: tx, y: ty, ...pos }} className={className}>
+    <motion.div style={{ x: tx, y: ty, ...style }} className={className}>
       {children}
     </motion.div>
   );
 }
 
-function Satellite({
+function CastMember({
   c,
   slot,
   x,
@@ -243,37 +197,25 @@ function Satellite({
   delay,
 }: {
   c: CardData;
-  slot: (typeof SLOTS)[number];
+  slot: (typeof CAST)[number];
   x: MotionValue<number>;
   y: MotionValue<number>;
   delay: number;
 }) {
-  const spec = portraitOf(c.slug);
   return (
-    <Layer x={x} y={y} depth={slot.depth} className={`absolute ${slot.size}`} pos={{ left: slot.left, top: slot.top }}>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        style={{ rotate: slot.rotate }}
-      >
-        <Link href={`/c/${c.slug}/`} className="group block animate-floaty" style={{ animationDelay: `${delay * 3}s` }}>
-          <div className="relative aspect-[4/5]">
-            <div className="absolute inset-x-0 bottom-0 top-[22%] rounded-[2rem] shadow-card" style={{ background: spec.accent }} />
-            <div className="absolute inset-0 overflow-hidden rounded-b-[2rem]">
-              <Portrait
-                c={c}
-                variant="cutout"
-                className="absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <span className="absolute -left-2 -top-1 rounded-full bg-ink px-2.5 py-0.5 font-display text-sm font-extrabold text-white shadow-sticker">
-              #{String(c.rank).padStart(2, "0")}
-            </span>
-          </div>
-          <div className="mt-2 truncate text-center font-display text-sm font-extrabold uppercase leading-none sm:text-base">
-            {c.name}
-          </div>
+    <Layer
+      x={x}
+      y={y}
+      depth={slot.depth}
+      className={`absolute ${slot.width} ${slot.z} ${slot.hideMobile ? "hidden sm:block" : ""}`}
+      style={{ left: slot.left, bottom: slot.bottom }}
+    >
+      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}>
+        <Link href={`/c/${c.slug}/`} className="group relative block aspect-square">
+          <Portrait c={c} variant="cutout" className="absolute inset-0 h-full w-full transition-transform duration-500 group-hover:-translate-y-2" />
+          <span className="absolute left-1/2 top-[8%] -translate-x-1/2 whitespace-nowrap rounded-full bg-paper/95 px-3 py-1 font-display text-[11px] font-extrabold uppercase shadow-sticker sm:text-sm">
+            <span className="text-fire">#{String(c.rank).padStart(2, "0")}</span> {c.name}
+          </span>
         </Link>
       </motion.div>
     </Layer>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Portrait from "./Portrait";
-import { portraitOf } from "@/data/portraits";
+import { avatarBg } from "@/data/portraits";
 import { bySlug } from "@/lib/data";
 import type { Universe } from "@/lib/types";
 
@@ -29,10 +29,10 @@ export default function UniverseGrid({ universes }: { universes: Universe[] }) {
                   className={`relative -ml-3 overflow-hidden rounded-full ring-4 ring-card transition-transform duration-300 first:ml-0 group-hover:-translate-y-1 ${
                     m.slug === hub?.slug ? "h-24 w-24" : "h-16 w-16"
                   }`}
-                  style={{ background: portraitOf(m.slug).accent, transitionDelay: `${i * 40}ms`, zIndex: 10 - i }}
+                  style={{ ...avatarBg(m.slug), transitionDelay: `${i * 40}ms`, zIndex: 10 - i }}
                   title={m.name}
                 >
-                  <Portrait c={m} className="absolute inset-0 h-full w-full" />
+                  <Portrait c={m} variant="compact" size={m.slug === hub?.slug ? 512 : 160} className="absolute inset-0 h-full w-full" />
                 </span>
               ))}
               {members.length > 6 && (

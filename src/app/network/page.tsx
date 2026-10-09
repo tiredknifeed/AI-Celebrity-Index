@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import NetworkGraph from "@/components/NetworkGraph";
-import PageHead from "@/components/PageHead";
 import UniverseGrid from "@/components/UniverseGrid";
 import { characters, edges, universes } from "@/lib/data";
 
@@ -21,6 +20,7 @@ export default function NetworkPage() {
       rank: c.ranks?.index ?? null,
       inclusion: c.inclusion,
       followers: c.followers,
+      status: c.status.code,
     }));
   const slugOf = new Map(characters.map((c) => [c.handle, c.slug]));
   const graphEdges = edges
@@ -30,26 +30,25 @@ export default function NetworkPage() {
 
   return (
     <>
-      <PageHead
-        kicker="Social graph"
-        title="The Universe"
-        intro="Every portrait is a character. Size is Fame, the pulse is Momentum, and the lines are real tags, call-outs and storylines found in their posts. Pick a universe to isolate it."
-      >
-        <div className="mt-6 flex flex-wrap gap-2 font-mono text-xs">
-          <span className="chip bg-ink text-white">{nodes.length} characters</span>
+      <header className="wrap flex flex-col justify-between gap-4 pb-4 pt-28 md:flex-row md:items-end">
+        <div>
+          <p className="kicker mb-2">Social graph · {nodes.length} characters</p>
+          <h1 className="display text-6xl sm:text-8xl">The Universe</h1>
+        </div>
+        <div className="flex flex-wrap gap-2 font-mono text-xs md:justify-end">
           {Object.entries(counts).map(([t, n]) => (
             <span key={t} className="chip bg-card shadow-card">
               {n} {t.replace("_", " ").toLowerCase()}
             </span>
           ))}
         </div>
-      </PageHead>
-      <section className="wrap">
+      </header>
+      <section className="px-2 sm:px-4">
         <NetworkGraph nodes={nodes} edges={graphEdges} universes={universes.map(({ id, name, tagline, members }) => ({ id, name, tagline, members }))} />
-        <p className="mt-4 text-sm text-muted">
-          Rival, storyline and collab labels are an analyst reading of the observed tags (INFERRED). Dashed grey lines mean
-          “same universe, no direct tag seen yet”. Real people and brands that characters tag as props are listed on each
-          profile, never drawn as collaborations.
+        <p className="wrap mt-4 text-sm text-muted">
+          Size is Fame, the pulse is Momentum. Hover a portrait for a mini profile, click to focus on its connections. Rival,
+          storyline and collab labels are an analyst reading of observed tags (INFERRED); dashed grey lines mean “same universe, no
+          direct tag seen yet”. Real people and brands tagged as props are listed on profiles, never drawn as collaborations.
         </p>
       </section>
       <section className="wrap mt-20">

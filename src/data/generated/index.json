@@ -78,7 +78,9 @@
     "note": "NONE observed in bio/captions",
     "url": null,
     "reported": "$JEANPHIL (pump.fun, Solana) per Dexerto/Sprites.ai - NOT on IG profile",
-    "userSupplied": "$JEAN"
+    "userSupplied": "$JEAN",
+    "contract": null,
+    "verification": "UNVERIFIED"
    },
    "related": "IN: archibald_brown (9 mentions, rivalry), brigittemacaron_ (4), imranpoppadumb (4), derek.mercer.2006 (2), dequavious_von (2), jadeorlhabit_ (bio 'Love U'), brigitte_macaron_ (2). OUT: stellamccartney (2, brand), lafeve7 (2, real rapper - music)",
    "personality": "OBSERVED: catchphrase 'Oui Madame.'; French captions; shadowboxing ('Jab, crochet. T'as senti le danger?'). INFERRED: suave, deadpan French gentleman-fighter / ladies' man",
@@ -371,7 +373,9 @@
     "note": "NONE - bio explicitly says 'No crypto affiliation yet'",
     "url": null,
     "reported": null,
-    "userSupplied": "$STACHE"
+    "userSupplied": "$STACHE",
+    "contract": null,
+    "verification": "UNVERIFIED"
    },
    "related": "No fictional-character tags/mentions observed in 15 posts",
    "personality": "OBSERVED: 'Hello Darling'; travel/dance diary captions ('Visiting Rio de Janeiro', 'Dressed for the meeting'). INFERRED: polite, oblivious party gentleman",
@@ -620,7 +624,9 @@
     "note": "NONE in bio/captions; handle suffix '.sol' suggests Solana link (INFERRED)",
     "url": null,
     "reported": null,
-    "userSupplied": "$SHORTKING"
+    "userSupplied": "$SHORTKING",
+    "contract": null,
+    "verification": "UNVERIFIED"
    },
    "related": "higgsfield.ai (7), higgsfield.creators (2), higgsfield.soul (1) - AI tool sponsor, not characters",
    "personality": "OBSERVED: bio quotes the film villain's line; captions 'You buggin', 'Feeling fresh', 'Goodnight everyone (say it back)'. INFERRED: pompous tiny tyrant who loves TikTok dance trends",
@@ -880,7 +886,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": "$ARCHIBROWN per Dexerto/Sprites.ai - NOT on IG profile",
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "UNVERIFIED"
    },
    "related": "OUT: jean_philanthrope (9; rivalry), abunuttyofficial (3; 'you're next'), danawhite (3, real), anthonyjoshua (12, real), jonnybones (7, real), ___johnjones___ (5), miketyson (1, real), mighty (13, unknown). IN: percival_ashcrofttt (3)",
    "personality": "OBSERVED: coaching/fight talk ('101 on throwing hands', 'Quick 101'), call-outs ('@jean_philanthrope come to London and find out…'). INFERRED: cocky London boxer, Jean Phil's nemesis",
@@ -1213,7 +1221,9 @@
     "note": "$ABU (bio + 10-02 carousel '$ABU Officially on Chain 🚀')",
     "url": "https://join.pump.fun/HSag/wsvnmbjs",
     "reported": null,
-    "userSupplied": "$ABUJAB"
+    "userSupplied": "$ABUJAB",
+    "contract": null,
+    "verification": "PROFILE"
    },
    "related": "IN: imranpoppadumb (2). No outbound character tags observed",
    "personality": "OBSERVED: 'Dancer | Actor | Comedian'; emoji-only captions, 'Heeywa', 'Habibi got hands'. INFERRED: carefree uncle-dancer",
@@ -1492,7 +1502,9 @@
     "note": "NONE on this account. Copycat @brigitte_macaron_ (268 followers) shows '$MACARON'",
     "url": null,
     "reported": null,
-    "userSupplied": "$MADAME"
+    "userSupplied": "$MADAME",
+    "contract": null,
+    "verification": "UNVERIFIED"
    },
    "related": "OUT: jean_philanthrope (4; 'La Jeanconde', 'your father' lore), dualipa (3, real singer)",
    "personality": "OBSERVED: calls fans 'Macaronies'; 'Your father insisted...', 'They challenged the wrong auntie 💅'. INFERRED: flirtatious, fashion-obsessed Parisian matriarch, implied partner of Jean Phil",
@@ -1731,7 +1743,9 @@
     "note": "$BillSmith + Solana contract address (…pump) in bio",
     "url": "https://pump.fun/coin/zYiF3rA8aWYUuDek3Z3po9NF4V5UDky5nji7Wr6pump",
     "reported": null,
-    "userSupplied": "$FRESHBILL"
+    "userSupplied": "$FRESHBILL",
+    "contract": "zYiF3rA8aWYUuDek3Z3po9NF4V5UDky5nji7Wr6pump",
+    "verification": "CONTRACT"
    },
    "related": "OUT: gucci (5, brand), demna (1, real designer). No fictional-character tags",
    "personality": "OBSERVED: 'If you cross me hold your cross very tight', 'Sorry not sorry you are still early #boxer'. INFERRED: menacing-but-fashionable boxer, crypto-shill voice ('you are still early')",
@@ -1978,7 +1992,9 @@
     "note": "Contract address (…pump) in bio",
     "url": "https://pump.fun/coin/7Xgc5RacHtGzfhw2HukUBk5V986yBbvshr7rrCoopump",
     "reported": "$DRMR per Dexerto/Sprites.ai",
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": "7Xgc5RacHtGzfhw2HukUBk5V986yBbvshr7rrCoopump",
+    "verification": "CONTRACT"
    },
    "related": "jean_philanthrope (2), sickmanai (2), monsterenergy (4, brand), higgsfield.ai (3), fortnite (brand); grid shows Higgsfield 'AI INFLUENCER - short drama' crossover poster",
    "personality": "OBSERVED: sigma/gym captions ('He was mogged.', 'Pumping with GIGACAT'). INFERRED: looksmaxxing gym-bro meme",
@@ -2217,7 +2233,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "casper.iggy (5), candy.greyhound (4), don.gorillo (2), pik.vik1 (2), ia.vacalha (2); called out by archibald_brown",
    "personality": "OBSERVED: fight-record persona ('TIME TO TAKE THE BELT #ufc #monkey'). INFERRED: cocky champion",
@@ -2424,7 +2442,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "abunuttyofficial (4); referenced by archibald_brown ('Casper was the warm-up') and don.gorillo",
    "personality": "INFERRED: underdog fighter dog",
@@ -2607,7 +2627,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "higgsfield.ai (14), malysh_bully (6), valterwalkerufc (3, real), askvenice (3), k.mbappe (real); tagged by abunuttyofficial, sickmanai, ia.vacalha, caramelinho.ia, pik.vik1, evildogi",
    "personality": "OBSERVED: '$1M prize challenge 🥊', 'With the big boss @danawhite'",
@@ -2831,7 +2853,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "abunuttyofficial (2), casper.iggy (2), ufc, jonnybones (real)",
    "personality": "OBSERVED: 'Biggest win of my life', 'I'M COMING HOME 🇦🇲'",
@@ -3027,7 +3051,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "higgsfield.ai (7), cadillac (brand), zaytovenbeatz (real producer); tagged by imranpoppadumb",
    "personality": "OBSERVED: 'NEW CAR 🚨 The Fleetwood Freak', 'I got them Cadillac 7s on me'",
@@ -3221,7 +3247,9 @@
     "note": "$Knightcat (bio) + pump.fun coin link",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "PROFILE"
    },
    "related": "evildogi (8), yesand_ai (5), candy.greyhound (4), capcutapp (4), higgsfield.creators; tagged by derek.mercer.2006",
    "personality": "OBSERVED: lore captions ('For five hundred years, no one fear...'), Korean-language captions",
@@ -3425,7 +3453,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "caramelinho.ia (8), candy.greyhound (6), higgsfield.ai (22)",
    "personality": "OBSERVED: serialized 'Parte 2' episodes featuring Caramelinho",
@@ -3626,7 +3656,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "ia.vacalha (14), candy.greyhound (8), higgsfield.ai (23), roboneo_br",
    "personality": "OBSERVED: training/fight arcs ('Caramelinho treinando...')",
@@ -3811,7 +3843,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "higgsfield.ai (1)",
    "personality": "OBSERVED: 'the shoulders speak', 'yalla saturday'",
@@ -3996,7 +4030,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "dahab.daddy (3), amidoudumont (1)",
    "personality": "OBSERVED: 'Why are they filming me', '#abdoulcheqri'",
@@ -4179,7 +4215,9 @@
     "note": "pump.fun coin link in bio (ticker not shown)",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "PROFILE"
    },
    "related": "archibald_brown (3), egorov_matvey_ (4), sean.dynastyprosper (3), higgsfield.ai",
    "personality": "OBSERVED: 'I'll be coming for you soon...'",
@@ -4370,7 +4408,9 @@
     "note": "$Edmond (bio)",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "PROFILE"
    },
    "related": "none observed",
    "personality": "OBSERVED: 'Handsome and strong'; 'One of the most iconic duos'",
@@ -4545,7 +4585,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "none observed",
    "personality": "OBSERVED: 'It's all about pleasing the cr[owd]'",
@@ -4720,7 +4762,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "jean_philanthrope (4), abu.shalab (2), miltonbumford (2), derek.mercer.2006 (1)",
    "personality": "OBSERVED: 'dancing for worldwide peace ✌️'",
@@ -4924,7 +4968,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "none observed",
    "personality": "OBSERVED: 'Ready for the Olympics', 'Tip toe'n in my Jordan's!'",
@@ -5107,7 +5153,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "devonlindner_ (4), dance_sfinks_official (2), robotron.bot (2)",
    "personality": "OBSERVED: 'Hi, Fellas!'",
@@ -5282,7 +5330,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "ms.stretchy (4), mahsunco (3, sponsor), ksenia_velart (3)",
    "personality": "OBSERVED: 'How did my feet fit in these shoes?'",
@@ -5464,7 +5514,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "ksenia_velart (3), adrielusho (2)",
    "personality": "INFERRED: playful counterpart to Mr. Stretchy",
@@ -5653,7 +5705,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "higgsfield.ai (13), candy.greyhound (2), k.mbappe (2, real); tagged by abunuttyofficial",
    "personality": "OBSERVED: 'Shadow & Milo's World'",
@@ -5845,7 +5899,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "sabrinacarpenter (2, real), coachella (2), johnliwag (2)",
    "personality": "INFERRED: Gen-Z musician/robot with long-running storyline",
@@ -6014,7 +6070,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "blurstudios.ai (4, creator), auntieauroraa (3), nananessaa (2), madonna (2, real), kalshi (brand)",
    "personality": "INFERRED: brutally honest rich granny",
@@ -6210,7 +6268,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "nananessaa (4), grannyspills (1), higgsfield.ai (9)",
    "personality": "OBSERVED: 'Auntie didn't get rich knitting.'",
@@ -6406,7 +6466,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "spaceykacey (2), marcrebillet (1, real)",
    "personality": "INFERRED: wholesome dancer",
@@ -6574,7 +6636,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "openart_ai (14, tool), theclueless.ai (5, creator agency)",
    "personality": "INFERRED: pink-haired fitness influencer",
@@ -6756,7 +6820,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "tamanaramen (6), ayachoww (5), complexjapan (4)",
    "personality": "INFERRED: Tokyo fashion icon",
@@ -6934,7 +7000,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "lukazelu (2)",
    "personality": "INFERRED: glamorous traveller",
@@ -7112,7 +7180,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "thinkculturefoundation (10), caratlane (2, brand)",
    "personality": "INFERRED: travel/lifestyle",
@@ -7286,7 +7356,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "thediigitals (40, creator), openart_ai (41), cameron.gram (30, fellow virtual model)",
    "personality": "INFERRED: high-fashion model",
@@ -7478,7 +7550,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "none observed",
    "personality": "INFERRED: chatty cryptid vlogger",
@@ -7654,7 +7728,9 @@
     "note": "NONE observed",
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "particle6productions (8, creator), elinehq (7), piersmorgan (3, real), zurichfilm",
    "personality": "INFERRED: aspiring screen actress",
@@ -7840,7 +7916,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "jean_philanthrope (2)",
    "personality": null,
@@ -7998,7 +8076,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "jean_philanthrope",
    "personality": null,
@@ -8157,7 +8237,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": "candy.greyhound (2), sickmanai (2)",
    "personality": null,
@@ -8317,7 +8399,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": null,
    "personality": null,
@@ -8460,7 +8544,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": null,
    "personality": null,
@@ -8603,7 +8689,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": null,
    "personality": null,
@@ -8734,7 +8822,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": null,
    "personality": null,
@@ -8865,7 +8955,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": null,
    "personality": null,
@@ -9000,7 +9092,9 @@
     "note": null,
     "url": null,
     "reported": null,
-    "userSupplied": null
+    "userSupplied": null,
+    "contract": null,
+    "verification": "NONE"
    },
    "related": null,
    "personality": null,

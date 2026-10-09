@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Portrait from "./Portrait";
-import { portraitOf } from "@/data/portraits";
+import { avatarBg, portraitOf } from "@/data/portraits";
 import type { Story } from "@/lib/data";
 
 const TONES: Record<string, string> = {
@@ -23,7 +23,7 @@ export default function Stories({ stories }: { stories: Story[] }) {
         const spec = portraitOf(lead.c.slug);
         return (
           <article key={s.id} className="panel flex flex-col overflow-hidden">
-            <Link href={`/c/${lead.c.slug}/`} className="group relative block h-56 overflow-hidden" style={{ background: spec.accent }}>
+            <Link href={`/c/${lead.c.slug}/`} className="group relative block h-56 overflow-hidden" style={avatarBg(lead.c.slug)}>
               <div className="grain absolute inset-0 opacity-60" />
               <Portrait
                 c={lead.c}
@@ -48,8 +48,8 @@ export default function Stories({ stories }: { stories: Story[] }) {
                   className="flex items-center gap-3 rounded-2xl p-1.5 transition-colors hover:bg-ink/[0.04]"
                 >
                   <span className="w-5 font-mono text-xs text-muted">{i + 2}</span>
-                  <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-xl" style={{ background: portraitOf(it.c.slug).accent }}>
-                    <Portrait c={it.c} className="absolute inset-0 h-full w-full" />
+                  <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-xl" style={avatarBg(it.c.slug)}>
+                    <Portrait c={it.c} variant="compact" className="absolute inset-0 h-full w-full" />
                   </span>
                   <span className="min-w-0 flex-1 truncate font-display text-[15px] font-extrabold uppercase">{it.c.name}</span>
                   <span className="font-display text-lg font-extrabold tabular-nums">{it.stat}</span>

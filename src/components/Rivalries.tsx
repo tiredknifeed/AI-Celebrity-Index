@@ -4,7 +4,8 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Portrait from "./Portrait";
-import { portraitOf } from "@/data/portraits";
+import { FameDisc } from "./Scores";
+import { avatarBg, portraitOf } from "@/data/portraits";
 import type { CardData } from "@/lib/data";
 import { compact } from "@/lib/format";
 
@@ -111,13 +112,16 @@ export default function Rivalries({ rivalries }: { rivalries: RivalryData[] }) {
 function Side({ c, align }: { c: RivalSide; align: "left" | "right" }) {
   const spec = portraitOf(c.slug);
   return (
-    <Link href={`/c/${c.slug}/`} className="group relative block aspect-[4/5] overflow-hidden sm:aspect-[16/11] lg:aspect-[16/9]" style={{ background: spec.accent }}>
+    <Link href={`/c/${c.slug}/`} className="group relative block aspect-[4/5] overflow-hidden sm:aspect-[16/11] lg:aspect-[16/9]" style={avatarBg(c.slug)}>
       <div className="grain absolute inset-0 opacity-60" />
       <Portrait
         c={c}
         variant="cutout"
         className={`absolute bottom-0 h-[92%] w-full transition-transform duration-500 group-hover:scale-105 ${align === "right" ? "-scale-x-100 group-hover:-scale-x-105" : ""}`}
       />
+      <div className={`absolute bottom-4 ${align === "left" ? "left-4" : "right-4"}`}>
+        <FameDisc value={c.fame} size={84} accent={portraitOf(c.slug).accent} />
+      </div>
       <div className={`absolute top-4 ${align === "left" ? "left-4" : "right-4 text-right"}`}>
         <div className="display text-2xl leading-[0.9] sm:text-4xl">{c.name}</div>
         <div className="mt-1 font-mono text-[11px]">#{c.rank} in the index</div>

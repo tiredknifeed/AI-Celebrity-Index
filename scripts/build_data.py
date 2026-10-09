@@ -478,6 +478,19 @@ def build(xlsx):
             token["reported"] = ext_tok
         if user_tok and not is_none_like(user_tok):
             token["userSupplied"] = user_tok
+        # Verification level (never invented):
+        #   CONTRACT   - full contract address shown on the character's own profile
+        #   PROFILE    - ticker / token link on the profile, contract not captured
+        #   UNVERIFIED - ticker only reported off-Instagram or supplied with the brief
+        #   NONE       - nothing token-related found
+        ca = re.search(r"CA:\s*([1-9A-HJ-NP-Za-km-z]{32,48})", bio or "", re.I)
+        token["contract"] = ca.group(1) if ca else None
+        if token["status"] == "IG_OBSERVED":
+            token["verification"] = "CONTRACT" if token["contract"] else "PROFILE"
+        elif token["reported"] or token["userSupplied"]:
+            token["verification"] = "UNVERIFIED"
+        else:
+            token["verification"] = "NONE"
 
         # scores -----------------------------------------------------------
         def f(col):

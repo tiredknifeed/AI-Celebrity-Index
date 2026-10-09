@@ -16,9 +16,11 @@ import {
 import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as RPointerEvent } from "react";
 import CharacterArt from "./CharacterArt";
 import { HEAT_STYLE } from "./Chips";
-import { portraitOf } from "@/data/portraits";
+import { avatarBg, portraitOf } from "@/data/portraits";
 import { EDGE_COLOR, EDGE_LABEL } from "@/lib/labels";
-import type { EdgeType, Heat, Inclusion } from "@/lib/types";
+import type { EdgeType, Heat, Inclusion, StatusCode } from "@/lib/types";
+import { StatusChip } from "./Chips";
+import { FameDisc, HeatBar } from "./Scores";
 
 export interface GraphNode {
   slug: string;
@@ -31,6 +33,7 @@ export interface GraphNode {
   rank: number | null;
   inclusion: Inclusion;
   followers: number;
+  status: StatusCode;
 }
 
 export interface GraphEdge {
@@ -84,11 +87,15 @@ export default function NetworkGraph({
   nodes,
   edges,
   universes,
+  height = "h-[calc(100svh-150px)]",
 }: {
   nodes: GraphNode[];
   edges: GraphEdge[];
   universes: GraphUniverse[];
+  /** Tailwind height class for the canvas. */
+  height?: string;
 }) {
+  const boxRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const simRef = useRef<Simulation<SimNode, SimLink> | null>(null);
   const [, setTick] = useState(0);
@@ -174,15 +181,27 @@ export default function NetworkGraph({
     if (f && nodes.some((n) => n.slug === f)) setSelected(f);
   }, [universes, nodes]);
 
-  // Fly to an isolated universe (or back out to the full map).
+  // Fly to a selected character and its links, an isolated universe, or back out.
   useEffect(() => {
     setSmooth(true);
     const t = setTimeout(() => setSmooth(false), 700);
-    if (!focusU) {
+    let ms: SimNode[] = [];
+    if (selected) {
+      const keep = new Set([selected]);
+      for (const l of simLinks) {
+        const a = typeof l.source === "object" ? (l.source as SimNode).slug : (l.source as string);
+        const b = typeof l.target === "object" ? (l.target as SimNode).slug : (l.target as string);
+        if (a === selected) keep.add(b);
+        if (b === selected) keep.add(a);
+      }
+      ms = simNodes.filter((n) => keep.has(n.slug) && n.x !== undefined);
+    } else if (focusU) {
+      ms = simNodes.filter((n) => n.universe === focusU && n.x !== undefined);
+    }
+    if (!ms.length) {
       setView(homeView(narrow));
       return () => clearTimeout(t);
     }
-    const ms = simNodes.filter((n) => n.universe === focusU && n.x !== undefined);
     if (!ms.length) return () => clearTimeout(t);
     const minX = Math.min(...ms.map((n) => n.x! - n.r));
     const maxX = Math.max(...ms.map((n) => n.x! + n.r));
@@ -194,7 +213,7 @@ export default function NetworkGraph({
     setView({ k, x: W / 2 - cx * k, y: H / 2 - cy * k });
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [focusU, narrow]);
+  }, [focusU, selected, narrow]);
 
   // --------------------------------------------------------------- pointer
   const drag = useRef<{ mode: "node" | "pan"; slug?: string; sx: number; sy: number; moved: boolean; vx: number; vy: number } | null>(null);
@@ -320,6 +339,50 @@ export default function NetworkGraph({
         }))
     : [];
 
+  let hoverCard: React.ReactNode = null;
+  const hv = hover && hover !== selected ? bySlug.get(hover) : null;
+  if (hv && hv.x !== undefined && svgRef.current && boxRef.current) {
+    const svg = svgRef.current;
+    const pt = svg.createSVGPoint();
+    pt.x = hv.x * view.k + view.x;
+    pt.y = (hv.y! - hv.r) * view.k + view.y;
+    const ctm = svg.getScreenCTM();
+    if (ctm) {
+      const sp = pt.matrixTransform(ctm);
+      const box = boxRef.current.getBoundingClientRect();
+      const left = Math.min(Math.max(sp.x - box.left, 140), box.width - 140);
+      const top = sp.y - box.top;
+      hoverCard = (
+        <div
+          className="pointer-events-none absolute z-20 hidden w-[260px] -translate-x-1/2 -translate-y-full rounded-3xl bg-paper p-3 shadow-lift md:block"
+          style={{ left, top: Math.max(top - 10, 250) }}
+        >
+          <div className="flex items-center gap-3">
+            <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-2xl" style={avatarBg(hv.slug)}>
+              {portraitOf(hv.slug).avatar ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={`/avatars/${hv.slug}/avatar-160.webp`} alt="" className="absolute inset-0 h-full w-full object-cover" />
+              ) : (
+                <CharacterArt art={portraitOf(hv.slug).art} name={hv.name} className="absolute inset-0 h-full w-full" />
+              )}
+            </span>
+            <div className="min-w-0 flex-1">
+              <div className="truncate font-display text-base font-extrabold uppercase leading-tight">{hv.name}</div>
+              <div className="font-mono text-[10.5px] text-muted">{hv.rank ? `#${hv.rank} in the index` : "Watchlist"}</div>
+              <div className="mt-1">
+                <StatusChip code={hv.status} />
+              </div>
+            </div>
+            <FameDisc value={hv.fame} size={48} accent={portraitOf(hv.slug).accent} />
+          </div>
+          <div className="mt-2.5">
+            <HeatBar value={hv.momentum} heat={hv.heat} />
+          </div>
+        </div>
+      );
+    }
+  }
+
   return (
     <div className="relative">
       {/* universe filter */}
@@ -351,13 +414,13 @@ export default function NetworkGraph({
         ))}
       </div>
 
-      <div className="relative overflow-hidden rounded-5xl bg-card shadow-card">
+      <div ref={boxRef} className="relative overflow-hidden rounded-5xl bg-card shadow-card">
         <div className="grain pointer-events-none absolute inset-0 opacity-50" />
         <svg
           ref={svgRef}
           viewBox={`0 0 ${W} ${H}`}
           preserveAspectRatio={narrow ? "xMidYMid slice" : "xMidYMid meet"}
-          className="relative block h-[78vh] min-h-[520px] w-full touch-none select-none"
+          className={`relative block ${height} min-h-[520px] w-full touch-none select-none`}
           onPointerDown={onBgDown}
           onPointerMove={onMove}
           onPointerUp={onUp}
@@ -371,6 +434,15 @@ export default function NetworkGraph({
                 <circle r={n.r} />
               </clipPath>
             ))}
+            {simNodes.map((n) => {
+              const bg = avatarBg(n.slug).background.match(/rgb\([^)]*\)/g) ?? [];
+              return (
+                <radialGradient key={`g-${n.slug}`} id={`bg-${n.slug}`} cx="50%" cy="36%" r="70%">
+                  <stop offset="0%" stopColor={bg[0]} />
+                  <stop offset="100%" stopColor={bg[1]} />
+                </radialGradient>
+              );
+            })}
           </defs>
           <g
             style={{
@@ -453,16 +525,16 @@ export default function NetworkGraph({
                     />
                   )}
                   <circle r={n.r + 4} fill="#fff" />
-                  <circle r={n.r} fill={spec.accent} />
+                  <circle r={n.r} fill={`url(#bg-${n.slug})`} />
                   <g clipPath={`url(#clip-${n.slug})`}>
-                    {spec.photo ? (
+                    {spec.avatar ? (
                       <image
-                        href={`/portraits/${n.slug}.webp`}
+                        href={`/avatars/${n.slug}/avatar-${n.r > 34 ? 512 : 160}.webp`}
                         x={-n.r}
                         y={-n.r}
                         width={n.r * 2}
                         height={n.r * 2}
-                        preserveAspectRatio="xMidYMin slice"
+                        preserveAspectRatio="xMidYMid slice"
                       />
                     ) : (
                       <svg x={-200 * s} y={-212 * s} width={400 * s} height={480 * s} overflow="visible">
@@ -511,6 +583,9 @@ export default function NetworkGraph({
           ))}
         </div>
 
+        {/* hover mini-profile */}
+        {hoverCard}
+
         {/* legend */}
         <div className="absolute bottom-4 right-4 hidden max-w-[220px] rounded-3xl bg-paper/90 p-4 text-xs shadow-card backdrop-blur md:block">
           <p className="kicker mb-2">Lines</p>
@@ -543,10 +618,10 @@ export default function NetworkGraph({
               className="absolute inset-x-3 bottom-3 max-h-[60%] overflow-y-auto rounded-4xl bg-paper p-4 shadow-lift sm:inset-x-auto sm:right-4 sm:w-[340px]"
             >
               <div className="flex items-center gap-3">
-                <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl" style={{ background: portraitOf(sel.slug).accent }}>
-                  {portraitOf(sel.slug).photo ? (
+                <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl" style={avatarBg(sel.slug)}>
+                  {portraitOf(sel.slug).avatar ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={`/portraits/${sel.slug}.webp`} alt="" className="absolute inset-0 h-full w-full object-cover object-top" />
+                    <img src={`/avatars/${sel.slug}/avatar-160.webp`} alt="" className="absolute inset-0 h-full w-full object-cover" />
                   ) : (
                     <CharacterArt art={portraitOf(sel.slug).art} name={sel.name} className="absolute inset-0 h-full w-full" />
                   )}

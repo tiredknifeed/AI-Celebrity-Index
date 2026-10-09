@@ -1,0 +1,90 @@
+{
+  "_doc": "Per-character source + framing anchors for scripts/avatars/normalize.py. Anchors are fractions of the source image: cx = face centre x; eye / chin = y of eye line and chin; top = y of the crown (null when the source crops it off). See docs/AVATAR_STYLE.md.",
+  "derek-mercer": {
+    "source": "derek-mercer.jpg",
+    "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)",
+    "model": "u2net_human_seg",
+    "cx": 0.5,
+    "eye": 0.4,
+    "chin": 0.66,
+    "top": 0.08
+  },
+  "abu-nutty": {
+    "source": "abu-nutty.jpg",
+    "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)",
+    "model": "isnet-general-use",
+    "cx": 0.56,
+    "eye": 0.29,
+    "chin": 0.47,
+    "top": 0.19,
+    "_why": "Framed wider than the rule so the signature fight glove stays in shot.",
+    "eyeY": 0.34,
+    "eyeChin": 0.15
+  },
+  "jean-phil": {
+    "source": "jean-phil.jpg",
+    "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)",
+    "model": "u2net_human_seg",
+    "cx": 0.53,
+    "eye": 0.37,
+    "chin": 0.68,
+    "top": 0.06
+  },
+  "abu-shalab": {
+    "source": "abu-shalab.jpg",
+    "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)",
+    "model": "u2net_human_seg",
+    "cx": 0.5,
+    "eye": 0.35,
+    "chin": 0.7,
+    "top": 0.03
+  },
+  "mr-stretchy": {
+    "source": "mr-stretchy.jpg",
+    "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)",
+    "model": "isnet-general-use",
+    "cx": 0.52,
+    "eye": 0.38,
+    "chin": 0.83,
+    "top": 0.06
+  },
+  "nobody-sausage": {
+    "source": "nobody-sausage.jpg",
+    "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)",
+    "model": "isnet-general-use",
+    "cx": 0.5,
+    "eye": 0.55,
+    "chin": 0.8,
+    "top": 0.2,
+    "graphic": true,
+    "eyeY": 0.6,
+    "_why": "Its eyes sit mid-body, so the eye line is placed lower to keep the whole shape in frame."
+  },
+  "benjamin-stachio": {
+    "source": "benjamin-stachio.png",
+    "origin": "Still from the supplied promo video (00:03.6)",
+    "model": "u2net_human_seg",
+    "cx": 0.48,
+    "eye": 0.12,
+    "chin": 0.52,
+    "top": null
+  },
+  "lord-farquaad": {
+    "source": "lord-farquaad.png",
+    "origin": "Still from the supplied promo video (00:03.6)",
+    "model": "u2net_human_seg",
+    "cx": 0.32,
+    "eye": 0.27,
+    "chin": 0.55,
+    "top": null
+  },
+  "bill-smith-prince": {
+    "source": "bill-smith-prince.png",
+    "origin": "Still from the supplied promo video (00:03.6)",
+    "model": "u2net_human_seg",
+    "cx": 0.5,
+    "eye": 0.45,
+    "chin": 0.68,
+    "top": 0.06
+  }
+}
