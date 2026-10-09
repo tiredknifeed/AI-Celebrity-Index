@@ -6,24 +6,35 @@ the streams appear together. Source frame: [`assets/promo-grid-frame.png`](asset
 Tiles near the edges of the grid are out of focus, so tickers marked with `?`
 are best guesses.
 
-| # | Name | Ticker |
-|---|------|--------|
-| 1 | Trump | `$TRUMPLIVE` |
-| 2 | Nikita Bier | `$BOAR` |
-| 3 | Dogefather | `?` (unreadable) |
-| 4 | Justin Sun | `$SUN` ? |
-| 5 | Benjamin Stachio | `$STACHE` |
-| 6 | Lord Farquaad | `$SHORTKING` |
-| 7 | Archibald Brown | `?` (unreadable) |
-| 8 | Tate | `?` (unreadable) |
-| 9 | Abu Shalab | `$ABUJAB` |
-| 10 | Jean Phil | `$JEAN` |
-| 11 | Brigitte Macaron | `$MADAME` |
-| 12 | Dave ? | `?` (unreadable) |
-| 13 | MrBeast | `$MRBEAST` ? |
-| 14 | Ansem | `$ANSEMLIVE` |
-| 15 | Bill Smith Prince | `$FRESHBILL` |
-| 16 | Vitalik Buterin | `$VITALIK` ? |
-| 17 | Threadguy | `$THREADGUY` ? |
-| 18 | BNB Holder | `$CZ` |
-| 19 | Toly | `?` (unreadable) |
+## AI influencers (fictional characters)
+
+| # | Name | Ticker | Note |
+|---|------|--------|------|
+| 1 | Jean Phil | `$JEAN` | Main character of the promo |
+| 2 | Benjamin Stachio | `$STACHE` | |
+| 3 | Lord Farquaad | `$SHORTKING` | Parody of the Shrek character |
+| 4 | Archibald Brown | `?` (unreadable) | |
+| 5 | Abu Shalab | `$ABUJAB` | |
+| 6 | Brigitte Macaron | `$MADAME` | Parody of Brigitte Macron |
+| 7 | Bill Smith Prince | `$FRESHBILL` | Parody of Will Smith / The Fresh Prince |
+
+Uncertain: **Derek ?** (ticker unreadable): an edge tile that is too blurry
+to tell whether it is an AI character or a real streamer.
+
+## Real people (not AI influencers)
+
+These tiles show real public figures, most of them from crypto Twitter:
+
+| Name | Ticker | Who |
+|------|--------|-----|
+| Trump | `$TRUMPLIVE` | Donald Trump |
+| Nikita Bier | `$BOAR` | Nikita Bier |
+| Dogefather | `?` (unreadable) | Elon Musk |
+| Justin Sun | `$SUN` ? | Justin Sun |
+| Tate | `?` (unreadable) | Andrew Tate |
+| MrBeast | `$MRBEAST` ? | MrBeast |
+| Ansem | `$ANSEMLIVE` | Ansem (crypto trader) |
+| Vitalik Buterin | `$VITALIK` ? | Vitalik Buterin |
+| Threadguy | `$THREADGUY` ? | Threadguy (crypto streamer) |
+| BNB Holder | `$CZ` | Changpeng Zhao (CZ) |
+| Toly | `?` (unreadable) | Anatoly Yakovenko (Solana) |
