@@ -238,18 +238,18 @@
     "SOCIAL GRAPH": "NO"
   },
   "review": {
-    "include": false,
+    "include": true,
     "name": "Gru",
-    "characterType": null,
-    "universe": null,
-    "parodyOf": null,
-    "recognizability": null,
+    "characterType": "AI parody character (animated-film villain)",
+    "universe": "higgsfield-network",
+    "parodyOf": "Gru from Despicable Me (Illumination)",
+    "recognizability": 4,
     "distinct": {
-      "visual": null,
-      "personality": null,
-      "lore": null,
-      "crossCharacter": null
+      "visual": 4,
+      "personality": 3,
+      "lore": 3,
+      "crossCharacter": 2
     },
-    "notes": ""
+    "notes": "Bio: 'Made in @higgsfield.ai', 'Coin coming soon minions'. Recurring cast (Dr. Nefario, the Gru mobile). Peak post 893K likes on 2026-10-06, 10 days after debut. Parody: not affiliated with Illumination."
   }
 }
