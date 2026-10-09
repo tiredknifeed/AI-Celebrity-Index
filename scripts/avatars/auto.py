@@ -112,7 +112,7 @@ def anchors(img: Image.Image, alpha: np.ndarray) -> tuple[dict, str]:
     # no face (cartoon, animal): frame by the silhouette, head assumed in the upper part
     bottom = int(rows[-1]) if len(rows) else h - 1
     bh = max(bottom - top_px, 1)
-    band = alpha[top_px : top_px + int(0.4 * bh)]
+    band = alpha[top_px : top_px + max(int(0.22 * bh), 1)]  # the crown: shoulders and props would pull the centre
     xs = np.where(band > 0.5)[1]
     cx = float(xs.mean()) / w if len(xs) else 0.5
     return {"cx": cx, "eye": (top_px + 0.30 * bh) / h, "chin": (top_px + 0.58 * bh) / h, "top": top}, "silhouette"

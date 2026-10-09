@@ -75,21 +75,6 @@
   "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)"
  },
  {
-  "slug": "benjamin-stachio",
-  "native": [
-   440,
-   235
-  ],
-  "superResolved": true,
-  "scale": 4.36,
-  "notes": [
-   "scaled up so the body reaches the bottom edge",
-   "crown cropped in source: top-anchored tight crop",
-   "heavy enlargement (4.4x native)"
-  ],
-  "origin": "Still from the supplied promo video (00:03.6)"
- },
- {
   "slug": "lord-farquaad",
   "native": [
    520,
@@ -165,5 +150,84 @@
    "hair touches the top edge"
   ],
   "origin": "Portrait supplied by the site editor (2026-10-09)"
+ },
+ {
+  "slug": "abu-yalla",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 0.96,
+  "notes": [
+   "scaled up so the body reaches the bottom edge"
+  ],
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
+ },
+ {
+  "slug": "abdoul-cheqri",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 0.95,
+  "notes": [
+   "scaled up so the body reaches the bottom edge",
+   "hair touches the top edge"
+  ],
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
+ },
+ {
+  "slug": "caramelinho",
+  "native": [
+   468,
+   468
+  ],
+  "superResolved": true,
+  "scale": 2.19,
+  "notes": [
+   "scaled up so the body reaches the bottom edge"
+  ],
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
+ },
+ {
+  "slug": "ms-stretchy",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 0.82,
+  "notes": [
+   "scaled up so the body reaches the bottom edge"
+  ],
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
+ },
+ {
+  "slug": "benjamin-stachio",
+  "native": [
+   740,
+   728
+  ],
+  "superResolved": false,
+  "scale": 1.6,
+  "notes": [
+   "hair touches the top edge"
+  ],
+  "origin": "Portrait supplied by the site editor (2026-10-09); app watermark at the lower left replaced by the mirrored right shoulder"
+ },
+ {
+  "slug": "charles-robinson",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 2.92,
+  "notes": [
+   "heavy enlargement (2.9x native)"
+  ],
+  "origin": "Instagram profile picture, captured 2026-10-09"
  }
 ]

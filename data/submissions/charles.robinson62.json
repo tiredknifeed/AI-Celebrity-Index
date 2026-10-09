@@ -1,0 +1,523 @@
+{
+  "schema": 1,
+  "handle": "charles.robinson62",
+  "profileUrl": "https://www.instagram.com/charles.robinson62/",
+  "submittedAt": "2026-10-09T18:40:13.497Z",
+  "capturedAt": "2026-10-09",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "payment": null,
+  "submissionId": "free_b5a21805ad28",
+  "profile": {
+    "fullName": "Charles Robinson",
+    "biography": "Never judge a book by the cover.\nCreative Partner - @higgsfield.ai",
+    "externalUrl": "https://linktr.ee/charles.robinson62",
+    "verified": false,
+    "private": false,
+    "followers": 945820,
+    "following": 3,
+    "postsCount": 42
+  },
+  "avatar": {
+    "path": "data/avatars/source/charles.robinson62.jpg",
+    "origin": "Instagram profile picture",
+    "capturedAt": "2026-10-09"
+  },
+  "posts": [
+    {
+      "url": "https://www.instagram.com/p/DePmtdvNBt2/",
+      "timestamp": "2026-10-08T18:44:48.000Z",
+      "likes": 4094,
+      "comments": 59,
+      "caption": "Humble with expensive taste.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DePITf3NFqu/",
+      "timestamp": "2026-10-08T14:19:41.000Z",
+      "likes": 60138,
+      "comments": 374,
+      "caption": "The clothes don’t make the man.\n\nMade with @higgsfield.ai",
+      "pinned": false,
+      "type": "Video",
+      "mentions": [
+        "higgsfield.ai"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeOmLX2tGgV/",
+      "timestamp": "2026-10-08T09:20:56.000Z",
+      "likes": 3615,
+      "comments": 90,
+      "caption": "Nothing beats a night cruise.\n\nMade with @higgsfield.ai",
+      "pinned": false,
+      "type": "Video",
+      "mentions": [
+        "higgsfield.ai"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeOQOCRtnxD/",
+      "timestamp": "2026-10-08T06:08:11.000Z",
+      "likes": 16397,
+      "comments": 581,
+      "caption": "Stay humble, greatness takes time.\n\nMade with @higgsfield.ai",
+      "pinned": false,
+      "type": "Video",
+      "mentions": [
+        "higgsfield.ai"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeN-zsJNIkJ/",
+      "timestamp": "2026-10-08T03:37:23.000Z",
+      "likes": 3801,
+      "comments": 130,
+      "caption": "Dressed for the occasion.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeN1MhaN5oc/",
+      "timestamp": "2026-10-08T02:14:28.000Z",
+      "likes": 156312,
+      "comments": 1444,
+      "caption": "Stay humble, your time comes.\n\nMade with @higgsfield.ai",
+      "pinned": false,
+      "type": "Video",
+      "mentions": [
+        "higgsfield.ai"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeNmJAWNUxx/",
+      "timestamp": "2026-10-08T00:00:27.000Z",
+      "likes": 21859,
+      "comments": 383,
+      "caption": "My brother.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeMlJPMNqOA/",
+      "timestamp": "2026-10-07T14:32:33.000Z",
+      "likes": 11842,
+      "comments": 181,
+      "caption": "If you know you know.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeMLYratLl4/",
+      "timestamp": "2026-10-07T10:47:26.000Z",
+      "likes": 5396,
+      "comments": 222,
+      "caption": "For the people. ⚔️",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeLkKlNNkKZ/",
+      "timestamp": "2026-10-07T05:04:43.000Z",
+      "likes": 43790,
+      "comments": 527,
+      "caption": "Lovely ladies.\n\nMade with @higgsfield.ai",
+      "pinned": false,
+      "type": "Video",
+      "mentions": [
+        "higgsfield.ai"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeLAzgHtBro/",
+      "timestamp": "2026-10-06T23:55:44.000Z",
+      "likes": 774997,
+      "comments": 3132,
+      "caption": "Never forget to stay humble.\n\nMade with @higgsfield.ai",
+      "pinned": false,
+      "type": "Video",
+      "mentions": [
+        "higgsfield.ai"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeKvr8ptihe/",
+      "timestamp": "2026-10-06T21:26:07.000Z",
+      "likes": 27275,
+      "comments": 599,
+      "caption": "Thank you guys for 800k Followers!",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeJOTv2N3vG/",
+      "timestamp": "2026-10-06T07:15:14.000Z",
+      "likes": 48220,
+      "comments": 422,
+      "caption": "The Humble King.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeIejQwNGO1/",
+      "timestamp": "2026-10-06T00:17:55.000Z",
+      "likes": 85031,
+      "comments": 760,
+      "caption": "Stay true to your roots.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeHrPint8pB/",
+      "timestamp": "2026-10-05T16:49:37.000Z",
+      "likes": 16353,
+      "comments": 293,
+      "caption": "Who won the dance battle?\n$CHARLES",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeHiftPoTKk/",
+      "timestamp": "2026-10-05T15:33:20.000Z",
+      "likes": 26653,
+      "comments": 377,
+      "caption": "Couturier in his youth @vladbykovbrand \n\n#vladbykov",
+      "pinned": false,
+      "type": "Video",
+      "mentions": [
+        "vladbykovbrand"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/p/DeHe1FTtgCz/",
+      "timestamp": "2026-10-05T15:01:21.000Z",
+      "likes": 116890,
+      "comments": 2393,
+      "caption": "Living the life.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeHIXoFtN97/",
+      "timestamp": "2026-10-05T11:44:51.000Z",
+      "likes": 75969,
+      "comments": 2729,
+      "caption": "Enjoy the simple things in life.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeG78rdt3p5/",
+      "timestamp": "2026-10-05T09:56:19.000Z",
+      "likes": 186510,
+      "comments": 1893,
+      "caption": "The ladies love my style.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeGuQYHNHAy/",
+      "timestamp": "2026-10-05T07:57:33.000Z",
+      "likes": 586788,
+      "comments": 4998,
+      "caption": "God Bless ❤️",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeGtluENsQb/",
+      "timestamp": "2026-10-05T07:50:50.000Z",
+      "likes": 48357,
+      "comments": 650,
+      "caption": "Thanks for 500k!",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeGB0ICt2uT/",
+      "timestamp": "2026-10-05T01:34:50.000Z",
+      "likes": 638345,
+      "comments": 5500,
+      "caption": "The ladies love me.",
+      "pinned": true,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeFuqDytvS9/",
+      "timestamp": "2026-10-04T22:40:40.000Z",
+      "likes": 37720,
+      "comments": 771,
+      "caption": "Thanks for 400k Followers!",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeFdxV0N-7P/",
+      "timestamp": "2026-10-04T20:13:07.000Z",
+      "likes": 126065,
+      "comments": 1514,
+      "caption": "Always showing love to the valet",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeFHlP1NCo3/",
+      "timestamp": "2026-10-04T16:59:30.000Z",
+      "likes": 179251,
+      "comments": 5307,
+      "caption": "",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeE4NdRtNwW/",
+      "timestamp": "2026-10-04T14:44:58.000Z",
+      "likes": 66554,
+      "comments": 1115,
+      "caption": "",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeEqDz4Nfwv/",
+      "timestamp": "2026-10-04T12:41:18.000Z",
+      "likes": 92350,
+      "comments": 1039,
+      "caption": "Thank you for 250k Followers!",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeElvXTNRfH/",
+      "timestamp": "2026-10-04T12:06:58.000Z",
+      "likes": 624449,
+      "comments": 6800,
+      "caption": "Staying humble is very important.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeEhCCJN2Ig/",
+      "timestamp": "2026-10-04T11:22:23.000Z",
+      "likes": 57762,
+      "comments": 912,
+      "caption": "My favorite Ferrari.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeECdhftYph/",
+      "timestamp": "2026-10-04T06:55:16.000Z",
+      "likes": 94849,
+      "comments": 1965,
+      "caption": "",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeDn54YNQzC/",
+      "timestamp": "2026-10-04T03:03:06.000Z",
+      "likes": 113033,
+      "comments": 1570,
+      "caption": "Don't judge my style.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeDWpxAtKr5/",
+      "timestamp": "2026-10-04T00:32:29.000Z",
+      "likes": 118889,
+      "comments": 2386,
+      "caption": "",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeDO1EDtWwb/",
+      "timestamp": "2026-10-03T23:24:05.000Z",
+      "likes": 3270418,
+      "comments": 21875,
+      "caption": "Always remember where you came from.",
+      "pinned": true,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeC8mhrtTYy/",
+      "timestamp": "2026-10-03T20:45:20.000Z",
+      "likes": 413612,
+      "comments": 3894,
+      "caption": "Always respect the valet.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeC6jSyNm-H/",
+      "timestamp": "2026-10-03T20:27:04.000Z",
+      "likes": 95243,
+      "comments": 1325,
+      "caption": "Thanks for 40k followers! \nStay humble.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeBoYyUNxIh/",
+      "timestamp": "2026-10-03T08:33:37.000Z",
+      "likes": 79496,
+      "comments": 1936,
+      "caption": "Don’t be fooled by my clothes.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeA7Gw7tu1D/",
+      "timestamp": "2026-10-03T01:53:16.000Z",
+      "likes": 95637,
+      "comments": 1744,
+      "caption": "My version of luxury.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeAjAcaN2ih/",
+      "timestamp": "2026-10-02T22:25:03.000Z",
+      "likes": 55468,
+      "comments": 527,
+      "caption": "Staying humble forever",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeAfZpRNJKU/",
+      "timestamp": "2026-10-02T21:51:16.000Z",
+      "likes": 140562,
+      "comments": 2882,
+      "caption": "Humble vibes, big dreams.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd-1HS5tGoa/",
+      "timestamp": "2026-10-02T06:22:26.000Z",
+      "likes": 447361,
+      "comments": 10002,
+      "caption": "Stay Humble",
+      "pinned": true,
+      "type": "Video",
+      "mentions": []
+    }
+  ],
+  "metrics": {
+    "postsAnalysed": 40,
+    "fullHistory": false,
+    "firstPost": "2026-10-02",
+    "lastPost": "2026-10-08",
+    "daysSinceFirst": 8,
+    "daysSinceLast": 1,
+    "posts7d": 39,
+    "posts14d": 37,
+    "posts30d": 37,
+    "avgLikes12": 94126,
+    "medianLikes12": 19128,
+    "avgComments12": 644,
+    "likesHidden12": 0,
+    "avgLikes14d": 127330,
+    "maxLikes": 3270418,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeDO1EDtWwb/",
+      "date": "2026-10-03",
+      "likes": 3270418,
+      "comments": 21875,
+      "caption": "Always remember where you came from."
+    },
+    "top14dPost": {
+      "url": "https://www.instagram.com/p/DeLAzgHtBro/",
+      "date": "2026-10-06",
+      "likes": 774997
+    },
+    "engagementRate": 0.10019859310792045
+  },
+  "scores": {
+    "fame": 67.3,
+    "momentum": 84.1,
+    "fameParts": {
+      "followers": 0.7439521233063509,
+      "engagement": 0.7434274008006618,
+      "viral": 0.8786508161078637,
+      "consistency": 1,
+      "longevity": 0.24929971615916022,
+      "recognizability": 0
+    },
+    "momentumParts": {
+      "engagement": 0.7434274008006618,
+      "viral": 0.7223250053407817,
+      "frequency": 1,
+      "growth": 1,
+      "recency": 1
+    },
+    "provisional": true,
+    "note": "Recognizability, distinctiveness and the index score are set by an analyst during review."
+  },
+  "token": {
+    "verification": "NONE",
+    "ticker": null,
+    "contract": null,
+    "url": null,
+    "evidence": null
+  },
+  "links": [],
+  "sufficiency": {
+    "VERIFIED IDENTITY": "PARTIAL",
+    "FAME SCORE": "YES",
+    "LIVE STATUS": "YES",
+    "CAREER TIMELINE": "PARTIAL",
+    "SOCIAL GRAPH": "NO"
+  },
+  "review": {
+    "include": true,
+    "auto": true,
+    "name": "Charles Robinson",
+    "characterType": "User-added AI character",
+    "universe": "higgsfield-network",
+    "parodyOf": null,
+    "recognizability": 1,
+    "distinct": {
+      "visual": 2,
+      "personality": 2,
+      "lore": 2,
+      "crossCharacter": 1
+    },
+    "notes": "Published automatically from a user submission. Recognizability and distinctiveness are provisional defaults until an editor reviews them."
+  }
+}

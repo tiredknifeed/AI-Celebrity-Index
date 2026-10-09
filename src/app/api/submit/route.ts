@@ -2,7 +2,7 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { getData, LIVE_TAG } from "@/lib/live";
 import { config, missingConfig } from "@/lib/submissions/config";
-import { idSuffix, openSubmissions, readLiveSubmission } from "@/lib/submissions/github";
+import { readLiveSubmission } from "@/lib/submissions/github";
 import { parseInstagram } from "@/lib/submissions/handle";
 import { slugify } from "@/lib/submissions/merge";
 import { publishFreeSubmission, SubmissionError } from "@/lib/submissions/process";
@@ -55,9 +55,6 @@ export async function POST(req: Request) {
     const prior = (await readLiveSubmission(handle)) as { review?: { include?: boolean } } | null;
     if (prior && prior.review?.include === false)
       return NextResponse.json({ error: "This account was reviewed and removed from the index by the editors." }, { status: 409 });
-    // a submission still waiting in a review PR (from paid mode or earlier)
-    const dup = (await openSubmissions()).find((q) => q.handle === handle);
-    if (dup) return NextResponse.json({ handle, id: idSuffix(dup.branch), duplicate: true });
     const userAdded = data.characters.filter((c) => c.group === "SUBMITTED").length;
     if (userAdded >= config.maxLive)
       return NextResponse.json({ error: "The index is not accepting new characters right now. Please try again later." }, { status: 429 });

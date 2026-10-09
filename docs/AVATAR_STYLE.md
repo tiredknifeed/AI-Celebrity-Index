@@ -28,6 +28,9 @@ Documented exceptions (character-first beats the grid):
 - **Nobody Sausage**: a flat graphic character; colour grading is skipped, and the eye line sits at 60% because its eyes are mid-body.
 - **Archibald Brown**: framed wider (eye line 36%, eye → chin 14%) so the two-hand gesture from his portrait stays in shot.
 - **Candy the Greyhound** and **Casper the Italian Greyhound**: dogs; "chin" is the bottom of the muzzle. Candy is shown full-length so the UFC gloves stay in shot.
+- **Benjamin Stachio**: editor-supplied still; the app watermark at the lower left was replaced by the mirrored right shoulder before normalizing. Framed from the curls to the tie (long neck).
+- **Caramelinho**: `clip` removes the owner's hand at the lower right that the matte kept.
+- **Ms. Stretchy**: toon head framed larger (eye → chin 31%), like Mr. Stretchy.
 - **Granny Spills**: white balance is off (`"wb": 0`), because the all-pink outfit fills the frame and grey-world correction turns the skin green.
 
 ## 2. Background system
@@ -80,5 +83,7 @@ python3 scripts/avatars/normalize.py --sr-model EDSR_x4.pb derek-mercer
 To add a character: drop the official image into `data/avatars/source/`, add an entry with its anchors to `avatars.json`, run the script, and set `avatar: true` for the slug in `src/data/portraits.ts`.
 
 ## User-added characters
+
+`"clip": [x0, y0, x1, y1]` (fractions of the source) clears part of the matte, for a hand or prop the model keeps.
 
 `scripts/avatars/auto.py` applies the same grid without hand-set anchors: OpenCV frontal-face detection when a face is found (human-segmentation cut-out), otherwise framing by the cut-out silhouette with the head assumed in its upper part (general cut-out model). The accent is the site palette colour that contrasts most with the subject. Entries are marked `"auto": true` in `scripts/avatars/avatars.json`.

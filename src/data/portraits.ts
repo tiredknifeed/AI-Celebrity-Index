@@ -129,14 +129,16 @@ export const portraits: Record<string, PortraitSpec> = {
     basis: "INFERRED",
     art: { kind: "catknight", primary: "#C7CED6", secondary: "#F08A24", accent: "#D7263D" },
   },
-  "benjamin-stachio": { accent: "#ECC660", avatar: true, source: "promo-still" },
+  "benjamin-stachio": { accent: "#ECC660", avatar: true, source: "editor" },
   "lord-farquaad": { accent: "#A3364A", onAccent: "#fff", avatar: true, source: "promo-still" },
   "caramelinho": {
     accent: "#43C06F",
+    avatar: true,
+    source: "editor",
     basis: "INFERRED",
     art: { kind: "dog", primary: "#C8873E", secondary: "#F6E6CF", accent: "#F7D02C" },
   },
-  "abdoul-cheqri": { accent: "#E09A55", art: UNKNOWN },
+  "abdoul-cheqri": { accent: "#E09A55", avatar: true, source: "editor" },
   "pik-vik": {
     accent: "#7CC3E0",
     basis: "INFERRED",
@@ -144,6 +146,8 @@ export const portraits: Record<string, PortraitSpec> = {
   },
   "ms-stretchy": {
     accent: "#FF9BB8",
+    avatar: true,
+    source: "editor",
     basis: "INFERRED",
     art: { kind: "stretchy", primary: "#F6D7B8", secondary: "#FF5D8F", variant: "female" },
   },
@@ -183,6 +187,8 @@ export const portraits: Record<string, PortraitSpec> = {
   "percival-ashcroft": { accent: "#8FA37A", art: UNKNOWN },
   "abu-yalla": {
     accent: "#E8AE5E",
+    avatar: true,
+    source: "editor",
     basis: "INFERRED",
     art: {
       kind: "human",

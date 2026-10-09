@@ -233,6 +233,11 @@ def run(slug: str, cfg: dict, accent: str, sr_model: str | None) -> dict:
     native = src.size
     img, upscaled = super_resolve(src, slug, sr_model)
     alpha = cut_out(img, cfg.get("model", "u2net_human_seg"))
+    # "clip": [x0, y0, x1, y1] (fractions) removes something the matte kept, e.g. a hand
+    if cfg.get("clip"):
+        x0, y0, x1, y1 = cfg["clip"]
+        hh, ww = alpha.shape
+        alpha[int(y0 * hh) : int(y1 * hh), int(x0 * ww) : int(x1 * ww)] = 0
     rgb = grade(np.array(img), alpha, cfg.get("graphic", False), cfg.get("wb", 0.45))
     w, h = img.size
     k, ox, oy, notes = frame(cfg, w, h)
