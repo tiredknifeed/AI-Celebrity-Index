@@ -1,0 +1,219 @@
+{
+  "schema": 1,
+  "handle": "maham.iha",
+  "profileUrl": "https://www.instagram.com/maham.iha/",
+  "submittedAt": "2026-10-09T18:58:49.191Z",
+  "capturedAt": "2026-10-09",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "payment": null,
+  "submissionId": "free_74364ea901ca",
+  "profile": {
+    "fullName": "Miron",
+    "biography": "Бывший спортсмен  / учусь танцевать / дальше меньше",
+    "externalUrl": null,
+    "verified": false,
+    "private": false,
+    "followers": 230222,
+    "following": 1,
+    "postsCount": 11
+  },
+  "avatar": {
+    "path": "data/avatars/source/maham.iha.jpg",
+    "origin": "Instagram profile picture",
+    "capturedAt": "2026-10-09"
+  },
+  "posts": [
+    {
+      "url": "https://www.instagram.com/p/DeOY1xhoqt8/",
+      "timestamp": "2026-10-08T07:23:34.000Z",
+      "likes": 11275,
+      "comments": 404,
+      "caption": "Я гибкий если что 😆",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeM4VY_opNA/",
+      "timestamp": "2026-10-07T17:20:44.000Z",
+      "likes": 8378,
+      "comments": 375,
+      "caption": "A huge thank you to everyone—we’ve reached 200,000 subscribers.",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeKtjlfIfft/",
+      "timestamp": "2026-10-06T21:07:36.000Z",
+      "likes": 8406,
+      "comments": 298,
+      "caption": "Однажды в Париже",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeJ4SmtI6_v/",
+      "timestamp": "2026-10-06T13:22:15.000Z",
+      "likes": 6092,
+      "comments": 378,
+      "caption": "Живи танцуя",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeIYMw6o9AG/",
+      "timestamp": "2026-10-05T23:22:37.000Z",
+      "likes": 15345,
+      "comments": 1029,
+      "caption": "Скажите честно , у меня хорошо получается ?",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeEfRS8AlI8/",
+      "timestamp": "2026-10-04T11:07:34.000Z",
+      "likes": 68484,
+      "comments": 2696,
+      "caption": "Иногда хипиш иногда кайфую 🤨",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeEKQUUoPBm/",
+      "timestamp": "2026-10-04T08:04:04.000Z",
+      "likes": 195265,
+      "comments": 26638,
+      "caption": "Со мной дружить надо )))",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/DeAcVpCIlOk/",
+      "timestamp": "2026-10-02T21:24:38.000Z",
+      "likes": 287015,
+      "comments": 18661,
+      "caption": "Изучаю новые танцы",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd_uafHIK5y/",
+      "timestamp": "2026-10-02T14:43:23.000Z",
+      "likes": 100460,
+      "comments": 3041,
+      "caption": "Хочу поднять всем настроение !!!❤️",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd9WYh2oKio/",
+      "timestamp": "2026-10-01T16:35:07.000Z",
+      "likes": 23557,
+      "comments": 2921,
+      "caption": "Ищу себе самую красивую жену ! Отметь подругу",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    },
+    {
+      "url": "https://www.instagram.com/p/Dd8j5RcoAOs/",
+      "timestamp": "2026-10-01T09:16:41.000Z",
+      "likes": 93122,
+      "comments": 4578,
+      "caption": "сколько же я учился танцевать это дермо 😆",
+      "pinned": false,
+      "type": "Video",
+      "mentions": []
+    }
+  ],
+  "metrics": {
+    "postsAnalysed": 11,
+    "fullHistory": true,
+    "firstPost": "2026-10-01",
+    "lastPost": "2026-10-08",
+    "daysSinceFirst": 8,
+    "daysSinceLast": 1,
+    "posts7d": 8,
+    "posts14d": 11,
+    "posts30d": 11,
+    "avgLikes12": 74309,
+    "medianLikes12": 23557,
+    "avgComments12": 5547,
+    "likesHidden12": 0,
+    "avgLikes14d": 74309,
+    "maxLikes": 287015,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeAcVpCIlOk/",
+      "date": "2026-10-02",
+      "likes": 287015,
+      "comments": 18661,
+      "caption": "Изучаю новые танцы"
+    },
+    "top14dPost": {
+      "url": "https://www.instagram.com/p/DeAcVpCIlOk/",
+      "date": "2026-10-02",
+      "likes": 287015
+    },
+    "engagementRate": 0.34686598942838576
+  },
+  "scores": {
+    "fame": 50,
+    "momentum": 77,
+    "fameParts": {
+      "followers": 0.5905367056076252,
+      "engagement": 0.7177603542262398,
+      "viral": 0.6144761486146801,
+      "consistency": 0.55,
+      "longevity": 0.01655707406328997,
+      "recognizability": 0
+    },
+    "momentumParts": {
+      "engagement": 0.7177603542262398,
+      "viral": 0.6144761486146801,
+      "frequency": 0.7857142857142857,
+      "growth": 0.9836227341754228,
+      "recency": 1
+    },
+    "provisional": true,
+    "note": "Recognizability, distinctiveness and the index score are set by an analyst during review."
+  },
+  "token": {
+    "verification": "NONE",
+    "ticker": null,
+    "contract": null,
+    "url": null,
+    "evidence": null
+  },
+  "links": [],
+  "sufficiency": {
+    "VERIFIED IDENTITY": "PARTIAL",
+    "FAME SCORE": "PARTIAL",
+    "LIVE STATUS": "YES",
+    "CAREER TIMELINE": "YES",
+    "SOCIAL GRAPH": "NO"
+  },
+  "review": {
+    "include": true,
+    "auto": true,
+    "name": "Miron",
+    "characterType": "User-added AI character",
+    "universe": null,
+    "parodyOf": null,
+    "recognizability": 1,
+    "distinct": {
+      "visual": 2,
+      "personality": 2,
+      "lore": 2,
+      "crossCharacter": 1
+    },
+    "notes": "Published automatically from a user submission. Recognizability and distinctiveness are provisional defaults until an editor reviews them."
+  }
+}
