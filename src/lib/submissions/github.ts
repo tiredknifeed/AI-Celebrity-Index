@@ -6,7 +6,7 @@
 import { config } from "./config";
 
 async function gh(path: string, init: { method?: string; body?: unknown } = {}): Promise<unknown> {
-  const res = await fetch(`${config.githubApi}/repos/${config.githubRepo}/${path}`, {
+  const res = await fetch(`${config.githubApi}/repos/${config.githubRepo}${path ? `/${path}` : ""}`, {
     method: init.method ?? "GET",
     headers: {
       authorization: `Bearer ${config.githubToken}`,
@@ -22,6 +22,16 @@ async function gh(path: string, init: { method?: string; body?: unknown } = {}):
   return json;
 }
 
+let baseBranch: string | null = null;
+/** GITHUB_BASE_BRANCH, or the repository's default branch. */
+async function base(): Promise<string> {
+  if (config.githubBase) return config.githubBase;
+  if (baseBranch) return baseBranch;
+  const repo = (await gh("")) as { default_branch?: string } | null;
+  if (!repo?.default_branch) throw new Error(`Repository ${config.githubRepo} not found or the token cannot read it`);
+  return (baseBranch = repo.default_branch);
+}
+
 export function branchFor(handle: string, session: string) {
   return `submission/${handle.replace(/[^a-z0-9._-]/g, "-")}-${session.slice(-8).toLowerCase()}`;
 }
@@ -30,9 +40,10 @@ export async function openSubmissionPR(handle: string, session: string, record: 
   const branch = branchFor(handle, session);
   const existing = await findPR(branch);
   if (existing) return existing.url;
-  const base = (await gh(`git/ref/heads/${config.githubBase}`)) as { object: { sha: string } } | null;
-  if (!base) throw new Error(`Base branch ${config.githubBase} not found`);
-  await gh("git/refs", { method: "POST", body: { ref: `refs/heads/${branch}`, sha: base.object.sha } });
+  const baseName = await base();
+  const head = (await gh(`git/ref/heads/${baseName}`)) as { object: { sha: string } } | null;
+  if (!head) throw new Error(`Base branch ${baseName} not found`);
+  await gh("git/refs", { method: "POST", body: { ref: `refs/heads/${branch}`, sha: head.object.sha } });
   const path = `data/submissions/${handle}.json`;
   const current = (await gh(`contents/${path}?ref=${branch}`)) as { sha?: string } | null;
   await gh(`contents/${path}`, {
@@ -46,7 +57,7 @@ export async function openSubmissionPR(handle: string, session: string, record: 
   });
   const pr = (await gh("pulls", {
     method: "POST",
-    body: { title: `Submission: @${handle}`, head: branch, base: config.githubBase, body: summary },
+    body: { title: `Submission: @${handle}`, head: branch, base: baseName, body: summary },
   })) as { html_url: string };
   return pr.html_url;
 }

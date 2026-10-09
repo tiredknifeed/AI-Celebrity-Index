@@ -21,7 +21,8 @@ export const config = {
   postsLimit: Number(process.env.SUBMISSION_POSTS_LIMIT ?? 60),
   githubToken: process.env.GITHUB_TOKEN ?? "",
   githubRepo: process.env.GITHUB_REPO ?? "tiredknifeed/AI-Celebrity-Index",
-  githubBase: process.env.GITHUB_BASE_BRANCH ?? "main",
+  /** Empty: use the repository's default branch. */
+  githubBase: process.env.GITHUB_BASE_BRANCH ?? "",
   // API endpoints; overridable only to point tests at a local mock.
   githubApi: process.env.GITHUB_API_BASE ?? "https://api.github.com",
   apifyApi: process.env.APIFY_API_BASE ?? "https://api.apify.com",

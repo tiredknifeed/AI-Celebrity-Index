@@ -60,7 +60,7 @@ Copy `.env.example` to `.env` (or set the variables on the host):
 | `SUBMISSION_PRICE_CENTS`, `SUBMISSION_CURRENCY` | Price (default 4900 = $49) |
 | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | Paid mode only. Stripe API key and the signing secret of a webhook pointing to `<SITE_URL>/api/stripe/webhook/` (note the trailing slash) for `checkout.session.completed` |
 | `APIFY_TOKEN`, `APIFY_PROFILE_ACTOR`, `APIFY_POSTS_ACTOR` | Apify token and the actors that return the public profile and posts |
-| `GITHUB_TOKEN`, `GITHUB_REPO`, `GITHUB_BASE_BRANCH` | Token with contents + pull-request write access to the data repository |
+| `GITHUB_TOKEN`, `GITHUB_REPO`, `GITHUB_BASE_BRANCH` | Token with contents + pull-request write access to the data repository; the base branch defaults to the repository's default branch |
 
 Until the Apify and GitHub keys (plus the Stripe keys in paid mode) are set, `/submit` stays visible but the API answers "Submissions are not open yet".
 

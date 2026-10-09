@@ -41,7 +41,7 @@ export default function SubmitForm({ known, price, free }: { known: KnownAccount
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ url, email: email || undefined, website: website || undefined }),
       });
-      const json = (await res.json().catch(() => ({}))) as { checkoutUrl?: string; id?: string; handle?: string; error?: string };
+      const json = (await res.json().catch(() => ({}))) as { checkoutUrl?: string; id?: string; handle?: string; error?: string; missing?: string[] };
       if (res.ok && json.checkoutUrl) {
         window.location.href = json.checkoutUrl;
         return;
@@ -50,7 +50,11 @@ export default function SubmitForm({ known, price, free }: { known: KnownAccount
         window.location.href = `/submit/status/?id=${encodeURIComponent(json.id)}&handle=${encodeURIComponent(json.handle)}`;
         return;
       }
-      setError(res.status === 503 ? "Submissions are not open yet. Check back soon." : (json.error ?? `Something went wrong (HTTP ${res.status}).`));
+      setError(
+        res.status === 503
+          ? `Submissions are not open yet. Check back soon.${json.missing?.length ? ` (Site owner: set ${json.missing.join(" and ")} on the server.)` : ""}`
+          : (json.error ?? `Something went wrong (HTTP ${res.status}).`),
+      );
     } catch {
       setError("Could not reach the submission service.");
     }
