@@ -26,6 +26,9 @@ Documented exceptions (character-first beats the grid):
 - **Abu Nutty**: framed wider (eye line 34%, eye → chin 15%) so the fight glove, his signature prop, stays in shot.
 - **Mr. Stretchy**: the oversized toon head is the character, so the head reads bigger than the grid once the body is made to reach the bottom edge.
 - **Nobody Sausage**: a flat graphic character; colour grading is skipped, and the eye line sits at 60% because its eyes are mid-body.
+- **Archibald Brown**: framed wider (eye line 36%, eye → chin 14%) so the two-hand gesture from his portrait stays in shot.
+- **Candy the Greyhound** and **Casper the Italian Greyhound**: dogs; "chin" is the bottom of the muzzle. Candy is shown full-length so the UFC gloves stay in shot.
+- **Granny Spills**: white balance is off (`"wb": 0`), because the all-pink outfit fills the frame and grey-world correction turns the skin green.
 
 ## 2. Background system
 
@@ -38,7 +41,7 @@ The UI reproduces the same gradient in CSS (`avatarBg()` in `src/data/portraits.
 
 ## 3. Lighting and finish
 
-- Partial grey-world white balance (45%) to remove colour casts from the original scene.
+- Partial grey-world white balance (45%, per-character `wb` override) to remove colour casts from the original scene.
 - Percentile levels on luminance (0.6% / 99.4%), then a gentle S-curve.
 - Saturation pulled towards one shared target (mean 0.34, clamped 0.8×–1.35×).
 - Slight warmth (+2% red, −1.5% blue) and a clarity pass (unsharp mask, 2.2 px).

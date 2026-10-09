@@ -87,5 +87,50 @@
     "eye": 0.45,
     "chin": 0.68,
     "top": 0.06
+  },
+  "archibald-brown": {
+    "source": "archibald-brown.jpg",
+    "origin": "Portrait supplied by the site editor (2026-10-09)",
+    "model": "u2net_human_seg",
+    "cx": 0.42,
+    "eye": 0.25,
+    "chin": 0.35,
+    "top": 0.13,
+    "_why": "Framed wider than the rule so the signature two-hand gesture stays in shot.",
+    "eyeY": 0.36,
+    "eyeChin": 0.14
+  },
+  "candy-the-greyhound": {
+    "source": "candy-the-greyhound.jpg",
+    "origin": "Portrait supplied by the site editor (2026-10-09)",
+    "model": "isnet-general-use",
+    "cx": 0.46,
+    "eye": 0.3,
+    "chin": 0.59,
+    "top": 0.08,
+    "_why": "Dog: 'chin' is the bottom of the muzzle; framed wider so the UFC gloves stay in shot.",
+    "eyeY": 0.34,
+    "eyeChin": 0.25
+  },
+  "granny-spills": {
+    "source": "granny-spills.jpg",
+    "origin": "Portrait supplied by the site editor (2026-10-09)",
+    "model": "u2net_human_seg",
+    "cx": 0.54,
+    "eye": 0.28,
+    "chin": 0.44,
+    "top": 0.19,
+    "wb": 0.0,
+    "_why": "White balance off: the pink outfit dominates the frame and grey-world would turn the skin green."
+  },
+  "casper-the-italian-greyhound": {
+    "source": "casper-the-italian-greyhound.jpg",
+    "origin": "Portrait supplied by the site editor (2026-10-09)",
+    "model": "isnet-general-use",
+    "cx": 0.49,
+    "eye": 0.5,
+    "chin": 0.73,
+    "top": 0.14,
+    "_why": "Dog: 'chin' is the bottom of the muzzle."
   }
 }

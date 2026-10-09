@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Portrait from "./Portrait";
 import { avatarBg, portraitOf } from "@/data/portraits";
+import Logo from "./Logo";
 
 export interface SearchItem {
   slug: string;
@@ -45,7 +46,7 @@ export default function Nav({ items, asOf }: { items: SearchItem[]; asOf: string
       <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
         <nav className="pointer-events-auto mx-auto flex max-w-[1440px] items-center justify-between gap-3 rounded-full border border-white/60 bg-paper/80 py-2 pl-4 pr-2 shadow-card backdrop-blur-xl">
           <Link href="/" className="flex items-center gap-2" aria-label="AI Fame Index home">
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-ink text-sm text-[#C6F432]">★</span>
+            <Logo size={32} />
             <span className="font-display text-[15px] font-extrabold uppercase leading-none tracking-tight">
               AI Fame
               <br className="sm:hidden" /> Index

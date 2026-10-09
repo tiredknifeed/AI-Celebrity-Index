@@ -67,6 +67,8 @@ export const portraits: Record<string, PortraitSpec> = {
   "abu-nutty": { accent: "#FF6A3D", onAccent: "#fff", avatar: true, source: "x-avatar" },
   "granny-spills": {
     accent: "#F7A1C4",
+    avatar: true,
+    source: "editor",
     basis: "INFERRED",
     art: {
       kind: "human",
@@ -83,11 +85,15 @@ export const portraits: Record<string, PortraitSpec> = {
   "abu-shalab": { accent: "#EDB54F", avatar: true, source: "editor" },
   "casper-the-italian-greyhound": {
     accent: "#9BCBB1",
+    avatar: true,
+    source: "editor",
     basis: "INFERRED",
     art: { kind: "greyhound", primary: "#BDB8B2", secondary: "#F7F4EF", accent: "#FF6B35" },
   },
   "archibald-brown": {
     accent: "#CFA06A",
+    avatar: true,
+    source: "editor",
     basis: "OBSERVED",
     art: {
       kind: "human",
@@ -102,6 +108,8 @@ export const portraits: Record<string, PortraitSpec> = {
   "mr-stretchy": { accent: "#FFB547", avatar: true, source: "x-avatar" },
   "candy-the-greyhound": {
     accent: "#F4AE79",
+    avatar: true,
+    source: "editor",
     basis: "INFERRED",
     art: { kind: "greyhound", primary: "#C98B57", secondary: "#F3E3CF", accent: "#E5383B" },
   },

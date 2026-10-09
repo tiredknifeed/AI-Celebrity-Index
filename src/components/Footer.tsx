@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { longDate } from "@/lib/format";
+import Logo from "./Logo";
 
 export default function Footer({ asOf }: { asOf: string }) {
   return (
@@ -10,7 +11,8 @@ export default function Footer({ asOf }: { asOf: string }) {
             <p className="display text-[13vw] leading-[0.82] md:text-[7.5vw]">
               AI Fame
               <br />
-              Index<span className="text-[#C6F432]">★</span>
+              Index
+              <Logo className="ml-[0.08em] inline-block h-[0.72em] w-[0.72em] align-baseline ring-2 ring-white/20 rounded-full" />
             </p>
             <p className="mt-4 font-mono text-sm text-white/60">tracking synthetic fame on the internet.</p>
           </div>

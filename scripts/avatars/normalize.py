@@ -97,16 +97,17 @@ def cut_out(img: Image.Image, model: str) -> np.ndarray:
     return np.array(m).astype(np.float32) / 255.0
 
 
-def grade(rgb: np.ndarray, alpha: np.ndarray, graphic: bool) -> np.ndarray:
+def grade(rgb: np.ndarray, alpha: np.ndarray, graphic: bool, wb: float = 0.45) -> np.ndarray:
     x = rgb.astype(np.float32) / 255.0
     mask = alpha > 0.5
     if graphic:
         return np.clip(x, 0, 1)
     px = x[mask]
-    # partial grey-world white balance
+    # partial grey-world white balance (wb = strength; lower it for subjects
+    # dominated by one colour, where grey-world would tint the skin)
     means = px.mean(axis=0)
     gain = means.mean() / np.maximum(means, 1e-4)
-    x = x * (1 + 0.45 * (gain - 1))
+    x = x * (1 + wb * (gain - 1))
     # percentile levels on luminance
     lum = (x[mask] @ np.array([0.299, 0.587, 0.114], dtype=np.float32))
     lo, hi = np.percentile(lum, 0.6), np.percentile(lum, 99.4)
@@ -232,7 +233,7 @@ def run(slug: str, cfg: dict, accent: str, sr_model: str | None) -> dict:
     native = src.size
     img, upscaled = super_resolve(src, slug, sr_model)
     alpha = cut_out(img, cfg.get("model", "u2net_human_seg"))
-    rgb = grade(np.array(img), alpha, cfg.get("graphic", False))
+    rgb = grade(np.array(img), alpha, cfg.get("graphic", False), cfg.get("wb", 0.45))
     w, h = img.size
     k, ox, oy, notes = frame(cfg, w, h)
     subject = place(rgb, k, ox, oy)

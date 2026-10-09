@@ -116,5 +116,54 @@
    "heavy enlargement (4.5x native)"
   ],
   "origin": "Still from the supplied promo video (00:03.6)"
+ },
+ {
+  "slug": "archibald-brown",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 1.33,
+  "notes": [],
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
+ },
+ {
+  "slug": "candy-the-greyhound",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 0.89,
+  "notes": [
+   "scaled up so the body reaches the bottom edge"
+  ],
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
+ },
+ {
+  "slug": "granny-spills",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 1.48,
+  "notes": [],
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
+ },
+ {
+  "slug": "casper-the-italian-greyhound",
+  "native": [
+   1008,
+   1008
+  ],
+  "superResolved": false,
+  "scale": 1.16,
+  "notes": [
+   "scaled up so the body reaches the bottom edge",
+   "hair touches the top edge"
+  ],
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
  }
 ]
