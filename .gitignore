@@ -6,3 +6,5 @@ next-env.d.ts
 .DS_Store
 __pycache__/
 data/avatars/.cache/
+.env
+.env.local

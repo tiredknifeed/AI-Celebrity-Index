@@ -143,19 +143,10 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
             <p className="kicker flex items-center gap-2">
               Bio · verbatim <TrustTag trust="OBSERVED" />
             </p>
-            <blockquote
-              className={`display mt-4 normal-case leading-[0.95] [overflow-wrap:anywhere] ${
-                (c.bio ?? "").length > 70 ? "text-3xl sm:text-4xl" : "text-4xl sm:text-6xl"
-              }`}
-            >
-              {(stripTrust(c.bio) || "—").split(" / ").map((line, i, all) => (
-                <span
-                  key={i}
-                  className={`block ${/\S{25,}/.test(line) ? "mt-2 font-mono text-base font-normal normal-case tracking-normal sm:text-lg" : ""}`}
-                >
-                  {i === 0 ? "“" : ""}
+            <blockquote className="mt-3 border-l-4 pl-4 text-xl font-semibold leading-snug [overflow-wrap:anywhere] sm:text-2xl" style={{ borderColor: spec.accent }}>
+              {(stripTrust(c.bio) || "—").split(" / ").map((line, i) => (
+                <span key={i} className={`block ${/\S{25,}/.test(line) ? "mt-1 font-mono text-sm font-normal text-ink/70 sm:text-base" : ""}`}>
                   {line}
-                  {i === all.length - 1 ? "”" : ""}
                 </span>
               ))}
             </blockquote>

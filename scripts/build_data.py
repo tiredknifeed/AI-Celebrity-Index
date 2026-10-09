@@ -378,6 +378,138 @@ def status_for(days, phase, momentum):
     return "COOLING", f"Last post {days}d before capture"
 
 
+
+# ---------------------------------------------------------------- submissions
+#
+# Paid submissions land in data/submissions/<handle>.json through a reviewed
+# pull request (see docs/SUBMISSIONS.md). Only records with review.include
+# true and all analyst ratings filled are merged. Scores use the same
+# formulas as src/lib/scoring.ts (checked by scripts/check_scoring.ts).
+
+SUBMISSIONS = ROOT / "data/submissions"
+
+
+def _log_scale(v, lo, hi):
+    import math
+    if not v or v <= 0:
+        return 0.0
+    return min(1.0, max(0.0, (math.log10(v) - math.log10(lo)) / (math.log10(hi) - math.log10(lo))))
+
+
+def py_score(followers, posts, avg12, avg14, max_likes, top14, posts14, posts30, days_first, days_last, analysed_share, verified, recog):
+    import math
+    clamp = lambda v: min(1.0, max(0.0, v))
+    fp = {
+        "followers": _log_scale(followers, 1e3, 1e7),
+        "engagement": _log_scale(avg12, 100, 1e6),
+        "viral": _log_scale(max_likes, 1e3, 1e7),
+        "consistency": clamp(posts30 / 20),
+        "longevity": max(clamp(days_first / 730) if days_first is not None else 0.0,
+                         clamp((math.log10(posts) - 1) / 2.5) if posts else 0.0),
+        "recognizability": 0.4 * (1 if verified else 0) + 0.6 * ((recog or 0) / 5),
+    }
+    recent = [] if posts14 == 0 else [v for v in (avg14, avg12) if v]
+    growth_ok = days_first is not None and 0 < days_first <= 60 and analysed_share >= 0.5
+    mp = {
+        "engagement": _log_scale(min(recent), 100, 1e6) if recent else 0.0,
+        "viral": _log_scale(top14, 1e3, 1e7),
+        "frequency": clamp(posts14 / 14),
+        "growth": _log_scale(followers / days_first, 100, 10 ** 4.5) if growth_ok else 0.0,
+        "recency": 0.0 if days_last is None else (1.0 if days_last <= 3 else clamp((30 - days_last) / 27)),
+    }
+    fw = {"followers": 30, "engagement": 20, "viral": 20, "consistency": 10, "longevity": 10, "recognizability": 10}
+    mw = {"engagement": 35, "viral": 25, "frequency": 15, "growth": 15, "recency": 10}
+    fame = round(sum(fp[k] * w for k, w in fw.items()), 1)
+    momentum = round(sum(mp[k] * w for k, w in mw.items()), 1)
+    return fame, momentum, fp, mp
+
+
+def load_submissions(existing_handles, asof):
+    out = []
+    if not SUBMISSIONS.exists():
+        return out
+    for f in sorted(SUBMISSIONS.glob("*.json")):
+        rec = json.loads(f.read_text(encoding="utf-8"))
+        rv = rec.get("review") or {}
+        d = rv.get("distinct") or {}
+        ratings = [rv.get("recognizability"), d.get("visual"), d.get("personality"), d.get("lore"), d.get("crossCharacter")]
+        if not rv.get("include") or any(v is None for v in ratings):
+            continue
+        if rec["handle"] in existing_handles:
+            print(f"skip submission {rec['handle']}: already in the workbook")
+            continue
+        out.append(rec)
+    return out
+
+
+def submission_character(rec, next_id, asof):
+    m, p, rv = rec["metrics"], rec["profile"], rec["review"]
+    d = rv["distinct"]
+    cap = dt.date.fromisoformat(rec["capturedAt"])
+    shift = (dt.date.fromisoformat(asof) - cap).days  # age the capture to the index date
+    days_first = None if m["daysSinceFirst"] is None else m["daysSinceFirst"] + shift
+    days_last = None if m["daysSinceLast"] is None else m["daysSinceLast"] + shift
+    fame, momentum, fp, mp = py_score(
+        p["followers"], p["postsCount"], m["avgLikes12"], m["avgLikes14d"], m["maxLikes"],
+        (m.get("top14dPost") or {}).get("likes"), m["posts14d"], m["posts30d"], days_first, days_last,
+        (m["postsAnalysed"] / p["postsCount"]) if p["postsCount"] else 0, p["verified"], rv["recognizability"])
+    distinct = round(sum(d[k] for k in ("visual", "personality", "lore", "crossCharacter")) / 20 * 100, 1)
+    flags = rec["sufficiency"]
+    suff = round(sum({"YES": 1, "PARTIAL": 0.5, "NO": 0}[v] for v in flags.values()) / len(flags), 2)
+    index = round(0.35 * fame + 0.30 * momentum + 0.20 * distinct + 0.15 * suff * 100, 1)
+    name = rv.get("name") or p.get("fullName") or rec["handle"]
+    tok = rec.get("token") or {}
+    verification = tok.get("verification", "NONE")
+    status_code, status_basis = status_for(days_last, None, momentum)
+    top = m.get("topPost")
+    top14 = m.get("top14dPost")
+    timeline = []
+    if m.get("firstPost"):
+        timeline.append({"date": m["firstPost"], "label": "First analysed post", "kind": "debut", "value": None,
+                         "status": "OBSERVED", "note": "Full history" if m.get("fullHistory") else "Oldest of the analysed posts"})
+    if top and top.get("date"):
+        timeline.append({"date": top["date"], "label": f"Peak post: {top['likes']:,} likes" if top.get("likes") else "Peak post",
+                         "kind": "peak", "value": top.get("likes"), "status": "OBSERVED", "url": top.get("url")})
+    if m.get("lastPost") and not any(e["date"] == m["lastPost"] for e in timeline):
+        timeline.append({"date": m["lastPost"], "label": "Latest post captured", "kind": "moment", "value": None, "status": "OBSERVED"})
+    timeline.sort(key=lambda e: e["date"])
+    return {
+        "id": next_id, "slug": slugify(name), "name": display_name(name), "fullName": name, "handle": rec["handle"],
+        "profileUrl": rec["profileUrl"], "group": "SUBMITTED", "inclusion": "INCLUDED", "caveat": None,
+        "characterType": rv.get("characterType") or "", "origin": "Paid submission", "kind": "human", "virtual": False,
+        "universe": rv.get("universe") if rv.get("universe") in UNIVERSES else "independents", "universeNote": rv.get("universe"),
+        "identity": "PARODY" if rv.get("parodyOf") else ("VERIFIED" if p["verified"] else "UNVERIFIED"),
+        "identityFlag": flags.get("VERIFIED IDENTITY"), "verifiedBadge": p["verified"], "parodyOf": rv.get("parodyOf"),
+        "disambiguation": None, "copycats": None,
+        "followers": p["followers"], "following": p.get("following"), "posts": p["postsCount"], "postsAnalysed": m["postsAnalysed"],
+        "fullHistory": "YES" if m.get("fullHistory") else "PARTIAL", "firstPost": m.get("firstPost"),
+        "firstPostBasis": "Oldest analysed post", "lastPost": m.get("lastPost"), "daysSinceLastPost": days_last,
+        "posts7d": m["posts7d"], "posts14d": m["posts14d"], "posts30d": m["posts30d"],
+        "postsPerWeek": round(m["posts14d"] / 2, 1), "avgLikes": m["avgLikes12"], "medianLikes": m.get("medianLikes12"),
+        "avgComments": m.get("avgComments12"), "likesHidden": m.get("likesHidden12"), "engagementRate": m.get("engagementRate"),
+        "engagementLevel": None, "avgLikes14d": m["avgLikes14d"], "avgComments14d": None, "maxLikes": m["maxLikes"],
+        "topPost": {"url": top["url"], "date": top["date"], "likes": top["likes"], "comments": top.get("comments"), "caption": top.get("caption")} if top and top.get("url") else None,
+        "topPost14d": {"url": top14["url"], "date": top14["date"], "likes": top14["likes"]} if top14 and top14.get("url") else None,
+        "topPostNote": None, "bio": p.get("biography"), "linkInBio": p.get("externalUrl"),
+        "token": {"status": "IG_OBSERVED" if verification != "NONE" else "NONE", "verification": verification,
+                  "ticker": tok.get("ticker"), "contract": tok.get("contract"), "chain": "SOLANA" if verification != "NONE" else None,
+                  "contractInBio": bool(tok.get("contract")), "note": tok.get("evidence"), "url": tok.get("url"),
+                  "reported": None, "userSupplied": None},
+        "related": None, "personality": None, "visualStyle": None, "contentFormat": None, "notes": rv.get("notes") or None,
+        "why": None,
+        "scores": {"fame": fame, "momentum": momentum, "distinctiveness": distinct, "sufficiency": suff, "index": index,
+                   "fameParts": fp, "momentumParts": mp, "distinctParts": d, "recognizabilityInput": rv["recognizability"]},
+        "heat": heat_for(momentum), "status": {"code": status_code, "basis": status_basis}, "phase": None,
+        "debut": {"date": m.get("firstPost"), "basis": "Oldest analysed post", "url": None},
+        "peak": {"date": top.get("date"), "likes": top.get("likes"), "url": top.get("url")} if top else None,
+        "trajectory": [], "timeline": timeline, "evidence": [], "realPeopleTagged": [], "brandsTagged": [],
+        "suggestedNeighbours": None,
+        "outLinks": [{"handle": l["handle"], "count": l["count"], "note": "tag/mention"} for l in rec.get("links", [])],
+        "inLinks": [], "externalLinks": [],
+        "sufficiency": {"flags": flags, "basis": "Automated checks on the submitted profile, confirmed in review"},
+        "submission": {"capturedAt": rec["capturedAt"], "source": rec.get("source")},
+    }
+
 # ---------------------------------------------------------------- build
 
 
@@ -689,6 +821,12 @@ def build(xlsx):
             }
         characters.append(ch)
 
+    existing = {c["handle"] for c in characters} | {e["handle"] for e in excluded}
+    for rec in load_submissions(existing, asof):
+        ch = submission_character(rec, max(c["id"] for c in characters) + 1, asof)
+        characters.append(ch)
+        print(f"merged submission @{ch['handle']} (fame {ch['scores']['fame']}, momentum {ch['scores']['momentum']})")
+
     included = [c for c in characters if c["inclusion"] == "INCLUDED"]
     by_handle = {c["handle"]: c for c in characters}
 
@@ -727,7 +865,16 @@ def build(xlsx):
             "observedOn": text(er.get("Observed on")),
             "status": "OBSERVED" if etype == "MENTION" else "INFERRED"}
     for c in characters:
-        c["externalLinks"] = external.get(c["handle"], [])
+        c.setdefault("externalLinks", [])
+        if c["group"] != "SUBMITTED":
+            c["externalLinks"] = external.get(c["handle"], [])
+            continue
+        for l in c["outLinks"]:  # tags observed in a submitted profile's posts
+            if l["handle"] in node_handles and (c["handle"], l["handle"]) not in edges:
+                edges[(c["handle"], l["handle"])] = {
+                    "source": c["handle"], "target": l["handle"], "type": "MENTION", "count": l["count"],
+                    "note": "Tag/mention in submitted profile", "raw": "tag/mention", "evidence": [],
+                    "observedOn": c["submission"]["capturedAt"], "status": "OBSERVED"}
 
     # SAME UNIVERSE edges: connect members with no in-universe link to the hub.
     for uid in UNIVERSES:

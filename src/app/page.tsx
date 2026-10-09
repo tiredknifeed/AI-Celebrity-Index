@@ -122,8 +122,26 @@ export default function Home() {
       <Hero lead={toCard(lead)} cast={cards.slice(1, 5)} peakLikes={lead.maxLikes} asOf={longDate(AS_OF)} lines={lines} />
       <IndexStrip cards={cards} />
 
+      {/* universe: second on the page */}
+      <section id="universe" className="mt-20 scroll-mt-24 sm:mt-28">
+        <div className="wrap">
+          <SectionHead
+            kicker="They all know each other?"
+            title="The universe"
+            intro="Portraits sized by Fame, pulsing with Momentum, wired by real tags, call-outs and storylines. Hover for a mini profile, click to focus."
+            href="/network/"
+            cta="Open full screen"
+          />
+          <NetworkGraph nodes={graphNodes} edges={graphEdges} universes={universes.map(({ id, name, tagline, members }) => ({ id, name, tagline, members }))} height="h-[72vh]" />
+        </div>
+        <div className="wrap mt-16 sm:mt-24">
+          <UniverseStory u={topUni} members={uniMembers} facts={uniFacts} headline={`The ${topUni.name} is taking over`} />
+        </div>
+      </section>
+
+
       {/* ranking */}
-      <section className="wrap mt-24 sm:mt-32">
+      <section className="wrap mt-28 sm:mt-40">
         <SectionHead
           kicker={`${meta.counts.included} ranked · updated ${longDate(AS_OF)}`}
           title={
@@ -171,23 +189,6 @@ export default function Home() {
         <div className="mt-16 sm:mt-24">
           <SectionHead kicker="Auto-generated from the data" title="The week in synthetic fame" />
           <Stories stories={stories} />
-        </div>
-      </section>
-
-      {/* universe */}
-      <section id="universe" className="mt-28 scroll-mt-24 sm:mt-40">
-        <div className="wrap">
-          <UniverseStory u={topUni} members={uniMembers} facts={uniFacts} headline={`The ${topUni.name} is taking over`} />
-        </div>
-        <div className="wrap mt-16 sm:mt-24">
-          <SectionHead
-            kicker="They all know each other?"
-            title="The universe"
-            intro="Portraits sized by Fame, pulsing with Momentum, wired by real tags, call-outs and storylines."
-            href="/network/"
-            cta="Open full screen"
-          />
-          <NetworkGraph nodes={graphNodes} edges={graphEdges} universes={universes.map(({ id, name, tagline, members }) => ({ id, name, tagline, members }))} height="h-[70vh]" />
         </div>
       </section>
 
@@ -252,6 +253,12 @@ export default function Home() {
           >
             Discover all {meta.counts.included + meta.counts.watchlist} →
           </Link>
+          <p className="mt-4 text-sm text-ink/60">
+            Missing someone?{" "}
+            <Link href="/submit/" className="link-u font-semibold">
+              Add an AI celebrity to the index →
+            </Link>
+          </p>
         </div>
         <Marquee people={ranked} />
       </section>

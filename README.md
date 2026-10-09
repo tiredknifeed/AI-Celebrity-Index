@@ -2,7 +2,7 @@
 
 **Who owns the internet today?** A live cultural index of fictional AI influencers, synthetic celebrities and internet-native AI characters, with Fame and Momentum scores, a social graph, career arcs, live status, identity labels and an optional token layer.
 
-Built with Next.js (App Router, static export), React, TypeScript, Tailwind CSS, Framer Motion and d3-force.
+Built with Next.js (App Router; pages pre-rendered, API routes for paid submissions), React, TypeScript, Tailwind CSS, Framer Motion and d3-force.
 
 ## Pages
 
@@ -14,6 +14,7 @@ Built with Next.js (App Router, static export), React, TypeScript, Tailwind CSS,
 | `/network/` | The Universe: an interactive force graph. Node size = Fame, pulse = Momentum, lines = relationships. Pick a universe to isolate it. Deep links: `?u=ai-fight-league`, `?focus=derek-mercer` |
 | `/discover/` | Visual discovery with search and filters (AI humans, AI animals, parody, crypto, virtual, verified, tokenized, active, rising) |
 | `/c/[slug]/` | Character profile: overview, career arc, fame history, network, posts, token, sources |
+| `/submit/` | Paid submission: paste an Instagram link, pay, get the analysis; approved characters join the index ([docs/SUBMISSIONS.md](docs/SUBMISSIONS.md)) |
 | `/methodology/`, `/sources/`, `/about/` | How scores work, every source, house rules |
 
 ## Data
@@ -62,9 +63,11 @@ Live market data (market cap, 24h change, volume, liquidity, price path) is requ
 
 ```bash
 npm install
-npm run dev         # http://localhost:3000
-npm run build       # static site in out/
+npm run dev            # http://localhost:3000
+npm run build          # pre-rendered pages + API routes
+npm start              # serve the build
 npm run typecheck
+npm run check:scoring  # scoring code vs. workbook values
 ```
 
 ## Ground rules

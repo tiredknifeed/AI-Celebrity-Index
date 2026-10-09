@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export: the whole index is pre-rendered from the JSON data layer.
-  output: "export",
+  // Pages are still pre-rendered from the JSON data layer; server routes
+  // under /api power paid submissions (Stripe + analysis + review PRs).
   images: { unoptimized: true },
   trailingSlash: true,
   reactStrictMode: true,

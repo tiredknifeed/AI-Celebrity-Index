@@ -68,7 +68,13 @@ export default function Nav({ items, asOf }: { items: SearchItem[]; asOf: string
             })}
           </div>
           <div className="flex items-center gap-2">
-            <span className="hidden font-mono text-[10px] uppercase leading-tight tracking-[0.14em] text-muted lg:block">
+            <Link
+              href="/submit/"
+              className="hidden rounded-full border-2 border-ink px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors hover:bg-ink hover:text-white md:inline-block"
+            >
+              + Add a character
+            </Link>
+            <span className="hidden font-mono text-[10px] uppercase leading-tight tracking-[0.14em] text-muted xl:block">
               Last updated
               <br />
               <span className="text-ink">{asOf}</span>
