@@ -73,14 +73,17 @@
    "token": {
     "status": "NONE",
     "ticker": null,
-    "chain": null,
+    "chain": "SOLANA",
     "contractInBio": false,
     "note": "NONE observed in bio/captions",
-    "url": null,
+    "url": "https://pump.fun/coin/GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump",
     "reported": "$JEANPHIL (pump.fun, Solana) per Dexerto/Sprites.ai - NOT on IG profile",
     "userSupplied": "$JEAN",
-    "contract": null,
-    "verification": "UNVERIFIED"
+    "contract": "GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump",
+    "contractSource": "EDITOR",
+    "verification": "CONTRACT",
+    "editorConfirmed": "2026-10-09",
+    "reference": "https://gmgn.ai/sol/token/GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump"
    },
    "related": "IN: archibald_brown (9 mentions, rivalry), brigittemacaron_ (4), imranpoppadumb (4), derek.mercer.2006 (2), dequavious_von (2), jadeorlhabit_ (bio 'Love U'), brigitte_macaron_ (2). OUT: stellamccartney (2, brand), lafeve7 (2, real rapper - music)",
    "personality": "OBSERVED: catchphrase 'Oui Madame.'; French captions; shadowboxing ('Jab, crochet. T'as senti le danger?'). INFERRED: suave, deadpan French gentleman-fighter / ladies' man",
@@ -375,6 +378,7 @@
     "reported": null,
     "userSupplied": "$STACHE",
     "contract": null,
+    "contractSource": null,
     "verification": "UNVERIFIED"
    },
    "related": "No fictional-character tags/mentions observed in 15 posts",
@@ -626,6 +630,7 @@
     "reported": null,
     "userSupplied": "$SHORTKING",
     "contract": null,
+    "contractSource": null,
     "verification": "UNVERIFIED"
    },
    "related": "higgsfield.ai (7), higgsfield.creators (2), higgsfield.soul (1) - AI tool sponsor, not characters",
@@ -888,6 +893,7 @@
     "reported": "$ARCHIBROWN per Dexerto/Sprites.ai - NOT on IG profile",
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "UNVERIFIED"
    },
    "related": "OUT: jean_philanthrope (9; rivalry), abunuttyofficial (3; 'you're next'), danawhite (3, real), anthonyjoshua (12, real), jonnybones (7, real), ___johnjones___ (5), miketyson (1, real), mighty (13, unknown). IN: percival_ashcrofttt (3)",
@@ -1219,11 +1225,14 @@
     "chain": "SOLANA",
     "contractInBio": false,
     "note": "$ABU (bio + 10-02 carousel '$ABU Officially on Chain 🚀')",
-    "url": "https://join.pump.fun/HSag/wsvnmbjs",
+    "url": "https://pump.fun/coin/6hTLdzZaaCjmqtn7RtaEMQsCbXT5Pg8q76tRViEGpump",
     "reported": null,
     "userSupplied": "$ABUJAB",
-    "contract": null,
-    "verification": "PROFILE"
+    "contract": "6hTLdzZaaCjmqtn7RtaEMQsCbXT5Pg8q76tRViEGpump",
+    "contractSource": "EDITOR",
+    "verification": "CONTRACT",
+    "editorConfirmed": "2026-10-09",
+    "reference": "https://gmgn.ai/sol/token/6hTLdzZaaCjmqtn7RtaEMQsCbXT5Pg8q76tRViEGpump"
    },
    "related": "IN: imranpoppadumb (2). No outbound character tags observed",
    "personality": "OBSERVED: 'Dancer | Actor | Comedian'; emoji-only captions, 'Heeywa', 'Habibi got hands'. INFERRED: carefree uncle-dancer",
@@ -1504,6 +1513,7 @@
     "reported": null,
     "userSupplied": "$MADAME",
     "contract": null,
+    "contractSource": null,
     "verification": "UNVERIFIED"
    },
    "related": "OUT: jean_philanthrope (4; 'La Jeanconde', 'your father' lore), dualipa (3, real singer)",
@@ -1745,6 +1755,7 @@
     "reported": null,
     "userSupplied": "$FRESHBILL",
     "contract": "zYiF3rA8aWYUuDek3Z3po9NF4V5UDky5nji7Wr6pump",
+    "contractSource": "PROFILE",
     "verification": "CONTRACT"
    },
    "related": "OUT: gucci (5, brand), demna (1, real designer). No fictional-character tags",
@@ -1994,6 +2005,7 @@
     "reported": "$DRMR per Dexerto/Sprites.ai",
     "userSupplied": null,
     "contract": "7Xgc5RacHtGzfhw2HukUBk5V986yBbvshr7rrCoopump",
+    "contractSource": "PROFILE",
     "verification": "CONTRACT"
    },
    "related": "jean_philanthrope (2), sickmanai (2), monsterenergy (4, brand), higgsfield.ai (3), fortnite (brand); grid shows Higgsfield 'AI INFLUENCER - short drama' crossover poster",
@@ -2235,6 +2247,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "casper.iggy (5), candy.greyhound (4), don.gorillo (2), pik.vik1 (2), ia.vacalha (2); called out by archibald_brown",
@@ -2444,6 +2457,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "abunuttyofficial (4); referenced by archibald_brown ('Casper was the warm-up') and don.gorillo",
@@ -2629,6 +2643,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "higgsfield.ai (14), malysh_bully (6), valterwalkerufc (3, real), askvenice (3), k.mbappe (real); tagged by abunuttyofficial, sickmanai, ia.vacalha, caramelinho.ia, pik.vik1, evildogi",
@@ -2855,6 +2870,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "abunuttyofficial (2), casper.iggy (2), ufc, jonnybones (real)",
@@ -3053,6 +3069,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "higgsfield.ai (7), cadillac (brand), zaytovenbeatz (real producer); tagged by imranpoppadumb",
@@ -3249,6 +3266,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "PROFILE"
    },
    "related": "evildogi (8), yesand_ai (5), candy.greyhound (4), capcutapp (4), higgsfield.creators; tagged by derek.mercer.2006",
@@ -3455,6 +3473,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "caramelinho.ia (8), candy.greyhound (6), higgsfield.ai (22)",
@@ -3658,6 +3677,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "ia.vacalha (14), candy.greyhound (8), higgsfield.ai (23), roboneo_br",
@@ -3845,6 +3865,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "higgsfield.ai (1)",
@@ -4032,6 +4053,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "dahab.daddy (3), amidoudumont (1)",
@@ -4217,6 +4239,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "PROFILE"
    },
    "related": "archibald_brown (3), egorov_matvey_ (4), sean.dynastyprosper (3), higgsfield.ai",
@@ -4410,6 +4433,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "PROFILE"
    },
    "related": "none observed",
@@ -4587,6 +4611,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "none observed",
@@ -4764,6 +4789,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "jean_philanthrope (4), abu.shalab (2), miltonbumford (2), derek.mercer.2006 (1)",
@@ -4970,6 +4996,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "none observed",
@@ -5155,6 +5182,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "devonlindner_ (4), dance_sfinks_official (2), robotron.bot (2)",
@@ -5332,6 +5360,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "ms.stretchy (4), mahsunco (3, sponsor), ksenia_velart (3)",
@@ -5516,6 +5545,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "ksenia_velart (3), adrielusho (2)",
@@ -5707,6 +5737,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "higgsfield.ai (13), candy.greyhound (2), k.mbappe (2, real); tagged by abunuttyofficial",
@@ -5901,6 +5932,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "sabrinacarpenter (2, real), coachella (2), johnliwag (2)",
@@ -6072,6 +6104,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "blurstudios.ai (4, creator), auntieauroraa (3), nananessaa (2), madonna (2, real), kalshi (brand)",
@@ -6270,6 +6303,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "nananessaa (4), grannyspills (1), higgsfield.ai (9)",
@@ -6468,6 +6502,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "spaceykacey (2), marcrebillet (1, real)",
@@ -6638,6 +6673,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "openart_ai (14, tool), theclueless.ai (5, creator agency)",
@@ -6822,6 +6858,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "tamanaramen (6), ayachoww (5), complexjapan (4)",
@@ -7002,6 +7039,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "lukazelu (2)",
@@ -7182,6 +7220,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "thinkculturefoundation (10), caratlane (2, brand)",
@@ -7358,6 +7397,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "thediigitals (40, creator), openart_ai (41), cameron.gram (30, fellow virtual model)",
@@ -7552,6 +7592,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "none observed",
@@ -7730,6 +7771,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "particle6productions (8, creator), elinehq (7), piersmorgan (3, real), zurichfilm",
@@ -7918,6 +7960,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "jean_philanthrope (2)",
@@ -8078,6 +8121,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "jean_philanthrope",
@@ -8239,6 +8283,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": "candy.greyhound (2), sickmanai (2)",
@@ -8401,6 +8446,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": null,
@@ -8546,6 +8592,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": null,
@@ -8691,6 +8738,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": null,
@@ -8824,6 +8872,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": null,
@@ -8957,6 +9006,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": null,
@@ -9094,6 +9144,7 @@
     "reported": null,
     "userSupplied": null,
     "contract": null,
+    "contractSource": null,
     "verification": "NONE"
    },
    "related": null,

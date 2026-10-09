@@ -47,10 +47,14 @@ export type TokenVerification = "CONTRACT" | "PROFILE" | "UNVERIFIED" | "NONE";
 
 export interface Token {
   status: "IG_OBSERVED" | "NONE";
-  /** CONTRACT: full address on the profile; PROFILE: ticker/link on the profile only. */
+  /** CONTRACT: full address on the profile or editor-confirmed; PROFILE: ticker/link on the profile only. */
   verification: TokenVerification;
-  /** Full contract address, only when shown on the character's own profile. */
+  /** Full contract address: shown on the character's own profile, or confirmed by the editors. */
   contract: string | null;
+  /** Where the contract comes from: the character's bio, or data/tokens.json (editor-confirmed). */
+  contractSource: "PROFILE" | "EDITOR" | null;
+  editorConfirmed?: string | null;
+  reference?: string | null;
   ticker: string | null;
   chain: "SOLANA" | null;
   contractInBio: boolean;

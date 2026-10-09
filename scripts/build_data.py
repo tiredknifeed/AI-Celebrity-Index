@@ -387,6 +387,34 @@ def status_for(days, phase, momentum):
 # formulas as src/lib/scoring.ts (checked by scripts/check_scoring.ts).
 
 SUBMISSIONS = ROOT / "data/submissions"
+EDITOR_TOKENS = ROOT / "data/tokens.json"
+
+
+def editor_tokens():
+    if not EDITOR_TOKENS.exists():
+        return {}
+    return {k: v for k, v in json.loads(EDITOR_TOKENS.read_text(encoding="utf-8")).items() if not k.startswith("_")}
+
+
+def apply_editor_token(token, slug):
+    """Contracts confirmed by the site editors (data/tokens.json) win over the workbook."""
+    e = editor_tokens().get(slug)
+    if not e:
+        return
+    ca = e["contract"]
+    if not re.fullmatch(r"[1-9A-HJ-NP-Za-km-z]{32,48}", ca):
+        raise SystemExit(f"data/tokens.json: bad contract for {slug}: {ca}")
+    token.update({
+        "verification": "CONTRACT",
+        "contract": ca,
+        "contractSource": "EDITOR",
+        "chain": e.get("chain", "SOLANA"),
+        "url": f"https://pump.fun/coin/{ca}",
+        "editorConfirmed": e.get("confirmed"),
+        "reference": e.get("reference"),
+    })
+    if e.get("ticker"):
+        token["ticker"] = e["ticker"]
 
 
 def _log_scale(v, lo, hi):
@@ -494,7 +522,7 @@ def submission_character(rec, next_id, asof):
         "token": {"status": "IG_OBSERVED" if verification != "NONE" else "NONE", "verification": verification,
                   "ticker": tok.get("ticker"), "contract": tok.get("contract"), "chain": "SOLANA" if verification != "NONE" else None,
                   "contractInBio": bool(tok.get("contract")), "note": tok.get("evidence"), "url": tok.get("url"),
-                  "reported": None, "userSupplied": None},
+                  "reported": None, "userSupplied": None, "contractSource": "PROFILE" if tok.get("contract") else None},
         "related": None, "personality": None, "visualStyle": None, "contentFormat": None, "notes": rv.get("notes") or None,
         "why": None,
         "scores": {"fame": fame, "momentum": momentum, "distinctiveness": distinct, "sufficiency": suff, "index": index,
@@ -617,12 +645,14 @@ def build(xlsx):
         #   NONE       - nothing token-related found
         ca = re.search(r"CA:\s*([1-9A-HJ-NP-Za-km-z]{32,48})", bio or "", re.I)
         token["contract"] = ca.group(1) if ca else None
+        token["contractSource"] = "PROFILE" if token["contract"] else None
         if token["status"] == "IG_OBSERVED":
             token["verification"] = "CONTRACT" if token["contract"] else "PROFILE"
         elif token["reported"] or token["userSupplied"]:
             token["verification"] = "UNVERIFIED"
         else:
             token["verification"] = "NONE"
+        apply_editor_token(token, slugify(name))
 
         # scores -----------------------------------------------------------
         def f(col):

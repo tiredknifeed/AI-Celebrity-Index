@@ -257,6 +257,8 @@ export interface TokenCard {
   verification: Character["token"]["verification"];
   ticker: string | null;
   contract: string | null;
+  /** EDITOR when the contract was confirmed by the editors rather than seen in the bio. */
+  contractSource: "PROFILE" | "EDITOR" | null;
   url: string | null;
   chain: string | null;
   /** Off-profile mention, shown only as "unverified". */
@@ -270,6 +272,7 @@ export function tokenCard(c: Character): TokenCard {
     verification: t.verification,
     ticker: t.verification === "CONTRACT" || t.verification === "PROFILE" ? t.ticker : null,
     contract: t.verification === "CONTRACT" ? t.contract : null,
+    contractSource: t.verification === "CONTRACT" ? t.contractSource : null,
     url: t.verification === "CONTRACT" || t.verification === "PROFILE" ? t.url : null,
     chain: t.chain,
     mention: t.verification === "UNVERIFIED" ? mention : null,

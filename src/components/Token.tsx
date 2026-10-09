@@ -58,9 +58,9 @@ export function TokenChip({ t, dark = false }: { t: TokenCard; dark?: boolean })
     <div className={`flex items-center gap-3 rounded-2xl px-3 py-2 ${base}`}>
       <div className="min-w-0">
         <div className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-[#C6F432]">
-          ◎ Token {t.verification === "CONTRACT" ? "· verified CA" : "· on profile"}
+          ◎ Token {t.verification === "CONTRACT" ? (t.contractSource === "EDITOR" ? "· editor-verified CA" : "· verified CA") : "· on profile"}
         </div>
-        <div className="truncate font-display text-lg font-extrabold leading-tight">{ticker ?? "Contract in bio"}</div>
+        <div className="truncate font-display text-lg font-extrabold leading-tight">{ticker ?? (t.contractSource === "EDITOR" ? "Solana token" : "Contract in bio")}</div>
       </div>
       {t.contract && (
         <div className="ml-auto flex items-center gap-2 text-right">
@@ -115,7 +115,7 @@ export function TokenModule({ t, profileNote }: { t: TokenCard; profileNote: str
     );
   }
 
-  const ticker = t.ticker ?? (live ? `$${live.symbol}` : "Contract in bio");
+  const ticker = t.ticker ?? (live ? `$${live.symbol}` : t.contractSource === "EDITOR" ? "Token" : "Contract in bio");
   const metrics: [string, string, string?][] = live
     ? [
         ["Market cap", usd(live.marketCap ?? live.fdv)],
@@ -132,7 +132,12 @@ export function TokenModule({ t, profileNote }: { t: TokenCard; profileNote: str
       <div className="grid gap-0 lg:grid-cols-12">
         <div className="relative bg-ink p-6 text-white sm:p-8 lg:col-span-5">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#C6F432]">
-            ◎ {t.verification === "CONTRACT" ? "Verified · contract on profile" : "Verified · ticker on profile"}
+            ◎{" "}
+            {t.verification === "CONTRACT"
+              ? t.contractSource === "EDITOR"
+                ? "Verified · contract confirmed by the editors"
+                : "Verified · contract on profile"
+              : "Verified · ticker on profile"}
           </p>
           <p className="display mt-3 text-6xl sm:text-7xl">{ticker}</p>
           {live?.name && <p className="mt-1 font-mono text-xs text-white/60">{live.name} · on-chain name</p>}

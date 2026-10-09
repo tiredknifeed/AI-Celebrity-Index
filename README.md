@@ -52,7 +52,7 @@ Token data follows `token.verification` from the data pipeline:
 
 | Level | Meaning | What the UI shows |
 | --- | --- | --- |
-| `CONTRACT` | Full contract address in the character's own bio | Ticker, contract (copy), pump.fun link, live market data, optional DexScreener chart embed |
+| `CONTRACT` | Full contract address in the character's own bio, or confirmed by the editors in `data/tokens.json` (labelled "confirmed by the editors") | Ticker, contract (copy), pump.fun link, live market data, optional DexScreener chart embed |
 | `PROFILE` | Ticker or pump.fun link on the profile, contract not captured | Ticker and link; no prices (they need the contract) |
 | `UNVERIFIED` | Ticker only reported off-Instagram or supplied with the brief | "Token status · unverified" with the mention; never linked or priced |
 | `NONE` | Nothing token-related found | "No verified token" |
