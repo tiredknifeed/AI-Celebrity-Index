@@ -16,7 +16,7 @@ import {
 import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as RPointerEvent } from "react";
 import CharacterArt from "./CharacterArt";
 import { HEAT_STYLE } from "./Chips";
-import { avatarBg, portraitOf } from "@/data/portraits";
+import { avatarBg, avatarSrc, portraitOf } from "@/data/portraits";
 import { EDGE_COLOR, EDGE_LABEL } from "@/lib/labels";
 import type { EdgeType, Heat, Inclusion, StatusCode } from "@/lib/types";
 import { StatusChip } from "./Chips";
@@ -359,9 +359,9 @@ export default function NetworkGraph({
         >
           <div className="flex items-center gap-3">
             <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-2xl" style={avatarBg(hv.slug)}>
-              {portraitOf(hv.slug).avatar ? (
+              {avatarSrc(hv.slug) ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={`/avatars/${hv.slug}/avatar-160.webp`} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                <img src={avatarSrc(hv.slug)!} alt="" className="absolute inset-0 h-full w-full object-cover" />
               ) : (
                 <CharacterArt art={portraitOf(hv.slug).art} name={hv.name} className="absolute inset-0 h-full w-full" />
               )}
@@ -529,7 +529,7 @@ export default function NetworkGraph({
                   <g clipPath={`url(#clip-${n.slug})`}>
                     {spec.avatar ? (
                       <image
-                        href={`/avatars/${n.slug}/avatar-${n.r > 34 ? 512 : 160}.webp`}
+                        href={avatarSrc(n.slug, n.r > 34 ? 512 : 160)!}
                         x={-n.r}
                         y={-n.r}
                         width={n.r * 2}
@@ -619,9 +619,9 @@ export default function NetworkGraph({
             >
               <div className="flex items-center gap-3">
                 <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl" style={avatarBg(sel.slug)}>
-                  {portraitOf(sel.slug).avatar ? (
+                  {avatarSrc(sel.slug) ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={`/avatars/${sel.slug}/avatar-160.webp`} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                    <img src={avatarSrc(sel.slug)!} alt="" className="absolute inset-0 h-full w-full object-cover" />
                   ) : (
                     <CharacterArt art={portraitOf(sel.slug).art} name={sel.name} className="absolute inset-0 h-full w-full" />
                   )}

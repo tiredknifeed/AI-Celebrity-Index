@@ -268,46 +268,16 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
 
       {/* ---------------------------------------------------------- career */}
       <section id="career" className="wrap scroll-mt-40 pt-24">
-        <p className="kicker mb-3">Career</p>
-        <h2 className="display mb-8 text-6xl sm:text-8xl">Career arc</h2>
+        <p className="kicker mb-3">Career · from debut to now</p>
+        <h2 className="display mb-6 text-6xl sm:text-7xl">Career arc</h2>
         <CareerArc events={careerArc(c)} />
         <div className="panel mt-8 p-5 sm:p-8">
-          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <p className="kicker">Attention over time · not price</p>
-              <h3 className="display text-4xl sm:text-5xl">Fame history</h3>
-            </div>
-            {c.phase && (
-              <span className="chip bg-ink text-white">
-                Current phase: {c.phase} <span className="opacity-60">· inferred</span>
-              </span>
-            )}
+          <div className="mb-5">
+            <p className="kicker">Attention over time · not a price</p>
+            <h3 className="display text-4xl sm:text-5xl">Fame history</h3>
+            <p className="mt-1 text-sm text-ink/70">How many likes {c.name}’s posts get, period by period.</p>
           </div>
           <FameHistory c={c} accent={spec.accent} asOf={AS_OF} />
-          {c.trajectory.length > 0 && (
-            <div className="mt-6 overflow-x-auto">
-              <table className="w-full min-w-[480px] text-left text-sm">
-                <thead>
-                  <tr className="kicker">
-                    <th className="py-2 pr-4 font-normal">Period</th>
-                    <th className="py-2 pr-4 font-normal">Posts</th>
-                    <th className="py-2 font-normal">Avg likes / post</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {c.trajectory.map((t, i) => (
-                    <tr key={i} className="border-t border-line">
-                      <td className="py-2 pr-4 font-mono text-xs">
-                        {t.start ? shortDate(t.start) : "…"} → {t.end ? shortDate(t.end) : "…"}
-                      </td>
-                      <td className="py-2 pr-4 font-mono text-xs">{t.posts ?? "—"}</td>
-                      <td className="py-2 font-display text-lg font-extrabold">{full(t.avgLikes)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
         </div>
       </section>
 

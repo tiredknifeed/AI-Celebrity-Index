@@ -46,6 +46,33 @@ function statusFor(days: number | null, asof: string): Character["status"] {
   return { code: "COOLING", basis: `Last post ${days}d before capture` };
 }
 
+const isoDay = (t: number) => new Date(t).toISOString().slice(0, 10);
+
+/** Average likes per post by week since the first analysed post (twin of weekly_trajectory in build_data.py). */
+function weeklyTrajectory(posts: SubmissionRecord["posts"], lastPost: string | null): Character["trajectory"] {
+  const pts = posts
+    .filter((p) => p.timestamp && p.likes !== null)
+    .map((p) => [p.timestamp!.slice(0, 10), p.likes!] as const)
+    .sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : a[1] - b[1]));
+  if (!pts.length) return [];
+  const d0 = Date.parse(pts[0][0]);
+  const weeks = new Map<number, number[]>();
+  for (const [d, likes] of pts) {
+    const k = Math.floor((Date.parse(d) - d0) / DAY / 7);
+    weeks.set(k, [...(weeks.get(k) ?? []), likes]);
+  }
+  return [...weeks.keys()]
+    .sort((a, b) => a - b)
+    .slice(-8)
+    .map((k) => {
+      const start = d0 + 7 * k * DAY;
+      let end = isoDay(start + 6 * DAY);
+      if (lastPost && lastPost < end) end = lastPost;
+      const v = weeks.get(k)!;
+      return { start: isoDay(start), end, posts: v.length, avgLikes: Math.floor(v.reduce((a, b) => a + b, 0) / v.length + 0.5), label: `Week ${k + 1}` };
+    });
+}
+
 /** A record the build would merge: included and every analyst rating filled. */
 export function isMergeable(rec: SubmissionRecord) {
   const rv = rec.review;
@@ -180,7 +207,7 @@ function submissionCharacter(rec: SubmissionRecord, id: number, asof: string, un
     phase: null,
     debut: { date: m.firstPost, basis: "Oldest analysed post", url: null },
     peak: top ? { date: top.date, likes: top.likes, url: top.url } : null,
-    trajectory: [],
+    trajectory: weeklyTrajectory(rec.posts ?? [], m.lastPost),
     timeline,
     evidence: [],
     realPeopleTagged: [],

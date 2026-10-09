@@ -9,7 +9,7 @@
 import { cache } from "react";
 import raw from "@/data/generated/index.json";
 import builtPortraits from "@/data/generated/portraits.json";
-import { setLivePortraits, type PortraitSpec } from "@/data/portraits";
+import { portraits as ownPortraits, setLivePortraits, type PortraitSpec } from "@/data/portraits";
 import { makeData, STATIC_DATA, type Data } from "./data";
 import type { SubmissionRecord } from "./submissions/analyze";
 import { config } from "./submissions/config";
@@ -73,7 +73,8 @@ function portraitsFor(ds: Dataset, records: SubmissionRecord[], avatars: Record<
   const byHandle = new Map(records.map((r) => [r.handle, r]));
   const out: Record<string, PortraitSpec> = {};
   for (const c of ds.characters) {
-    if (c.group !== "SUBMITTED" || built[c.slug]) continue; // deployed avatars are served locally
+    // deployed and hand-made avatars are served locally
+    if (built[c.slug] || ownPortraits[c.slug]?.avatar || c.inclusion !== "INCLUDED") continue;
     const cfg = avatars[c.slug];
     if (cfg?.auto) {
       out[c.slug] = { accent: cfg.accent ?? "#CFC8BA", avatar: true, source: "instagram", base: assetUrl(`public/avatars/${c.slug}/`) };

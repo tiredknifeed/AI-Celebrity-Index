@@ -305,7 +305,20 @@ export function setLivePortraits(map: Record<string, PortraitSpec>) {
 }
 
 export function portraitOf(slug: string): PortraitSpec {
-  return portraits[slug] ?? (submitted as Record<string, PortraitSpec>)[slug] ?? live[slug] ?? FALLBACK;
+  const own = portraits[slug];
+  if (own?.avatar) return own;
+  // an Instagram avatar normalized by scripts/avatars/auto.py beats the illustration
+  const dyn = (submitted as Record<string, PortraitSpec>)[slug] ?? live[slug];
+  if (dyn) return own ? { ...own, ...dyn, accent: own.accent, onAccent: own.onAccent } : dyn;
+  return own ?? FALLBACK;
+}
+
+/** Square avatar image for small placements, or null when the character has none. */
+export function avatarSrc(slug: string, size: 160 | 512 | 1024 = 160): string | null {
+  const s = portraitOf(slug);
+  if (s.pending) return s.pending;
+  if (!s.avatar) return null;
+  return `${s.base ?? `/avatars/${slug}/`}avatar-${size}.webp`;
 }
 
 function mix(hex: string, to: number, t: number): string {

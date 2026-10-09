@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
-"""Normalize avatars for user-added characters, with no hand-set anchors.
+"""Normalize Instagram avatars, with no hand-set anchors, for every ranked
+character that has no avatar yet (user-added ones and researched characters
+still shown as an illustration).
 
     python3 scripts/avatars/auto.py [--sr-model EDSR_x4.pb] [--force] [slug ...]
 
 Runs after scripts/build_data.py (it reads src/data/generated/index.json).
-For every approved submission (group SUBMITTED) without public/avatars/<slug>/:
+For every INCLUDED character without an avatar (public/avatars/<slug>/ or
+`avatar: true` in src/data/portraits.ts):
 
 1. source picture: the one committed with the submission
-   (data/submissions/<handle>.json -> avatar.path); if missing, the current
-   profile picture through Apify (APIFY_TOKEN) or unavatar.io
+   (data/submissions/<handle>.json -> avatar.path), one already in
+   data/avatars/source/<handle>.*, or the current profile picture from
+   Instagram's public profile endpoint, Apify (APIFY_TOKEN) or unavatar.io
 2. framing anchors found automatically: OpenCV face detection, or the
    cut-out silhouette when no face is found (cartoons, animals)
-3. accent: the site palette colour that contrasts most with the subject
+3. accent: the character's accent from src/data/portraits.ts, else the site
+   palette colour that contrasts most with the subject
 4. the same pipeline as the hand-tuned avatars (normalize.py run()), and an
    entry in scripts/avatars/avatars.json marked "auto": true
 
@@ -25,6 +30,7 @@ import argparse
 import io
 import json
 import os
+import re
 import sys
 import urllib.request
 from pathlib import Path
@@ -55,19 +61,41 @@ def fetch(url: str, data: bytes | None = None, timeout=60) -> bytes | None:
         return None
 
 
-def current_picture(handle: str) -> tuple[bytes, str] | None:
+IG_UA = "Instagram 300.0.0.0.0 Android (33/13; 420dpi; 1080x2340; samsung; SM-S918B; dm3q; qcom; en_US; 520000000)"
+_apify: dict[str, str] = {}
+
+
+def apify_pictures(handles: list[str]) -> None:
+    """One Apify run for every handle still missing a picture (needs APIFY_TOKEN)."""
     token = os.environ.get("APIFY_TOKEN")
-    if token:
-        actor = os.environ.get("APIFY_PROFILE_ACTOR", "apify~instagram-profile-scraper")
-        raw = fetch(f"https://api.apify.com/v2/acts/{actor}/run-sync-get-dataset-items?token={token}&timeout=120",
-                    json.dumps({"usernames": [handle]}).encode(), timeout=180)
-        if raw:
-            items = json.loads(raw)
-            p = items[0] if items else {}
-            url = p.get("profilePicUrlHD") or p.get("profilePicUrl")
-            img = fetch(url) if url else None
-            if img:
-                return img, "Instagram profile picture (Apify)"
+    if not token or not handles:
+        return
+    actor = os.environ.get("APIFY_PROFILE_ACTOR", "apify~instagram-profile-scraper")
+    raw = fetch(f"https://api.apify.com/v2/acts/{actor}/run-sync-get-dataset-items?token={token}&timeout=280",
+                json.dumps({"usernames": handles}).encode(), timeout=300)
+    for p in json.loads(raw) if raw else []:
+        url = p.get("profilePicUrlHD") or p.get("profilePicUrl")
+        if p.get("username") and url:
+            _apify[p["username"].lower()] = url
+
+
+def current_picture(handle: str) -> tuple[bytes, str] | None:
+    # Instagram's own public profile endpoint (works without login from many networks)
+    try:
+        req = urllib.request.Request(f"https://i.instagram.com/api/v1/users/web_profile_info/?username={handle}",
+                                     headers={"user-agent": IG_UA, "x-ig-app-id": "936619743392459"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            user = json.loads(r.read())["data"]["user"]
+        url = user.get("profile_pic_url_hd") or user.get("profile_pic_url")
+        img = fetch(url) if url else None
+        if img and len(img) > 1000:
+            return img, "Instagram profile picture"
+    except Exception as e:
+        print(f"  instagram endpoint failed for @{handle}: {e}")
+    if handle in _apify:
+        img = fetch(_apify[handle])
+        if img:
+            return img, "Instagram profile picture (Apify)"
     img = fetch(f"https://unavatar.io/instagram/{handle}?fallback=false")
     if img and len(img) > 1000:
         return img, "Instagram profile picture (unavatar.io)"
@@ -81,6 +109,9 @@ def source_for(c: dict) -> tuple[str, str] | None:
     av = rec.get("avatar") or {}
     if av.get("path") and (ROOT / av["path"]).exists():
         return Path(av["path"]).name, f"{av.get('origin', 'Instagram profile picture')}, captured {av.get('capturedAt', '')}".strip(", ")
+    for ext in ("jpg", "png", "webp"):
+        if (N.SOURCES / f"{c['handle']}.{ext}").exists():
+            return f"{c['handle']}.{ext}", "Instagram profile picture"
     got = current_picture(c["handle"])
     if not got:
         return None
@@ -134,13 +165,22 @@ def main():
     cfgs = json.loads(N.CONFIG.read_text(encoding="utf-8"))
     report_path = N.OUT / "report.json"
     report = json.loads(report_path.read_text()) if report_path.exists() else []
-    done = 0
+    accents = N.accents()
+    hand_made = set(re.findall(r'"([a-z0-9-]+)":\s*\{[^}]*?avatar:\s*true', N.PORTRAITS_TS.read_text(encoding="utf-8")))
+    todo = []
     for c in data["characters"]:
-        if c.get("group") != "SUBMITTED" or (args.slugs and c["slug"] not in args.slugs):
+        if c.get("inclusion") != "INCLUDED" or (args.slugs and c["slug"] not in args.slugs):
             continue
+        if c["slug"] in hand_made and not args.force:
+            continue
+        if (N.OUT / c["slug"] / "avatar-512.webp").exists() and not args.force:
+            continue
+        todo.append(c)
+    have = {p.stem for p in N.SOURCES.iterdir()}
+    apify_pictures([c["handle"] for c in todo if c["handle"] not in have and c.get("group") != "SUBMITTED"])
+    done = 0
+    for c in todo:
         slug = c["slug"]
-        if (N.OUT / slug / "avatar-512.webp").exists() and not args.force:
-            continue
         existing = cfgs.get(slug)
         cfg = existing if existing and not existing.get("auto") else None  # a hand-tuned entry wins
         if cfg is None:
@@ -157,7 +197,7 @@ def main():
                 model = "u2net_human_seg"
                 alpha = N.cut_out(img, model)
             cfg = {"source": name, "origin": origin, "model": model, **{k: round(v, 3) if v is not None else None for k, v in a.items()},
-                   "accent": accent_for(img, alpha), "auto": True, "_why": f"Anchors found automatically ({how})."}
+                   "accent": accents.get(slug) or accent_for(img, alpha), "auto": True, "_why": f"Anchors found automatically ({how})."}
             cfgs[slug] = cfg
         r = N.run(slug, cfg, cfg.get("accent", "#CFC8BA"), args.sr_model)
         r["origin"] = cfg["origin"]

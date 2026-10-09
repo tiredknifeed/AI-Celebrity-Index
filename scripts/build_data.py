@@ -470,6 +470,28 @@ def load_submissions(existing_handles, asof):
     return out
 
 
+def weekly_trajectory(posts, last_post):
+    """Average likes per post by week since the first analysed post (same rule as
+    weeklyTrajectory() in src/lib/submissions/merge.ts); the last 8 weeks."""
+    pts = sorted((p["timestamp"][:10], p["likes"]) for p in posts if p.get("timestamp") and p.get("likes") is not None)
+    if not pts:
+        return []
+    d0 = dt.date.fromisoformat(pts[0][0])
+    weeks = {}
+    for d, likes in pts:
+        weeks.setdefault((dt.date.fromisoformat(d) - d0).days // 7, []).append(likes)
+    out = []
+    for k in sorted(weeks)[-8:]:
+        start = d0 + dt.timedelta(days=7 * k)
+        end = start + dt.timedelta(days=6)
+        if last_post:
+            end = min(end, dt.date.fromisoformat(last_post))
+        v = weeks[k]
+        out.append({"start": start.isoformat(), "end": end.isoformat(), "posts": len(v),
+                    "avgLikes": int(sum(v) / len(v) + 0.5), "label": f"Week {k + 1}"})
+    return out
+
+
 def submission_character(rec, next_id, asof):
     m, p, rv = rec["metrics"], rec["profile"], rec["review"]
     d = rv["distinct"]
@@ -531,7 +553,7 @@ def submission_character(rec, next_id, asof):
         "heat": heat_for(momentum), "status": {"code": status_code, "basis": status_basis}, "phase": None,
         "debut": {"date": m.get("firstPost"), "basis": "Oldest analysed post", "url": None},
         "peak": {"date": top.get("date"), "likes": top.get("likes"), "url": top.get("url")} if top else None,
-        "trajectory": [], "timeline": timeline, "evidence": [], "realPeopleTagged": [], "brandsTagged": [],
+        "trajectory": weekly_trajectory(rec.get("posts") or [], m.get("lastPost")), "timeline": timeline, "evidence": [], "realPeopleTagged": [], "brandsTagged": [],
         "suggestedNeighbours": None,
         "outLinks": [{"handle": l["handle"], "count": l["count"], "note": "tag/mention"} for l in rec.get("links", [])],
         "inLinks": [], "externalLinks": [],
@@ -1023,12 +1045,13 @@ AVATARS_CONFIG = ROOT / "scripts/avatars/avatars.json"
 
 
 def submission_portraits(data):
-    """Portrait specs for user-added characters whose avatar has been normalized
-    (scripts/avatars/auto.py). The hand-tuned ones live in src/data/portraits.ts."""
+    """Portrait specs for avatars normalized by scripts/avatars/auto.py (user-added
+    characters and researched ones that had no photo). The hand-tuned ones live in
+    src/data/portraits.ts."""
     cfg = json.loads(AVATARS_CONFIG.read_text(encoding="utf-8")) if AVATARS_CONFIG.exists() else {}
     out = {}
     for c in data["characters"]:
-        if c.get("group") != "SUBMITTED":
+        if not (cfg.get(c["slug"]) or {}).get("auto") and c.get("group") != "SUBMITTED":
             continue
         if (ROOT / "public/avatars" / c["slug"] / "avatar-512.webp").exists():
             out[c["slug"]] = {"accent": (cfg.get(c["slug"]) or {}).get("accent", "#CFC8BA"), "avatar": True, "source": "instagram"}
