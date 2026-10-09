@@ -29,8 +29,23 @@
   "avatar": true,
   "source": "instagram"
  },
+ "edmond-lebon": {
+  "accent": "#C27A3A",
+  "avatar": true,
+  "source": "instagram"
+ },
  "vulu-zamal": {
   "accent": "#E58466",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "imran-poppadumb": {
+  "accent": "#EDCB6B",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "tony-ravioliano": {
+  "accent": "#E0566A",
   "avatar": true,
   "source": "instagram"
  },
@@ -46,6 +61,46 @@
  },
  "lil-miquela": {
   "accent": "#F6A65C",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "auntie-aurora": {
+  "accent": "#F59A4A",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "aitana-lopez": {
+  "accent": "#FF9DB0",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "imma": {
+  "accent": "#FFB3CF",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "mia-zelu": {
+  "accent": "#F5CB5C",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "kyra": {
+  "accent": "#F6926D",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "shudu": {
+  "accent": "#D4AF37",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "bigfoot-vlog": {
+  "accent": "#8DB27A",
+  "avatar": true,
+  "source": "instagram"
+ },
+ "tilly-norwood": {
+  "accent": "#B2C29A",
   "avatar": true,
   "source": "instagram"
  },

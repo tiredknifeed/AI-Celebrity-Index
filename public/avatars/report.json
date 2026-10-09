@@ -387,5 +387,151 @@
    "heavy enlargement (2.9x native)"
   ],
   "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "edmond-lebon",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 2.95,
+  "notes": [
+   "heavy enlargement (3.0x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "imran-poppadumb",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.15,
+  "notes": [
+   "scaled up so the body reaches the bottom edge",
+   "heavy enlargement (3.2x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "tony-ravioliano",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 7.02,
+  "notes": [
+   "hair touches the top edge",
+   "heavy enlargement (7.0x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "auntie-aurora",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 4.52,
+  "notes": [
+   "heavy enlargement (4.5x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "aitana-lopez",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 1.06,
+  "notes": [],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "imma",
+  "native": [
+   870,
+   870
+  ],
+  "superResolved": false,
+  "scale": 1.19,
+  "notes": [
+   "scaled up so the body reaches the bottom edge"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "mia-zelu",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.11,
+  "notes": [
+   "scaled up so the body reaches the bottom edge",
+   "heavy enlargement (3.1x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "kyra",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 5.37,
+  "notes": [
+   "heavy enlargement (5.4x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "shudu",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.2,
+  "notes": [
+   "crown cropped in source: top-anchored tight crop",
+   "heavy enlargement (3.2x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "bigfoot-vlog",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.2,
+  "notes": [
+   "heavy enlargement (3.2x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "tilly-norwood",
+  "native": [
+   1080,
+   1080
+  ],
+  "superResolved": false,
+  "scale": 0.95,
+  "notes": [
+   "scaled up so the body reaches the bottom edge",
+   "crown cropped in source: top-anchored tight crop"
+  ],
+  "origin": "Instagram profile picture"
  }
 ]
