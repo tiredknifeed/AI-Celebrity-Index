@@ -278,7 +278,13 @@
     "top": 0.212,
     "accent": "#8FA37A",
     "auto": true,
-    "_why": "Anchors found automatically (face)."
+    "_why": "Anchors found automatically (face). clip removes the police officer behind him.",
+    "clip": [
+      0.55,
+      0.0,
+      1.0,
+      0.55
+    ]
   },
   "vulu-zamal": {
     "source": "vuluzamal.jpg",
@@ -439,14 +445,14 @@
   "shudu": {
     "source": "shudu.gram.jpg",
     "origin": "Instagram profile picture",
-    "model": "isnet-general-use",
-    "cx": 0.501,
-    "eye": 0.299,
-    "chin": 0.578,
+    "model": "u2net_human_seg",
+    "cx": 0.5,
+    "eye": 0.36,
+    "chin": 0.63,
     "top": null,
     "accent": "#D4AF37",
     "auto": true,
-    "_why": "Anchors found automatically (silhouette)."
+    "_why": "Framed by hand; Instagram's profile icon at the lower left was painted out of the source."
   },
   "bigfoot-vlog": {
     "source": "bigfootvlog.jpg",

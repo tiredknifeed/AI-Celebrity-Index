@@ -311,19 +311,6 @@
   "origin": "Instagram profile picture"
  },
  {
-  "slug": "percival-ashcroft",
-  "native": [
-   320,
-   320
-  ],
-  "superResolved": true,
-  "scale": 4.15,
-  "notes": [
-   "heavy enlargement (4.1x native)"
-  ],
-  "origin": "Instagram profile picture"
- },
- {
   "slug": "vulu-zamal",
   "native": [
    320,
@@ -494,20 +481,6 @@
   "origin": "Instagram profile picture"
  },
  {
-  "slug": "shudu",
-  "native": [
-   320,
-   320
-  ],
-  "superResolved": true,
-  "scale": 3.2,
-  "notes": [
-   "crown cropped in source: top-anchored tight crop",
-   "heavy enlargement (3.2x native)"
-  ],
-  "origin": "Instagram profile picture"
- },
- {
   "slug": "bigfoot-vlog",
   "native": [
    320,
@@ -531,6 +504,33 @@
   "notes": [
    "scaled up so the body reaches the bottom edge",
    "crown cropped in source: top-anchored tight crop"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "percival-ashcroft",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 4.15,
+  "notes": [
+   "heavy enlargement (4.1x native)"
+  ],
+  "origin": "Instagram profile picture"
+ },
+ {
+  "slug": "shudu",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.2,
+  "notes": [
+   "crown cropped in source: top-anchored tight crop",
+   "heavy enlargement (3.2x native)"
   ],
   "origin": "Instagram profile picture"
  }
