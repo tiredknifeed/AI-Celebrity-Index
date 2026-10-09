@@ -46,6 +46,7 @@ export async function GET() {
   const missing = missingConfig();
   return NextResponse.json({
     ready: missing.length === 0 && gh.ok && ap.ok,
+    build: process.env.BUILD_COMMIT ? process.env.BUILD_COMMIT.slice(0, 7) : null,
     mode: config.free ? "free" : "paid",
     missing,
     github: gh,

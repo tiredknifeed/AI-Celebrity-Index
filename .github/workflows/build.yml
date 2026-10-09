@@ -1,0 +1,31 @@
+# Runs the same build as Netlify (netlify.toml) on every push, so a broken
+# build shows up on GitHub with its log.
+name: Build check
+
+on:
+  push:
+    paths-ignore:
+      - "data/avatars/**"
+      - "public/avatars/**"
+      - "data/submissions/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run data
+      - run: npm run check:merge
+      - run: npm run build
