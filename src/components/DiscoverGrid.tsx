@@ -13,6 +13,7 @@ const FILTERS: { key: string; label: string; test: (c: CardData) => boolean }[] 
   { key: "crypto", label: "Crypto", test: (c) => c.crypto },
   { key: "virtual", label: "Virtual", test: (c) => c.virtual || c.kind === "toon" },
   { key: "verified", label: "Verified", test: (c) => c.verified },
+  { key: "community", label: "User-added", test: (c) => c.identity === "COMMUNITY" },
   { key: "tokenized", label: "Tokenized", test: (c) => c.tokenized },
   { key: "active", label: "Active", test: (c) => c.daysSinceLastPost !== null && c.daysSinceLastPost <= 3 },
   { key: "rising", label: "Rising", test: (c) => ["ON FIRE", "HOT", "RISING"].includes(c.heat) },

@@ -61,9 +61,9 @@ export default function CharacterCard({
           <div className="absolute right-3 top-3">
             <StatusChip code={c.status} solid />
           </div>
-          {c.identity === "PARODY" && (
+          {(c.identity === "PARODY" || c.identity === "COMMUNITY") && (
             <div className="absolute bottom-3 left-3">
-              <IdentityBadge identity="PARODY" />
+              <IdentityBadge identity={c.identity} />
             </div>
           )}
           <div className="absolute bottom-0 right-3 z-10 translate-y-1/3">

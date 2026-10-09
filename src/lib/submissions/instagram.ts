@@ -24,6 +24,8 @@ export interface RawProfile {
   followers: number;
   following: number | null;
   postsCount: number;
+  /** Profile picture URL (Instagram CDN, expires after a few days). */
+  profilePicUrl: string | null;
   posts: RawPost[];
 }
 
@@ -91,6 +93,7 @@ export async function fetchProfile(handle: string): Promise<RawProfile> {
     followers: num(p.followersCount, p.followers) ?? 0,
     following: num(p.followsCount, p.following),
     postsCount: num(p.postsCount, p.mediaCount) ?? unique.length,
+    profilePicUrl: str(p.profilePicUrlHD, p.profilePicUrlHd, p.profile_pic_url_hd, p.profilePicUrl, p.profile_pic_url),
     posts: unique,
   };
 }

@@ -258,11 +258,15 @@ def main():
     for slug, cfg in cfgs.items():
         if args.slugs and slug not in args.slugs:
             continue
-        r = run(slug, cfg, acc.get(slug, "#CFC8BA"), args.sr_model)
+        r = run(slug, cfg, cfg.get("accent") or acc.get(slug, "#CFC8BA"), args.sr_model)
         r["origin"] = cfg["origin"]
         report.append(r)
         print(f"{slug:20s} native {r['native'][0]}x{r['native'][1]}  sr={r['superResolved']}  {r['scale']}x  {'; '.join(r['notes'])}")
-    (OUT / "report.json").write_text(json.dumps(report, indent=1))
+    # merge into the existing report so a partial run keeps the other entries
+    path = OUT / "report.json"
+    done = {r["slug"] for r in report}
+    old = json.loads(path.read_text()) if path.exists() else []
+    path.write_text(json.dumps([r for r in old if r.get("slug") not in done] + report, indent=1))
 
 
 if __name__ == "__main__":

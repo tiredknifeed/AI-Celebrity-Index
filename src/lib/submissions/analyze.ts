@@ -19,7 +19,9 @@ export interface SubmissionRecord {
   payment: { provider: "stripe"; session: string; amount: number; currency: string } | null;
   /** Submission id: the Stripe session (paid) or a random free_… id. */
   submissionId: string;
-  profile: Omit<RawProfile, "posts" | "handle">;
+  profile: Omit<RawProfile, "posts" | "handle" | "profilePicUrl">;
+  /** Profile picture saved with the submission; normalized into the avatar system after approval. */
+  avatar: { path: string; origin: string; capturedAt: string } | null;
   posts: RawPost[];
   metrics: {
     postsAnalysed: number;
@@ -160,7 +162,7 @@ export function analyze(
   for (const p of dated) for (const m of new Set(p.mentions)) if (known.has(m) && m !== raw.handle) counts.set(m, (counts.get(m) ?? 0) + 1);
   const links = [...counts.entries()].map(([handle, count]) => ({ handle, count })).sort((a, b) => b.count - a.count);
 
-  const { posts, handle, ...profile } = raw;
+  const { posts, handle, profilePicUrl, ...profile } = raw;
   return {
     schema: 1,
     handle,
@@ -171,6 +173,7 @@ export function analyze(
     payment: opts.payment ? { provider: "stripe", ...opts.payment } : null,
     submissionId: opts.id,
     profile,
+    avatar: null,
     posts: posts.slice(0, 60),
     metrics,
     scores: { ...s, provisional: true, note: "Recognizability, distinctiveness and the index score are set by an analyst during review." },

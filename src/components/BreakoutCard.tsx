@@ -34,7 +34,7 @@ export default function BreakoutCard({ c, place }: { c: Character; place: number
       <div className="flex flex-col gap-4 p-5 sm:p-6">
         <div className="flex flex-wrap items-center gap-1.5">
           <span className="chip bg-ink text-white">#{c.ranks?.index} in the index</span>
-          {c.identity === "PARODY" && <IdentityBadge identity="PARODY" />}
+          {(c.identity === "PARODY" || c.identity === "COMMUNITY") && <IdentityBadge identity={c.identity} />}
         </div>
         <div>
           <h3 className="display text-4xl leading-[0.88] sm:text-[46px]">{c.name}</h3>

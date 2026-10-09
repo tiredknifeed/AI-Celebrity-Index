@@ -2,7 +2,7 @@
 // A future backend should return the same shape so the UI does not change.
 
 export type Trust = "OBSERVED" | "INFERRED" | "UNKNOWN";
-export type Identity = "VERIFIED" | "OFFICIAL" | "UNVERIFIED" | "PARODY" | "UNKNOWN";
+export type Identity = "VERIFIED" | "OFFICIAL" | "UNVERIFIED" | "PARODY" | "COMMUNITY" | "UNKNOWN";
 export type Heat = "ON FIRE" | "HOT" | "RISING" | "STEADY" | "COOLING" | "DORMANT";
 export type StatusCode =
   | "ACTIVE_TODAY"

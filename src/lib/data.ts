@@ -299,7 +299,8 @@ export function toCard(c: Character): CardData {
     universeName: u && u.id !== "independents" ? u.name : null,
     kind: c.kind,
     virtual: c.virtual,
-    verified: c.verifiedBadge,
+    // user-added characters never carry the verified mark
+    verified: c.verifiedBadge && c.identity !== "COMMUNITY",
     tokenized: c.token.status === "IG_OBSERVED",
     crypto: c.token.status === "IG_OBSERVED" || !!c.token.reported,
     daysSinceLastPost: c.daysSinceLastPost,

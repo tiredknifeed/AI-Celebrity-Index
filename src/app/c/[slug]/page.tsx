@@ -114,6 +114,19 @@ export default async function ProfilePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
+      {c.identity === "COMMUNITY" && (
+        <div className="wrap -mt-6 relative z-10">
+          <div className="rounded-4xl bg-[#DCE8FF] p-5 shadow-card sm:flex sm:items-center sm:gap-5">
+            <span className="display shrink-0 text-3xl">+ Added by a user</span>
+            <p className="mt-2 text-sm leading-snug sm:mt-0">
+              This character was submitted by a visitor. The numbers come from its public Instagram profile and the entry was checked by the
+              editors, but the identity is not verified by the index.
+              {c.parodyOf && <> Parody of {stripTrust(c.parodyOf)}; not affiliated with the person or IP referenced.</>}
+            </p>
+          </div>
+        </div>
+      )}
+
       {c.identity === "PARODY" && (
         <div className="wrap -mt-6 relative z-10">
           <div className="rounded-4xl bg-[#FFE45C] p-5 shadow-card sm:flex sm:items-center sm:gap-5">

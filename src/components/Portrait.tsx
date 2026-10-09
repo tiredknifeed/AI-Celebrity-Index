@@ -51,7 +51,12 @@ export default function Portrait({
 export function portraitCredit(slug: string): string {
   const spec = portraitOf(slug);
   if (spec.avatar)
-    return { "x-avatar": "Official X avatar · normalized", editor: "Editor-supplied portrait · normalized", "promo-still": "Promo still · normalized" }[spec.source ?? "promo-still"];
+    return {
+      "x-avatar": "Official X avatar · normalized",
+      editor: "Editor-supplied portrait · normalized",
+      instagram: "Instagram profile picture · normalized",
+      "promo-still": "Promo still · normalized",
+    }[spec.source ?? "promo-still"];
   if (!spec.art || spec.art.kind === "unknown") return "Portrait not captured";
   return spec.basis === "OBSERVED" ? "Illustration · from observed posts" : "Illustration · inferred look";
 }

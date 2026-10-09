@@ -76,6 +76,12 @@ Hosting needs server functions (e.g. Vercel): the site is no longer a pure stati
 
 A file with `"include": false` or any rating left empty is ignored by the build, so merging an unreviewed PR is harmless.
 
+On the site, user-added characters carry a "+ Added by a user" label (identity `COMMUNITY`) instead of an identity verdict, and never show the verified mark.
+
+## Avatars
+
+The submission saves the Instagram profile picture with the PR (`data/avatars/source/<handle>.jpg`, the CDN link expires). After approval, the **Submission avatars** GitHub Action (`.github/workflows/avatars.yml`) runs `scripts/avatars/auto.py`: it finds the face (or frames by the silhouette for cartoons and animals), picks a contrasting accent, normalizes the picture with the same pipeline as the hand-tuned avatars and commits `public/avatars/<slug>/`. That push triggers one more site build. For submissions saved without a picture, the job fetches the current one through Apify (optional repository secret `APIFY_TOKEN`) or unavatar.io. To hand-tune a result, edit its entry in `scripts/avatars/avatars.json`, remove `"auto": true` and run `normalize.py <slug>`.
+
 ## Checks
 
 - `npm run check:scoring` re-scores all 38 researched characters with `src/lib/scoring.ts` and compares with the workbook (worst difference must be 0.0).

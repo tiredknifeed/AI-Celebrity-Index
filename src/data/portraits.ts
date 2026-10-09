@@ -6,6 +6,12 @@
 // description in the research workbook, on the same background system. When
 // the workbook marks the look as UNKNOWN we draw a neutral placeholder instead
 // of inventing a face.
+//
+// User-added characters get their spec from src/data/generated/portraits.json,
+// written by scripts/build_data.py once scripts/avatars/auto.py has normalized
+// their Instagram profile picture.
+
+import submitted from "./generated/portraits.json";
 
 export type HairStyle =
   | "bowl"
@@ -54,7 +60,7 @@ export interface PortraitSpec {
   /** A normalized avatar exists in public/avatars/<slug>/. */
   avatar?: boolean;
   /** Where the avatar came from. */
-  source?: "x-avatar" | "promo-still" | "editor";
+  source?: "x-avatar" | "promo-still" | "editor" | "instagram";
   art?: Art;
   /** How the look was established: OBSERVED in posts, or INFERRED from captions. */
   basis?: "OBSERVED" | "INFERRED";
@@ -283,7 +289,7 @@ export const portraits: Record<string, PortraitSpec> = {
 const FALLBACK: PortraitSpec = { accent: "#CFC8BA", art: UNKNOWN };
 
 export function portraitOf(slug: string): PortraitSpec {
-  return portraits[slug] ?? FALLBACK;
+  return portraits[slug] ?? (submitted as Record<string, PortraitSpec>)[slug] ?? FALLBACK;
 }
 
 function mix(hex: string, to: number, t: number): string {

@@ -78,3 +78,7 @@ python3 scripts/avatars/normalize.py --sr-model EDSR_x4.pb derek-mercer
 ```
 
 To add a character: drop the official image into `data/avatars/source/`, add an entry with its anchors to `avatars.json`, run the script, and set `avatar: true` for the slug in `src/data/portraits.ts`.
+
+## User-added characters
+
+`scripts/avatars/auto.py` applies the same grid without hand-set anchors: OpenCV frontal-face detection when a face is found (human-segmentation cut-out), otherwise framing by the cut-out silhouette with the head assumed in its upper part (general cut-out model). The accent is the site palette colour that contrasts most with the subject. Entries are marked `"auto": true` in `scripts/avatars/avatars.json`.

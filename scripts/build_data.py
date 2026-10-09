@@ -506,7 +506,8 @@ def submission_character(rec, next_id, asof):
         "profileUrl": rec["profileUrl"], "group": "SUBMITTED", "inclusion": "INCLUDED", "caveat": None,
         "characterType": rv.get("characterType") or "", "origin": "Community submission", "kind": "human", "virtual": False,
         "universe": rv.get("universe") if rv.get("universe") in UNIVERSES else "independents", "universeNote": rv.get("universe"),
-        "identity": "PARODY" if rv.get("parodyOf") else ("VERIFIED" if p["verified"] else "UNVERIFIED"),
+        # user-added: labelled as such everywhere, never shown as verified
+        "identity": "COMMUNITY",
         "identityFlag": flags.get("VERIFIED IDENTITY"), "verifiedBadge": p["verified"], "parodyOf": rv.get("parodyOf"),
         "disambiguation": None, "copycats": None,
         "followers": p["followers"], "following": p.get("following"), "posts": p["postsCount"], "postsAnalysed": m["postsAnalysed"],
@@ -1011,11 +1012,29 @@ def build(xlsx):
     return data
 
 
+PORTRAITS_OUT = ROOT / "src/data/generated/portraits.json"
+AVATARS_CONFIG = ROOT / "scripts/avatars/avatars.json"
+
+
+def submission_portraits(data):
+    """Portrait specs for user-added characters whose avatar has been normalized
+    (scripts/avatars/auto.py). The hand-tuned ones live in src/data/portraits.ts."""
+    cfg = json.loads(AVATARS_CONFIG.read_text(encoding="utf-8")) if AVATARS_CONFIG.exists() else {}
+    out = {}
+    for c in data["characters"]:
+        if c.get("group") != "SUBMITTED":
+            continue
+        if (ROOT / "public/avatars" / c["slug"] / "avatar-512.webp").exists():
+            out[c["slug"]] = {"accent": (cfg.get(c["slug"]) or {}).get("accent", "#CFC8BA"), "avatar": True, "source": "instagram"}
+    return out
+
+
 def main():
     xlsx = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_XLSX
     data = build(xlsx)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    PORTRAITS_OUT.write_text(json.dumps(submission_portraits(data), indent=1) + "\n", encoding="utf-8")
     m = data["meta"]["counts"]
     print(f"wrote {OUT.relative_to(ROOT)}: {m['included']} included, {m['watchlist']} watchlist, "
           f"{m['excluded']} excluded, {len(data['edges'])} edges, {len(data['universes'])} universes")

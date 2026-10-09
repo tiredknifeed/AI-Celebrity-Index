@@ -36,7 +36,13 @@ export function branchFor(handle: string, session: string) {
   return `submission/${handle.replace(/[^a-z0-9._-]/g, "-")}-${session.slice(-8).toLowerCase()}`;
 }
 
-export async function openSubmissionPR(handle: string, session: string, record: unknown, summary: string): Promise<string> {
+export async function openSubmissionPR(
+  handle: string,
+  session: string,
+  record: unknown,
+  summary: string,
+  extra: { path: string; base64: string; message: string }[] = [],
+): Promise<string> {
   const branch = branchFor(handle, session);
   const existing = await findPR(branch);
   if (existing) return existing.url;
@@ -55,6 +61,9 @@ export async function openSubmissionPR(handle: string, session: string, record: 
       ...(current?.sha ? { sha: current.sha } : {}),
     },
   });
+  for (const f of extra) {
+    await gh(`contents/${f.path}`, { method: "PUT", body: { message: f.message, content: f.base64, branch } });
+  }
   const pr = (await gh("pulls", {
     method: "POST",
     body: { title: `Submission: @${handle}`, head: branch, base: baseName, body: summary },

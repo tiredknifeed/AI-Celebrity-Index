@@ -151,7 +151,7 @@ function PodiumCard({ c, place, tab }: { c: CardData; place: number; tab: TabKey
               #{String(place).padStart(2, "0")}
             </span>
             <StatusChip code={c.status} solid />
-            {c.identity === "PARODY" && <IdentityBadge identity="PARODY" />}
+            {(c.identity === "PARODY" || c.identity === "COMMUNITY") && <IdentityBadge identity={c.identity} />}
           </div>
           <div className="absolute right-4 top-4">
             <FameDisc value={c.fame} size={place === 1 ? 104 : 88} accent={portraitOf(c.slug).accent} />
