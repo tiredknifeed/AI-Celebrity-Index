@@ -109,7 +109,7 @@ export async function publishFreeSubmission(handle: string, knownHandles: string
   return record;
 }
 
-async function downloadImage(url: string): Promise<{ base64: string; ext: string } | null> {
+export async function downloadImage(url: string): Promise<{ base64: string; ext: string } | null> {
   try {
     const res = await fetch(url, { signal: AbortSignal.timeout(15_000) });
     const type = res.headers.get("content-type") ?? "";

@@ -8,6 +8,7 @@ on:
   push:
     paths:
       - "data/submissions/**"
+      - "data/avatars/source/**"
       - "scripts/avatars/**"
   workflow_dispatch:
 

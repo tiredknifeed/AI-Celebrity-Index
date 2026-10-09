@@ -20,6 +20,8 @@ Server pages call `getData()` (`src/lib/live.ts`) instead of importing the build
 
 Avatars: the picture saved with the submission is shown right away; the **Submission avatars** action restyles it a minute later and commits the files with `[skip netlify]`; `/api/live-asset/` serves them from GitHub until the next deploy bundles them.
 
+Characters without a photo (researched ones still drawn as illustrations, or submissions saved without a picture): open `/tools/avatars/` on the site and press the button. It fetches their Instagram profile pictures through Apify with the site's own keys, a few per request, and commits them to `data/avatars/source/`; the action restyles them. Instagram and unavatar.io refuse GitHub's servers, so the action alone cannot fetch them (unless the optional `APIFY_TOKEN` repository secret is set).
+
 Free-mode submissions are published with provisional analyst inputs (`review.auto: true`: recognizability 1, distinctiveness 2/2/2 and cross-character from the observed links) and say so on the profile.
 
 ### Moderation

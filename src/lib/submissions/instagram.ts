@@ -97,3 +97,15 @@ export async function fetchProfile(handle: string): Promise<RawProfile> {
     posts: unique,
   };
 }
+
+/** Profile picture URLs for several handles in one actor run (handle -> URL). */
+export async function fetchProfilePictures(handles: string[]): Promise<Map<string, string>> {
+  const out = new Map<string, string>();
+  if (!handles.length) return out;
+  for (const p of await runActor(config.apifyProfileActor, { usernames: handles })) {
+    const handle = String(str(p.username) ?? "").toLowerCase();
+    const url = str(p.profilePicUrlHD, p.profilePicUrlHd, p.profile_pic_url_hd, p.profilePicUrl, p.profile_pic_url);
+    if (handle && url) out.set(handle, url);
+  }
+  return out;
+}
