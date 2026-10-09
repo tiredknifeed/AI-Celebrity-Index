@@ -229,5 +229,19 @@
    "heavy enlargement (2.9x native)"
   ],
   "origin": "Instagram profile picture, captured 2026-10-09"
+ },
+ {
+  "slug": "miron",
+  "native": [
+   320,
+   320
+  ],
+  "superResolved": true,
+  "scale": 3.39,
+  "notes": [
+   "crown cropped in source: top-anchored tight crop",
+   "heavy enlargement (3.4x native)"
+  ],
+  "origin": "Instagram profile picture, captured 2026-10-09"
  }
 ]

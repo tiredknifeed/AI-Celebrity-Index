@@ -4,7 +4,7 @@
   "asOf": "2026-10-09",
   "generatedFrom": "AI_Celebrity_Index_Instagram_Research_2026-10-09.xlsx",
   "counts": {
-   "included": 40,
+   "included": 41,
    "watchlist": 9,
    "excluded": 15
   },
@@ -271,7 +271,7 @@
    "ranks": {
     "index": 4,
     "fame": 7,
-    "momentum": 19,
+    "momentum": 20,
     "distinctiveness": 1
    },
    "externalLinks": [
@@ -544,8 +544,8 @@
    },
    "ranks": {
     "index": 13,
-    "fame": 17,
-    "momentum": 12,
+    "fame": 18,
+    "momentum": 13,
     "distinctiveness": 14
    },
    "externalLinks": [],
@@ -800,7 +800,7 @@
    "ranks": {
     "index": 14,
     "fame": 15,
-    "momentum": 8,
+    "momentum": 9,
     "distinctiveness": 28
    },
    "externalLinks": [
@@ -1097,7 +1097,7 @@
    "ranks": {
     "index": 7,
     "fame": 12,
-    "momentum": 18,
+    "momentum": 19,
     "distinctiveness": 2
    },
    "externalLinks": [
@@ -1660,9 +1660,9 @@
     "active": "YES - OBSERVED last post 2026-10-08."
    },
    "ranks": {
-    "index": 27,
-    "fame": 38,
-    "momentum": 22,
+    "index": 28,
+    "fame": 39,
+    "momentum": 23,
     "distinctiveness": 8
    },
    "externalLinks": [
@@ -1904,9 +1904,9 @@
     "active": "SLOWING - OBSERVED last post 2026-10-02 (7 days before capture)."
    },
    "ranks": {
-    "index": 31,
-    "fame": 33,
-    "momentum": 29,
+    "index": 32,
+    "fame": 34,
+    "momentum": 30,
     "distinctiveness": 29
    },
    "externalLinks": [
@@ -2379,7 +2379,7 @@
    "ranks": {
     "index": 2,
     "fame": 6,
-    "momentum": 4,
+    "momentum": 5,
     "distinctiveness": 3
    },
    "externalLinks": [],
@@ -2565,7 +2565,7 @@
    "ranks": {
     "index": 6,
     "fame": 8,
-    "momentum": 5,
+    "momentum": 6,
     "distinctiveness": 7
    },
    "externalLinks": [],
@@ -2777,7 +2777,7 @@
    "ranks": {
     "index": 9,
     "fame": 11,
-    "momentum": 13,
+    "momentum": 14,
     "distinctiveness": 9
    },
    "externalLinks": [
@@ -2989,9 +2989,9 @@
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
    "ranks": {
-    "index": 21,
-    "fame": 35,
-    "momentum": 21,
+    "index": 22,
+    "fame": 36,
+    "momentum": 22,
     "distinctiveness": 10
    },
    "externalLinks": [],
@@ -3186,9 +3186,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
    "ranks": {
-    "index": 22,
-    "fame": 22,
-    "momentum": 27,
+    "index": 23,
+    "fame": 23,
+    "momentum": 28,
     "distinctiveness": 25
    },
    "externalLinks": [],
@@ -3387,7 +3387,7 @@
    "ranks": {
     "index": 11,
     "fame": 10,
-    "momentum": 16,
+    "momentum": 17,
     "distinctiveness": 11
    },
    "externalLinks": [
@@ -3597,9 +3597,9 @@
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: no post history captured | Social: >=3 fictional-character links observed (in or out)"
    },
    "ranks": {
-    "index": 20,
-    "fame": 18,
-    "momentum": 24,
+    "index": 21,
+    "fame": 19,
+    "momentum": 25,
     "distinctiveness": 12
    },
    "externalLinks": [],
@@ -3786,8 +3786,8 @@
    },
    "ranks": {
     "index": 15,
-    "fame": 32,
-    "momentum": 11,
+    "fame": 33,
+    "momentum": 12,
     "distinctiveness": 15
    },
    "externalLinks": [],
@@ -3973,9 +3973,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: no character links observed"
    },
    "ranks": {
-    "index": 26,
-    "fame": 27,
-    "momentum": 14,
+    "index": 27,
+    "fame": 28,
+    "momentum": 15,
     "distinctiveness": 34
    },
    "externalLinks": [],
@@ -4160,8 +4160,8 @@
    },
    "ranks": {
     "index": 16,
-    "fame": 20,
-    "momentum": 9,
+    "fame": 21,
+    "momentum": 10,
     "distinctiveness": 30
    },
    "externalLinks": [],
@@ -4353,9 +4353,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
    "ranks": {
-    "index": 25,
-    "fame": 36,
-    "momentum": 26,
+    "index": 26,
+    "fame": 37,
+    "momentum": 27,
     "distinctiveness": 21
    },
    "externalLinks": [],
@@ -4531,9 +4531,9 @@
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: no character links observed"
    },
    "ranks": {
-    "index": 29,
-    "fame": 34,
-    "momentum": 15,
+    "index": 30,
+    "fame": 35,
+    "momentum": 16,
     "distinctiveness": 37
    },
    "externalLinks": [],
@@ -4709,9 +4709,9 @@
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: full post history loaded (debut = first post) | Social: no character links observed"
    },
    "ranks": {
-    "index": 24,
-    "fame": 28,
-    "momentum": 6,
+    "index": 25,
+    "fame": 29,
+    "momentum": 7,
     "distinctiveness": 38
    },
    "externalLinks": [],
@@ -4916,9 +4916,9 @@
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
    "ranks": {
-    "index": 35,
-    "fame": 40,
-    "momentum": 32,
+    "index": 36,
+    "fame": 41,
+    "momentum": 33,
     "distinctiveness": 22
    },
    "externalLinks": [],
@@ -5102,9 +5102,9 @@
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: no character links observed"
    },
    "ranks": {
-    "index": 37,
-    "fame": 39,
-    "momentum": 30,
+    "index": 38,
+    "fame": 40,
+    "momentum": 31,
     "distinctiveness": 31
    },
    "externalLinks": [],
@@ -5280,9 +5280,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
    "ranks": {
-    "index": 28,
-    "fame": 29,
-    "momentum": 17,
+    "index": 29,
+    "fame": 30,
+    "momentum": 18,
     "distinctiveness": 39
    },
    "externalLinks": [],
@@ -5459,7 +5459,7 @@
    "ranks": {
     "index": 8,
     "fame": 5,
-    "momentum": 10,
+    "momentum": 11,
     "distinctiveness": 16
    },
    "externalLinks": [
@@ -5659,7 +5659,7 @@
    "ranks": {
     "index": 19,
     "fame": 16,
-    "momentum": 25,
+    "momentum": 26,
     "distinctiveness": 17
    },
    "externalLinks": [],
@@ -5853,8 +5853,8 @@
    },
    "ranks": {
     "index": 17,
-    "fame": 19,
-    "momentum": 23,
+    "fame": 20,
+    "momentum": 24,
     "distinctiveness": 23
    },
    "externalLinks": [],
@@ -6024,9 +6024,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
    "ranks": {
-    "index": 23,
+    "index": 24,
     "fame": 13,
-    "momentum": 33,
+    "momentum": 34,
     "distinctiveness": 4
    },
    "externalLinks": [],
@@ -6217,7 +6217,7 @@
    "ranks": {
     "index": 3,
     "fame": 2,
-    "momentum": 20,
+    "momentum": 21,
     "distinctiveness": 5
    },
    "externalLinks": [
@@ -6422,9 +6422,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
    "ranks": {
-    "index": 30,
-    "fame": 31,
-    "momentum": 35,
+    "index": 31,
+    "fame": 32,
+    "momentum": 36,
     "distinctiveness": 13
    },
    "externalLinks": [],
@@ -6595,7 +6595,7 @@
    "ranks": {
     "index": 10,
     "fame": 1,
-    "momentum": 28,
+    "momentum": 29,
     "distinctiveness": 18
    },
    "externalLinks": [],
@@ -6774,9 +6774,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
    "ranks": {
-    "index": 32,
-    "fame": 23,
-    "momentum": 31,
+    "index": 33,
+    "fame": 24,
+    "momentum": 32,
     "distinctiveness": 32
    },
    "externalLinks": [
@@ -6959,9 +6959,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
    "ranks": {
-    "index": 34,
-    "fame": 24,
-    "momentum": 38,
+    "index": 35,
+    "fame": 25,
+    "momentum": 39,
     "distinctiveness": 19
    },
    "externalLinks": [],
@@ -7144,9 +7144,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
    "ranks": {
-    "index": 36,
-    "fame": 26,
-    "momentum": 36,
+    "index": 37,
+    "fame": 27,
+    "momentum": 37,
     "distinctiveness": 33
    },
    "externalLinks": [],
@@ -7321,9 +7321,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: last post >14 days ago or not captured | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
    "ranks": {
-    "index": 39,
-    "fame": 21,
-    "momentum": 39,
+    "index": 40,
+    "fame": 22,
+    "momentum": 40,
     "distinctiveness": 35
    },
    "externalLinks": [],
@@ -7504,9 +7504,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: last post >14 days ago or not captured | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
    "ranks": {
-    "index": 40,
-    "fame": 37,
-    "momentum": 40,
+    "index": 41,
+    "fame": 38,
+    "momentum": 41,
     "distinctiveness": 26
    },
    "externalLinks": [
@@ -7691,9 +7691,9 @@
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: no character links observed"
    },
    "ranks": {
-    "index": 33,
+    "index": 34,
     "fame": 14,
-    "momentum": 34,
+    "momentum": 35,
     "distinctiveness": 27
    },
    "externalLinks": [],
@@ -7882,9 +7882,9 @@
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
    "ranks": {
-    "index": 38,
-    "fame": 30,
-    "momentum": 37,
+    "index": 39,
+    "fame": 31,
+    "momentum": 38,
     "distinctiveness": 36
    },
    "externalLinks": [
@@ -9585,9 +9585,189 @@
    },
    "ranks": {
     "index": 18,
-    "fame": 25,
-    "momentum": 7,
+    "fame": 26,
+    "momentum": 8,
     "distinctiveness": 24
+   },
+   "degree": 0,
+   "sources": []
+  },
+  {
+   "id": 50,
+   "slug": "miron",
+   "name": "Miron",
+   "fullName": "Miron",
+   "handle": "maham.iha",
+   "profileUrl": "https://www.instagram.com/maham.iha/",
+   "group": "SUBMITTED",
+   "inclusion": "INCLUDED",
+   "caveat": null,
+   "characterType": "User-added AI character",
+   "origin": "Community submission",
+   "kind": "human",
+   "virtual": false,
+   "universe": "independents",
+   "universeNote": null,
+   "identity": "COMMUNITY",
+   "identityFlag": "PARTIAL",
+   "verifiedBadge": false,
+   "parodyOf": null,
+   "disambiguation": null,
+   "copycats": null,
+   "followers": 230222,
+   "following": 1,
+   "posts": 11,
+   "postsAnalysed": 11,
+   "fullHistory": "YES",
+   "firstPost": "2026-10-01",
+   "firstPostBasis": "Oldest analysed post",
+   "lastPost": "2026-10-08",
+   "daysSinceLastPost": 1,
+   "posts7d": 8,
+   "posts14d": 11,
+   "posts30d": 11,
+   "postsPerWeek": 5.5,
+   "avgLikes": 74309,
+   "medianLikes": 23557,
+   "avgComments": 5547,
+   "likesHidden": 0,
+   "engagementRate": 0.34686598942838576,
+   "engagementLevel": null,
+   "avgLikes14d": 74309,
+   "avgComments14d": null,
+   "maxLikes": 287015,
+   "topPost": {
+    "url": "https://www.instagram.com/p/DeAcVpCIlOk/",
+    "date": "2026-10-02",
+    "likes": 287015,
+    "comments": 18661,
+    "caption": "Изучаю новые танцы"
+   },
+   "topPost14d": {
+    "url": "https://www.instagram.com/p/DeAcVpCIlOk/",
+    "date": "2026-10-02",
+    "likes": 287015
+   },
+   "topPostNote": null,
+   "bio": "Бывший спортсмен  / учусь танцевать / дальше меньше",
+   "linkInBio": null,
+   "token": {
+    "status": "NONE",
+    "verification": "NONE",
+    "ticker": null,
+    "contract": null,
+    "chain": null,
+    "contractInBio": false,
+    "note": null,
+    "url": null,
+    "reported": null,
+    "userSupplied": null,
+    "contractSource": null
+   },
+   "related": null,
+   "personality": null,
+   "visualStyle": null,
+   "contentFormat": null,
+   "notes": "Published automatically from a user submission. Recognizability and distinctiveness are provisional defaults until an editor reviews them.",
+   "why": null,
+   "scores": {
+    "fame": 51.2,
+    "momentum": 77.0,
+    "distinctiveness": 35.0,
+    "sufficiency": 0.6,
+    "index": 57.0,
+    "fameParts": {
+     "followers": 0.5905367056076252,
+     "engagement": 0.7177603542262398,
+     "viral": 0.6144761486146801,
+     "consistency": 0.55,
+     "longevity": 0.01655707406328997,
+     "recognizability": 0.12
+    },
+    "momentumParts": {
+     "engagement": 0.7177603542262398,
+     "viral": 0.6144761486146801,
+     "frequency": 0.7857142857142857,
+     "growth": 0.9836227341754228,
+     "recency": 1.0
+    },
+    "distinctParts": {
+     "visual": 2,
+     "personality": 2,
+     "lore": 2,
+     "crossCharacter": 1
+    },
+    "recognizabilityInput": 1
+   },
+   "heat": "HOT",
+   "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+   },
+   "phase": null,
+   "debut": {
+    "date": "2026-10-01",
+    "basis": "Oldest analysed post",
+    "url": null
+   },
+   "peak": {
+    "date": "2026-10-02",
+    "likes": 287015,
+    "url": "https://www.instagram.com/p/DeAcVpCIlOk/"
+   },
+   "trajectory": [],
+   "timeline": [
+    {
+     "date": "2026-10-01",
+     "label": "First analysed post",
+     "kind": "debut",
+     "value": null,
+     "status": "OBSERVED",
+     "note": "Full history"
+    },
+    {
+     "date": "2026-10-02",
+     "label": "Peak post: 287,015 likes",
+     "kind": "peak",
+     "value": 287015,
+     "status": "OBSERVED",
+     "url": "https://www.instagram.com/p/DeAcVpCIlOk/"
+    },
+    {
+     "date": "2026-10-08",
+     "label": "Latest post captured",
+     "kind": "moment",
+     "value": null,
+     "status": "OBSERVED"
+    }
+   ],
+   "evidence": [],
+   "realPeopleTagged": [],
+   "brandsTagged": [],
+   "suggestedNeighbours": null,
+   "outLinks": [],
+   "inLinks": [],
+   "externalLinks": [],
+   "sufficiency": {
+    "flags": {
+     "VERIFIED IDENTITY": "PARTIAL",
+     "FAME SCORE": "PARTIAL",
+     "LIVE STATUS": "YES",
+     "CAREER TIMELINE": "YES",
+     "SOCIAL GRAPH": "NO"
+    },
+    "basis": "Automated checks on the submitted profile"
+   },
+   "submission": {
+    "capturedAt": "2026-10-09",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+    "auto": true
+   },
+   "ranks": {
+    "index": 20,
+    "fame": 17,
+    "momentum": 4,
+    "distinctiveness": 41
    },
    "degree": 0,
    "sources": []
@@ -10219,6 +10399,7 @@
    "name": "Independents",
    "tagline": "Characters with no observed links to another universe yet.",
    "members": [
+    "miron",
     "vulu-zamal",
     "edmond-lebon",
     "bigfoot-vlog",

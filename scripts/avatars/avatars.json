@@ -195,5 +195,17 @@
     "accent": "#5ED3F3",
     "auto": true,
     "_why": "Anchors found automatically (silhouette)."
+  },
+  "miron": {
+    "source": "maham.iha.jpg",
+    "origin": "Instagram profile picture, captured 2026-10-09",
+    "model": "u2net_human_seg",
+    "cx": 0.52,
+    "eye": 0.299,
+    "chin": 0.535,
+    "top": null,
+    "accent": "#5ED3F3",
+    "auto": true,
+    "_why": "Anchors found automatically (face)."
   }
 }
