@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!c) return {};
   return {
     title: `${c.name} (@${c.handle})`,
-    description: c.why ?? `${c.name} on the AI Celebrity Index.`,
+    description: c.why ?? `${c.name} on the AI Fame Index.`,
   };
 }
 

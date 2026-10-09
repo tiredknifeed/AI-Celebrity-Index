@@ -11,7 +11,7 @@ const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = DM_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"] });
 
 export const metadata: Metadata = {
-  title: { default: "AI Celebrity Index — Who owns the internet today?", template: "%s · AI Celebrity Index" },
+  title: { default: "AI Fame Index — Who owns the internet today?", template: "%s · AI Fame Index" },
   description:
     "The live index of AI celebrities: Fame, Momentum, social graph and career arcs of fictional AI influencers and synthetic personalities.",
 };

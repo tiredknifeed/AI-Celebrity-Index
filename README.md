@@ -1,4 +1,4 @@
-# AI Celebrity Index
+# AI Fame Index
 
 **Who owns the internet today?** A live cultural index of fictional AI influencers, synthetic celebrities and internet-native AI characters, with Fame and Momentum scores, a social graph, career arcs, live status, identity labels and an optional token layer.
 

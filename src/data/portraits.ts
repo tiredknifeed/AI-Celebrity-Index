@@ -54,7 +54,7 @@ export interface PortraitSpec {
   /** A normalized avatar exists in public/avatars/<slug>/. */
   avatar?: boolean;
   /** Where the avatar came from. */
-  source?: "x-avatar" | "promo-still";
+  source?: "x-avatar" | "promo-still" | "editor";
   art?: Art;
   /** How the look was established: OBSERVED in posts, or INFERRED from captions. */
   basis?: "OBSERVED" | "INFERRED";
@@ -80,7 +80,7 @@ export const portraits: Record<string, PortraitSpec> = {
     },
   },
   "jean-phil": { accent: "#6E9BD8", onAccent: "#fff", avatar: true, source: "x-avatar" },
-  "abu-shalab": { accent: "#EDB54F", avatar: true, source: "x-avatar" },
+  "abu-shalab": { accent: "#EDB54F", avatar: true, source: "editor" },
   "casper-the-italian-greyhound": {
     accent: "#9BCBB1",
     basis: "INFERRED",

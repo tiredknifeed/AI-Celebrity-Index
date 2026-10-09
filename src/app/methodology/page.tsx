@@ -42,7 +42,7 @@ export default function MethodologyPage() {
       <PageHead
         kicker={`Index methodology · ${longDate(AS_OF)}`}
         title="How we score"
-        intro="The AI Celebrity Index is an index methodology, not objective truth. Weights are choices. Here is every one of them, in plain language."
+        intro="The AI Fame Index is an index methodology, not objective truth. Weights are choices. Here is every one of them, in plain language."
       />
       <section className="wrap grid gap-4 lg:grid-cols-3">
         {blocks.map((b) => (

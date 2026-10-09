@@ -39,15 +39,16 @@
  {
   "slug": "abu-shalab",
   "native": [
-   400,
-   400
+   1080,
+   1080
   ],
-  "superResolved": true,
-  "scale": 2.24,
+  "superResolved": false,
+  "scale": 0.95,
   "notes": [
-   "scaled up so the body reaches the bottom edge"
+   "scaled up so the body reaches the bottom edge",
+   "hair touches the top edge"
   ],
-  "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)"
+  "origin": "Portrait supplied by the site editor (2026-10-09)"
  },
  {
   "slug": "mr-stretchy",

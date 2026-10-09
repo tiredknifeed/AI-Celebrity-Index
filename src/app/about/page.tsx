@@ -26,7 +26,7 @@ export default function AboutPage() {
           </p>
           <p className="mt-5">
             There was no canonical place to see who is big, who is growing, who is hot right now, and who is connected to who.
-            The AI Celebrity Index is that place: a ranking, a set of profiles, and a map of the universe, built from public
+            The AI Fame Index is that place: a ranking, a set of profiles, and a map of the universe, built from public
             Instagram data and checked by hand.
           </p>
           <p className="mt-5">

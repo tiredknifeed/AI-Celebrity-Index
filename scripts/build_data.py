@@ -961,7 +961,7 @@ def build(xlsx):
 
     data = {
         "meta": {
-            "title": "AI Celebrity Index",
+            "title": "AI Fame Index",
             "asOf": asof,
             "generatedFrom": Path(xlsx).name,
             "counts": {

@@ -32,12 +32,13 @@
   },
   "abu-shalab": {
     "source": "abu-shalab.jpg",
-    "origin": "Official X profile avatar (x_avatars_2026-10-09.zip)",
+    "origin": "Portrait supplied by the site editor (2026-10-09)",
     "model": "u2net_human_seg",
-    "cx": 0.5,
-    "eye": 0.35,
-    "chin": 0.7,
-    "top": 0.03
+    "cx": 0.52,
+    "eye": 0.42,
+    "chin": 0.89,
+    "top": 0.01,
+    "eyeY": 0.42
   },
   "mr-stretchy": {
     "source": "mr-stretchy.jpg",

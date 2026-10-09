@@ -23,7 +23,7 @@ export async function createCheckout(handle: string, email: string | null): Prom
     "line_items[0][quantity]": "1",
     "line_items[0][price_data][currency]": config.currency,
     "line_items[0][price_data][unit_amount]": String(config.priceCents),
-    "line_items[0][price_data][product_data][name]": `AI Celebrity Index analysis: @${handle}`,
+    "line_items[0][price_data][product_data][name]": `AI Fame Index analysis: @${handle}`,
     "line_items[0][price_data][product_data][description]":
       "Full profile analysis (Fame, Momentum, career timeline, network links, token check) and analyst review for inclusion in the index.",
     "metadata[handle]": handle,

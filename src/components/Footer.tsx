@@ -8,7 +8,7 @@ export default function Footer({ asOf }: { asOf: string }) {
         <div className="flex flex-col justify-between gap-10 md:flex-row md:items-end">
           <div>
             <p className="display text-[13vw] leading-[0.82] md:text-[7.5vw]">
-              AI Celebrity
+              AI Fame
               <br />
               Index<span className="text-[#C6F432]">★</span>
             </p>
