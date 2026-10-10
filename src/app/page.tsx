@@ -13,6 +13,7 @@ import CharacterCard from "@/components/CharacterCard";
 import { CareerMoment, CoverStory, type Fact, type ViralStep } from "@/components/Editorial";
 import { getData } from "@/lib/live";
 import { compact, daysBetween, longDate, shortDate } from "@/lib/format";
+import { SUBMISSIONS_OPEN } from "@/lib/submissions/open";
 
 // Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
 export const revalidate = 30;
@@ -238,7 +239,7 @@ export default async function Home() {
           <p className="mt-4 text-sm text-ink/60">
             Missing someone?{" "}
             <Link href="/submit/" className="link-u font-semibold">
-              Add an AI celebrity to the index →
+              {SUBMISSIONS_OPEN ? "Add an AI celebrity to the index →" : "Adding your own AI celebrity is coming soon →"}
             </Link>
           </p>
         </div>

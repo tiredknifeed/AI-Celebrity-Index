@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { longDate } from "@/lib/format";
 import Logo from "./Logo";
+import { SUBMISSIONS_OPEN } from "@/lib/submissions/open";
 
 export default function Footer({ asOf }: { asOf: string }) {
   return (
@@ -19,7 +20,7 @@ export default function Footer({ asOf }: { asOf: string }) {
           <div className="flex flex-col gap-6 md:items-end">
             <ul className="flex flex-wrap gap-2">
               {[
-                ["Add a character", "/submit/"],
+                [SUBMISSIONS_OPEN ? "Add a character" : "Add a character · soon", "/submit/"],
                 ["Methodology", "/methodology/"],
                 ["Sources", "/sources/"],
                 ["Instagram", "/sources/#instagram"],

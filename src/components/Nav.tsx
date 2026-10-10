@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Portrait from "./Portrait";
 import { avatarBg, portraitOf } from "@/data/portraits";
 import Logo from "./Logo";
+import { SUBMISSIONS_OPEN } from "@/lib/submissions/open";
 
 export interface SearchItem {
   slug: string;
@@ -75,6 +76,7 @@ export default function Nav({ items, asOf }: { items: SearchItem[]; asOf: string
               className="hidden rounded-full border-2 border-ink px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors hover:bg-ink hover:text-white md:inline-block"
             >
               + Add a character
+              {!SUBMISSIONS_OPEN && <span className="ml-2 rounded-full bg-[#C6F432] px-1.5 py-0.5 text-[9px] text-ink">Soon</span>}
             </Link>
             <span className="hidden font-mono text-[10px] uppercase leading-tight tracking-[0.14em] text-muted xl:block">
               Last updated

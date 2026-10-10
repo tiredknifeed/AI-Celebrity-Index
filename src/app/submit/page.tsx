@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHead from "@/components/PageHead";
 import SubmitForm, { type KnownAccount } from "@/components/SubmitForm";
 import { getData } from "@/lib/live";
+import { SUBMISSIONS_OPEN } from "@/lib/submissions/open";
 
 // Re-read live user submissions at most every 30 s (the submit route also refreshes at once).
 export const revalidate = 30;
@@ -55,7 +56,7 @@ export default async function SubmitPage() {
   return (
     <>
       <PageHead
-        kicker={`Grow the index · ${meta.counts.included} characters so far`}
+        kicker={SUBMISSIONS_OPEN ? `Grow the index · ${meta.counts.included} characters so far` : `Coming soon · ${meta.counts.included} characters so far`}
         title={
           <>
             Add an AI
@@ -63,15 +64,19 @@ export default async function SubmitPage() {
             celebrity
           </>
         }
-        intro="Know an AI character that should be on the chart? Paste its Instagram link. We analyze the profile with the same methodology as every other character and send it to review for the index."
+        intro={
+          SUBMISSIONS_OPEN
+            ? "Know an AI character that should be on the chart? Paste its Instagram link. We analyze the profile with the same methodology as every other character and send it to review for the index."
+            : "Soon you can put any AI character on the chart: paste its Instagram link and it is analyzed with the same methodology as every other character. Submissions open shortly; waitlist members get in first."
+        }
       />
       <section className="wrap grid gap-6 lg:grid-cols-12">
         <div className="lg:col-span-7">
-          <SubmitForm known={known} price={price} free={FREE} />
+          <SubmitForm known={known} price={price} free={FREE} open={SUBMISSIONS_OPEN} />
         </div>
         <aside className="flex flex-col gap-4 lg:col-span-5">
           <div className="rounded-5xl bg-ink p-6 text-white sm:p-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C6F432]">{FREE ? "Free during launch" : `One-time · ${price}`}</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C6F432]">{!SUBMISSIONS_OPEN ? "Coming soon" : FREE ? "Free during launch" : `One-time · ${price}`}</p>
             <p className="display mt-3 text-5xl">What you get</p>
             <ul className="mt-5 space-y-2.5 text-[15px] text-white/85">
               <li>★ Provisional Fame and Momentum scores</li>

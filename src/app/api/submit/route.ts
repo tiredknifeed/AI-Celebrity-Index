@@ -2,6 +2,7 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { getData, LIVE_TAG } from "@/lib/live";
 import { config, missingConfig } from "@/lib/submissions/config";
+import { SUBMISSIONS_OPEN } from "@/lib/submissions/open";
 import { readLiveSubmission } from "@/lib/submissions/github";
 import { parseInstagram } from "@/lib/submissions/handle";
 import { slugify } from "@/lib/submissions/merge";
@@ -29,6 +30,7 @@ function limited(ip: string) {
  */
 export async function POST(req: Request) {
   const body = (await req.json().catch(() => ({}))) as { url?: string; email?: string; website?: string };
+  if (!SUBMISSIONS_OPEN) return NextResponse.json({ error: "Adding characters is coming soon." }, { status: 403 });
   // honeypot: real visitors never see or fill this field
   if (body.website) return NextResponse.json({ error: "Rejected." }, { status: 400 });
   const handle = parseInstagram(body.url ?? "");

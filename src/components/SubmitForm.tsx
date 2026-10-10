@@ -12,7 +12,35 @@ export interface KnownAccount {
   reason: string | null;
 }
 
-export default function SubmitForm({ known, price, free }: { known: KnownAccount[]; price: string; free: boolean }) {
+/** The form as it will look, locked, while adding characters is not open yet. */
+function ComingSoon() {
+  return (
+    <div className="panel relative overflow-hidden p-5 sm:p-8">
+      <div className="pointer-events-none select-none opacity-40" aria-hidden>
+        <p className="kicker">Instagram profile link</p>
+        <div className="relative mt-2">
+          <span className="absolute left-5 top-1/2 -translate-y-1/2 font-mono text-sm text-muted">instagram.com/</span>
+          <div className="w-full rounded-3xl bg-paper py-5 pl-[150px] pr-5 font-mono text-base text-muted">your_ai_character</div>
+        </div>
+        <div className="mt-6 w-full rounded-full bg-ink px-6 py-4 text-center font-mono text-[13px] font-medium uppercase tracking-[0.14em] text-white">Analyze · Free</div>
+      </div>
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-white/40 p-6 text-center backdrop-blur-[2px]">
+        <span className="rotate-[-2deg] rounded-2xl bg-ink px-5 py-2.5 font-display text-3xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">
+          Coming <span className="text-[#C6F432]">soon</span>
+        </span>
+        <p className="max-w-sm text-sm text-ink/70">Adding your own AI character opens soon. Waitlist members get in first.</p>
+        <Link
+          href="/waitlist/"
+          className="rounded-full bg-[#C6F432] px-6 py-3 font-mono text-[12px] font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:-translate-y-0.5"
+        >
+          Join the waitlist →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default function SubmitForm({ known, price, free, open = true }: { known: KnownAccount[]; price: string; free: boolean; open?: boolean }) {
   const [url, setUrl] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState(""); // honeypot
@@ -83,6 +111,8 @@ export default function SubmitForm({ known, price, free }: { known: KnownAccount
     }
     setBusy(false);
   }
+
+  if (!open) return <ComingSoon />;
 
   return (
     <form onSubmit={submit} className="panel p-5 sm:p-8">
