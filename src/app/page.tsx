@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import Waitlist from "@/components/Waitlist";
+import { leaderboard } from "@/lib/waitlist";
 import IndexStrip from "@/components/IndexStrip";
 import TopChart from "@/components/TopChart";
 import BreakoutCard from "@/components/BreakoutCard";
@@ -19,6 +21,7 @@ export const revalidate = 30;
 export default async function Home() {
   const { AS_OF, breakout, characters, edges, meta, ranked, relationshipsOf, rivalries, stories, toCard, universes } = await getData();
   const cards = ranked.map(toCard);
+  const board = await leaderboard().catch(() => ({ total: 0, top: [] as { handle: string; points: number }[] }));
   const lead = ranked[0];
 
   // ---- cover story: the index leader, facts only ------------------------
@@ -111,6 +114,16 @@ export default async function Home() {
           cta={`All ${meta.counts.included}`}
         />
         <TopChart cards={cards} limit={10} />
+      </section>
+
+      {/* waitlist */}
+      <section id="waitlist" className="wrap mt-28 scroll-mt-24 sm:mt-40">
+        <SectionHead
+          kicker="Founding fans"
+          title="Join the waitlist"
+          intro="Drop your X handle to get in line for what we launch next. Quick tasks and invites move you up the list, and the top spots come with perks."
+        />
+        <Waitlist initialTotal={board.total} initialTop={board.top} />
       </section>
 
       {/* breakout */}

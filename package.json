@@ -13,6 +13,7 @@
     "check:merge": "tsx scripts/check_merge.ts"
   },
   "dependencies": {
+    "@netlify/blobs": "11.1.0",
     "d3-force": "3.0.0",
     "framer-motion": "11.18.2",
     "next": "15.5.27",

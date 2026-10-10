@@ -118,8 +118,8 @@ export default function Hero({
               <Link href="/chart/" className="flex-1 rounded-full bg-white px-4 py-2.5 text-center font-mono text-[11.5px] uppercase tracking-[0.14em] text-ink">
                 View the index →
               </Link>
-              <Link href="/network/" className="flex-1 rounded-full border border-white/30 px-4 py-2.5 text-center font-mono text-[11.5px] uppercase tracking-[0.14em]">
-                The universe
+              <Link href="#waitlist" className="flex-1 rounded-full bg-[#C6F432] px-4 py-2.5 text-center font-mono text-[11.5px] uppercase tracking-[0.14em] text-ink">
+                Join the waitlist
               </Link>
             </div>
           </div>
