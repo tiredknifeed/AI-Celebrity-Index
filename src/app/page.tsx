@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Hero, { type CoverLine } from "@/components/Hero";
+import Hero from "@/components/Hero";
 import IndexStrip from "@/components/IndexStrip";
 import TopChart from "@/components/TopChart";
 import BreakoutCard from "@/components/BreakoutCard";
@@ -9,7 +9,7 @@ import SectionHead from "@/components/SectionHead";
 import Marquee from "@/components/Marquee";
 import NetworkGraph from "@/components/NetworkGraph";
 import CharacterCard from "@/components/CharacterCard";
-import { CareerMoment, CoverStory, UniverseStory, type Fact, type ViralStep } from "@/components/Editorial";
+import { CareerMoment, CoverStory, type Fact, type ViralStep } from "@/components/Editorial";
 import { getData } from "@/lib/live";
 import { compact, daysBetween, longDate, shortDate } from "@/lib/format";
 
@@ -17,7 +17,7 @@ import { compact, daysBetween, longDate, shortDate } from "@/lib/format";
 export const revalidate = 30;
 
 export default async function Home() {
-  const { AS_OF, breakout, bySlug, characters, edges, meta, ranked, relationshipsOf, rivalries, stories, toCard, universes } = await getData();
+  const { AS_OF, breakout, characters, edges, meta, ranked, relationshipsOf, rivalries, stories, toCard, universes } = await getData();
   const cards = ranked.map(toCard);
   const lead = ranked[0];
 
@@ -35,31 +35,6 @@ export default async function Home() {
     },
   ];
 
-  // ---- universe report: the most internally connected universe -------------
-  const handleUni = new Map(characters.map((c) => [c.handle, c.universe]));
-  const internal = (id: string) =>
-    edges.filter((e) => e.type !== "SAME_UNIVERSE" && handleUni.get(e.source) === id && handleUni.get(e.target) === id).length;
-  const rivals = (id: string) =>
-    edges.filter((e) => e.type === "RIVAL" && handleUni.get(e.source) === id && handleUni.get(e.target) === id).length;
-  const topUni = [...universes]
-    .filter((u) => u.id !== "independents")
-    .sort((a, b) => internal(b.id) - internal(a.id) || rivals(b.id) - rivals(a.id))[0];
-  const uniMembers = topUni.members.map((s) => bySlug(s)!).filter(Boolean);
-  const hub = bySlug(topUni.hub)!;
-  const record = hub.bio?.match(/Undefeated\s+(\d+-\d+)/i)?.[1];
-  const best14 = [...uniMembers].sort((a, b) => (b.topPost14d?.likes ?? 0) - (a.topPost14d?.likes ?? 0))[0];
-  const uniFacts: Fact[] = [
-    { label: "Characters", value: `${uniMembers.length}`, trust: "OBSERVED" },
-    { label: "Combined followers", value: compact(uniMembers.reduce((s, m) => s + m.followers, 0)), trust: "OBSERVED" },
-    { label: "Links between them", value: `${internal(topUni.id)}`, trust: "OBSERVED" },
-    record
-      ? { label: `${hub.name} record`, value: `${record} (bio)`, trust: "OBSERVED" }
-      : { label: "Hub", value: hub.name, trust: "INFERRED" },
-    ...(best14?.topPost14d?.likes
-      ? [{ label: `Best post · 14d`, value: `${compact(best14.topPost14d.likes)} · ${best14.name}`, trust: "OBSERVED" as const }]
-      : []),
-  ];
-
   // ---- from 0 to viral: fastest debut-to-million ----------------------------
   const viral = ranked
     .filter((c) => c.peak?.date && c.debut.date && (c.peak.likes ?? 0) >= 1_000_000 && (c.debut.basis ?? "").toLowerCase().includes("full history"))
@@ -74,13 +49,6 @@ export default async function Home() {
         { date: AS_OF, label: `${compact(viral.c.followers)} followers today`, value: null },
       ]
     : [];
-
-  // ---- cover lines ----------------------------------------------------------
-  const fall = stories.find((s) => s.id === "biggest-fall")?.items[0];
-  const lines: CoverLine[] = [
-    { kicker: "Universe report", text: `The ${topUni.name} is taking over`, href: "#universe" },
-    ...(fall ? [{ kicker: "Biggest fall", text: `${fall.c.name}: ${fall.stat} since week one`, href: `/c/${fall.c.slug}/` }] : []),
-  ];
 
   const tokenized = ranked
     .filter((c) => c.token.verification === "CONTRACT" || c.token.verification === "PROFILE")
@@ -110,7 +78,7 @@ export default async function Home() {
 
   return (
     <>
-      <Hero lead={toCard(lead)} cast={cards.slice(1, 5)} peakLikes={lead.maxLikes} asOf={longDate(AS_OF)} lines={lines} />
+      <Hero lead={toCard(lead)} cast={cards.slice(1, 3)} peakLikes={lead.maxLikes} asOf={longDate(AS_OF)} />
       <IndexStrip cards={cards} />
 
       {/* universe: second on the page */}
@@ -124,9 +92,6 @@ export default async function Home() {
             cta="Open full screen"
           />
           <NetworkGraph nodes={graphNodes} edges={graphEdges} universes={universes.map(({ id, name, tagline, members }) => ({ id, name, tagline, members }))} height="h-[72vh]" />
-        </div>
-        <div className="wrap mt-16 sm:mt-24">
-          <UniverseStory u={topUni} members={uniMembers} facts={uniFacts} headline={`The ${topUni.name} is taking over`} />
         </div>
       </section>
 

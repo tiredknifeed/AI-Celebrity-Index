@@ -11,19 +11,12 @@ import { avatarBg, portraitOf } from "@/data/portraits";
 import type { CardData } from "@/lib/data";
 import { compact } from "@/lib/format";
 
-// The supporting cast: front row flanking #1, back row raised and smaller.
+// The supporting cast: #2 and #3 flanking the cover star. Kept to two so the
+// cover reads at a glance.
 const CAST = [
   { left: "63%", bottom: "0%", width: "w-[44%] sm:w-[33%]", z: "z-20", depth: 18, hideMobile: false },
   { left: "-4%", bottom: "0%", width: "w-[44%] sm:w-[33%]", z: "z-20", depth: 18, hideMobile: false },
-  { left: "81%", bottom: "27%", width: "w-[21%]", z: "z-10", depth: 30, hideMobile: true },
-  { left: "-6%", bottom: "29%", width: "w-[21%]", z: "z-10", depth: 30, hideMobile: true },
 ];
-
-export interface CoverLine {
-  kicker: string;
-  text: string;
-  href: string;
-}
 
 /** Magazine-cover hero: the characters answer the headline. */
 export default function Hero({
@@ -31,13 +24,11 @@ export default function Hero({
   cast,
   peakLikes,
   asOf,
-  lines,
 }: {
   lead: CardData;
   cast: CardData[];
   peakLikes: number | null;
   asOf: string;
-  lines: CoverLine[];
 }) {
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -85,8 +76,8 @@ export default function Hero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.7 }}
-          className="display pointer-events-none absolute inset-x-0 top-[13%] z-40 select-none px-3 text-center text-[9.5vw] leading-[0.85] text-white sm:top-[19%] sm:text-[6.6vw] xl:text-[6.2rem]"
-          style={{ WebkitTextStroke: "0.06em #141414", paintOrder: "stroke fill", textShadow: "0 8px 0 rgba(20,20,20,0.15)" }}
+          className="display pointer-events-none absolute inset-x-0 top-[13%] z-40 select-none whitespace-nowrap px-3 text-center text-[8.4vw] leading-[0.85] text-white sm:top-[19%] sm:text-[6.6vw] xl:text-[6.2rem]"
+          style={{ WebkitTextStroke: "0.06em #141414", paintOrder: "stroke fill", textShadow: "0 0.07em 0 rgba(20,20,20,0.12)" }}
         >
           the internet today?
         </motion.p>
@@ -100,37 +91,9 @@ export default function Hero({
           <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}>
             <Link href={`/c/${lead.slug}/`} className="group relative block aspect-square" aria-label={`${lead.name}, number one`}>
               <Portrait c={lead} variant="cutout" priority className="absolute inset-0 h-full w-full transition-transform duration-700 group-hover:scale-[1.02]" />
-              <span className="absolute left-[4%] top-[16%] rotate-[-6deg] rounded-2xl bg-ink px-3 py-1.5 font-display text-3xl font-extrabold leading-none text-white shadow-sticker sm:text-6xl">
-                #01
-              </span>
-              {lead.status === "BREAKING_OUT" && (
-                <motion.span
-                  className="absolute right-[2%] top-[26%] rotate-6 rounded-2xl bg-fire px-3 py-1.5 font-display text-base font-extrabold uppercase text-white shadow-sticker sm:text-2xl"
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 2.2, repeat: Infinity }}
-                >
-                  Breaking out ↑
-                </motion.span>
-              )}
-              {peakLikes && (
-                <span className="absolute bottom-[24%] right-[0%] hidden rotate-[4deg] rounded-2xl bg-white px-3 py-2 shadow-sticker sm:block">
-                  <span className="block font-display text-3xl font-extrabold leading-none">{compact(peakLikes)}</span>
-                  <span className="block font-mono text-[9.5px] uppercase tracking-[0.16em] text-muted">likes · peak post</span>
-                </span>
-              )}
             </Link>
           </motion.div>
         </Layer>
-
-        {/* cover lines */}
-        <div className="absolute bottom-[40%] left-[2%] z-40 hidden w-[15%] flex-col gap-3 2xl:flex">
-          {lines.slice(0, 2).map((l) => (
-            <Link key={l.href + l.kicker} href={l.href} className="rounded-3xl bg-paper/90 p-3 shadow-card backdrop-blur transition-transform hover:-translate-y-1">
-              <span className="block font-mono text-[9.5px] uppercase tracking-[0.16em] text-fire">{l.kicker}</span>
-              <span className="mt-1 block font-display text-[15px] font-extrabold uppercase leading-tight">{l.text} →</span>
-            </Link>
-          ))}
-        </div>
       </div>
 
       {/* cover-star bar */}
@@ -143,6 +106,7 @@ export default function Hero({
               <div className="display text-4xl leading-[0.9] sm:text-5xl">{lead.name}</div>
               <div className="mt-1.5 flex flex-wrap items-center gap-2">
                 <span className="font-mono text-xs text-white/60">@{lead.handle}</span>
+                {peakLikes && <span className="font-mono text-xs text-white/60">· peak post {compact(peakLikes)} likes</span>}
                 <StatusChip code={lead.status} solid />
               </div>
             </div>
