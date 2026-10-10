@@ -21,6 +21,7 @@ const LINKS = [
   { href: "/breakout/", label: "Breakout", icon: "↑" },
   { href: "/network/", label: "Network", icon: "✺" },
   { href: "/discover/", label: "Discover", icon: "◎" },
+  { href: "/waitlist/", label: "Waitlist", icon: "★" },
 ];
 
 export default function Nav({ items, asOf }: { items: SearchItem[]; asOf: string }) {

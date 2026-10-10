@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import Waitlist from "@/components/Waitlist";
 import { leaderboard } from "@/lib/waitlist";
 import IndexStrip from "@/components/IndexStrip";
 import TopChart from "@/components/TopChart";
@@ -116,14 +115,28 @@ export default async function Home() {
         <TopChart cards={cards} limit={10} />
       </section>
 
-      {/* waitlist */}
-      <section id="waitlist" className="wrap mt-28 scroll-mt-24 sm:mt-40">
-        <SectionHead
-          kicker="Founding fans"
-          title="Join the waitlist"
-          intro="Drop your X handle to get in line for what we launch next. Quick tasks and invites move you up the list, and the top spots come with perks."
-        />
-        <Waitlist initialTotal={board.total} initialTop={board.top} />
+      {/* waitlist teaser: the full flow lives on /waitlist/ */}
+      <section className="wrap mt-28 sm:mt-40">
+        <Link
+          href="/waitlist/"
+          className="group relative block overflow-hidden rounded-5xl bg-ink p-7 text-white shadow-card transition-transform hover:-translate-y-1 sm:p-12"
+        >
+          <div className="grain pointer-events-none absolute inset-0 opacity-30" />
+          <div className="relative grid items-end gap-6 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C6F432]">
+                Founding fans{board.total > 0 ? ` · ${board.total} on the list` : ""}
+              </p>
+              <p className="display mt-3 text-5xl leading-[0.9] sm:text-7xl">Join the waitlist</p>
+              <p className="mt-4 max-w-xl text-white/70">
+                Drop your X handle, complete quick tasks and invite friends. Every point counts toward the community airdrop.
+              </p>
+            </div>
+            <span className="w-fit rounded-full bg-[#C6F432] px-7 py-4 font-mono text-[13px] font-semibold uppercase tracking-[0.14em] text-ink transition-transform group-hover:translate-x-1">
+              Claim your spot →
+            </span>
+          </div>
+        </Link>
       </section>
 
       {/* breakout */}
