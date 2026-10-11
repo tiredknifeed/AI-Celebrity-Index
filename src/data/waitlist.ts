@@ -1,10 +1,11 @@
 // Waitlist tasks, points and rewards. Edit freely: the page and the API read
-// everything from here. NEXT_PUBLIC_X_POST (link to the post to like and
-// repost) can be set on the host; until then those tasks open the profile.
+// everything from here. The like and repost tasks point at the launch post;
+// NEXT_PUBLIC_X_POST on the host overrides it with another post link.
 
 export const X_HANDLE = (process.env.NEXT_PUBLIC_X_HANDLE || "AIFameIndex").replace(/^@/, "");
 export const X_PROFILE = `https://x.com/${X_HANDLE}`;
-export const X_POST_ID = (process.env.NEXT_PUBLIC_X_POST ?? "").match(/status\/(\d+)/)?.[1] ?? "";
+export const LAUNCH_POST = "https://x.com/AIFameIndex/status/2109331017018597775";
+export const X_POST_ID = (process.env.NEXT_PUBLIC_X_POST || LAUNCH_POST).match(/status\/(\d+)/)?.[1] ?? "";
 
 export type TaskId = "follow" | "like" | "repost" | "post";
 
