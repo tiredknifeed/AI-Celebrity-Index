@@ -55,13 +55,18 @@ const Pen = () => (
     <path d="M4 20h4L19 9l-4-4L4 16v4ZM13.5 6.5l4 4" />
   </svg>
 );
+const Comment = () => (
+  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinejoin="round" aria-hidden>
+    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H11l-5 4.5V16h0.5A2.5 2.5 0 0 1 4 13.5v-8Z" />
+  </svg>
+);
 const People = () => (
   <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" aria-hidden>
     <circle cx="9" cy="8" r="3.5" />
     <path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.8c1.6.8 2.6 2.6 3 5.2" />
   </svg>
 );
-const ICON: Record<TaskId, () => ReactNode> = { follow: XLogo, like: Heart, repost: Repost, post: Pen };
+const ICON: Record<TaskId, () => ReactNode> = { follow: XLogo, like: Heart, repost: Repost, comment: Comment, post: Pen };
 
 /** Countdown ring shown while a task is "being checked". */
 function Ring({ left }: { left: number }) {
@@ -200,10 +205,12 @@ export default function Waitlist({ initialTotal, initialTop }: { initialTotal: n
                 Then earn up to {maxPoints} points, plus {REFERRAL_POINTS} per friend
               </p>
               <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-                {TASKS.map((t) => {
+                {TASKS.map((t, i) => {
                   const Icon = ICON[t.id];
+                  // an odd last task takes the full row
+                  const wide = i === TASKS.length - 1 && TASKS.length % 2 === 1;
                   return (
-                    <li key={t.id} className="flex items-center gap-3 rounded-2xl bg-white/[0.06] p-3">
+                    <li key={t.id} className={`flex items-center gap-3 rounded-2xl bg-white/[0.06] p-3 ${wide ? "sm:col-span-2" : ""}`}>
                       <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/10">
                         <Icon />
                       </span>

@@ -7,7 +7,7 @@ export const X_PROFILE = `https://x.com/${X_HANDLE}`;
 export const LAUNCH_POST = "https://x.com/AIFameIndex/status/2109331017018597775";
 export const X_POST_ID = (process.env.NEXT_PUBLIC_X_POST || LAUNCH_POST).match(/status\/(\d+)/)?.[1] ?? "";
 
-export type TaskId = "follow" | "like" | "repost" | "post";
+export type TaskId = "follow" | "like" | "repost" | "comment" | "post";
 
 export interface Task {
   id: TaskId;
@@ -40,6 +40,13 @@ export const TASKS: Task[] = [
     hint: X_POST_ID ? "Share it with your followers" : `Repost the pinned post on @${X_HANDLE}`,
     points: 100,
     url: () => (X_POST_ID ? `https://x.com/intent/retweet?tweet_id=${X_POST_ID}` : X_PROFILE),
+  },
+  {
+    id: "comment",
+    label: "Comment on the launch post",
+    hint: X_POST_ID ? "Tell us which AI celeb is #1 for you" : `Reply to the pinned post on @${X_HANDLE}`,
+    points: 100,
+    url: () => (X_POST_ID ? `https://x.com/intent/tweet?in_reply_to=${X_POST_ID}` : X_PROFILE),
   },
   {
     id: "post",
