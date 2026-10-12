@@ -1,15 +1,76 @@
 {
   "schema": 1,
   "handle": "abdulbigote",
-  "pending": {
-    "date": "2026-10-12",
-    "profile": {
-      "id": "Z74xviNiF2NYuwhX8",
-      "dataset": "JacL2SBRYDOvnoHwP"
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 2693,
+    "following": 207,
+    "posts": 20,
+    "postsAnalysed": 20,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 5,
+    "posts14d": 11,
+    "posts30d": 17,
+    "postsPerWeek": 5.5,
+    "avgLikes": 420,
+    "medianLikes": 68.5,
+    "avgComments": 14,
+    "likesHidden": 0,
+    "engagementRate": 0.1610657259561827,
+    "avgLikes14d": 449,
+    "maxLikes": 9715,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Ddx7a8wM8Zj/",
+      "date": "2026-09-27",
+      "likes": 9715,
+      "comments": 339,
+      "caption": "🕺🌍 ABDUL IS HERE 😂🔥\nWhat should he dance next? 👇\n\nDance credits: @bbyshanzz \n\n#AbdulBigote #Dance #Funny #AI #aivideó"
     },
-    "posts": {
-      "id": "f43ijdGYdQeQ6UZRm",
-      "dataset": "DTZ06omwy5m0ZLSni"
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd36mX6sMkb/",
+      "date": "2026-09-29",
+      "likes": 2302
+    },
+    "bio": "Abdul Bigote 🥸 | Daily chaos 🕺\nThe Arab uncle you didn’t ask for 😂\n🎯 Road to 5K: 2,466 / 5,000\nFollow before Abdul finds you ↓",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 26.2,
+    "momentum": 31,
+    "index": 29,
+    "fameParts": {
+      "followers": 0.10755908835287764,
+      "engagement": 0.15581232259947508,
+      "viral": 0.24686070123395032,
+      "consistency": 0.85,
+      "longevity": 0.1204119982655925,
+      "recognizability": 0.52
+    },
+    "momentumParts": {
+      "engagement": 0.15581232259947508,
+      "viral": 0.09052632982344322,
+      "frequency": 0.7857142857142857,
+      "growth": 0.10165803774233169,
+      "recency": 1
     }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2026-09-27",
+    "end": "2026-10-11",
+    "posts": 20,
+    "avgLikes": 978,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
   }
 }
