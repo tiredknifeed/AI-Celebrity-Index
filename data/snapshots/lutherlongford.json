@@ -1,15 +1,76 @@
 {
   "schema": 1,
   "handle": "lutherlongford",
-  "pending": {
-    "date": "2026-10-12",
-    "profile": {
-      "id": "qCExq11aVeG5RlNVQ",
-      "dataset": "b0QOJEkEI7EIFHgmR"
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 21531,
+    "following": 0,
+    "posts": 40,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 7,
+    "posts14d": 22,
+    "posts30d": 28,
+    "postsPerWeek": 11,
+    "avgLikes": 3960,
+    "medianLikes": 734,
+    "avgComments": 30,
+    "likesHidden": 5,
+    "engagementRate": 0.18531088065712562,
+    "avgLikes14d": 3108,
+    "maxLikes": 81850,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd0nZazNTVM/",
+      "date": "2026-09-28",
+      "likes": 81850,
+      "comments": 1647,
+      "caption": "You dare question my flow?"
     },
-    "posts": {
-      "id": "IzYGwKUWoTztz3yLB",
-      "dataset": "8fpdfM6sbKl8HpRV6"
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd4xYR-t0By/",
+      "date": "2026-09-29",
+      "likes": 13683
+    },
+    "bio": "Standing on business with immaculate manners\nCreative Partner @higgsfield.ai \n$LONGFORD",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 41.2,
+    "momentum": 51.6,
+    "index": 40.4,
+    "fameParts": {
+      "followers": 0.3332660502379947,
+      "engagement": 0.39942379648137805,
+      "viral": 0.47825467093699014,
+      "consistency": 1,
+      "longevity": 0.240823996531185,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.37312025253221914,
+      "viral": 0.2840453317401501,
+      "frequency": 1,
+      "growth": 0.431116678339469,
+      "recency": 1
     }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2026-09-24",
+    "end": "2026-10-10",
+    "posts": 25,
+    "avgLikes": 9123,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
   }
 }
