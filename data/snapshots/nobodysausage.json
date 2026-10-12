@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "nobodysausage",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 7343798,
+    "following": 647,
+    "posts": 744,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-10",
+    "daysSinceLastPost": 2,
+    "posts7d": 2,
+    "posts14d": 4,
+    "posts30d": 8,
+    "postsPerWeek": 2,
+    "avgLikes": 101601,
+    "medianLikes": 65268,
+    "avgComments": 633,
+    "likesHidden": 0,
+    "engagementRate": 0.01392106645634861,
+    "avgLikes14d": 27748,
+    "maxLikes": 565164,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DbI9CnVxzJs/",
+      "date": "2026-07-23",
+      "likes": 565164,
+      "comments": 2455,
+      "caption": "We ar..."
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeKIPiyoc_i/",
+      "date": "2026-10-06",
+      "likes": 31446
+    },
+    "bio": "Just wanna make humans laugh!",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 79.3,
+    "momentum": 45,
+    "index": 66.3,
+    "fameParts": {
+      "followers": 0.9664801806413024,
+      "engagement": 0.7517244956197129,
+      "viral": 0.6880436225566537,
+      "consistency": 0.4,
+      "longevity": 0.7486291742183514,
+      "recognizability": 1
+    },
+    "momentumParts": {
+      "engagement": 0.6108079214568736,
+      "viral": 0.3743913525215592,
+      "frequency": 0.2857142857142857,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
+  },
+  "period": {
+    "start": "2026-06-13",
+    "end": "2026-10-10",
+    "posts": 30,
+    "avgLikes": 90668,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
