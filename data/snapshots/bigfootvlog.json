@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "bigfootvlog",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 239590,
+    "following": 15,
+    "posts": 92,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-08",
+    "daysSinceLastPost": 4,
+    "posts7d": 1,
+    "posts14d": 1,
+    "posts30d": 4,
+    "postsPerWeek": 0.5,
+    "avgLikes": 7248,
+    "medianLikes": 1647,
+    "avgComments": 73,
+    "likesHidden": 0,
+    "engagementRate": 0.03055532367794983,
+    "avgLikes14d": 1085,
+    "maxLikes": 297057,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DKSml-3A7rF/",
+      "date": "2025-05-30",
+      "likes": 297057,
+      "comments": 1849,
+      "caption": "Bigfo..."
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DePYw13A70F/",
+      "date": "2026-10-08",
+      "likes": 1085
+    },
+    "bio": "nuser9458@gmail.com",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 52,
+    "momentum": 20,
+    "index": 44.2,
+    "fameParts": {
+      "followers": 0.5948671718814778,
+      "engagement": 0.4650545461671891,
+      "viral": 0.6182099476915195,
+      "consistency": 0.2,
+      "longevity": 0.6876712328767123,
+      "recognizability": 0.36
+    },
+    "momentumParts": {
+      "engagement": 0.2588574345461371,
+      "viral": 0.008857434546137077,
+      "frequency": 0.07142857142857142,
+      "growth": 0,
+      "recency": 0.9629629629629629
+    }
+  },
+  "heat": "DORMANT",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
+  },
+  "period": {
+    "start": "2025-05-28",
+    "end": "2026-10-08",
+    "posts": 30,
+    "avgLikes": 22103,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
