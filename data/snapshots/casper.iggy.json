@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "casper.iggy",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 199153,
+    "following": 1,
+    "posts": 70,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 7,
+    "posts14d": 12,
+    "posts30d": 26,
+    "postsPerWeek": 6,
+    "avgLikes": 61238,
+    "medianLikes": 31899,
+    "avgComments": 767,
+    "likesHidden": 0,
+    "engagementRate": 0.31134312145268545,
+    "avgLikes14d": 61238,
+    "maxLikes": 802743,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DcqiPnXtpwo/",
+      "date": "2026-08-30",
+      "likes": 802743,
+      "comments": 8295,
+      "caption": "Incredible technical display by Casper 🥊🧠🔥\n#mma #ufc #martialarts #fitness #italiangreyhound"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeEpod6NMnS/",
+      "date": "2026-10-04",
+      "likes": 204997
+    },
+    "bio": "Just an ordinary Italian Greyhound 🐾\nCollabs: caspertheiggy@gmail.com\nAI tools I use ⬇️",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 62.7,
+    "momentum": 61.7,
+    "index": 67.5,
+    "fameParts": {
+      "followers": 0.5747967132294354,
+      "engagement": 0.6967552496086644,
+      "viral": 0.7261441317908315,
+      "consistency": 1,
+      "longevity": 0.33803921600570275,
+      "recognizability": 0.36
+    },
+    "momentumParts": {
+      "engagement": 0.6967552496086644,
+      "viral": 0.5779368763700616,
+      "frequency": 0.8571428571428571,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-08-30",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 133956,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
