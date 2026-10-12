@@ -2,7 +2,8 @@
 # runners cannot read Instagram, so the site does the capture with its own Apify
 # key: each POST /api/refresh/ captures one profile and commits
 # data/snapshots/<handle>.json ([skip netlify]); the site shows it within
-# seconds, no rebuild. Each character is captured at most once a day.
+# seconds, no rebuild. Each call is one short step (start the Apify runs for the
+# next character, or collect them once finished), so none hits the host's limit. Each character is captured at most once a day.
 # Cost: one Apify profile + posts run per character (about 50 per refresh).
 name: Refresh Instagram numbers
 
@@ -27,19 +28,19 @@ jobs:
           # optional: set the same REFRESH_KEY on Netlify and as a repository secret
           KEY: ${{ secrets.REFRESH_KEY }}
         run: |
-          # wait for a deploy that has the route (up to 10 minutes)
+          # wait for a deploy that has the stepwise route (up to 10 minutes)
           for i in $(seq 1 40); do
-            curl -s -m 30 "$SITE/api/refresh/" | grep -q '"total"' && break
+            curl -s -m 30 "$SITE/api/refresh/" | grep -q '"pending"' && break
             echo "waiting for the site to serve /api/refresh/ ..."; sleep 15
           done
           echo "before: $(curl -s -m 30 "$SITE/api/refresh/")"
           fails=0
-          for i in $(seq 1 150); do
+          for i in $(seq 1 500); do
             r=$(curl -s -m 100 -X POST -H "x-refresh-key: $KEY" "$SITE/api/refresh/" || true)
             echo "$i: $r"
             echo "$r" | grep -q '"done":true' && break
             if echo "$r" | grep -q '"handle"'; then fails=0; else fails=$((fails + 1)); fi
             if [ "$fails" -ge 5 ]; then echo "::error::the site failed 5 times in a row, stopping"; exit 1; fi
-            sleep 3
+            if echo "$r" | grep -q '"waiting"\|"started"'; then sleep 8; else sleep 2; fi
           done
           echo "after: $(curl -s -m 30 "$SITE/api/refresh/")"

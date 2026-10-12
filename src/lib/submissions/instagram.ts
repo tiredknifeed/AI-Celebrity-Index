@@ -71,6 +71,11 @@ export async function fetchProfile(handle: string, postsLimit = config.postsLimi
     runActor(config.apifyProfileActor, { usernames: [handle] }),
     runActor(config.apifyPostsActor, { username: [handle], resultsLimit: postsLimit }),
   ]);
+  return toProfile(handle, profiles, posts);
+}
+
+/** Builds the profile from the two actors' dataset items. */
+export function toProfile(handle: string, profiles: Obj[], posts: Obj[]): RawProfile {
   const p = profiles.find((x) => String(str(x.username) ?? "").toLowerCase() === handle) ?? profiles[0];
   if (!p) throw new Error("Profile not found or not public");
   const fromProfile = Array.isArray(p.latestPosts) ? (p.latestPosts as Obj[]) : [];
@@ -96,6 +101,47 @@ export async function fetchProfile(handle: string, postsLimit = config.postsLimi
     profilePicUrl: str(p.profilePicUrlHD, p.profilePicUrlHd, p.profile_pic_url_hd, p.profilePicUrl, p.profile_pic_url),
     posts: unique,
   };
+}
+
+// ---- asynchronous runs: start now, collect on a later request (no long-held connection)
+const tokenQ = () => `token=${encodeURIComponent(config.apifyToken)}`;
+export interface ActorRun {
+  id: string;
+  dataset: string;
+}
+
+async function startActor(actor: string, input: unknown): Promise<ActorRun> {
+  const res = await fetch(`${config.apifyApi}/v2/acts/${actor}/runs?${tokenQ()}&timeout=300`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(input),
+  });
+  if (!res.ok) throw new Error(`Apify ${actor} start failed: HTTP ${res.status}`);
+  const { data } = (await res.json()) as { data: { id: string; defaultDatasetId: string } };
+  return { id: data.id, dataset: data.defaultDatasetId };
+}
+
+/** Starts the profile and posts runs for one handle. */
+export async function startProfileRuns(handle: string, postsLimit = config.postsLimit) {
+  const [profile, posts] = await Promise.all([
+    startActor(config.apifyProfileActor, { usernames: [handle] }),
+    startActor(config.apifyPostsActor, { username: [handle], resultsLimit: postsLimit }),
+  ]);
+  return { profile, posts };
+}
+
+/** "RUNNING", "SUCCEEDED", "FAILED", "TIMED-OUT", "ABORTED", ... */
+export async function runStatus(run: ActorRun): Promise<string> {
+  const res = await fetch(`${config.apifyApi}/v2/actor-runs/${run.id}?${tokenQ()}`, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Apify run ${run.id}: HTTP ${res.status}`);
+  return ((await res.json()) as { data: { status: string } }).data.status;
+}
+
+export async function runItems(run: ActorRun): Promise<Obj[]> {
+  const res = await fetch(`${config.apifyApi}/v2/datasets/${run.dataset}/items?${tokenQ()}&clean=true`, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Apify dataset ${run.dataset}: HTTP ${res.status}`);
+  const items = (await res.json()) as unknown;
+  return Array.isArray(items) ? (items as Obj[]) : [];
 }
 
 /** Profile picture URLs for several handles in one actor run (handle -> URL). */

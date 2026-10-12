@@ -33,7 +33,9 @@ export interface Snapshot {
   /** Likes per post since the researched history ends, shown as the last fame-history period. */
   period?: TrajectoryPoint | null;
   /** Last capture attempt, successful or not. */
-  attempt: { date: string; ok: boolean; error?: string };
+  attempt?: { date: string; ok: boolean; error?: string };
+  /** Apify runs started for today's capture and not collected yet. */
+  pending?: { date: string; profile: { id: string; dataset: string }; posts: { id: string; dataset: string } };
 }
 
 const round = (v: number, d: number) => Math.round(v * 10 ** d) / 10 ** d;

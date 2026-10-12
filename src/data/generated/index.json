@@ -1,7 +1,7 @@
 {
  "meta": {
   "title": "AI Fame Index",
-  "asOf": "2026-10-09",
+  "asOf": "2026-10-12",
   "generatedFrom": "AI_Celebrity_Index_Instagram_Research_2026-10-09.xlsx",
   "counts": {
    "included": 41,
@@ -33,7 +33,7 @@
    "parodyOf": null,
    "disambiguation": "Original fictional character (no real-person namesake identified). Not to be confused with impostor/promo account @jeanphilanthrope.co ('Evil Twin').",
    "copycats": "@jeanphilanthrope.co (250,667 followers, 'Evil Twin… Create Videos Just Like Me', ~336 likes/post - EXCLUDED); @jean_philanthroope; @phil_john_jean (copycat, 11K); @jeanphilbonjour (fan).",
-   "followers": 241147,
+   "followers": 243988,
    "following": 1,
    "posts": 12,
    "postsAnalysed": 12,
@@ -41,31 +41,31 @@
    "firstPost": "2026-09-17",
    "firstPostBasis": "Full history loaded - first post",
    "lastPost": "2026-10-07",
-   "daysSinceLastPost": 2,
-   "posts7d": 2,
-   "posts14d": 4,
+   "daysSinceLastPost": 5,
+   "posts7d": 1,
+   "posts14d": 3,
    "posts30d": 12,
-   "postsPerWeek": 2,
-   "avgLikes": 297994,
-   "medianLikes": 110763,
-   "avgComments": 7823,
+   "postsPerWeek": 1.5,
+   "avgLikes": 298560,
+   "medianLikes": 73527,
+   "avgComments": 7858,
    "likesHidden": 0,
-   "engagementRate": 1.2681766723202,
+   "engagementRate": 1.2558752889486369,
    "engagementLevel": "Very high",
-   "avgLikes14d": 11876,
+   "avgLikes14d": 8484,
    "avgComments14d": 613,
-   "maxLikes": 1708185,
+   "maxLikes": 1711091,
    "topPost": {
     "url": "https://www.instagram.com/p/Ddb0QUyqnhG/",
-    "date": "2026-09-19",
-    "likes": 1708185,
-    "comments": 53119,
-    "caption": "Elle m'appelle le soir, elle t'appelle bout d'chou"
+    "date": "2026-09-18",
+    "likes": 1711091,
+    "comments": 53170,
+    "caption": "Elle m’appelle le soir, elle t’appelle bout d’chou"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Ddy7hfsiPyt/",
-    "date": "2026-09-27",
-    "likes": 23808
+    "url": "https://www.instagram.com/p/Dd9NfF5iq_Y/",
+    "date": "2026-10-01",
+    "likes": 9345
    },
    "topPostNote": null,
    "bio": "Oui Madame.",
@@ -92,25 +92,25 @@
    "notes": "Debut 2026-09-17; peak 09-18..09-22 (two reels with 921K and 1.71M likes); October posts 6-9K likes. 'jeanphilanthrope.co' (250K followers, 'Evil Twin') is a separate promo/copycat account - EXCLUDED.",
    "why": "Patient zero of the Sep-2026 AI-character wave: 1.7M-like reel within 2 days of debut; the hub most other characters tag or call out.",
    "scores": {
-    "fame": 63.7,
-    "momentum": 53.3,
+    "fame": 63.8,
+    "momentum": 47.4,
     "distinctiveness": 95,
     "sufficiency": 1,
-    "index": 72.3,
+    "index": 70.6,
     "fameParts": {
-     "followers": 0.5956,
-     "engagement": 0.8686,
-     "viral": 0.8081,
+     "followers": 0.5968421167671214,
+     "engagement": 0.8687579055166015,
+     "viral": 0.808318276749233,
      "consistency": 0.6,
-     "longevity": 0.0317,
+     "longevity": 0.03424657534246575,
      "recognizability": 0.6
     },
     "momentumParts": {
-     "engagement": 0.5187,
-     "viral": 0.3442,
-     "frequency": 0.2857,
-     "growth": 0.8159,
-     "recency": 1
+     "engagement": 0.48215016496113106,
+     "viral": 0.24264482642871277,
+     "frequency": 0.21428571428571427,
+     "growth": 0.7957713833585792,
+     "recency": 0.9259259259259259
     },
     "distinctParts": {
      "visual": 5,
@@ -122,8 +122,8 @@
    },
    "heat": "STEADY",
    "status": {
-    "code": "COOLING",
-    "basis": "Phase: Peaked (week 1) - decaying; last post 2d ago"
+    "code": "STABLE",
+    "basis": "Last post 5d before capture"
    },
    "phase": "Peaked (week 1) - decaying",
    "debut": {
@@ -268,10 +268,14 @@
     "interactions": "OBSERVED (inbound): @archibald_brown (9 mentions - 'come to London and find out…', 'you're next'), @brigittemacaron_ (4 - 'La Jeanconde', 'your father'), @imranpoppadumb (4), @derek.mercer.2006 (2), @dequavious_von (2), @jadeorlhabit_ (bio 'Oui Monsieur… @jean_philanthrope Love U 💋'). Jean's own posts tag no other AI characters.",
     "active": "YES - OBSERVED last post 2026-10-07 (2 days before capture); slowing (2 posts/7d)."
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
     "index": 4,
     "fame": 7,
-    "momentum": 20,
+    "momentum": 28,
     "distinctiveness": 1
    },
    "externalLinks": [
@@ -331,42 +335,42 @@
    "parodyOf": null,
    "disambiguation": "Original fictional character; no real-person namesake identified.",
    "copycats": "@benjamin_stachiio (78 followers, copycat), @benjaminstachio, @darlingbenj, @benjamin_stachin (search results, not reviewed).",
-   "followers": 101097,
+   "followers": 102431,
    "following": 0,
-   "posts": 15,
-   "postsAnalysed": 15,
+   "posts": 16,
+   "postsAnalysed": 16,
    "fullHistory": "YES (15/15)",
    "firstPost": "2026-09-27",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
+   "lastPost": "2026-10-10",
+   "daysSinceLastPost": 2,
    "posts7d": 6,
    "posts14d": 12,
-   "posts30d": 12,
+   "posts30d": 13,
    "postsPerWeek": 6,
-   "avgLikes": 8999,
-   "medianLikes": 4168,
-   "avgComments": 575,
+   "avgLikes": 7859,
+   "medianLikes": 3169.5,
+   "avgComments": 411,
    "likesHidden": 0,
-   "engagementRate": 0.094701128619049,
+   "engagementRate": 0.08074215813572064,
    "engagementLevel": "Very high",
-   "avgLikes14d": 8999,
+   "avgLikes14d": 7859,
    "avgComments14d": 575,
-   "maxLikes": 846425,
+   "maxLikes": 849030,
    "topPost": {
     "url": "https://www.instagram.com/p/Dd2joiwTDJv/",
     "date": "2026-09-29",
-    "likes": 846425,
-    "comments": 76277,
-    "caption": "Dancing with friends (pinned)"
+    "likes": 849030,
+    "comments": 76428,
+    "caption": "Dancing with friends"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd4BE9nMR7M/",
     "date": "2026-09-29",
-    "likes": 43249
+    "likes": 43486
    },
    "topPostNote": null,
-   "bio": "Hello Darling / ⚠️No crypto affiliation yet⚠️",
+   "bio": "Hello Darling\n⚠️No crypto affiliation yet⚠️",
    "linkInBio": "(none)",
    "token": {
     "status": "NONE",
@@ -388,24 +392,24 @@
    "notes": "Viral bar-dance reel 09-29 (846K likes / 76K comments; pinned). Pinned 10-07 post announces song 'Shut It' on streaming; 10-07 teaser 'Something big and fun is coming'.",
    "why": "Most visually distinctive body-horror-comedy design of the wave; first character to move into music (single 'Shut It').",
    "scores": {
-    "fame": 50.9,
-    "momentum": 61.7,
+    "fame": 51.3,
+    "momentum": 60.7,
     "distinctiveness": 65,
     "sufficiency": 0.7,
-    "index": 59.8,
+    "index": 59.7,
     "fameParts": {
-     "followers": 0.5012,
-     "engagement": 0.4885,
-     "viral": 0.7319,
-     "consistency": 0.6,
-     "longevity": 0.0704,
+     "followers": 0.50260785315281,
+     "engagement": 0.4738418221933405,
+     "viral": 0.7322307590168984,
+     "consistency": 0.65,
+     "longevity": 0.08164799306236992,
      "recognizability": 0.48
     },
     "momentumParts": {
-     "engagement": 0.4885,
-     "viral": 0.409,
-     "frequency": 0.8571,
-     "growth": 0.7702,
+     "engagement": 0.4738418221933405,
+     "viral": 0.40958736538022733,
+     "frequency": 0.8571428571428571,
+     "growth": 0.7337360614222235,
      "recency": 1
     },
     "distinctParts": {
@@ -419,7 +423,7 @@
    "heat": "RISING",
    "status": {
     "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "basis": "Last post 2d before capture"
    },
    "phase": "Post-viral plateau; pivot to music",
    "debut": {
@@ -453,6 +457,14 @@
      "posts": 4,
      "avgLikes": 3267,
      "label": "10-05..08: 4 posts, avg 3,267"
+    },
+    {
+     "start": "2026-10-09",
+     "end": "2026-10-10",
+     "posts": 2,
+     "avgLikes": 666,
+     "label": "Latest",
+     "live": true
     }
    ],
    "timeline": [
@@ -542,10 +554,14 @@
     "interactions": "OBSERVED: none - no tags/mentions of other characters in 15 posts; no inbound mentions captured.",
     "active": "YES - OBSERVED last post 2026-10-08; 6 posts in last 7 days."
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 13,
-    "fame": 18,
-    "momentum": 13,
+    "index": 17,
+    "fame": 20,
+    "momentum": 14,
     "distinctiveness": 14
    },
    "externalLinks": [],
@@ -583,26 +599,26 @@
    "parodyOf": "Parody of a third-party fictional character (Shrek) - IP/brand risk for an index",
    "disambiguation": "PARODY of the DreamWorks 'Shrek' villain Lord Farquaad (third-party fictional IP). This account is NOT affiliated with DreamWorks; the bio quotes the film. IP/brand risk for any index product.",
    "copycats": "@lord__.farquaad, @l.o.r.d._.farquaad, @lordfarquaad20, @lordfarquaad.93 (search results; fan/meme accounts, not reviewed).",
-   "followers": 102526,
-   "following": 19,
-   "posts": 57,
-   "postsAnalysed": 57,
+   "followers": 107213,
+   "following": 16,
+   "posts": 70,
+   "postsAnalysed": 30,
    "fullHistory": "YES (57/57 on first pass)",
    "firstPost": "2026-09-25",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-09",
+   "lastPost": "2026-10-12",
    "daysSinceLastPost": 0,
-   "posts7d": 26,
-   "posts14d": 51,
-   "posts30d": 56,
-   "postsPerWeek": 25.5,
-   "avgLikes": 2389,
-   "medianLikes": 1286,
-   "avgComments": 38,
+   "posts7d": 27,
+   "posts14d": 30,
+   "posts30d": 30,
+   "postsPerWeek": 15,
+   "avgLikes": 4025,
+   "medianLikes": 2799.5,
+   "avgComments": 45,
    "likesHidden": 0,
-   "engagementRate": 0.0236720441644071,
+   "engagementRate": 0.03795870525651429,
    "engagementLevel": "High",
-   "avgLikes14d": 25012,
+   "avgLikes14d": 7073,
    "avgComments14d": 209,
    "maxLikes": 379725,
    "topPost": {
@@ -613,12 +629,12 @@
     "caption": "Feeling fresh"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/DdwhswgBSFq/",
-    "date": "2026-09-26",
-    "likes": 379725
+    "url": "https://www.instagram.com/p/DeHIYfDh_Sa/",
+    "date": "2026-10-05",
+    "likes": 50354
    },
    "topPostNote": null,
-   "bio": "Some of you may die, but that is a sacrifice I am willing to make / Email: lordfarquaadbusiness@gmail.com / Made with @higgsfield.ai",
+   "bio": "Some of you may die, but that is a sacrifice I am willing to make\nFarquaad parody\nEmail: lordfarquaadbusiness@gmail.com\nMade with @higgsfield.ai",
    "linkInBio": "(none)",
    "token": {
     "status": "NONE",
@@ -640,24 +656,24 @@
    "notes": "Peak week 09-24..30 (21 posts, avg 50,981 likes) -> 10-05..09 (16 posts, avg 4,870). NOT the DreamWorks character itself - fan/AI parody.",
    "why": "Highest posting cadence of any seed and an explicit AI-tool sponsorship - shows the brand-deal business model; borrowed IP limits index suitability.",
    "scores": {
-    "fame": 51.5,
-    "momentum": 64.4,
+    "fame": 53.1,
+    "momentum": 49.7,
     "distinctiveness": 50,
     "sufficiency": 0.8,
-    "index": 59.3,
+    "index": 55.5,
     "fameParts": {
-     "followers": 0.5027,
-     "engagement": 0.3446,
-     "viral": 0.6449,
+     "followers": 0.5075618621180158,
+     "engagement": 0.40119147117597187,
+     "viral": 0.6448672976946352,
      "consistency": 1,
-     "longevity": 0.3023,
+     "longevity": 0.33803921600570275,
      "recognizability": 0.36
     },
     "momentumParts": {
-     "engagement": 0.3446,
-     "viral": 0.6449,
+     "engagement": 0.40119147117597187,
+     "viral": 0.425508493890866,
      "frequency": 1,
-     "growth": 0.7459,
+     "growth": 0,
      "recency": 1
     },
     "distinctParts": {
@@ -668,10 +684,10 @@
     },
     "recognizabilityInput": 3
    },
-   "heat": "RISING",
+   "heat": "STEADY",
    "status": {
     "code": "ACTIVE_TODAY",
-    "basis": "Posted on capture day (09 Oct 2026)"
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": "Decaying, high-volume sponsored phase",
    "debut": {
@@ -705,6 +721,14 @@
      "posts": 16,
      "avgLikes": 4870,
      "label": "10-05..09: 16 posts, avg 4,870"
+    },
+    {
+     "start": "2026-10-10",
+     "end": "2026-10-12",
+     "posts": 9,
+     "avgLikes": 3682,
+     "label": "Latest",
+     "live": true
     }
    ],
    "timeline": [
@@ -797,10 +821,14 @@
     "interactions": "OBSERVED: none (only @higgsfield.ai / @higgsfield.creators / @higgsfield.soul - AI tool accounts).",
     "active": "YES - OBSERVED most active seed (posted on capture day; 26 posts/7d)."
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 14,
-    "fame": 15,
-    "momentum": 9,
+    "index": 24,
+    "fame": 18,
+    "momentum": 27,
     "distinctiveness": 28
    },
    "externalLinks": [
@@ -846,26 +874,26 @@
    "parodyOf": null,
    "disambiguation": "Original fictional character (no real-person namesake identified). Real athletes appear only as tagged/AI-generated props; they are not involved.",
    "copycats": "@archibaldbrown3, @sir_archibaldfrenchie, @chroniclesofarchibaldbrown, @archeezmo (search results - unrelated or copycats).",
-   "followers": 131892,
-   "following": 24,
-   "posts": 56,
-   "postsAnalysed": 56,
+   "followers": 131631,
+   "following": 31,
+   "posts": 59,
+   "postsAnalysed": 30,
    "fullHistory": "YES (56/56)",
    "firstPost": "2026-09-20",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-07",
+   "lastPost": "2026-10-10",
    "daysSinceLastPost": 2,
-   "posts7d": 5,
-   "posts14d": 25,
-   "posts30d": 53,
-   "postsPerWeek": 12.5,
-   "avgLikes": 1302,
-   "medianLikes": 936,
-   "avgComments": 28,
+   "posts7d": 6,
+   "posts14d": 19,
+   "posts30d": 27,
+   "postsPerWeek": 9.5,
+   "avgLikes": 1372,
+   "medianLikes": 617.5,
+   "avgComments": 27,
    "likesHidden": 0,
-   "engagementRate": 0.0100840081278622,
+   "engagementRate": 0.01062946165163728,
    "engagementLevel": "Medium",
-   "avgLikes14d": 2635,
+   "avgLikes14d": 1375,
    "avgComments14d": 62,
    "maxLikes": 1106935,
    "topPost": {
@@ -876,9 +904,9 @@
     "caption": "Send me a dm for coaching"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/DdzwiRxMIMU/",
-    "date": "2026-09-27",
-    "likes": 27193
+    "url": "https://www.instagram.com/p/Dd6ODvfMYjY/",
+    "date": "2026-09-30",
+    "likes": 4760
    },
    "topPostNote": null,
    "bio": "DM if you need the 101 on throwing hands? 🥊",
@@ -903,24 +931,24 @@
    "notes": "Tags real athletes for storyline - these are NOT endorsements. Peak pre-09-24 (18 posts avg 90,924 likes); October ~1-2K likes.",
    "why": "The storyline engine of the wave: rivalry with Jean Phil, cross-over call-outs to the AI-animal fighters (Abu Nutty, Casper). Strong lore, weak recent engagement.",
    "scores": {
-    "fame": 54.5,
-    "momentum": 54.8,
+    "fame": 54.7,
+    "momentum": 49.8,
     "distinctiveness": 90,
     "sufficiency": 1,
-    "index": 68.5,
+    "index": 67.1,
     "fameParts": {
-     "followers": 0.5301,
-     "engagement": 0.2787,
-     "viral": 0.761,
+     "followers": 0.5298395451604514,
+     "engagement": 0.2843385278426832,
+     "viral": 0.7610305298876741,
      "consistency": 1,
-     "longevity": 0.2993,
+     "longevity": 0.3083408046568577,
      "recognizability": 0.48
     },
     "momentumParts": {
-     "engagement": 0.2787,
-     "viral": 0.3586,
+     "engagement": 0.2843385278426832,
+     "viral": 0.16940173818012327,
      "frequency": 1,
-     "growth": 0.7366,
+     "growth": 0.7107741999278396,
      "recency": 1
     },
     "distinctParts": {
@@ -933,8 +961,8 @@
    },
    "heat": "STEADY",
    "status": {
-    "code": "COOLING",
-    "basis": "Phase: Decaying; storyline still active; last post 2d ago"
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
    },
    "phase": "Decaying; storyline still active",
    "debut": {
@@ -975,6 +1003,14 @@
      "posts": 3,
      "avgLikes": 1227,
      "label": "10-05..07: 3 posts, avg 1,227"
+    },
+    {
+     "start": "2026-10-09",
+     "end": "2026-10-10",
+     "posts": 3,
+     "avgLikes": 359,
+     "label": "Latest",
+     "live": true
     }
    ],
    "timeline": [
@@ -1094,10 +1130,14 @@
     "interactions": "OBSERVED: OUT -> @jean_philanthrope (9; rivalry), @abunuttyofficial (3; call-out). IN <- @percival_ashcrofttt (3). Also tags real fighters/execs as storyline props (@anthonyjoshua, @jonnybones, @miketyson, @danawhite, @rodtang_jimungnon) - NOT real collaborations.",
     "active": "YES - OBSERVED last post 2026-10-07; engagement low (~1-2K likes)."
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 7,
-    "fame": 12,
-    "momentum": 19,
+    "index": 8,
+    "fame": 16,
+    "momentum": 26,
     "distinctiveness": 2
    },
    "externalLinks": [
@@ -1182,26 +1222,26 @@
    "parodyOf": null,
    "disambiguation": "Original fictional character (Gulf/Arab 'uncle' archetype). Not a real performer as far as Instagram shows; 'won red bull dance' is an in-character joke (no Red Bull tag).",
    "copycats": "@abushalab.official, @abu__shalab, @abu_shalab11, @abu_shalab_ (search results - not reviewed).",
-   "followers": 531003,
+   "followers": 536200,
    "following": 0,
-   "posts": 27,
-   "postsAnalysed": 27,
+   "posts": 30,
+   "postsAnalysed": 28,
    "fullHistory": "YES (27/27)",
    "firstPost": "2026-09-25",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-08",
+   "lastPost": "2026-10-11",
    "daysSinceLastPost": 1,
-   "posts7d": 11,
-   "posts14d": 27,
+   "posts7d": 5,
+   "posts14d": 19,
    "posts30d": 27,
-   "postsPerWeek": 13.5,
-   "avgLikes": 22069,
-   "medianLikes": 9664,
-   "avgComments": 578,
+   "postsPerWeek": 9.5,
+   "avgLikes": 22515,
+   "medianLikes": 9012,
+   "avgComments": 546,
    "likesHidden": 0,
-   "engagementRate": 0.0426494765566296,
+   "engagementRate": 0.043009138381201045,
    "engagementLevel": "High",
-   "avgLikes14d": 157239,
+   "avgLikes14d": 37347,
    "avgComments14d": 4532,
    "maxLikes": 1392520,
    "topPost": {
@@ -1212,12 +1252,12 @@
     "caption": "Throwback to when i won red bull dance"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Dduf1zGNri-/",
-    "date": "2026-09-25",
-    "likes": 1392520
+    "url": "https://www.instagram.com/p/Dd4WBQrt48X/",
+    "date": "2026-09-29",
+    "likes": 291784
    },
    "topPostNote": null,
-   "bio": "Dancer | Actor | Comedian / Road to 1M followers 😁 (0.52/1M) / Official $ABU👇",
+   "bio": "Official $ABU👇",
    "linkInBio": "join.pump.fun/HSag/wsvnmbjs (pump.fun referral)",
    "token": {
     "status": "IG_OBSERVED",
@@ -1241,24 +1281,24 @@
    "notes": "Largest seed by followers. First 5 days (09-25..29) produced 1.39M, 874K and 527K-like reels; October posts 1-81K likes.",
    "why": "Biggest audience among seeds (531K in 14 days) and the clearest IG-native token link ($ABU + pump.fun link in bio).",
    "scores": {
-    "fame": 63.2,
-    "momentum": 80.2,
+    "fame": 63.5,
+    "momentum": 76,
     "distinctiveness": 60,
     "sufficiency": 0.9,
-    "index": 71.7,
+    "index": 70.5,
     "fameParts": {
-     "followers": 0.6813,
-     "engagement": 0.5859,
-     "viral": 0.786,
+     "followers": 0.6823317024117153,
+     "engagement": 0.588117987824738,
+     "viral": 0.7859503603559232,
      "consistency": 1,
-     "longevity": 0.1725,
+     "longevity": 0.19084850188786495,
      "recognizability": 0.36
     },
     "momentumParts": {
-     "engagement": 0.5859,
-     "viral": 0.786,
+     "engagement": 0.588117987824738,
+     "viral": 0.6162653684090433,
      "frequency": 1,
-     "growth": 1,
+     "growth": 0.9995511553074348,
      "recency": 1
     },
     "distinctParts": {
@@ -1269,10 +1309,10 @@
     },
     "recognizabilityInput": 3
    },
-   "heat": "ON FIRE",
+   "heat": "HOT",
    "status": {
-    "code": "COOLING",
-    "basis": "Phase: Peaked (days 1-5) - decaying fast; last post 1d ago"
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
    },
    "phase": "Peaked (days 1-5) - decaying fast",
    "debut": {
@@ -1306,6 +1346,14 @@
      "posts": 4,
      "avgLikes": 5688,
      "label": "10-05..08: 4 posts, avg 5,688"
+    },
+    {
+     "start": "2026-10-10",
+     "end": "2026-10-11",
+     "posts": 3,
+     "avgLikes": 3893,
+     "label": "Latest",
+     "live": true
     }
    ],
    "timeline": [
@@ -1411,9 +1459,13 @@
     "interactions": "OBSERVED: IN <- @imranpoppadumb (2). No outbound character tags. Clone-style accounts in the same archetype: @abu.yalla, @abdoul.cheqri.",
     "active": "YES - OBSERVED last post 2026-10-08; 11 posts/7d."
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
     "index": 5,
-    "fame": 9,
+    "fame": 8,
     "momentum": 3,
     "distinctiveness": 20
    },
@@ -1466,42 +1518,42 @@
    "parodyOf": "Parody of a real public figure's name (Brigitte Macron) - NOT that person",
    "disambiguation": "PARODY name of a real public figure (Brigitte Macron). This is an AI character, NOT the real person; no affiliation shown. Reputational/legal risk for an index using the name.",
    "copycats": "@brigitte_macaron_ (268 followers, '$MACARON', copycat - EXCLUDED); @brigittemacaron__ (298, 1 post); @_brigitte._.macaron_ ('Gone').",
-   "followers": 4299,
+   "followers": 4481,
    "following": 1,
-   "posts": 18,
-   "postsAnalysed": 18,
+   "posts": 19,
+   "postsAnalysed": 19,
    "fullHistory": "YES (18/18)",
    "firstPost": "2026-09-26",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 7,
-   "posts14d": 18,
-   "posts30d": 18,
-   "postsPerWeek": 9,
-   "avgLikes": 6938,
-   "medianLikes": 4911,
-   "avgComments": 14,
+   "lastPost": "2026-10-09",
+   "daysSinceLastPost": 3,
+   "posts7d": 4,
+   "posts14d": 15,
+   "posts30d": 19,
+   "postsPerWeek": 7.5,
+   "avgLikes": 18163,
+   "medianLikes": 18163,
+   "avgComments": 16,
    "likesHidden": 11,
-   "engagementRate": 1.6171202605257,
+   "engagementRate": 4.056851149297032,
    "engagementLevel": "Very high",
-   "avgLikes14d": 6938,
+   "avgLikes14d": 18163,
    "avgComments14d": 63,
-   "maxLikes": 17442,
+   "maxLikes": 18163,
    "topPost": {
     "url": "https://www.instagram.com/p/DeEZ0sEN_Hy/",
     "date": "2026-10-04",
-    "likes": 17442,
+    "likes": 18163,
     "comments": 91,
-    "caption": "200K Macaronies on TikTok, in less than 1 week..."
+    "caption": "200K Macaronies on TikTok, in less than 1 week. I knew you had taste 🫦"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/DeEZ0sEN_Hy/",
     "date": "2026-10-04",
-    "likes": 17442
+    "likes": 18163
    },
    "topPostNote": null,
-   "bio": "TikTok: brigittemacaron_ (300K) / Tomorrow's outfit. I'm letting you decide 👇🏻",
+   "bio": "TikTok: brigittemacaron_ (360K)\n𝐓𝐨𝐦𝐨𝐫𝐫𝐨𝐰'𝐬 𝐨𝐮𝐭𝐟𝐢𝐭. 𝐈'𝐦 𝐥𝐞𝐭𝐭𝐢𝐧𝐠 𝐲𝐨𝐮 𝐝𝐞𝐜𝐢𝐝𝐞 👇🏻",
    "linkInBio": "brigittemacaron.com",
    "token": {
     "status": "NONE",
@@ -1523,24 +1575,24 @@
    "notes": "Likes are HIDDEN on 14/18 posts (API returns placeholder 3) -> avg likes uses the 4 visible posts. Main audience is TikTok (300K per bio). Two IG accounts exist: brigittemacaron_ (primary: website + TikTok link) and brigitte_macaron_ (copycat).",
    "why": "First female lead of the wave and the only one with an interactive audience mechanic (outfit votes); IG is a secondary channel to TikTok.",
    "scores": {
-    "fame": 33.8,
-    "momentum": 52,
+    "fame": 36.7,
+    "momentum": 55.3,
     "distinctiveness": 70,
     "sufficiency": 0.7,
-    "index": 51.9,
+    "index": 53.9,
     "fameParts": {
-     "followers": 0.1583,
-     "engagement": 0.4603,
-     "viral": 0.3104,
-     "consistency": 0.9,
-     "longevity": 0.1021,
+     "followers": 0.16284373597826085,
+     "engagement": 0.5647968957357012,
+     "viral": 0.31479689573570124,
+     "consistency": 0.95,
+     "longevity": 0.11150144038113155,
      "recognizability": 0.36
     },
     "momentumParts": {
-     "engagement": 0.4603,
-     "viral": 0.3104,
+     "engagement": 0.5647968957357012,
+     "viral": 0.31479689573570124,
      "frequency": 1,
-     "growth": 0.2078,
+     "growth": 0.17890198450284736,
      "recency": 1
     },
     "distinctParts": {
@@ -1554,7 +1606,7 @@
    "heat": "STEADY",
    "status": {
     "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "basis": "Last post 3d before capture"
    },
    "phase": "Growing on TikTok; IG secondary",
    "debut": {
@@ -1567,7 +1619,16 @@
     "likes": 17442,
     "url": "https://www.instagram.com/p/DeEZ0sEN_Hy/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-26",
+     "end": "2026-10-04",
+     "posts": 4,
+     "avgLikes": 7162,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-26",
@@ -1659,10 +1720,14 @@
     "interactions": "OBSERVED: OUT -> @jean_philanthrope (4; implied family - 'La Jeanconde', 'Your father'). Also tags @dualipa (real singer) as a joke.",
     "active": "YES - OBSERVED last post 2026-10-08."
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 28,
-    "fame": 39,
-    "momentum": 23,
+    "index": 26,
+    "fame": 36,
+    "momentum": 20,
     "distinctiveness": 8
    },
    "externalLinks": [
@@ -1708,42 +1773,42 @@
    "parodyOf": null,
    "disambiguation": "Original fictional character; name not tied to an identified real person.",
    "copycats": "UNKNOWN - no copycats found in search ('bill smith' search returns unrelated real people incl. @willsmith).",
-   "followers": 15092,
-   "following": 1,
-   "posts": 12,
-   "postsAnalysed": 12,
+   "followers": 15066,
+   "following": 2,
+   "posts": 14,
+   "postsAnalysed": 14,
    "fullHistory": "YES (12/12)",
    "firstPost": "2026-09-22",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-02",
-   "daysSinceLastPost": 7,
-   "posts7d": 0,
-   "posts14d": 7,
-   "posts30d": 12,
-   "postsPerWeek": 3.5,
-   "avgLikes": 13819,
-   "medianLikes": 2046,
-   "avgComments": 1015,
+   "lastPost": "2026-10-09",
+   "daysSinceLastPost": 3,
+   "posts7d": 2,
+   "posts14d": 6,
+   "posts30d": 14,
+   "postsPerWeek": 3,
+   "avgLikes": 5849,
+   "medianLikes": 641,
+   "avgComments": 197,
    "likesHidden": 0,
-   "engagementRate": 0.982904850251789,
+   "engagementRate": 0.40130094251958054,
    "engagementLevel": "Very high",
-   "avgLikes14d": 1941,
+   "avgLikes14d": 486,
    "avgComments14d": 67,
-   "maxLikes": 52286,
+   "maxLikes": 52311,
    "topPost": {
     "url": "https://www.instagram.com/p/Ddqo1FvtNyH/",
     "date": "2026-09-24",
-    "likes": 52286,
+    "likes": 52311,
     "comments": 1767,
-    "caption": "No way he will survive this @gucci make me a new suit..."
+    "caption": "No way he will survive this @gucci make me a new suit this one is 24 h old …is  becoming vintage stuff #boxing #gang #fashionstyle \n\nTag Guc"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/DdtyIBLt2oE/",
-    "date": "2026-09-25",
-    "likes": 9256
+    "url": "https://www.instagram.com/p/Dd4VPIxN7SF/",
+    "date": "2026-09-29",
+    "likes": 2346
    },
    "topPostNote": null,
-   "bio": "Official $BillSmith / Ca:zYiF3rA8aWYUuDek3Z3po9NF4V5UDky5nji7Wr6pump / Made with @higgsfield.ai",
+   "bio": "Official $BillSmith \nCa:zYiF3rA8aWYUuDek3Z3po9NF4V5UDky5nji7Wr6pump\nMade with @higgsfield.ai",
    "linkInBio": "(none)",
    "token": {
     "status": "IG_OBSERVED",
@@ -1765,25 +1830,25 @@
    "notes": "No posts since 2026-10-02 (7 days at capture) -> cooling. Ticker on IG ($BillSmith) differs from the user-supplied $FRESHBILL.",
    "why": "Clearest 'character-as-token-wrapper' case: contract address in bio from day one; small audience but high comment counts on early posts (7,122 on one reel).",
    "scores": {
-    "fame": 36.9,
-    "momentum": 39,
+    "fame": 36.2,
+    "momentum": 30,
     "distinctiveness": 50,
     "sufficiency": 0.7,
-    "index": 45.1,
+    "index": 42.2,
     "fameParts": {
-     "followers": 0.2947,
-     "engagement": 0.5351,
-     "viral": 0.4296,
-     "consistency": 0.6,
-     "longevity": 0.0317,
+     "followers": 0.2944994907741414,
+     "engagement": 0.44177040534083056,
+     "viral": 0.42964825556760644,
+     "consistency": 0.7,
+     "longevity": 0.05845121427129518,
      "recognizability": 0.24
     },
     "momentumParts": {
-     "engagement": 0.322,
-     "viral": 0.2416,
-     "frequency": 0.5,
-     "growth": 0.3793,
-     "recency": 0.8519
+     "engagement": 0.17165906731557334,
+     "viral": 0.09258200194487765,
+     "frequency": 0.42857142857142855,
+     "growth": 0.3507871869730339,
+     "recency": 1
     },
     "distinctParts": {
      "visual": 4,
@@ -1795,8 +1860,8 @@
    },
    "heat": "COOLING",
    "status": {
-    "code": "COOLING",
-    "basis": "Phase: Stalling; last post 7d ago"
+    "code": "POSTING",
+    "basis": "Last post 3d before capture"
    },
    "phase": "Stalling",
    "debut": {
@@ -1823,6 +1888,14 @@
      "posts": 7,
      "avgLikes": 1941,
      "label": "after 09-25: avg 1,941 (7 posts)"
+    },
+    {
+     "start": "2026-09-22",
+     "end": "2026-10-09",
+     "posts": 14,
+     "avgLikes": 11883,
+     "label": "Latest",
+     "live": true
     }
    ],
    "timeline": [
@@ -1903,10 +1976,14 @@
     "interactions": "OBSERVED: none (only @gucci and @demna - brand/real designer).",
     "active": "SLOWING - OBSERVED last post 2026-10-02 (7 days before capture)."
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 32,
-    "fame": 34,
-    "momentum": 30,
+    "index": 38,
+    "fame": 37,
+    "momentum": 33,
     "distinctiveness": 29
    },
    "externalLinks": [
@@ -1958,42 +2035,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 63330,
+   "followers": 67034,
    "following": 1,
-   "posts": 30,
-   "postsAnalysed": 24,
+   "posts": 34,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (24/30 returned)",
    "firstPost": "2026-09-23",
    "firstPostBasis": "Oldest of 24 returned posts",
-   "lastPost": "2026-10-08",
+   "lastPost": "2026-10-11",
    "daysSinceLastPost": 1,
-   "posts7d": 8,
-   "posts14d": 18,
-   "posts30d": 22,
-   "postsPerWeek": 9,
-   "avgLikes": 349345,
-   "medianLikes": 18912,
-   "avgComments": 1963,
+   "posts7d": 7,
+   "posts14d": 16,
+   "posts30d": 30,
+   "postsPerWeek": 8,
+   "avgLikes": 30403,
+   "medianLikes": 10386,
+   "avgComments": 290,
    "likesHidden": 0,
-   "engagementRate": 5.54726038212538,
+   "engagementRate": 0.4578683951427634,
    "engagementLevel": "Very high",
-   "avgLikes14d": 301185,
+   "avgLikes14d": 226178,
    "avgComments14d": 1843,
-   "maxLikes": 3150423,
+   "maxLikes": 3209419,
    "topPost": {
     "url": "https://www.instagram.com/p/Dd1y2m2sMRB/",
-    "date": "2026-09-29",
-    "likes": 3150423,
-    "comments": 7700,
+    "date": "2026-09-28",
+    "likes": 3209419,
+    "comments": 7841,
     "caption": "Remember your gym bro."
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd1y2m2sMRB/",
-    "date": "2026-09-29",
-    "likes": 3150423
+    "date": "2026-09-28",
+    "likes": 3209419
    },
    "topPostNote": null,
-   "bio": "Σ / CA: 7Xgc5RacHtGzfhw2HukUBk5V986yBbvshr7rrCoopump",
+   "bio": "Σ\nCA: 7Xgc5RacHtGzfhw2HukUBk5V986yBbvshr7rrCoopump",
    "linkInBio": "derekmercer2006.com (earlier: join.pump.fun/HSag/6yv0t32g); Threads @derek.mercer.2006",
    "token": {
     "status": "IG_OBSERVED",
@@ -2015,24 +2092,24 @@
    "notes": "Highest single-post likes in the dataset (3.15M). Verified badge.",
    "why": "Breakout of the wave: 3.15M-like reel, verified badge, brand-style Monster Energy content, crossovers with Jean Phil and Sickman.",
    "scores": {
-    "fame": 69.4,
-    "momentum": 86.9,
+    "fame": 64.6,
+    "momentum": 77.9,
     "distinctiveness": 80,
     "sufficiency": 0.8,
-    "index": 78.4,
+    "index": 74,
     "fameParts": {
-     "followers": 0.4504,
-     "engagement": 0.8858,
-     "viral": 0.8746,
+     "followers": 0.45657378376122004,
+     "engagement": 0.6207291098755678,
+     "viral": 0.8766066048355039,
      "consistency": 1,
-     "longevity": 0.1908,
+     "longevity": 0.21259156681690206,
      "recognizability": 0.88
     },
     "momentumParts": {
-     "engagement": 0.8697,
-     "viral": 0.8746,
+     "engagement": 0.6207291098755678,
+     "viral": 0.8766066048355039,
      "frequency": 1,
-     "growth": 0.639,
+     "growth": 0.6190166136368204,
      "recency": 1
     },
     "distinctParts": {
@@ -2043,10 +2120,10 @@
     },
     "recognizabilityInput": 4
    },
-   "heat": "ON FIRE",
+   "heat": "HOT",
    "status": {
-    "code": "BREAKING_OUT",
-    "basis": "Posted 1d ago; phase: Hot / breakout"
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
    },
    "phase": "Hot / breakout",
    "debut": {
@@ -2073,6 +2150,14 @@
      "posts": null,
      "avgLikes": 301185,
      "label": "09-25..10-08 avg 301,185 (3.15M reel 09-29)"
+    },
+    {
+     "start": "2026-10-11",
+     "end": "2026-10-11",
+     "posts": 1,
+     "avgLikes": 3741,
+     "label": "Latest",
+     "live": true
     }
    ],
    "timeline": [
@@ -2157,10 +2242,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 1,
-    "fame": 3,
-    "momentum": 1,
+    "index": 2,
+    "fame": 6,
+    "momentum": 2,
     "distinctiveness": 6
    },
    "externalLinks": [
@@ -2206,36 +2295,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 127549,
-   "following": null,
-   "posts": 52,
-   "postsAnalysed": 32,
+   "followers": 135538,
+   "following": 2,
+   "posts": 54,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (32/52)",
    "firstPost": "2026-09-11",
    "firstPostBasis": "Oldest of 32 sampled posts",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 0,
    "posts7d": 5,
-   "posts14d": 14,
-   "posts30d": 19,
-   "postsPerWeek": 7,
-   "avgLikes": 43627,
-   "medianLikes": 40821,
-   "avgComments": 560,
+   "posts14d": 12,
+   "posts30d": 27,
+   "postsPerWeek": 6,
+   "avgLikes": 51361,
+   "medianLikes": 38999.5,
+   "avgComments": 614,
    "likesHidden": 0,
-   "engagementRate": 0.346431567476029,
+   "engagementRate": 0.3834742532229584,
    "engagementLevel": "Very high",
-   "avgLikes14d": 41952,
+   "avgLikes14d": 51361,
    "avgComments14d": 526,
-   "maxLikes": 672934,
-   "topPost": null,
+   "maxLikes": 691190,
+   "topPost": {
+    "url": "https://www.instagram.com/p/DdkLKRQxZ_y/",
+    "date": "2026-09-21",
+    "likes": 691190,
+    "comments": 2326,
+    "caption": "STARS ARE IN THE BUILDING! \n\n#ufc #monkey #abunutty #dana #mma\n\n@casper.iggy"
+   },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd9effMAN2F/",
     "date": "2026-10-01",
-    "likes": 119425
+    "likes": 126548
    },
    "topPostNote": "(max seen in 32-post sample; code not captured). Best captured: DdrXuZJR431 09-24 293,316 likes",
-   "bio": "Undefeated 6-0 / Follow for more Abu Nutty! / Higgsfield Creative Partner 🧩 / MERCH ON SALE NOW!",
+   "bio": "Undefeated 6-0\nFollow for more Abu Nutty!\nHiggsfield Creative Partner 🧩\nMERCH ON SALE NOW!\nLINK BELOW ⬇️",
    "linkInBio": "linktr.ee/abunutty",
    "token": {
     "status": "NONE",
@@ -2257,24 +2352,24 @@
    "notes": "Merch store + Higgsfield Creative Partner. Hub of the AI-animal fight league.",
    "why": "Hub of a multi-character AI fight league (Casper, Candy, Don Gorillo) with a running win-loss record and merch.",
    "scores": {
-    "fame": 64.3,
-    "momentum": 70.9,
+    "fame": 65.5,
+    "momentum": 69.6,
     "distinctiveness": 90,
     "sufficiency": 0.9,
     "index": 75.3,
     "fameParts": {
-     "followers": 0.5264,
-     "engagement": 0.6599,
-     "viral": 0.707,
-     "consistency": 0.95,
-     "longevity": 0.2864,
+     "followers": 0.5330152682244593,
+     "engagement": 0.6776583677169807,
+     "viral": 0.7098993615574389,
+     "consistency": 1,
+     "longevity": 0.29295750392918746,
      "recognizability": 0.88
     },
     "momentumParts": {
-     "engagement": 0.6557,
-     "viral": 0.5193,
-     "frequency": 1,
-     "growth": 0.6634,
+     "engagement": 0.6776583677169807,
+     "viral": 0.5255638214592508,
+     "frequency": 0.8571428571428571,
+     "growth": 0.6562797516254257,
      "recency": 1
     },
     "distinctParts": {
@@ -2287,8 +2382,8 @@
    },
    "heat": "HOT",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": "Stable, franchise-building",
    "debut": {
@@ -2301,7 +2396,16 @@
     "likes": 672934,
     "url": null
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-11",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 94764,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-08",
@@ -2376,10 +2480,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 2,
-    "fame": 6,
-    "momentum": 5,
+    "index": 1,
+    "fame": 5,
+    "momentum": 6,
     "distinctiveness": 3
    },
    "externalLinks": [],
@@ -2410,42 +2518,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 194460,
-   "following": null,
-   "posts": 66,
-   "postsAnalysed": 22,
+   "followers": 199153,
+   "following": 1,
+   "posts": 70,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/66)",
    "firstPost": "2026-09-18",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-07",
-   "daysSinceLastPost": 2,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 0,
    "posts7d": 7,
-   "posts14d": 13,
-   "posts30d": 21,
-   "postsPerWeek": 6.5,
-   "avgLikes": 135030,
-   "medianLikes": 65432,
-   "avgComments": 1868,
+   "posts14d": 12,
+   "posts30d": 26,
+   "postsPerWeek": 6,
+   "avgLikes": 61238,
+   "medianLikes": 31899,
+   "avgComments": 767,
    "likesHidden": 0,
-   "engagementRate": 0.703990537899825,
+   "engagementRate": 0.31134312145268545,
    "engagementLevel": "Very high",
-   "avgLikes14d": 130394,
+   "avgLikes14d": 61238,
    "avgComments14d": 1779,
-   "maxLikes": 527299,
+   "maxLikes": 802743,
    "topPost": {
-    "url": "https://www.instagram.com/p/Dd85audNoC2/",
-    "date": "2026-10-01",
-    "likes": 527299,
-    "comments": 6875,
-    "caption": "Casper..."
+    "url": "https://www.instagram.com/p/DcqiPnXtpwo/",
+    "date": "2026-08-30",
+    "likes": 802743,
+    "comments": 8295,
+    "caption": "Incredible technical display by Casper 🥊🧠🔥\n#mma #ufc #martialarts #fitness #italiangreyhound"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Dd85audNoC2/",
-    "date": "2026-10-01",
-    "likes": 527299
+    "url": "https://www.instagram.com/p/DeEpod6NMnS/",
+    "date": "2026-10-04",
+    "likes": 204997
    },
    "topPostNote": null,
-   "bio": "Just an ordinary Italian Greyhound 🐾 / Collabs: caspertheiggy@gmail.com / AI tools I use ⬇️",
+   "bio": "Just an ordinary Italian Greyhound 🐾\nCollabs: caspertheiggy@gmail.com\nAI tools I use ⬇️",
    "linkInBio": "(AI tools link)",
    "token": {
     "status": "NONE",
@@ -2467,23 +2575,23 @@
    "notes": "Highest recent average likes among AI-animal characters (130K over last 14 days).",
    "why": "Strongest current engagement in the fight-league universe; appears in other characters' storylines.",
    "scores": {
-    "fame": 63.3,
-    "momentum": 68.2,
+    "fame": 62.7,
+    "momentum": 61.7,
     "distinctiveness": 75,
     "sufficiency": 0.8,
-    "index": 69.6,
+    "index": 67.5,
     "fameParts": {
-     "followers": 0.5722,
-     "engagement": 0.7826,
-     "viral": 0.6805,
+     "followers": 0.5747967132294354,
+     "engagement": 0.6967552496086644,
+     "viral": 0.7261441317908315,
      "consistency": 1,
-     "longevity": 0.3278,
+     "longevity": 0.33803921600570275,
      "recognizability": 0.36
     },
     "momentumParts": {
-     "engagement": 0.7788,
-     "viral": 0.6805,
-     "frequency": 0.9286,
+     "engagement": 0.6967552496086644,
+     "viral": 0.5779368763700616,
+     "frequency": 0.8571428571428571,
      "growth": 0,
      "recency": 1
     },
@@ -2495,10 +2603,10 @@
     },
     "recognizabilityInput": 3
    },
-   "heat": "HOT",
+   "heat": "RISING",
    "status": {
-    "code": "BREAKING_OUT",
-    "basis": "Posted 2d ago; phase: Rising"
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": "Rising",
    "debut": {
@@ -2511,7 +2619,16 @@
     "likes": 527299,
     "url": "https://www.instagram.com/p/Dd85audNoC2/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-08-30",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 133956,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-01",
@@ -2562,10 +2679,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 6,
-    "fame": 8,
-    "momentum": 6,
+    "index": 7,
+    "fame": 9,
+    "momentum": 11,
     "distinctiveness": 7
    },
    "externalLinks": [],
@@ -2596,42 +2717,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 64699,
-   "following": null,
-   "posts": 65,
-   "postsAnalysed": 22,
+   "followers": 72889,
+   "following": 99,
+   "posts": 72,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/65)",
    "firstPost": "2026-08-31",
    "firstPostBasis": "Pinned post date (oldest in sample)",
-   "lastPost": "2026-10-09",
+   "lastPost": "2026-10-12",
    "daysSinceLastPost": 0,
-   "posts7d": 5,
+   "posts7d": 7,
    "posts14d": 14,
-   "posts30d": 15,
+   "posts30d": 22,
    "postsPerWeek": 7,
-   "avgLikes": 30857,
-   "medianLikes": 6426,
-   "avgComments": 327,
+   "avgLikes": 39376,
+   "medianLikes": 13833.5,
+   "avgComments": 467,
    "likesHidden": 0,
-   "engagementRate": 0.481985811218102,
+   "engagementRate": 0.5466268344103135,
    "engagementLevel": "Very high",
-   "avgLikes14d": 28129,
+   "avgLikes14d": 37630,
    "avgComments14d": 299,
-   "maxLikes": 794009,
+   "maxLikes": 804676,
    "topPost": {
     "url": "https://www.instagram.com/p/Dct28DASFLp/",
     "date": "2026-08-31",
-    "likes": 794009,
-    "comments": 8800,
-    "caption": "Hold... (pinned)"
+    "likes": 804676,
+    "comments": 8915,
+    "caption": "Hold my 10th dan black belt 🥋 \n\n#taekwondo #martialarts #tkd #greyhound"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd94Av3RhS0/",
     "date": "2026-10-01",
-    "likes": 214841
+    "likes": 233811
    },
    "topPostNote": null,
-   "bio": "Sharing my side quests / Best fighter in the world / Higgsfield Creative Partner",
+   "bio": "📈 Sharing my side quests\n👑 Best fighter in the world\n🧩 Higgsfield Creative Partner\n🤝 Collabs: dogofads@gmail.com",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -2653,22 +2774,22 @@
    "notes": "Most-tagged animal character across the AI-animal accounts.",
    "why": "Most cross-referenced node of the AI-animal universe; verified.",
    "scores": {
-    "fame": 58.9,
-    "momentum": 61,
+    "fame": 62.5,
+    "momentum": 62.3,
     "distinctiveness": 70,
     "sufficiency": 0.9,
-    "index": 66.4,
+    "index": 68.1,
     "fameParts": {
-     "followers": 0.4527,
-     "engagement": 0.6223,
-     "viral": 0.725,
-     "consistency": 0.75,
-     "longevity": 0.3252,
+     "followers": 0.46566549799252543,
+     "engagement": 0.6488078990896817,
+     "viral": 0.726405262099167,
+     "consistency": 1,
+     "longevity": 0.3429329985725074,
      "recognizability": 0.76
     },
     "momentumParts": {
-     "engagement": 0.6123,
-     "viral": 0.583,
+     "engagement": 0.6438835545799662,
+     "viral": 0.5922162348404618,
      "frequency": 1,
      "growth": 0,
      "recency": 1
@@ -2684,7 +2805,7 @@
    "heat": "RISING",
    "status": {
     "code": "ACTIVE_TODAY",
-    "basis": "Posted on capture day (09 Oct 2026)"
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": "Stable",
    "debut": {
@@ -2697,7 +2818,16 @@
     "likes": 794009,
     "url": "https://www.instagram.com/p/Dct28DASFLp/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-08-21",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 85679,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-08-31",
@@ -2774,10 +2904,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 9,
-    "fame": 11,
-    "momentum": 14,
+    "index": 6,
+    "fame": 10,
+    "momentum": 10,
     "distinctiveness": 9
    },
    "externalLinks": [
@@ -2823,42 +2957,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 12105,
-   "following": null,
-   "posts": 36,
-   "postsAnalysed": 22,
+   "followers": 13303,
+   "following": 36,
+   "posts": 38,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/36)",
    "firstPost": "2026-09-26",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-08",
+   "lastPost": "2026-10-11",
    "daysSinceLastPost": 1,
-   "posts7d": 15,
-   "posts14d": 22,
-   "posts30d": 22,
-   "postsPerWeek": 11,
-   "avgLikes": 2483,
-   "medianLikes": 1661,
-   "avgComments": 50,
+   "posts7d": 11,
+   "posts14d": 19,
+   "posts30d": 30,
+   "postsPerWeek": 9.5,
+   "avgLikes": 3010,
+   "medianLikes": 1798.5,
+   "avgComments": 54,
    "likesHidden": 0,
-   "engagementRate": 0.209252375051632,
+   "engagementRate": 0.23032398707058557,
    "engagementLevel": "Very high",
-   "avgLikes14d": 6048,
+   "avgLikes14d": 4696,
    "avgComments14d": 114,
-   "maxLikes": 37862,
+   "maxLikes": 40518,
    "topPost": {
     "url": "https://www.instagram.com/p/Ddvayy5Otjf/",
     "date": "2026-09-26",
-    "likes": 37862,
-    "comments": 857,
-    "caption": "don't m..."
+    "likes": 40518,
+    "comments": 910,
+    "caption": "don’t mention their names in front of me!!"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Ddvayy5Otjf/",
-    "date": "2026-09-26",
-    "likes": 37862
+    "url": "https://www.instagram.com/p/DeCiE4uuvch/",
+    "date": "2026-10-03",
+    "likes": 27644
    },
    "topPostNote": null,
-   "bio": "Armenian blood. Gorilla mentality. / Follow me before I get famous. / UFC RECORD 2-0",
+   "bio": "Armenian blood. Gorilla mentality. \nFollow me before I get famous.\nUFC RECORD 2-0\nMy coach,manager @arutyun.prod",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -2880,24 +3014,24 @@
    "notes": "Small but high-frequency (15 posts / 7 days).",
    "why": "Shows the league expanding with new fighters and records.",
    "scores": {
-    "fame": 36.4,
-    "momentum": 52.9,
+    "fame": 37.4,
+    "momentum": 52.5,
     "distinctiveness": 70,
     "sufficiency": 0.8,
-    "index": 54.6,
+    "index": 54.8,
     "fameParts": {
-     "followers": 0.2707,
-     "engagement": 0.3487,
-     "viral": 0.3946,
+     "followers": 0.2809873977704569,
+     "engagement": 0.3696416238984609,
+     "viral": 0.4019120000259566,
      "consistency": 1,
-     "longevity": 0.2225,
+     "longevity": 0.23191343864672403,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0.3487,
-     "viral": 0.3946,
+     "engagement": 0.3696416238984609,
+     "viral": 0.36040022107423275,
      "frequency": 1,
-     "growth": 0.3876,
+     "growth": 0.367931843370361,
      "recency": 1
     },
     "distinctParts": {
@@ -2924,7 +3058,16 @@
     "likes": 37862,
     "url": "https://www.instagram.com/p/Ddvayy5Otjf/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-23",
+     "end": "2026-10-11",
+     "posts": 30,
+     "avgLikes": 6583,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-26",
@@ -2988,10 +3131,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 22,
-    "fame": 36,
-    "momentum": 22,
+    "index": 25,
+    "fame": 35,
+    "momentum": 21,
     "distinctiveness": 10
    },
    "externalLinks": [],
@@ -3022,42 +3169,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 124366,
-   "following": null,
+   "followers": 128657,
+   "following": 73,
    "posts": 31,
-   "postsAnalysed": 12,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (12/31)",
    "firstPost": "2026-10-01",
    "firstPostBasis": "Oldest of 12 sampled posts",
    "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 7,
-   "posts14d": 9,
-   "posts30d": 9,
-   "postsPerWeek": 4.5,
-   "avgLikes": 9479,
-   "medianLikes": 5654,
-   "avgComments": 319,
+   "daysSinceLastPost": 4,
+   "posts7d": 3,
+   "posts14d": 10,
+   "posts30d": 27,
+   "postsPerWeek": 5,
+   "avgLikes": 13671,
+   "medianLikes": 7736.5,
+   "avgComments": 401,
    "likesHidden": 0,
-   "engagementRate": 0.0787835903703585,
+   "engagementRate": 0.1093773884566457,
    "engagementLevel": "Very high",
-   "avgLikes14d": 9479,
+   "avgLikes14d": 11726,
    "avgComments14d": 319,
-   "maxLikes": 382660,
+   "maxLikes": 386903,
    "topPost": {
     "url": "https://www.instagram.com/p/Dd0ONAHuI9A/",
     "date": "2026-09-28",
-    "likes": 382660,
-    "comments": 11815,
-    "caption": "Spin..."
+    "likes": 386903,
+    "comments": 11980,
+    "caption": "Spinnin’ da block fr gng 🥷🏿 ong I just hit my first lick\n\n#fwm #bumfordbusiness #gang\n\nSend a message from Milton to your friends on Cameo"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd8FTD8OSAo/",
     "date": "2026-10-01",
-    "likes": 32315
+    "likes": 33309
    },
    "topPostNote": null,
-   "bio": "Standing on Bumford Business / Comedy/parody (AI) / Made With @higgsfield.ai / Create Videos Just...",
+   "bio": "📈 Standing on Bumford Business\n🫪 Comedy/parody (AI)\n💻 Made With @higgsfield.ai \n👔 The Caddy Suit. Now Wearable.👇",
    "linkInBio": "miltonbumford.com/create",
    "token": {
     "status": "NONE",
@@ -3079,25 +3226,25 @@
    "notes": "Explicitly labels itself 'Comedy/parody (AI)'. Link sells an AI-video template.",
    "why": "Transparent AI-parody labelling + monetised 'create videos like me' funnel.",
    "scores": {
-    "fame": 48.6,
-    "momentum": 46.4,
+    "fame": 55,
+    "momentum": 60.4,
     "distinctiveness": 55,
     "sufficiency": 0.8,
-    "index": 53.9,
+    "index": 60.4,
     "fameParts": {
-     "followers": 0.5237,
-     "engagement": 0.4942,
-     "viral": 0.6457,
-     "consistency": 0.45,
-     "longevity": 0.1965,
+     "followers": 0.5273583550961125,
+     "engagement": 0.5339500708255278,
+     "viral": 0.6469005243005583,
+     "consistency": 1,
+     "longevity": 0.19654467753370905,
      "recognizability": 0.36
     },
     "momentumParts": {
-     "engagement": 0.4942,
-     "viral": 0.3774,
-     "frequency": 0.6429,
-     "growth": 0,
-     "recency": 1
+     "engagement": 0.5172874724621945,
+     "viral": 0.3806403986336091,
+     "frequency": 0.7142857142857143,
+     "growth": 0.8272162940904902,
+     "recency": 0.9629629629629629
     },
     "distinctParts": {
      "visual": 3,
@@ -3107,10 +3254,10 @@
     },
     "recognizabilityInput": 3
    },
-   "heat": "STEADY",
+   "heat": "RISING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
    },
    "phase": null,
    "debut": {
@@ -3123,7 +3270,16 @@
     "likes": 382660,
     "url": "https://www.instagram.com/p/Dd0ONAHuI9A/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-23",
+     "end": "2026-10-08",
+     "posts": 30,
+     "avgLikes": 36600,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-28",
@@ -3185,10 +3341,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 23,
-    "fame": 23,
-    "momentum": 28,
+    "index": 15,
+    "fame": 15,
+    "momentum": 16,
     "distinctiveness": 25
    },
    "externalLinks": [],
@@ -3219,42 +3379,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 106810,
-   "following": null,
-   "posts": 109,
-   "postsAnalysed": 22,
+   "followers": 113065,
+   "following": 507,
+   "posts": 117,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/109)",
    "firstPost": "2026-10-05",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 22,
-   "posts14d": 21,
-   "posts30d": 21,
-   "postsPerWeek": 10.5,
-   "avgLikes": 5091,
-   "medianLikes": 3204,
-   "avgComments": 65,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 0,
+   "posts7d": 29,
+   "posts14d": 26,
+   "posts30d": 26,
+   "postsPerWeek": 13,
+   "avgLikes": 7998,
+   "medianLikes": 5820.5,
+   "avgComments": 76,
    "likesHidden": 0,
-   "engagementRate": 0.0482726336485348,
+   "engagementRate": 0.07141172481905687,
    "engagementLevel": "High",
-   "avgLikes14d": 54530,
+   "avgLikes14d": 39932,
    "avgComments14d": 244,
-   "maxLikes": 632105,
+   "maxLikes": 993635,
    "topPost": {
-    "url": "https://www.instagram.com/p/DeHe2fKTvjr/",
-    "date": "2026-10-05",
-    "likes": 632105,
-    "comments": 1968,
-    "caption": "Tag t..."
+    "url": "https://www.instagram.com/p/DcUdF_fJ9M_/",
+    "date": "2026-08-21",
+    "likes": 993635,
+    "comments": 4468,
+    "caption": "🐱⚔🐉 pt.2\n\nComment \"guide\" for the prompts"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/DeHpJF0tVOi/",
+    "url": "https://www.instagram.com/p/DeHyCusN0ju/",
     "date": "2026-10-05",
-    "likes": 536920
+    "likes": 506655
    },
    "topPostNote": null,
-   "bio": "Protecting meow island with 9 lives / DYOR. No guarantees. / Official $Knightcat token on PUMPFUN",
+   "bio": "Protecting meow island with 9 lives\nDYOR. No guarantees.\nOfficial $Knightcat token on PUMPFUN",
    "linkInBio": "pump.fun/coin/3Dgwn5…pump",
    "token": {
     "status": "IG_OBSERVED",
@@ -3276,22 +3436,22 @@
    "notes": "Two 500K+ reels on 10-05 then ~5K average. Verified.",
    "why": "Crypto-native character with a fantasy lore world and a live pump.fun token.",
    "scores": {
-    "fame": 59.5,
-    "momentum": 57,
+    "fame": 61.8,
+    "momentum": 58.6,
     "distinctiveness": 70,
     "sufficiency": 0.9,
-    "index": 65.4,
+    "index": 66.7,
     "fameParts": {
-     "followers": 0.5072,
-     "engagement": 0.4267,
-     "viral": 0.7002,
+     "followers": 0.5133320467678351,
+     "engagement": 0.4757453499493757,
+     "viral": 0.7493067201946284,
      "consistency": 1,
-     "longevity": 0.415,
+     "longevity": 0.4272743446984647,
      "recognizability": 0.76
     },
     "momentumParts": {
-     "engagement": 0.4267,
-     "viral": 0.6825,
+     "engagement": 0.4757453499493757,
+     "viral": 0.6761780832270221,
      "frequency": 1,
      "growth": 0,
      "recency": 1
@@ -3304,10 +3464,10 @@
     },
     "recognizabilityInput": 3
    },
-   "heat": "STEADY",
+   "heat": "RISING",
    "status": {
-    "code": "COOLING",
-    "basis": "Phase: Spiked, cooling; last post 1d ago"
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": "Spiked, cooling",
    "debut": {
@@ -3320,7 +3480,16 @@
     "likes": 632105,
     "url": "https://www.instagram.com/p/DeHe2fKTvjr/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-08-21",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 108571,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-05",
@@ -3384,9 +3553,13 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 11,
-    "fame": 10,
+    "index": 9,
+    "fame": 11,
     "momentum": 17,
     "distinctiveness": 11
    },
@@ -3426,42 +3599,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 189326,
-   "following": null,
-   "posts": 175,
-   "postsAnalysed": 12,
+   "followers": 205379,
+   "following": 122,
+   "posts": 184,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (12/175)",
    "firstPost": "2026-10-04",
    "firstPostBasis": "Oldest of 12 sampled posts",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 12,
-   "posts14d": 12,
-   "posts30d": 12,
-   "postsPerWeek": 6,
-   "avgLikes": 11231,
-   "medianLikes": 5310,
-   "avgComments": 121,
+   "lastPost": "2026-10-10",
+   "daysSinceLastPost": 2,
+   "posts7d": 20,
+   "posts14d": 30,
+   "posts30d": 30,
+   "postsPerWeek": 15,
+   "avgLikes": 27166,
+   "medianLikes": 16173,
+   "avgComments": 317,
    "likesHidden": 0,
-   "engagementRate": 0.0599600688759072,
+   "engagementRate": 0.1338115548976932,
    "engagementLevel": "Very high",
-   "avgLikes14d": 11231,
+   "avgLikes14d": 30848,
    "avgComments14d": 121,
-   "maxLikes": 46360,
+   "maxLikes": 233843,
    "topPost": {
-    "url": "https://www.instagram.com/p/DeK-uSCxbWx/",
-    "date": "2026-10-06",
-    "likes": 46360,
-    "comments": 524,
-    "caption": "Cuca ab..."
+    "url": "https://www.instagram.com/p/Dd94Av3RhS0/",
+    "date": "2026-10-01",
+    "likes": 233843,
+    "comments": 2429,
+    "caption": "Cuca e candy foram parar em uma fazendo pra caçar um skinwalker🐒🐕‍🦺\n\nFeito com: @higgsfield.ai #higgsfieldai #skinwalker"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/DeK-uSCxbWx/",
-    "date": "2026-10-06",
-    "likes": 46360
+    "url": "https://www.instagram.com/p/Dd94Av3RhS0/",
+    "date": "2026-10-01",
+    "likes": 233843
    },
    "topPostNote": null,
-   "bio": "+100M de views nos últimos 30 dias / CPP: @higgsfield.ai, @syntx_ai e @roboneo_br / contato",
+   "bio": "📈+100M de views nos últimos 30 dias\n💼CPP: @higgsfield.ai , @syntx_ai e @roboneo_br \n📧contato: freakoncept@gmail.com\nHiggsfield Creative Partner",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -3483,23 +3656,23 @@
    "notes": "Claims +100M views in 30 days (self-reported, bio).",
    "why": "Brazilian-market AI universe with serialized episodes and a spin-off character (Caramelinho).",
    "scores": {
-    "fame": 50.2,
-    "momentum": 51.2,
+    "fame": 60,
+    "momentum": 61.1,
     "distinctiveness": 70,
     "sufficiency": 0.6,
-    "index": 55.9,
+    "index": 62.3,
     "fameParts": {
-     "followers": 0.5693,
-     "engagement": 0.5126,
-     "viral": 0.4165,
-     "consistency": 0.6,
-     "longevity": 0.4972,
+     "followers": 0.5781390087316081,
+     "engagement": 0.6085064240890616,
+     "viral": 0.5922310935003285,
+     "consistency": 1,
+     "longevity": 0.5059271292038146,
      "recognizability": 0.36
     },
     "momentumParts": {
-     "engagement": 0.5126,
-     "viral": 0.4165,
-     "frequency": 0.8571,
+     "engagement": 0.6085064240890616,
+     "viral": 0.5922310935003285,
+     "frequency": 1,
      "growth": 0,
      "recency": 1
     },
@@ -3511,10 +3684,10 @@
     },
     "recognizabilityInput": 3
    },
-   "heat": "STEADY",
+   "heat": "RISING",
    "status": {
     "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "basis": "Last post 2d before capture"
    },
    "phase": null,
    "debut": {
@@ -3527,7 +3700,16 @@
     "likes": 46360,
     "url": "https://www.instagram.com/p/DeK-uSCxbWx/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-29",
+     "end": "2026-10-10",
+     "posts": 30,
+     "avgLikes": 30848,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-04",
@@ -3596,10 +3778,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: no post history captured | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 21,
-    "fame": 19,
-    "momentum": 25,
+    "index": 13,
+    "fame": 13,
+    "momentum": 12,
     "distinctiveness": 12
    },
    "externalLinks": [],
@@ -3630,39 +3816,39 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 19058,
-   "following": null,
-   "posts": 13,
-   "postsAnalysed": 13,
+   "followers": 37841,
+   "following": 14,
+   "posts": 16,
+   "postsAnalysed": 16,
    "fullHistory": "YES (13/13)",
    "firstPost": "2026-10-03",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 13,
-   "posts14d": 13,
-   "posts30d": 13,
-   "postsPerWeek": 6.5,
-   "avgLikes": 11306,
-   "medianLikes": 2902,
-   "avgComments": 122,
+   "lastPost": "2026-10-10",
+   "daysSinceLastPost": 2,
+   "posts7d": 14,
+   "posts14d": 16,
+   "posts30d": 16,
+   "postsPerWeek": 8,
+   "avgLikes": 30512,
+   "medianLikes": 27559,
+   "avgComments": 337,
    "likesHidden": 0,
-   "engagementRate": 0.59964319445902,
+   "engagementRate": 0.8152136571443672,
    "engagementLevel": "Very high",
-   "avgLikes14d": 15158,
+   "avgLikes14d": 23841,
    "avgComments14d": 157,
-   "maxLikes": 61373,
+   "maxLikes": 74355,
    "topPost": {
-    "url": "https://www.instagram.com/p/DeCKb4JIGeG/",
-    "date": "2026-10-03",
-    "likes": 61373,
-    "comments": 582,
-    "caption": "Cuca re..."
+    "url": "https://www.instagram.com/p/DeSqrPoxWk-/",
+    "date": "2026-10-09",
+    "likes": 74355,
+    "comments": 388,
+    "caption": "PARTE 03: hora de ver se o caramelinho aprendeu tudo certinha, caçando sozinho um skinwalker bizarro 🥊🐕\n\nFeito com: @higgsfield.ai #higgsf"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/DeCKb4JIGeG/",
-    "date": "2026-10-03",
-    "likes": 61373
+    "url": "https://www.instagram.com/p/DeSqrPoxWk-/",
+    "date": "2026-10-09",
+    "likes": 74355
    },
    "topPostNote": null,
    "bio": "(empty)",
@@ -3687,24 +3873,24 @@
    "notes": "Launched 2026-10-03 as a spin-off of Cuca Beludo.",
    "why": "Clean example of a spin-off character launched from an existing AI universe; full history available.",
    "scores": {
-    "fame": 38.2,
-    "momentum": 62.1,
+    "fame": 44.8,
+    "momentum": 67.2,
     "distinctiveness": 65,
     "sufficiency": 0.9,
-    "index": 58.5,
+    "index": 62.3,
     "fameParts": {
-     "followers": 0.32,
-     "engagement": 0.5133,
-     "viral": 0.447,
-     "consistency": 0.65,
-     "longevity": 0.0456,
+     "followers": 0.39449065117625115,
+     "engagement": 0.6211176689254827,
+     "viral": 0.467827544490208,
+     "consistency": 0.8,
+     "longevity": 0.08164799306236992,
      "recognizability": 0.24
     },
     "momentumParts": {
-     "engagement": 0.5133,
-     "viral": 0.447,
-     "frequency": 0.9286,
-     "growth": 0.6008,
+     "engagement": 0.594331116934139,
+     "viral": 0.467827544490208,
+     "frequency": 1,
+     "growth": 0.649488038106272,
      "recency": 1
     },
     "distinctParts": {
@@ -3717,8 +3903,8 @@
    },
    "heat": "RISING",
    "status": {
-    "code": "BREAKING_OUT",
-    "basis": "Posted 1d ago; phase: New / rising"
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
    },
    "phase": "New / rising",
    "debut": {
@@ -3731,7 +3917,16 @@
     "likes": 61373,
     "url": "https://www.instagram.com/p/DeCKb4JIGeG/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-10-04",
+     "end": "2026-10-10",
+     "posts": 16,
+     "avgLikes": 23841,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-03",
@@ -3784,10 +3979,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: full post history loaded (debut = first post) | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 15,
-    "fame": 33,
-    "momentum": 12,
+    "index": 14,
+    "fame": 29,
+    "momentum": 7,
     "distinctiveness": 15
    },
    "externalLinks": [],
@@ -3818,42 +4017,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 67414,
-   "following": null,
-   "posts": 13,
+   "followers": 67761,
+   "following": 0,
+   "posts": 12,
    "postsAnalysed": 12,
    "fullHistory": "PARTIAL (12/13)",
    "firstPost": "2026-09-28",
    "firstPostBasis": "Oldest of 12 sampled posts",
    "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 4,
-   "posts14d": 9,
-   "posts30d": 9,
-   "postsPerWeek": 4.5,
-   "avgLikes": 9859,
-   "medianLikes": 2031,
-   "avgComments": 275,
+   "daysSinceLastPost": 4,
+   "posts7d": 2,
+   "posts14d": 10,
+   "posts30d": 10,
+   "postsPerWeek": 5,
+   "avgLikes": 13220,
+   "medianLikes": 2209,
+   "avgComments": 359,
    "likesHidden": 0,
-   "engagementRate": 0.150324858338031,
+   "engagementRate": 0.20039993506589335,
    "engagementLevel": "Very high",
-   "avgLikes14d": 9859,
+   "avgLikes14d": 13220,
    "avgComments14d": 275,
-   "maxLikes": 161812,
+   "maxLikes": 161996,
    "topPost": {
     "url": "https://www.instagram.com/p/Dd62X7dJbCD/",
     "date": "2026-09-30",
-    "likes": 161812,
-    "comments": 18552,
-    "caption": "🫶 (pinned)"
+    "likes": 161996,
+    "comments": 18567,
+    "caption": "🫶"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd9YfOIRK85/",
     "date": "2026-10-01",
-    "likes": 72070
+    "likes": 72445
    },
    "topPostNote": null,
-   "bio": "made with @higgsfield.ai / the shoulders speak🕺🏽 / Road to 100k yalla followers [67k/100k]",
+   "bio": "made with @higgsfield.ai \nthe shoulders speak🕺🏽\nRoad to 100k yalla followers [67k/100k]",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -3875,25 +4074,25 @@
    "notes": "Closely mirrors Abu Shalab's format.",
    "why": "Shows how fast a successful archetype (Abu Shalab) gets cloned.",
    "scores": {
-    "fame": 42.1,
-    "momentum": 59.4,
+    "fame": 43.1,
+    "momentum": 60.6,
     "distinctiveness": 45,
     "sufficiency": 0.7,
-    "index": 52.1,
+    "index": 52.8,
     "fameParts": {
-     "followers": 0.4572,
-     "engagement": 0.4985,
-     "viral": 0.5523,
-     "consistency": 0.45,
-     "longevity": 0.0456,
+     "followers": 0.4577449516449974,
+     "engagement": 0.5303078637874055,
+     "viral": 0.5523760727724254,
+     "consistency": 0.5,
+     "longevity": 0.031672498419049955,
      "recognizability": 0.24
     },
     "momentumParts": {
-     "engagement": 0.4985,
-     "viral": 0.4644,
-     "frequency": 0.6429,
-     "growth": 0.7149,
-     "recency": 1
+     "engagement": 0.5303078637874055,
+     "viral": 0.4650021041897452,
+     "frequency": 0.7142857142857143,
+     "growth": 0.6739407083607005,
+     "recency": 0.9629629629629629
     },
     "distinctParts": {
      "visual": 3,
@@ -3905,8 +4104,8 @@
    },
    "heat": "RISING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
    },
    "phase": null,
    "debut": {
@@ -3919,7 +4118,16 @@
     "likes": 161812,
     "url": "https://www.instagram.com/p/Dd62X7dJbCD/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-28",
+     "end": "2026-10-08",
+     "posts": 12,
+     "avgLikes": 35954,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-28",
@@ -3972,9 +4180,13 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: no character links observed"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 27,
-    "fame": 28,
+    "index": 28,
+    "fame": 30,
     "momentum": 15,
     "distinctiveness": 34
    },
@@ -4006,26 +4218,26 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 115505,
-   "following": null,
-   "posts": 19,
-   "postsAnalysed": 19,
+   "followers": 118907,
+   "following": 0,
+   "posts": 18,
+   "postsAnalysed": 18,
    "fullHistory": "YES (19/19)",
    "firstPost": "2026-09-29",
    "firstPostBasis": "Full history loaded - first post",
    "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 13,
+   "daysSinceLastPost": 4,
+   "posts7d": 4,
    "posts14d": 17,
    "posts30d": 17,
    "postsPerWeek": 8.5,
-   "avgLikes": 4059,
-   "medianLikes": 2640,
-   "avgComments": 111,
+   "avgLikes": 6011,
+   "medianLikes": 2225,
+   "avgComments": 137,
    "likesHidden": 0,
-   "engagementRate": 0.0361023332323276,
+   "engagementRate": 0.05170497391518863,
    "engagementLevel": "High",
-   "avgLikes14d": 13776,
+   "avgLikes14d": 15310,
    "avgComments14d": 417,
    "maxLikes": 697221,
    "topPost": {
@@ -4038,10 +4250,10 @@
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd7IwUgMkba/",
     "date": "2026-09-30",
-    "likes": 86926
+    "likes": 87469
    },
    "topPostNote": null,
-   "bio": "الأصل موجود، والباقي يحاول 😏 / Actor • Dancer • Comedian / Born iconic. Here for the plot",
+   "bio": "الأصل موجود، والباقي يحاول 😏\nActor • Dancer • Comedian\nBorn iconic. Here for the plot.\nCollabs 📩 abdoul.cheqri@gmail.com",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -4063,25 +4275,25 @@
    "notes": "AI status not declared on profile - classification INFERRED from format/archetype similarity to Abu Shalab.",
    "why": "697K-like reel within 3 days of debut; same archetype as Abu Shalab.",
    "scores": {
-    "fame": 49.7,
-    "momentum": 63.6,
+    "fame": 50.6,
+    "momentum": 64.1,
     "distinctiveness": 50,
     "sufficiency": 0.8,
-    "index": 58.5,
+    "index": 58.9,
     "fameParts": {
-     "followers": 0.5157,
-     "engagement": 0.4021,
-     "viral": 0.7108,
+     "followers": 0.5188018555215528,
+     "engagement": 0.4447366819921542,
+     "viral": 0.710842614850012,
      "consistency": 0.85,
-     "longevity": 0.1115,
+     "longevity": 0.10210900204132241,
      "recognizability": 0.24
     },
     "momentumParts": {
-     "engagement": 0.4021,
-     "viral": 0.4848,
+     "engagement": 0.4447366819921542,
+     "viral": 0.4854635403572938,
      "frequency": 1,
-     "growth": 0.825,
-     "recency": 1
+     "growth": 0.7845056279117497,
+     "recency": 0.9629629629629629
     },
     "distinctParts": {
      "visual": 3,
@@ -4093,8 +4305,8 @@
    },
    "heat": "RISING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
    },
    "phase": null,
    "debut": {
@@ -4107,7 +4319,16 @@
     "likes": 697221,
     "url": "https://www.instagram.com/p/Dd9RXFtIbr1/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-29",
+     "end": "2026-10-08",
+     "posts": 18,
+     "avgLikes": 17424,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-29",
@@ -4158,10 +4379,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: full post history loaded (debut = first post) | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 16,
-    "fame": 21,
-    "momentum": 10,
+    "index": 18,
+    "fame": 23,
+    "momentum": 8,
     "distinctiveness": 30
    },
    "externalLinks": [],
@@ -4192,42 +4417,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 9054,
-   "following": null,
-   "posts": 49,
-   "postsAnalysed": 32,
+   "followers": 9266,
+   "following": 1,
+   "posts": 54,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (32/49)",
    "firstPost": "2026-09-23",
    "firstPostBasis": "Oldest of 32 sampled posts",
-   "lastPost": "2026-10-09",
-   "daysSinceLastPost": 0,
+   "lastPost": "2026-10-10",
+   "daysSinceLastPost": 2,
    "posts7d": 14,
-   "posts14d": 28,
-   "posts30d": 32,
-   "postsPerWeek": 14,
-   "avgLikes": 2287,
-   "medianLikes": 198,
-   "avgComments": 23,
+   "posts14d": 26,
+   "posts30d": 26,
+   "postsPerWeek": 13,
+   "avgLikes": 592,
+   "medianLikes": 108.5,
+   "avgComments": 6,
    "likesHidden": 0,
-   "engagementRate": 0.255135851557323,
+   "engagementRate": 0.06456399740988561,
    "engagementLevel": "Very high",
-   "avgLikes14d": 2016,
+   "avgLikes14d": 1750,
    "avgComments14d": 20,
-   "maxLikes": 40302,
+   "maxLikes": 56119,
    "topPost": {
-    "url": "https://www.instagram.com/p/Dd2EhVtx54d/",
-    "date": "2026-09-28",
-    "likes": 40302,
-    "comments": 539,
-    "caption": "Dance t..."
+    "url": "https://www.instagram.com/p/Dd6zES-BvF5/",
+    "date": "2026-09-30",
+    "likes": 56119,
+    "comments": 701,
+    "caption": "Bobbinnnn n weavinnn\n\nReference video: @calebrownnnnn"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd_1HzNoS-L/",
     "date": "2026-10-02",
-    "likes": 22642
+    "likes": 24239
    },
    "topPostNote": null,
-   "bio": "Road to 100K 🚀 / Follow the journey. / Made in @higgsfield.ai",
+   "bio": "Road to 100K 🚀\n8.3K / 100K\nFollow the journey.\n• Made in @higgsfield.ai",
    "linkInBio": "pump.fun/coin/fw6UJ…pump",
    "token": {
     "status": "IG_OBSERVED",
@@ -4249,24 +4474,24 @@
    "notes": "Appears in IG suggested accounts next to archibald_brown.",
    "why": "Secondary rival in the Archibald Brown storyline, with its own token link.",
    "scores": {
-    "fame": 36,
-    "momentum": 49.4,
+    "fame": 34,
+    "momentum": 44.5,
     "distinctiveness": 60,
     "sufficiency": 0.9,
-    "index": 52.9,
+    "index": 50.8,
     "fameParts": {
-     "followers": 0.2392,
-     "engagement": 0.3398,
-     "viral": 0.4013,
+     "followers": 0.24172307396678405,
+     "engagement": 0.19308042668073,
+     "viral": 0.4372774809029112,
      "consistency": 1,
-     "longevity": 0.2761,
+     "longevity": 0.29295750392918746,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0.3261,
-     "viral": 0.3387,
+     "engagement": 0.19308042668073,
+     "viral": 0.3461286746714132,
      "frequency": 1,
-     "growth": 0.3011,
+     "growth": 0.2752554779657229,
      "recency": 1
     },
     "distinctParts": {
@@ -4277,10 +4502,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "STEADY",
+   "heat": "COOLING",
    "status": {
-    "code": "ACTIVE_TODAY",
-    "basis": "Posted on capture day (09 Oct 2026)"
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
    },
    "phase": null,
    "debut": {
@@ -4293,7 +4518,16 @@
     "likes": 40302,
     "url": "https://www.instagram.com/p/Dd2EhVtx54d/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-23",
+     "end": "2026-10-10",
+     "posts": 30,
+     "avgLikes": 5640,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-23",
@@ -4352,10 +4586,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 26,
-    "fame": 37,
-    "momentum": 27,
+    "index": 29,
+    "fame": 40,
+    "momentum": 30,
     "distinctiveness": 21
    },
    "externalLinks": [],
@@ -4386,42 +4624,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 14689,
-   "following": null,
-   "posts": 20,
-   "postsAnalysed": 12,
+   "followers": 14734,
+   "following": 0,
+   "posts": 23,
+   "postsAnalysed": 23,
    "fullHistory": "PARTIAL (12/20)",
    "firstPost": "2026-09-29",
    "firstPostBasis": "Oldest of 12 sampled posts",
-   "lastPost": "2026-10-08",
+   "lastPost": "2026-10-11",
    "daysSinceLastPost": 1,
-   "posts7d": 8,
-   "posts14d": 12,
-   "posts30d": 12,
-   "postsPerWeek": 6,
-   "avgLikes": 8532,
-   "medianLikes": 490,
-   "avgComments": 100,
+   "posts7d": 7,
+   "posts14d": 17,
+   "posts30d": 23,
+   "postsPerWeek": 8.5,
+   "avgLikes": 886,
+   "medianLikes": 187.5,
+   "avgComments": 12,
    "likesHidden": 0,
-   "engagementRate": 0.587650622915107,
+   "engagementRate": 0.06088525406090223,
    "engagementLevel": "Very high",
-   "avgLikes14d": 8532,
+   "avgLikes14d": 6831,
    "avgComments14d": 100,
-   "maxLikes": 89487,
+   "maxLikes": 90835,
    "topPost": {
     "url": "https://www.instagram.com/p/Dd8LM0NscoW/",
     "date": "2026-10-01",
-    "likes": 89487,
-    "comments": 1048,
-    "caption": "Bring..."
+    "likes": 90835,
+    "comments": 1060,
+    "caption": "Bring back Tecktonik please #fyp"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd8LM0NscoW/",
     "date": "2026-10-01",
-    "likes": 89487
+    "likes": 90835
    },
    "topPostNote": null,
-   "bio": "Handsome and strong, what more could you ask for? $Edmond",
+   "bio": "Handsome and strong, what more could you ask for?                                                  X:Edmond_Lebon                             $EDMD",
    "linkInBio": null,
    "token": {
     "status": "IG_OBSERVED",
@@ -4443,24 +4681,24 @@
    "notes": null,
    "why": "Ticker-in-bio character from the same wave; one 89K-like reel.",
    "scores": {
-    "fame": 36.6,
-    "momentum": 59,
+    "fame": 35.9,
+    "momentum": 51.9,
     "distinctiveness": 40,
     "sufficiency": 0.6,
-    "index": 47.5,
+    "index": 45.1,
     "fameParts": {
-     "followers": 0.2917,
-     "engagement": 0.4828,
-     "viral": 0.4879,
-     "consistency": 0.6,
-     "longevity": 0.1204,
+     "followers": 0.29208016637971634,
+     "engagement": 0.2368584304717627,
+     "viral": 0.4895633051314956,
+     "consistency": 1,
+     "longevity": 0.14469113440703713,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0.4828,
-     "viral": 0.4879,
-     "frequency": 0.8571,
-     "growth": 0.4668,
+     "engagement": 0.2368584304717627,
+     "viral": 0.4895633051314956,
+     "frequency": 1,
+     "growth": 0.4217509252848114,
      "recency": 1
     },
     "distinctParts": {
@@ -4471,7 +4709,7 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "RISING",
+   "heat": "STEADY",
    "status": {
     "code": "POSTING",
     "basis": "Last post 1d before capture"
@@ -4487,7 +4725,16 @@
     "likes": 89487,
     "url": "https://www.instagram.com/p/Dd8LM0NscoW/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-23",
+     "end": "2026-10-11",
+     "posts": 23,
+     "avgLikes": 8986,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-29",
@@ -4530,10 +4777,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: no character links observed"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 30,
-    "fame": 35,
-    "momentum": 16,
+    "index": 34,
+    "fame": 38,
+    "momentum": 22,
     "distinctiveness": 37
    },
    "externalLinks": [],
@@ -4564,42 +4815,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 36296,
-   "following": null,
-   "posts": 11,
-   "postsAnalysed": 11,
+   "followers": 38932,
+   "following": 0,
+   "posts": 14,
+   "postsAnalysed": 14,
    "fullHistory": "YES (11/11)",
    "firstPost": "2026-09-30",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-09",
+   "lastPost": "2026-10-12",
    "daysSinceLastPost": 0,
-   "posts7d": 5,
-   "posts14d": 11,
-   "posts30d": 11,
-   "postsPerWeek": 5.5,
-   "avgLikes": 23737,
-   "medianLikes": 8035,
-   "avgComments": 324,
+   "posts7d": 8,
+   "posts14d": 13,
+   "posts30d": 13,
+   "postsPerWeek": 6.5,
+   "avgLikes": 5186,
+   "medianLikes": 1498,
+   "avgComments": 85,
    "likesHidden": 0,
-   "engagementRate": 0.662910513555213,
+   "engagementRate": 0.13540703448748245,
    "engagementLevel": "Very high",
-   "avgLikes14d": 23737,
+   "avgLikes14d": 6613,
    "avgComments14d": 324,
-   "maxLikes": 194063,
+   "maxLikes": 195840,
    "topPost": {
     "url": "https://www.instagram.com/p/Dd5VDDURAPn/",
     "date": "2026-09-30",
-    "likes": 194063,
-    "comments": 1875,
-    "caption": "felt..."
+    "likes": 195840,
+    "comments": 1887,
+    "caption": "felt slick"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Dd5VDDURAPn/",
+    "url": "https://www.instagram.com/p/Dd5J-VCx8GY/",
     "date": "2026-09-30",
-    "likes": 194063
+    "likes": 23737
    },
    "topPostNote": null,
-   "bio": "ifa paris 22' / dancer | singer | stylist",
+   "bio": "ifa paris 22'\ndancer | singer | stylist\n👇 make videos like me!",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -4621,24 +4872,24 @@
    "notes": "AI status not declared - INFERRED from IG suggested-account clustering with the seeds.",
    "why": "High likes per follower (194K reel on debut day).",
    "scores": {
-    "fame": 41.9,
-    "momentum": 66.5,
+    "fame": 40.2,
+    "momentum": 56.6,
     "distinctiveness": 40,
     "sufficiency": 0.7,
-    "index": 53.1,
+    "index": 49.6,
     "fameParts": {
-     "followers": 0.39,
-     "engagement": 0.5939,
-     "viral": 0.572,
-     "consistency": 0.55,
-     "longevity": 0.0166,
+     "followers": 0.39757667867583524,
+     "engagement": 0.42870812810833314,
+     "viral": 0.5729753501163668,
+     "consistency": 0.65,
+     "longevity": 0.05845121427129518,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0.5939,
-     "viral": 0.572,
-     "frequency": 0.7857,
-     "growth": 0.6422,
+     "engagement": 0.42870812810833314,
+     "viral": 0.3438564574480858,
+     "frequency": 0.9285714285714286,
+     "growth": 0.6044501874622863,
      "recency": 1
     },
     "distinctParts": {
@@ -4649,10 +4900,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "RISING",
+   "heat": "STEADY",
    "status": {
     "code": "ACTIVE_TODAY",
-    "basis": "Posted on capture day (09 Oct 2026)"
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": null,
    "debut": {
@@ -4665,7 +4916,16 @@
     "likes": 194063,
     "url": "https://www.instagram.com/p/Dd5VDDURAPn/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-30",
+     "end": "2026-10-12",
+     "posts": 14,
+     "avgLikes": 20130,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-30",
@@ -4708,10 +4968,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: full post history loaded (debut = first post) | Social: no character links observed"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 25,
-    "fame": 29,
-    "momentum": 7,
+    "index": 31,
+    "fame": 33,
+    "momentum": 19,
     "distinctiveness": 38
    },
    "externalLinks": [],
@@ -4742,42 +5006,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 17346,
-   "following": null,
-   "posts": 45,
-   "postsAnalysed": 22,
+   "followers": 17433,
+   "following": 0,
+   "posts": 56,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/45)",
    "firstPost": "2026-10-03",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 19,
-   "posts14d": 19,
-   "posts30d": 19,
-   "postsPerWeek": 9.5,
-   "avgLikes": 104,
-   "medianLikes": 109,
-   "avgComments": 1,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 0,
+   "posts7d": 23,
+   "posts14d": 27,
+   "posts30d": 27,
+   "postsPerWeek": 13.5,
+   "avgLikes": 48,
+   "medianLikes": 44,
+   "avgComments": 0,
    "likesHidden": 0,
-   "engagementRate": 0.00605326876513317,
+   "engagementRate": 0.002767739344920553,
    "engagementLevel": "Medium",
-   "avgLikes14d": 151,
+   "avgLikes14d": 95,
    "avgComments14d": 2,
-   "maxLikes": 74041,
+   "maxLikes": 74428,
    "topPost": {
     "url": "https://www.instagram.com/p/Dd9pUvWDT_0/",
     "date": "2026-10-01",
-    "likes": 74041,
-    "comments": 619,
-    "caption": "gang got moves (pinned)"
+    "likes": 74428,
+    "comments": 621,
+    "caption": "gang got moves"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/DeEGSC_AFXs/",
-    "date": "2026-10-04",
-    "likes": 609
+    "url": "https://www.instagram.com/p/DeMh7fjgSYl/",
+    "date": "2026-10-07",
+    "likes": 261
    },
    "topPostNote": null,
-   "bio": "(empty)",
+   "bio": "Autonomous fictional man living on the internet. Built with @base44.app + @higgsfield.ai\nSee my brain work 👇🏻",
    "linkInBio": "poppadumb.com",
    "token": {
     "status": "NONE",
@@ -4799,24 +5063,24 @@
    "notes": "Recent engagement collapsed (~100 likes) despite 19 posts/week.",
    "why": "Crossover connector between seed characters.",
    "scores": {
-    "fame": 32,
-    "momentum": 25.1,
+    "fame": 32.9,
+    "momentum": 32.7,
     "distinctiveness": 60,
     "sufficiency": 0.8,
-    "index": 42.7,
+    "index": 45.3,
     "fameParts": {
-     "followers": 0.3098,
-     "engagement": 0.0043,
-     "viral": 0.4674,
-     "consistency": 0.95,
-     "longevity": 0.2613,
+     "followers": 0.3103430325396088,
+     "engagement": 0,
+     "viral": 0.46793408723945684,
+     "consistency": 1,
+     "longevity": 0.2992752108024802,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0.0043,
+     "engagement": 0,
      "viral": 0,
      "frequency": 1,
-     "growth": 0,
+     "growth": 0.5148518482876444,
      "recency": 1
     },
     "distinctParts": {
@@ -4829,8 +5093,8 @@
    },
    "heat": "COOLING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": null,
    "debut": {
@@ -4843,7 +5107,16 @@
     "likes": 74041,
     "url": "https://www.instagram.com/p/Dd9pUvWDT_0/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-10-01",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 3457,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-01",
@@ -4915,10 +5188,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 36,
+    "index": 33,
     "fame": 41,
-    "momentum": 33,
+    "momentum": 32,
     "distinctiveness": 22
    },
    "externalLinks": [],
@@ -4949,42 +5226,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 12525,
-   "following": null,
-   "posts": 30,
-   "postsAnalysed": 12,
+   "followers": 12737,
+   "following": 108,
+   "posts": 35,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (12/30)",
    "firstPost": "2026-10-01",
    "firstPostBasis": "Oldest of 12 sampled posts",
-   "lastPost": "2026-10-09",
-   "daysSinceLastPost": 0,
-   "posts7d": 10,
-   "posts14d": 9,
-   "posts30d": 9,
-   "postsPerWeek": 4.5,
-   "avgLikes": 2200,
-   "medianLikes": 980,
-   "avgComments": 31,
+   "lastPost": "2026-10-11",
+   "daysSinceLastPost": 2,
+   "posts7d": 8,
+   "posts14d": 21,
+   "posts30d": 27,
+   "postsPerWeek": 10.5,
+   "avgLikes": 6729,
+   "medianLikes": 1053.5,
+   "avgComments": 63,
    "likesHidden": 0,
-   "engagementRate": 0.17812375249501,
+   "engagementRate": 0.5332626730522625,
    "engagementLevel": "Very high",
-   "avgLikes14d": 2200,
+   "avgLikes14d": 4492,
    "avgComments14d": 31,
-   "maxLikes": 81230,
+   "maxLikes": 81679,
    "topPost": {
     "url": "https://www.instagram.com/p/DeAQrgpT11j/",
-    "date": "2026-10-04",
-    "likes": 81230,
-    "comments": 1450,
-    "caption": "Can yo... (pinned)"
+    "date": "2026-10-02",
+    "likes": 81679,
+    "comments": 1458,
+    "caption": "Can you jam like this?"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Dd9rvZeTkeJ/",
-    "date": "2026-10-03",
-    "likes": 7051
+    "url": "https://www.instagram.com/p/DeGU32Zz3tn/",
+    "date": "2026-10-05",
+    "likes": 57219
    },
    "topPostNote": null,
-   "bio": "Famous Espresso Aficionado / DM for promo inquiries / Now on Cameo for all Special Occasions",
+   "bio": "Espresso in one hand\nGilbert’s in the other 🥩 ☕️🕺\n10% off use code TONY 👇",
    "linkInBio": "cameo.com/tonyravioliano",
    "token": {
     "status": "NONE",
@@ -5006,24 +5283,24 @@
    "notes": "Offers Cameo shout-outs; AI status not declared.",
    "why": "Monetising via Cameo - a non-crypto revenue model.",
    "scores": {
-    "fame": 33.3,
-    "momentum": 36.7,
+    "fame": 41.6,
+    "momentum": 56.8,
     "distinctiveness": 50,
     "sufficiency": 0.6,
-    "index": 41.7,
+    "index": 50.6,
     "fameParts": {
-     "followers": 0.2744,
-     "engagement": 0.3356,
-     "viral": 0.4774,
-     "consistency": 0.45,
-     "longevity": 0.1908,
+     "followers": 0.27626678720253084,
+     "engagement": 0.4569876320756575,
+     "viral": 0.478027603005694,
+     "consistency": 1,
+     "longevity": 0.21762721774011026,
      "recognizability": 0.24
     },
     "momentumParts": {
-     "engagement": 0.3356,
-     "viral": 0.2121,
-     "frequency": 0.6429,
-     "growth": 0,
+     "engagement": 0.4131099368973551,
+     "viral": 0.43938506587396553,
+     "frequency": 1,
+     "growth": 0.4254697854607592,
      "recency": 1
     },
     "distinctParts": {
@@ -5034,10 +5311,10 @@
     },
     "recognizabilityInput": 2
    },
-   "heat": "COOLING",
+   "heat": "STEADY",
    "status": {
-    "code": "ACTIVE_TODAY",
-    "basis": "Posted on capture day (09 Oct 2026)"
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
    },
    "phase": null,
    "debut": {
@@ -5050,7 +5327,16 @@
     "likes": 81230,
     "url": "https://www.instagram.com/p/DeAQrgpT11j/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-27",
+     "end": "2026-10-11",
+     "posts": 30,
+     "avgLikes": 6262,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-01",
@@ -5101,10 +5387,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: no character links observed"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 38,
-    "fame": 40,
-    "momentum": 31,
+    "index": 30,
+    "fame": 31,
+    "momentum": 18,
     "distinctiveness": 31
    },
    "externalLinks": [],
@@ -5135,42 +5425,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 63220,
-   "following": null,
-   "posts": 25,
-   "postsAnalysed": 22,
+   "followers": 73073,
+   "following": 3,
+   "posts": 23,
+   "postsAnalysed": 18,
    "fullHistory": "PARTIAL (22/25)",
    "firstPost": "2026-09-23",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-09",
-   "daysSinceLastPost": 0,
-   "posts7d": 14,
-   "posts14d": 18,
-   "posts30d": 22,
-   "postsPerWeek": 9,
-   "avgLikes": 794,
-   "medianLikes": 341,
-   "avgComments": 25,
+   "lastPost": "2026-10-11",
+   "daysSinceLastPost": 2,
+   "posts7d": 8,
+   "posts14d": 13,
+   "posts30d": 18,
+   "postsPerWeek": 6.5,
+   "avgLikes": 43329,
+   "medianLikes": 7080,
+   "avgComments": 416,
    "likesHidden": 0,
-   "engagementRate": 0.0129547611515343,
+   "engagementRate": 0.5986467870029515,
    "engagementLevel": "Medium",
-   "avgLikes14d": 11758,
+   "avgLikes14d": 40586,
    "avgComments14d": 184,
-   "maxLikes": 118332,
+   "maxLikes": 279278,
    "topPost": {
-    "url": "https://www.instagram.com/p/Dd-2uFShyCV/",
-    "date": "2026-10-02",
-    "likes": 118332,
-    "comments": 1590,
-    "caption": "👇 Th..."
+    "url": "https://www.instagram.com/p/DeVW54mhAtv/",
+    "date": "2026-10-11",
+    "likes": 279278,
+    "comments": 1570,
+    "caption": "👇\n\nOriginal biker and creator of the original video is: @laakeawong"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Dd-2uFShyCV/",
-    "date": "2026-10-02",
-    "likes": 118332
+    "url": "https://www.instagram.com/p/DeVW54mhAtv/",
+    "date": "2026-10-11",
+    "likes": 279278
    },
    "topPostNote": null,
-   "bio": "Hi, Fellas! Made with @higgsfield.ai",
+   "bio": "Hi, Fellas!\nMade with:",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -5192,24 +5482,24 @@
    "notes": "Last-12 avg (794) far below 14-day avg (11,758): decaying.",
    "why": "Example of a fast-fading wave character.",
    "scores": {
-    "fame": 41.2,
-    "momentum": 55.4,
+    "fame": 51,
+    "momentum": 71.5,
     "distinctiveness": 35,
     "sufficiency": 0.8,
-    "index": 50,
+    "index": 58.3,
     "fameParts": {
-     "followers": 0.4502,
-     "engagement": 0.225,
-     "viral": 0.5183,
-     "consistency": 1,
-     "longevity": 0.1592,
+     "followers": 0.46593923439994356,
+     "engagement": 0.6591946664918418,
+     "viral": 0.6115091814235354,
+     "consistency": 0.9,
+     "longevity": 0.14469113440703713,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0.225,
-     "viral": 0.5183,
-     "frequency": 1,
-     "growth": 0.6387,
+     "engagement": 0.652094062758309,
+     "viral": 0.6115091814235354,
+     "frequency": 0.9285714285714286,
+     "growth": 0.6340013346587782,
      "recency": 1
     },
     "distinctParts": {
@@ -5220,10 +5510,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "STEADY",
+   "heat": "HOT",
    "status": {
-    "code": "ACTIVE_TODAY",
-    "basis": "Posted on capture day (09 Oct 2026)"
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
    },
    "phase": null,
    "debut": {
@@ -5236,7 +5526,16 @@
     "likes": 118332,
     "url": "https://www.instagram.com/p/Dd-2uFShyCV/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-23",
+     "end": "2026-10-11",
+     "posts": 18,
+     "avgLikes": 34129,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-23",
@@ -5279,10 +5578,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 29,
-    "fame": 30,
-    "momentum": 18,
+    "index": 19,
+    "fame": 22,
+    "momentum": 5,
     "distinctiveness": 39
    },
    "externalLinks": [],
@@ -5313,42 +5616,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 965161,
-   "following": null,
-   "posts": 97,
-   "postsAnalysed": 22,
+   "followers": 1048758,
+   "following": 1,
+   "posts": 103,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/97)",
    "firstPost": "2026-09-17",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 7,
-   "posts14d": 13,
-   "posts30d": 22,
-   "postsPerWeek": 6.5,
-   "avgLikes": 60268,
-   "medianLikes": 49282,
-   "avgComments": 1767,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 0,
+   "posts7d": 14,
+   "posts14d": 17,
+   "posts30d": 29,
+   "postsPerWeek": 8.5,
+   "avgLikes": 23886,
+   "medianLikes": 9658,
+   "avgComments": 802,
    "likesHidden": 0,
-   "engagementRate": 0.0642742506172545,
+   "engagementRate": 0.023539828381126376,
    "engagementLevel": "Very high",
-   "avgLikes14d": 61104,
+   "avgLikes14d": 45529,
    "avgComments14d": 1786,
-   "maxLikes": 502072,
+   "maxLikes": 518280,
    "topPost": {
     "url": "https://www.instagram.com/p/DdW8lunNb70/",
-    "date": "2026-09-24",
-    "likes": 502072,
-    "comments": 10382,
-    "caption": "🤨🍝"
+    "date": "2026-09-16",
+    "likes": 518280,
+    "comments": 10654,
+    "caption": "🤨🍝\n\n@ksenia_velart \n\n#reels #explorepage #explore #ai #ai_video"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/DeAcjbDtnuT/",
-    "date": "2026-10-05",
-    "likes": 203290
+    "date": "2026-10-02",
+    "likes": 269721
    },
    "topPostNote": null,
-   "bio": "little stories from a magical AI world / cozy characters • visual stories • AI art / ads & promotions",
+   "bio": "✨ little stories from a magical AI world\n🎬 cozy characters • visual stories • AI art\n📣 ads & promotions → DM",
    "linkInBio": "tiktok.com/@mr_.stretchy",
    "token": {
     "status": "NONE",
@@ -5370,23 +5673,23 @@
    "notes": "Largest new-format AI character found (965K). Runs paid placements (Persian brand @mahsunco).",
    "why": "Near-1M AI character with a partner character (Ms. Stretchy) and visible ad revenue.",
    "scores": {
-    "fame": 67.3,
-    "momentum": 62.7,
+    "fame": 65.8,
+    "momentum": 61,
     "distinctiveness": 65,
     "sufficiency": 0.8,
-    "index": 67.4,
+    "index": 66.3,
     "fameParts": {
-     "followers": 0.7461,
-     "engagement": 0.695,
-     "viral": 0.6752,
+     "followers": 0.7551688216695833,
+     "engagement": 0.5945358569919355,
+     "viral": 0.6786411125237808,
      "consistency": 1,
-     "longevity": 0.3947,
+     "longevity": 0.4051348898820688,
      "recognizability": 0.36
     },
     "momentumParts": {
-     "engagement": 0.695,
-     "viral": 0.577,
-     "frequency": 0.9286,
+     "engagement": 0.5945358569919355,
+     "viral": 0.6077286902923755,
+     "frequency": 1,
      "growth": 0,
      "recency": 1
     },
@@ -5400,8 +5703,8 @@
    },
    "heat": "RISING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": "Stable, monetising",
    "debut": {
@@ -5414,7 +5717,16 @@
     "likes": 502072,
     "url": "https://www.instagram.com/p/DdW8lunNb70/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-12",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 70663,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-24",
@@ -5456,10 +5768,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 8,
-    "fame": 5,
-    "momentum": 11,
+    "index": 10,
+    "fame": 4,
+    "momentum": 13,
     "distinctiveness": 16
    },
    "externalLinks": [
@@ -5498,42 +5814,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 80794,
-   "following": null,
-   "posts": 10,
-   "postsAnalysed": 10,
+   "followers": 84441,
+   "following": 2,
+   "posts": 11,
+   "postsAnalysed": 11,
    "fullHistory": "YES (10/10)",
    "firstPost": "2026-08-31",
    "firstPostBasis": "Full history loaded - first post",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": 1,
+   "lastPost": "2026-10-09",
+   "daysSinceLastPost": 3,
+   "posts7d": 2,
    "posts14d": 2,
-   "posts30d": 9,
+   "posts30d": 7,
    "postsPerWeek": 1,
-   "avgLikes": 129199,
-   "medianLikes": 72884,
-   "avgComments": 2907,
+   "avgLikes": 69969,
+   "medianLikes": 39631.5,
+   "avgComments": 1916,
    "likesHidden": 0,
-   "engagementRate": 1.63509666559398,
+   "engagementRate": 0.8513020925853555,
    "engagementLevel": "Very high",
-   "avgLikes14d": 21214,
+   "avgLikes14d": 22993,
    "avgComments14d": 537,
-   "maxLikes": 647717,
+   "maxLikes": 666724,
    "topPost": {
     "url": "https://www.instagram.com/p/DdH9RnPNA_3/",
-    "date": "2026-09-12",
-    "likes": 647717,
-    "comments": 11452,
-    "caption": "🤪 @..."
+    "date": "2026-09-10",
+    "likes": 666724,
+    "comments": 11695,
+    "caption": "🤪\n\n@cure_9997\n\n#reels #explorepage #explore #ai_video"
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Dd1GEHzt04I/",
-    "date": "2026-10-01",
-    "likes": 35868
+    "url": "https://www.instagram.com/p/DeR_s4vtETs/",
+    "date": "2026-10-09",
+    "likes": 31856
    },
    "topPostNote": null,
-   "bio": "Ms. Stretchy / little stories from a magical AI world / cozy characters",
+   "bio": "✨ little stories from a magical AI world\n🎬 cozy characters • AI art\n📩 collabs & custom videos → DM me\nMarried 💍",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -5555,24 +5871,24 @@
    "notes": "Very high likes per post vs followers.",
    "why": "Shows an AI 'couple' franchise model.",
    "scores": {
-    "fame": 51.4,
-    "momentum": 50.1,
+    "fame": 49.3,
+    "momentum": 50,
     "distinctiveness": 65,
     "sufficiency": 0.8,
-    "index": 58,
+    "index": 57.3,
     "fameParts": {
-     "followers": 0.4768,
-     "engagement": 0.7778,
-     "viral": 0.7028,
-     "consistency": 0.45,
-     "longevity": 0.0534,
+     "followers": 0.4816383419592076,
+     "engagement": 0.711226416750204,
+     "viral": 0.7059865221659585,
+     "consistency": 0.35,
+     "longevity": 0.057534246575342465,
      "recognizability": 0.24
     },
     "momentumParts": {
-     "engagement": 0.5817,
-     "viral": 0.3887,
-     "frequency": 0.1429,
-     "growth": 0.5265,
+     "engagement": 0.5903989098295586,
+     "viral": 0.3757978106708335,
+     "frequency": 0.14285714285714285,
+     "growth": 0.5213216309755719,
      "recency": 1
     },
     "distinctParts": {
@@ -5586,7 +5902,7 @@
    "heat": "STEADY",
    "status": {
     "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "basis": "Last post 3d before capture"
    },
    "phase": null,
    "debut": {
@@ -5599,7 +5915,16 @@
     "likes": 647717,
     "url": "https://www.instagram.com/p/DdH9RnPNA_3/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-08-30",
+     "end": "2026-10-09",
+     "posts": 11,
+     "avgLikes": 124220,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-08-31",
@@ -5656,10 +5981,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: full post history loaded (debut = first post) | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 19,
-    "fame": 16,
-    "momentum": 26,
+    "index": 21,
+    "fame": 24,
+    "momentum": 25,
     "distinctiveness": 17
    },
    "externalLinks": [],
@@ -5690,42 +6019,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 85019,
-   "following": null,
-   "posts": 110,
-   "postsAnalysed": 12,
+   "followers": 86992,
+   "following": 13,
+   "posts": 116,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (12/110)",
    "firstPost": "2026-09-30",
    "firstPostBasis": "Oldest of 12 sampled posts",
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 0,
    "posts7d": 9,
-   "posts14d": 12,
-   "posts30d": 12,
-   "postsPerWeek": 6,
-   "avgLikes": 11405,
-   "medianLikes": 5704,
-   "avgComments": 108,
+   "posts14d": 15,
+   "posts30d": 30,
+   "postsPerWeek": 7.5,
+   "avgLikes": 5642,
+   "medianLikes": 2594,
+   "avgComments": 56,
    "likesHidden": 0,
-   "engagementRate": 0.135416789188299,
+   "engagementRate": 0.06549836000245234,
    "engagementLevel": "Very high",
-   "avgLikes14d": 11405,
+   "avgLikes14d": 10229,
    "avgComments14d": 108,
-   "maxLikes": 52198,
+   "maxLikes": 197220,
    "topPost": {
-    "url": "https://www.instagram.com/p/Dd6Anomgs5t/",
-    "date": "2026-09-30",
-    "likes": 52198,
-    "comments": 456,
-    "caption": "Shadow ..."
+    "url": "https://www.instagram.com/p/DdgdmnugF9W/",
+    "date": "2026-09-20",
+    "likes": 197220,
+    "comments": 1479,
+    "caption": "When the stack isn’t heavy enough, you pull the whole machine down! 🚣‍♂️💥😼\n\n•Shadow hitting the seated cable row! Signaled to stack the m"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd6Anomgs5t/",
     "date": "2026-09-30",
-    "likes": 52198
+    "likes": 52953
    },
    "topPostNote": null,
-   "bio": "Pik Vik | Shadow 🐾 / AI Stories • Real Characters / Shadow & Milo's World",
+   "bio": "AI Stories • Real Characters\nShadow & Milo’s World\n💚 Higgsfield Creative Partner\n🚀 Start creating with Higgsfield ↓",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -5747,23 +6076,23 @@
    "notes": "Verified.",
    "why": "Verified pet-duo universe connected to the fight league.",
    "scores": {
-    "fame": 49.9,
-    "momentum": 51.6,
+    "fame": 55.4,
+    "momentum": 51.1,
     "distinctiveness": 60,
     "sufficiency": 0.9,
-    "index": 58.4,
+    "index": 60.2,
     "fameParts": {
-     "followers": 0.4824,
-     "engagement": 0.5143,
-     "viral": 0.4294,
-     "consistency": 0.6,
-     "longevity": 0.4166,
+     "followers": 0.4848698289144089,
+     "engagement": 0.43785827045483683,
+     "viral": 0.5737377386163169,
+     "consistency": 1,
+     "longevity": 0.42578319569076745,
      "recognizability": 0.64
     },
     "momentumParts": {
-     "engagement": 0.5143,
-     "viral": 0.4294,
-     "frequency": 0.8571,
+     "engagement": 0.43785827045483683,
+     "viral": 0.4309726424165332,
+     "frequency": 1,
      "growth": 0,
      "recency": 1
     },
@@ -5777,8 +6106,8 @@
    },
    "heat": "STEADY",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": null,
    "debut": {
@@ -5791,7 +6120,16 @@
     "likes": 52198,
     "url": "https://www.instagram.com/p/Dd6Anomgs5t/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-16",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 19940,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-30",
@@ -5851,9 +6189,13 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 17,
-    "fame": 20,
+    "index": 16,
+    "fame": 14,
     "momentum": 24,
     "distinctiveness": 23
    },
@@ -5885,26 +6227,26 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 2247629,
-   "following": null,
+   "followers": 2247240,
+   "following": 2136,
    "posts": 1501,
-   "postsAnalysed": 22,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/1501)",
    "firstPost": "2026-04-13",
    "firstPostBasis": "Oldest of 22 sampled posts (account is far older - not verifiable from sample)",
    "lastPost": "2026-10-06",
-   "daysSinceLastPost": 3,
-   "posts7d": 2,
+   "daysSinceLastPost": 6,
+   "posts7d": 1,
    "posts14d": 2,
    "posts30d": 3,
    "postsPerWeek": 1,
-   "avgLikes": 1102,
-   "medianLikes": 949,
-   "avgComments": 78,
+   "avgLikes": 1123,
+   "medianLikes": 952,
+   "avgComments": 72,
    "likesHidden": 3,
-   "engagementRate": 0.00052499767532809,
+   "engagementRate": 0.0005317510467160705,
    "engagementLevel": "Low",
-   "avgLikes14d": 901,
+   "avgLikes14d": 1013,
    "avgComments14d": 68,
    "maxLikes": 3799,
    "topPost": {
@@ -5917,10 +6259,10 @@
    "topPost14d": {
     "url": "https://www.instagram.com/p/DeKPiH-jtIG/",
     "date": "2026-10-06",
-    "likes": 1028
+    "likes": 1236
    },
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "❤️‍🔥23\n📍L.A\n🖤Robot",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -5943,24 +6285,24 @@
    "why": "Category benchmark: biggest legacy following, but low current engagement.",
    "scores": {
     "fame": 53.5,
-    "momentum": 20.6,
+    "momentum": 20.4,
     "distinctiveness": 90,
     "sufficiency": 0.7,
-    "index": 53.4,
+    "index": 53.3,
     "fameParts": {
-     "followers": 0.8379,
-     "engagement": 0.2605,
-     "viral": 0.1449,
+     "followers": 0.8379123641338946,
+     "engagement": 0.26259493906536446,
+     "viral": 0.14491732338868002,
      "consistency": 0.15,
-     "longevity": 0.8706,
+     "longevity": 0.8705522768973081,
      "recognizability": 1
     },
     "momentumParts": {
-     "engagement": 0.2387,
-     "viral": 0.003,
-     "frequency": 0.1429,
+     "engagement": 0.2514023613400701,
+     "viral": 0.02300461768819928,
+     "frequency": 0.14285714285714285,
      "growth": 0,
-     "recency": 1
+     "recency": 0.8888888888888888
     },
     "distinctParts": {
      "visual": 5,
@@ -5972,8 +6314,8 @@
    },
    "heat": "DORMANT",
    "status": {
-    "code": "COOLING",
-    "basis": "Phase: Legacy / low engagement; last post 3d ago"
+    "code": "STABLE",
+    "basis": "Last post 6d before capture"
    },
    "phase": "Legacy / low engagement",
    "debut": {
@@ -5986,7 +6328,16 @@
     "likes": 3799,
     "url": "https://www.instagram.com/p/DXE1ordFGu-/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-03-30",
+     "end": "2026-10-06",
+     "posts": 11,
+     "avgLikes": 1320,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-06",
@@ -6023,10 +6374,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 24,
-    "fame": 13,
-    "momentum": 34,
+    "index": 27,
+    "fame": 17,
+    "momentum": 35,
     "distinctiveness": 4
    },
    "externalLinks": [],
@@ -6057,26 +6412,26 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 2170103,
-   "following": null,
-   "posts": 212,
-   "postsAnalysed": 22,
+   "followers": 2174713,
+   "following": 15,
+   "posts": 220,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/212)",
    "firstPost": "2025-07-11",
    "firstPostBasis": "Pinned post date (oldest in sample)",
-   "lastPost": "2026-10-08",
+   "lastPost": "2026-10-11",
    "daysSinceLastPost": 1,
-   "posts7d": 13,
-   "posts14d": 20,
-   "posts30d": 20,
-   "postsPerWeek": 10,
-   "avgLikes": 12268,
-   "medianLikes": 2621,
-   "avgComments": 157,
-   "likesHidden": 1,
-   "engagementRate": 0.00572553468660243,
+   "posts7d": 18,
+   "posts14d": 28,
+   "posts30d": 28,
+   "postsPerWeek": 14,
+   "avgLikes": 6102,
+   "medianLikes": 680.5,
+   "avgComments": 95,
+   "likesHidden": 0,
+   "engagementRate": 0.00284930318008246,
    "engagementLevel": "Medium",
-   "avgLikes14d": 9534,
+   "avgLikes14d": 7225,
    "avgComments14d": 128,
    "maxLikes": 1027957,
    "topPost": {
@@ -6089,10 +6444,10 @@
    "topPost14d": {
     "url": "https://www.instagram.com/p/DeCz8Bniv7e/",
     "date": "2026-10-03",
-    "likes": 55078
+    "likes": 56718
    },
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "✨ Spilling tea & designer receipts since 1950\nBirthed by @blurstudios.ai\n📧 granny@blurstudios.ai",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -6114,22 +6469,22 @@
    "notes": "Owned by an AI studio that runs sibling characters.",
    "why": "Largest AI-native (generative, not CGI) character found: 2.17M followers, 1M-like reel, 20 posts in 14 days.",
    "scores": {
-    "fame": 76.8,
-    "momentum": 53.2,
+    "fame": 75.3,
+    "momentum": 51.6,
     "distinctiveness": 85,
     "sufficiency": 0.9,
-    "index": 73.3,
+    "index": 72.3,
     "fameParts": {
-     "followers": 0.8341,
-     "engagement": 0.5222,
-     "viral": 0.753,
+     "followers": 0.8343504876513341,
+     "engagement": 0.44636805082659703,
+     "viral": 0.7529937370662485,
      "consistency": 1,
-     "longevity": 0.6233,
+     "longevity": 0.6273972602739726,
      "recognizability": 1
     },
     "momentumParts": {
-     "engagement": 0.4948,
-     "viral": 0.4352,
+     "engagement": 0.44636805082659703,
+     "viral": 0.43843022706932633,
      "frequency": 1,
      "growth": 0,
      "recency": 1
@@ -6158,7 +6513,16 @@
     "likes": 1027957,
     "url": "https://www.instagram.com/p/DL8o9HPtwf0/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2025-07-11",
+     "end": "2026-10-11",
+     "posts": 29,
+     "avgLikes": 55962,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2025-07-11",
@@ -6214,10 +6578,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
     "index": 3,
     "fame": 2,
-    "momentum": 21,
+    "momentum": 23,
     "distinctiveness": 5
    },
    "externalLinks": [
@@ -6256,42 +6624,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 120171,
-   "following": null,
-   "posts": 53,
-   "postsAnalysed": 12,
+   "followers": 120143,
+   "following": 7,
+   "posts": 54,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (12/53)",
    "firstPost": "2025-11-30",
    "firstPostBasis": "Oldest of 12 sampled posts",
-   "lastPost": "2026-10-06",
-   "daysSinceLastPost": 3,
-   "posts7d": 1,
-   "posts14d": 1,
-   "posts30d": 1,
-   "postsPerWeek": 0.5,
-   "avgLikes": 4399,
-   "medianLikes": 625,
-   "avgComments": 67,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 1,
+   "posts7d": 2,
+   "posts14d": 2,
+   "posts30d": 2,
+   "postsPerWeek": 1,
+   "avgLikes": 1966,
+   "medianLikes": 469.5,
+   "avgComments": 24,
    "likesHidden": 0,
-   "engagementRate": 0.037163708382222,
+   "engagementRate": 0.01655873972405106,
    "engagementLevel": "High",
-   "avgLikes14d": 625,
+   "avgLikes14d": 310,
    "avgComments14d": 19,
-   "maxLikes": 14391,
+   "maxLikes": 19440,
    "topPost": {
-    "url": "https://www.instagram.com/p/DTYiD4qEtdU/",
-    "date": "2026-01-11",
-    "likes": 14391,
-    "comments": 148,
-    "caption": "We all..."
+    "url": "https://www.instagram.com/p/DRX4OtqEq2A/",
+    "date": "2025-11-22",
+    "likes": 19440,
+    "comments": 331,
+    "caption": "@auntieauroraa always knows how to make you laugh😂💅#grannyspills #relationshipadvice #dating #advice"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/DeKPxSGCo-D/",
     "date": "2026-10-06",
-    "likes": 625
+    "likes": 613
    },
    "topPostNote": null,
-   "bio": "Auntie Aurora 🧡 / Auntie didn't get rich knitting. / Birthed by @blurstudios.ai",
+   "bio": "Auntie didn’t get rich knitting.\nBirthed by @blurstudios.ai \n📚 Not Financial Advice\n📧 aurora@blurstudios.ai",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -6313,23 +6681,23 @@
    "notes": "Low posting cadence.",
    "why": "Studio-built character family (shared universe with Granny Spills).",
    "scores": {
-    "fame": 40.8,
-    "momentum": 18,
+    "fame": 40.2,
+    "momentum": 16.4,
     "distinctiveness": 70,
     "sufficiency": 0.9,
-    "index": 47.2,
+    "index": 46.5,
     "fameParts": {
-     "followers": 0.5199,
-     "engagement": 0.4108,
-     "viral": 0.2895,
-     "consistency": 0.05,
-     "longevity": 0.4288,
+     "followers": 0.5199246180464558,
+     "engagement": 0.32339587837402917,
+     "viral": 0.32217406514756397,
+     "consistency": 0.1,
+     "longevity": 0.4328767123287671,
      "recognizability": 0.64
     },
     "momentumParts": {
-     "engagement": 0.199,
+     "engagement": 0.12284042345856816,
      "viral": 0,
-     "frequency": 0.0714,
+     "frequency": 0.14285714285714285,
      "growth": 0,
      "recency": 1
     },
@@ -6344,7 +6712,7 @@
    "heat": "DORMANT",
    "status": {
     "code": "POSTING",
-    "basis": "Last post 3d before capture"
+    "basis": "Last post 1d before capture"
    },
    "phase": null,
    "debut": {
@@ -6357,7 +6725,16 @@
     "likes": 14391,
     "url": "https://www.instagram.com/p/DTYiD4qEtdU/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2025-08-06",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 3705,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2025-11-30",
@@ -6421,10 +6798,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 31,
-    "fame": 32,
-    "momentum": 36,
+    "index": 32,
+    "fame": 34,
+    "momentum": 37,
     "distinctiveness": 13
    },
    "externalLinks": [],
@@ -6455,26 +6836,26 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 7346848,
-   "following": null,
-   "posts": 743,
-   "postsAnalysed": 22,
+   "followers": 7343798,
+   "following": 647,
+   "posts": 744,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/743)",
    "firstPost": "2026-07-10",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-06",
-   "daysSinceLastPost": 3,
+   "lastPost": "2026-10-10",
+   "daysSinceLastPost": 2,
    "posts7d": 2,
-   "posts14d": 3,
-   "posts30d": 7,
-   "postsPerWeek": 1.5,
-   "avgLikes": 99531,
-   "medianLikes": 67039,
-   "avgComments": 648,
+   "posts14d": 4,
+   "posts30d": 8,
+   "postsPerWeek": 2,
+   "avgLikes": 101601,
+   "medianLikes": 65268,
+   "avgComments": 633,
    "likesHidden": 0,
-   "engagementRate": 0.0136356434759505,
+   "engagementRate": 0.01392106645634861,
    "engagementLevel": "Medium",
-   "avgLikes14d": 25533,
+   "avgLikes14d": 27748,
    "avgComments14d": 249,
    "maxLikes": 565164,
    "topPost": {
@@ -6485,12 +6866,12 @@
     "caption": "We ar..."
    },
    "topPost14d": {
-    "url": "https://www.instagram.com/p/Dd1aXmFs8kY/",
-    "date": "2026-09-28",
-    "likes": 29084
+    "url": "https://www.instagram.com/p/DeKIPiyoc_i/",
+    "date": "2026-10-06",
+    "likes": 31446
    },
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "Just wanna make humans laugh!",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -6512,23 +6893,23 @@
    "notes": "CGI-animated rather than generative AI - include as 'synthetic celebrity'.",
    "why": "Largest synthetic character on IG in this set (7.35M).",
    "scores": {
-    "fame": 78.7,
-    "momentum": 43.4,
+    "fame": 79.3,
+    "momentum": 45,
     "distinctiveness": 65,
     "sufficiency": 0.8,
-    "index": 65.6,
+    "index": 66.3,
     "fameParts": {
-     "followers": 0.9665,
-     "engagement": 0.7495,
-     "viral": 0.688,
-     "consistency": 0.35,
-     "longevity": 0.7484,
+     "followers": 0.9664801806413024,
+     "engagement": 0.7517244956197129,
+     "viral": 0.6880436225566537,
+     "consistency": 0.4,
+     "longevity": 0.7486291742183514,
      "recognizability": 1
     },
     "momentumParts": {
-     "engagement": 0.6018,
-     "viral": 0.3659,
-     "frequency": 0.2143,
+     "engagement": 0.6108079214568736,
+     "viral": 0.3743913525215592,
+     "frequency": 0.2857142857142857,
      "growth": 0,
      "recency": 1
     },
@@ -6540,10 +6921,10 @@
     },
     "recognizabilityInput": 5
    },
-   "heat": "COOLING",
+   "heat": "STEADY",
    "status": {
-    "code": "COOLING",
-    "basis": "Phase: Mature, slowing cadence; last post 3d ago"
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
    },
    "phase": "Mature, slowing cadence",
    "debut": {
@@ -6556,7 +6937,16 @@
     "likes": 565164,
     "url": "https://www.instagram.com/p/DbI9CnVxzJs/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-06-13",
+     "end": "2026-10-10",
+     "posts": 30,
+     "avgLikes": 90668,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-07-23",
@@ -6592,8 +6982,12 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 10,
+    "index": 11,
     "fame": 1,
     "momentum": 29,
     "distinctiveness": 18
@@ -6626,26 +7020,26 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 404112,
-   "following": null,
-   "posts": 375,
-   "postsAnalysed": 22,
+   "followers": 404082,
+   "following": 494,
+   "posts": 378,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/375)",
    "firstPost": "2026-08-31",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-07",
-   "daysSinceLastPost": 2,
-   "posts7d": 3,
-   "posts14d": 4,
-   "posts30d": 13,
-   "postsPerWeek": 2,
-   "avgLikes": 985,
-   "medianLikes": 811,
-   "avgComments": 86,
-   "likesHidden": 3,
-   "engagementRate": 0.00265025537474759,
+   "lastPost": "2026-10-11",
+   "daysSinceLastPost": 1,
+   "posts7d": 5,
+   "posts14d": 6,
+   "posts30d": 12,
+   "postsPerWeek": 3,
+   "avgLikes": 697,
+   "medianLikes": 669,
+   "avgComments": 75,
+   "likesHidden": 2,
+   "engagementRate": 0.0019080285684588772,
    "engagementLevel": "Low",
-   "avgLikes14d": 1281,
+   "avgLikes14d": 727,
    "avgComments14d": 87,
    "maxLikes": 2697,
    "topPost": {
@@ -6658,10 +7052,10 @@
    "topPost14d": {
     "url": "https://www.instagram.com/p/DeHf1OyIzas/",
     "date": "2026-10-05",
-    "likes": 2697
+    "likes": 999
    },
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "Virtual fitness & lifestyle \nPowered by @theclueless.ai \n@theclueless.tech Ambassador",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -6683,23 +7077,23 @@
    "notes": "Likes hidden on 3 of last 12.",
    "why": "Benchmark agency-run AI model; low engagement rate.",
    "scores": {
-    "fame": 48.3,
-    "momentum": 25.7,
+    "fame": 47,
+    "momentum": 23.8,
     "distinctiveness": 50,
     "sufficiency": 0.7,
-    "index": 45.1,
+    "index": 44.1,
     "fameParts": {
-     "followers": 0.6516,
-     "engagement": 0.2484,
-     "viral": 0.1077,
-     "consistency": 0.65,
-     "longevity": 0.6296,
+     "followers": 0.6516173762615007,
+     "engagement": 0.2108081945245024,
+     "viral": 0.10772023661322283,
+     "consistency": 0.6,
+     "longevity": 0.6309967199348903,
      "recognizability": 0.88
     },
     "momentumParts": {
-     "engagement": 0.2484,
-     "viral": 0.1077,
-     "frequency": 0.2857,
+     "engagement": 0.2108081945245024,
+     "viral": 0,
+     "frequency": 0.42857142857142855,
      "growth": 0,
      "recency": 1
     },
@@ -6711,10 +7105,10 @@
     },
     "recognizabilityInput": 4
    },
-   "heat": "COOLING",
+   "heat": "DORMANT",
    "status": {
     "code": "POSTING",
-    "basis": "Last post 2d before capture"
+    "basis": "Last post 1d before capture"
    },
    "phase": null,
    "debut": {
@@ -6727,7 +7121,16 @@
     "likes": 2697,
     "url": "https://www.instagram.com/p/DeHf1OyIzas/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-10",
+     "end": "2026-10-11",
+     "posts": 11,
+     "avgLikes": 665,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-08-31",
@@ -6773,10 +7176,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 33,
-    "fame": 24,
-    "momentum": 32,
+    "index": 36,
+    "fame": 27,
+    "momentum": 34,
     "distinctiveness": 32
    },
    "externalLinks": [
@@ -6815,38 +7222,38 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 377813,
-   "following": null,
-   "posts": 967,
-   "postsAnalysed": 22,
+   "followers": 377754,
+   "following": 885,
+   "posts": 968,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/967)",
    "firstPost": "2026-07-09",
    "firstPostBasis": "Oldest of 22 sampled posts",
-   "lastPost": "2026-10-07",
-   "daysSinceLastPost": 2,
+   "lastPost": "2026-10-09",
+   "daysSinceLastPost": 3,
    "posts7d": 2,
-   "posts14d": 2,
-   "posts30d": 5,
-   "postsPerWeek": 1,
-   "avgLikes": null,
-   "medianLikes": null,
-   "avgComments": 58,
+   "posts14d": 3,
+   "posts30d": 6,
+   "postsPerWeek": 1.5,
+   "avgLikes": 51199,
+   "medianLikes": 51199,
+   "avgComments": 49,
    "likesHidden": 11,
-   "engagementRate": null,
+   "engagementRate": 0.13566545070777983,
    "engagementLevel": "UNKNOWN",
    "avgLikes14d": null,
    "avgComments14d": null,
-   "maxLikes": 50556,
+   "maxLikes": 51199,
    "topPost": {
     "url": "https://www.instagram.com/p/DdjHD7akvR8/",
     "date": "2026-09-21",
-    "likes": 50556,
+    "likes": 51199,
     "comments": 126,
-    "caption": "🧃🧢ギャル (only post with visible likes)"
+    "caption": "🧃🧢ギャルFUJIMOTO🧠⚡️\n\n@fujimoto1954 @ppgalclub"
    },
    "topPost14d": null,
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "Virtual girl in 🇯🇵\n🧠⚡️🐋💫⛩️🎀",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -6868,23 +7275,23 @@
    "notes": "Likes hidden on 11 of last 12 -> avg likes UNKNOWN.",
    "why": "Benchmark Asian virtual model; hidden likes limit scoring.",
    "scores": {
-    "fame": 47.1,
-    "momentum": 12.1,
+    "fame": 61.2,
+    "momentum": 36.9,
     "distinctiveness": 65,
     "sufficiency": 0.7,
-    "index": 43.6,
+    "index": 56,
     "fameParts": {
-     "followers": 0.6443,
-     "engagement": 0,
-     "viral": 0.4259,
-     "consistency": 0.25,
-     "longevity": 0.7942,
+     "followers": 0.6443022679342549,
+     "engagement": 0.6773153696447238,
+     "viral": 0.42731536964472383,
+     "consistency": 0.3,
+     "longevity": 0.7943501429233575,
      "recognizability": 0.88
     },
     "momentumParts": {
-     "engagement": 0,
+     "engagement": 0.6773153696447238,
      "viral": 0,
-     "frequency": 0.1429,
+     "frequency": 0.21428571428571427,
      "growth": 0,
      "recency": 1
     },
@@ -6896,10 +7303,10 @@
     },
     "recognizabilityInput": 4
    },
-   "heat": "DORMANT",
+   "heat": "COOLING",
    "status": {
     "code": "POSTING",
-    "basis": "Last post 2d before capture"
+    "basis": "Last post 3d before capture"
    },
    "phase": null,
    "debut": {
@@ -6912,7 +7319,16 @@
     "likes": 50556,
     "url": "https://www.instagram.com/p/DdjHD7akvR8/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-21",
+     "end": "2026-09-21",
+     "posts": 1,
+     "avgLikes": 51199,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-07-09",
@@ -6958,10 +7374,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: likes hidden or sample limited | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 35,
-    "fame": 25,
-    "momentum": 39,
+    "index": 23,
+    "fame": 12,
+    "momentum": 31,
     "distinctiveness": 19
    },
    "externalLinks": [],
@@ -6992,42 +7412,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 283021,
-   "following": null,
+   "followers": 282850,
+   "following": 320,
    "posts": 154,
-   "postsAnalysed": 22,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/154)",
    "firstPost": "2026-07-21",
    "firstPostBasis": "Oldest of 22 sampled posts",
    "lastPost": "2026-10-01",
-   "daysSinceLastPost": 8,
+   "daysSinceLastPost": 11,
    "posts7d": 0,
    "posts14d": 1,
-   "posts30d": 5,
+   "posts30d": 3,
    "postsPerWeek": 0.5,
-   "avgLikes": 1974,
-   "medianLikes": 2012,
-   "avgComments": 108,
+   "avgLikes": 1978,
+   "medianLikes": 1865,
+   "avgComments": 109,
    "likesHidden": 0,
-   "engagementRate": 0.00735634458220415,
+   "engagementRate": 0.007377585292557893,
    "engagementLevel": "Medium",
-   "avgLikes14d": 518,
+   "avgLikes14d": 538,
    "avgComments14d": 70,
-   "maxLikes": 5376,
+   "maxLikes": 69616,
    "topPost": {
-    "url": "https://www.instagram.com/p/DceUOwhgqXK/",
-    "date": "2026-08-25",
-    "likes": 5376,
-    "comments": 228,
-    "caption": "Sometime..."
+    "url": "https://www.instagram.com/p/DZk2MZdig1u/",
+    "date": "2026-06-14",
+    "likes": 69616,
+    "comments": 2598,
+    "caption": "zoomed in and emotionally unprepared 😂🫪 2-1 at the break. 🥳\n\nwhere are you watching from? drop your country and who you’ve got tonight.🤍"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd9JtnIC7AY/",
     "date": "2026-10-01",
-    "likes": 518
+    "likes": 538
    },
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "Endless Summer - out now ↓\nby @zeluhouse 📩",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -7049,25 +7469,25 @@
    "notes": "Last post 2026-10-01.",
    "why": "Recognisable name, slowing cadence.",
    "scores": {
-    "fame": 44.6,
-    "momentum": 15.5,
+    "fame": 49.1,
+    "momentum": 14.5,
     "distinctiveness": 50,
     "sufficiency": 0.8,
-    "index": 42.3,
+    "index": 43.5,
     "fameParts": {
-     "followers": 0.613,
-     "engagement": 0.3238,
-     "viral": 0.1826,
-     "consistency": 0.25,
-     "longevity": 0.475,
+     "followers": 0.612889045769107,
+     "engagement": 0.32405657181529013,
+     "viral": 0.46067726648716034,
+     "consistency": 0.15,
+     "longevity": 0.47500828833458525,
      "recognizability": 0.88
     },
     "momentumParts": {
-     "engagement": 0.1786,
+     "engagement": 0.18269556891659733,
      "viral": 0,
-     "frequency": 0.0714,
+     "frequency": 0.07142857142857142,
      "growth": 0,
-     "recency": 0.8148
+     "recency": 0.7037037037037037
     },
     "distinctParts": {
      "visual": 3,
@@ -7080,7 +7500,7 @@
    "heat": "DORMANT",
    "status": {
     "code": "STABLE",
-    "basis": "Last post 8d before capture"
+    "basis": "Last post 11d before capture"
    },
    "phase": null,
    "debut": {
@@ -7093,7 +7513,16 @@
     "likes": 5376,
     "url": "https://www.instagram.com/p/DceUOwhgqXK/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-06-12",
+     "end": "2026-10-01",
+     "posts": 30,
+     "avgLikes": 5795,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-07-21",
@@ -7143,10 +7572,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
     "index": 37,
-    "fame": 27,
-    "momentum": 37,
+    "fame": 25,
+    "momentum": 38,
     "distinctiveness": 33
    },
    "externalLinks": [],
@@ -7177,24 +7610,24 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 247516,
-   "following": null,
+   "followers": 247270,
+   "following": 1082,
    "posts": 138,
-   "postsAnalysed": 22,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/138)",
    "firstPost": "2025-01-18",
    "firstPostBasis": "Oldest of 22 sampled posts",
    "lastPost": "2026-09-22",
-   "daysSinceLastPost": 17,
+   "daysSinceLastPost": 20,
    "posts7d": 0,
    "posts14d": 0,
    "posts30d": 1,
    "postsPerWeek": 0,
-   "avgLikes": 3057,
-   "medianLikes": 1199,
+   "avgLikes": 3055,
+   "medianLikes": 1193,
    "avgComments": 68,
    "likesHidden": 0,
-   "engagementRate": 0.012625446435786,
+   "engagementRate": 0.012632614820506599,
    "engagementLevel": "Medium",
    "avgLikes14d": null,
    "avgComments14d": null,
@@ -7208,7 +7641,7 @@
    },
    "topPost14d": null,
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "India's first AI Influencer \nAs seen on Shark Tank India 🇮🇳 \ncollab - aihumankyra@gmail.com",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -7231,16 +7664,16 @@
    "why": "Market-specific (India) virtual influencer; dormant-ish.",
    "scores": {
     "fame": 48.8,
-    "momentum": 4.8,
+    "momentum": 3.7,
     "distinctiveness": 45,
     "sufficiency": 0.7,
-    "index": 38,
+    "index": 37.7,
     "fameParts": {
-     "followers": 0.5984,
-     "engagement": 0.3713,
-     "viral": 0.3351,
+     "followers": 0.5982928572092225,
+     "engagement": 0.3712528036446433,
+     "viral": 0.3350515200100055,
      "consistency": 0.05,
-     "longevity": 0.8616,
+     "longevity": 0.8657534246575342,
      "recognizability": 0.76
     },
     "momentumParts": {
@@ -7248,7 +7681,7 @@
      "viral": 0,
      "frequency": 0,
      "growth": 0,
-     "recency": 0.4815
+     "recency": 0.37037037037037035
     },
     "distinctParts": {
      "visual": 3,
@@ -7261,7 +7694,7 @@
    "heat": "DORMANT",
    "status": {
     "code": "COOLING",
-    "basis": "Last post 17d before capture"
+    "basis": "Last post 20d before capture"
    },
    "phase": null,
    "debut": {
@@ -7274,7 +7707,16 @@
     "likes": 21888,
     "url": "https://www.instagram.com/p/DaftyHNP0qz/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2024-11-06",
+     "end": "2026-09-22",
+     "posts": 29,
+     "avgLikes": 3938,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2025-01-18",
@@ -7320,9 +7762,13 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: last post >14 days ago or not captured | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
     "index": 40,
-    "fame": 22,
+    "fame": 26,
     "momentum": 40,
     "distinctiveness": 35
    },
@@ -7354,24 +7800,24 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 235598,
-   "following": null,
+   "followers": 235606,
+   "following": 4811,
    "posts": 211,
-   "postsAnalysed": 22,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/211)",
    "firstPost": "2026-01-17",
    "firstPostBasis": "Oldest of 22 sampled posts",
    "lastPost": "2026-09-02",
-   "daysSinceLastPost": 37,
+   "daysSinceLastPost": 40,
    "posts7d": 0,
    "posts14d": 0,
    "posts30d": 0,
    "postsPerWeek": 0,
    "avgLikes": 295,
-   "medianLikes": 276,
-   "avgComments": 44,
+   "medianLikes": 242.5,
+   "avgComments": 45,
    "likesHidden": 0,
-   "engagementRate": 0.00143889167140638,
+   "engagementRate": 0.0014427334900922162,
    "engagementLevel": "Low",
    "avgLikes14d": null,
    "avgComments14d": null,
@@ -7385,7 +7831,7 @@
    },
    "topPost14d": null,
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "The World’s First Digital Supermodel",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -7413,11 +7859,11 @@
     "sufficiency": 0.8,
     "index": 35,
     "fameParts": {
-     "followers": 0.593,
-     "engagement": 0.1175,
-     "viral": 0.0087,
+     "followers": 0.5930465865263377,
+     "engagement": 0.11745550399454074,
+     "viral": 0.008657114156330081,
      "consistency": 0,
-     "longevity": 0.5297,
+     "longevity": 0.529712982119077,
      "recognizability": 0.88
     },
     "momentumParts": {
@@ -7438,7 +7884,7 @@
    "heat": "DORMANT",
    "status": {
     "code": "DORMANT",
-    "basis": "Last post 37 days before capture"
+    "basis": "Last post 40 days before capture"
    },
    "phase": null,
    "debut": {
@@ -7451,7 +7897,16 @@
     "likes": 1083,
     "url": "https://www.instagram.com/p/DV9MyM8iEAN/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2025-10-31",
+     "end": "2026-09-02",
+     "posts": 29,
+     "avgLikes": 354,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-01-17",
@@ -7503,9 +7958,13 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: last post >14 days ago or not captured | Timeline: only a recent sample loaded - debut not verifiable | Social: >=3 fictional-character links observed (in or out)"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
     "index": 41,
-    "fame": 38,
+    "fame": 39,
     "momentum": 41,
     "distinctiveness": 26
    },
@@ -7545,26 +8004,26 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 239718,
-   "following": null,
+   "followers": 239590,
+   "following": 15,
    "posts": 92,
-   "postsAnalysed": 22,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/92)",
    "firstPost": "2025-05-28",
    "firstPostBasis": "Pinned post (oldest in sample)",
    "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
+   "daysSinceLastPost": 4,
    "posts7d": 1,
    "posts14d": 1,
    "posts30d": 4,
    "postsPerWeek": 0.5,
-   "avgLikes": 7177,
-   "medianLikes": 2034,
-   "avgComments": 72,
+   "avgLikes": 7248,
+   "medianLikes": 1647,
+   "avgComments": 73,
    "likesHidden": 0,
-   "engagementRate": 0.0302396983121835,
+   "engagementRate": 0.03055532367794983,
    "engagementLevel": "High",
-   "avgLikes14d": 695,
+   "avgLikes14d": 1085,
    "avgComments14d": 18,
    "maxLikes": 297057,
    "topPost": {
@@ -7577,10 +8036,10 @@
    "topPost14d": {
     "url": "https://www.instagram.com/p/DePYw13A70F/",
     "date": "2026-10-08",
-    "likes": 695
+    "likes": 1085
    },
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "nuser9458@gmail.com",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -7602,25 +8061,25 @@
    "notes": "Unverified handle; several copycat 'bigfoot vlog' accounts exist.",
    "why": "Format-defining AI vlog character from 2025.",
    "scores": {
-    "fame": 51.9,
-    "momentum": 18.4,
+    "fame": 52,
+    "momentum": 20,
     "distinctiveness": 55,
     "sufficiency": 0.6,
-    "index": 43.7,
+    "index": 44.2,
     "fameParts": {
-     "followers": 0.5949,
-     "engagement": 0.464,
-     "viral": 0.6182,
+     "followers": 0.5948671718814778,
+     "engagement": 0.4650545461671891,
+     "viral": 0.6182099476915195,
      "consistency": 0.2,
-     "longevity": 0.6836,
+     "longevity": 0.6876712328767123,
      "recognizability": 0.36
     },
     "momentumParts": {
-     "engagement": 0.2105,
-     "viral": 0,
-     "frequency": 0.0714,
+     "engagement": 0.2588574345461371,
+     "viral": 0.008857434546137077,
+     "frequency": 0.07142857142857142,
      "growth": 0,
-     "recency": 1
+     "recency": 0.9629629629629629
     },
     "distinctParts": {
      "visual": 4,
@@ -7632,8 +8091,8 @@
    },
    "heat": "DORMANT",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
    },
    "phase": null,
    "debut": {
@@ -7646,7 +8105,16 @@
     "likes": 297057,
     "url": "https://www.instagram.com/p/DKSml-3A7rF/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2025-05-28",
+     "end": "2026-10-08",
+     "posts": 30,
+     "avgLikes": 22103,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2025-05-28",
@@ -7690,10 +8158,14 @@
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: no character links observed"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
-    "index": 34,
-    "fame": 14,
-    "momentum": 35,
+    "index": 35,
+    "fame": 19,
+    "momentum": 36,
     "distinctiveness": 27
    },
    "externalLinks": [],
@@ -7724,42 +8196,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 183781,
-   "following": null,
+   "followers": 183631,
+   "following": 69,
    "posts": 43,
-   "postsAnalysed": 22,
+   "postsAnalysed": 30,
    "fullHistory": "PARTIAL (22/43)",
    "firstPost": "2026-04-13",
    "firstPostBasis": "Oldest of 22 sampled non-pinned posts (pinned date 2025-07-30)",
    "lastPost": "2026-10-06",
-   "daysSinceLastPost": 3,
+   "daysSinceLastPost": 6,
    "posts7d": 2,
-   "posts14d": 4,
-   "posts30d": 9,
-   "postsPerWeek": 2,
-   "avgLikes": 634,
-   "medianLikes": 187,
-   "avgComments": 116,
+   "posts14d": 3,
+   "posts30d": 8,
+   "postsPerWeek": 1.5,
+   "avgLikes": 637,
+   "medianLikes": 189,
+   "avgComments": 118,
    "likesHidden": 0,
-   "engagementRate": 0.00408094416724253,
+   "engagementRate": 0.004107421949452979,
    "engagementLevel": "Low",
-   "avgLikes14d": 100,
+   "avgLikes14d": 123,
    "avgComments14d": 19,
-   "maxLikes": 4238,
+   "maxLikes": 4248,
    "topPost": {
     "url": "https://www.instagram.com/p/DdbhN3RBgYT/",
     "date": "2026-09-18",
-    "likes": 4238,
-    "comments": 654,
-    "caption": "EXCLUSIV..."
+    "likes": 4248,
+    "comments": 653,
+    "caption": "EXCLUSIVE: AI actress @tillynorwood glitches and starts speaking CANTONESE during her interview with @piersmorgan and real-life actor Tom Co"
    },
    "topPost14d": {
     "url": "https://www.instagram.com/p/Dd6p3TAx8W1/",
     "date": "2026-09-30",
-    "likes": 183
+    "likes": 191
    },
    "topPostNote": null,
-   "bio": "(not captured)",
+   "bio": "Welcome to the Tillyverse! \nJust another AI Actor.\nYou’ll either get it or pretend you don’t.",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -7781,25 +8253,25 @@
    "notes": "Comments-to-likes ratio unusually high (debate-driven).",
    "why": "High press recognisability, low IG engagement.",
    "scores": {
-    "fame": 41.2,
-    "momentum": 14.3,
+    "fame": 40.7,
+    "momentum": 12.9,
     "distinctiveness": 45,
     "sufficiency": 0.8,
-    "index": 39.7,
+    "index": 39.1,
     "fameParts": {
-     "followers": 0.5661,
-     "engagement": 0.2005,
-     "viral": 0.1568,
-     "consistency": 0.45,
-     "longevity": 0.2534,
+     "followers": 0.5659864998160795,
+     "engagement": 0.2010348580838376,
+     "viral": 0.1570461270183532,
+     "consistency": 0.4,
+     "longevity": 0.25338738223183466,
      "recognizability": 1
     },
     "momentumParts": {
-     "engagement": 0,
+     "engagement": 0.022476277859849514,
      "viral": 0,
-     "frequency": 0.2857,
+     "frequency": 0.21428571428571427,
      "growth": 0,
-     "recency": 1
+     "recency": 0.8888888888888888
     },
     "distinctParts": {
      "visual": 3,
@@ -7811,8 +8283,8 @@
    },
    "heat": "DORMANT",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 3d before capture"
+    "code": "STABLE",
+    "basis": "Last post 6d before capture"
    },
    "phase": null,
    "debut": {
@@ -7825,7 +8297,16 @@
     "likes": 4238,
     "url": "https://www.instagram.com/p/DdbhN3RBgYT/"
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2025-07-30",
+     "end": "2026-10-06",
+     "posts": 30,
+     "avgLikes": 906,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-04-13",
@@ -7881,10 +8362,14 @@
     },
     "basis": "Identity: canonical account clear (badge, self-declared AI/creator, or referenced by other characters) | Fame: followers + visible likes/comments on >=12 posts | Live: dated posts within last 14 days | Timeline: only a recent sample loaded - debut not verifiable | Social: 1-2 character links or only brands/creators"
    },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
+   },
    "ranks": {
     "index": 39,
-    "fame": 31,
-    "momentum": 38,
+    "fame": 32,
+    "momentum": 39,
     "distinctiveness": 36
    },
    "externalLinks": [
@@ -8084,32 +8569,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 66,
-   "following": null,
-   "posts": 30,
-   "postsAnalysed": null,
+   "followers": 76,
+   "following": 3,
+   "posts": 38,
+   "postsAnalysed": 30,
    "fullHistory": null,
    "firstPost": "2026-09-24",
    "firstPostBasis": null,
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": null,
-   "posts14d": null,
-   "posts30d": null,
-   "postsPerWeek": null,
-   "avgLikes": 28,
-   "medianLikes": null,
-   "avgComments": null,
-   "likesHidden": null,
-   "engagementRate": 0.424242424242424,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 0,
+   "posts7d": 13,
+   "posts14d": 20,
+   "posts30d": 30,
+   "postsPerWeek": 10,
+   "avgLikes": 22,
+   "medianLikes": 12,
+   "avgComments": 1,
+   "likesHidden": 0,
+   "engagementRate": 0.30372807017543857,
    "engagementLevel": "Very high",
-   "avgLikes14d": null,
+   "avgLikes14d": 25,
    "avgComments14d": null,
-   "maxLikes": 101,
-   "topPost": null,
-   "topPost14d": null,
+   "maxLikes": 119,
+   "topPost": {
+    "url": "https://www.instagram.com/p/DeKDoR-MXg9/",
+    "date": "2026-10-06",
+    "likes": 119,
+    "comments": 5,
+    "caption": "Je me suis fait de nouveaux amis 🥰 avec @tony_ravioliano 💘"
+   },
+   "topPost14d": {
+    "url": "https://www.instagram.com/p/DeKDoR-MXg9/",
+    "date": "2026-10-06",
+    "likes": 119
+   },
    "topPostNote": null,
-   "bio": "Oui Monsieur. / CA: 8Ay16b…pump / @jean_philanthrope Love U 💋",
+   "bio": "Oui Monsieur.\nCA : 8Ay16b69QA4vRoGry4sG6HvgnkZfAPBsLPkEEEkppump\n @jean_philanthrope Love U 💋\n@jakeorlhabit Sister 🤦",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -8131,23 +8626,23 @@
    "notes": null,
    "why": null,
    "scores": {
-    "fame": 3.1,
-    "momentum": 10,
+    "fame": 13.5,
+    "momentum": 25,
     "distinctiveness": 30,
     "sufficiency": 0.3,
-    "index": 14.6,
+    "index": 22.7,
     "fameParts": {
      "followers": 0,
      "engagement": 0,
      "viral": 0,
-     "consistency": 0,
-     "longevity": 0.1908,
+     "consistency": 1,
+     "longevity": 0.23191343864672403,
      "recognizability": 0.12
     },
     "momentumParts": {
      "engagement": 0,
      "viral": 0,
-     "frequency": 0,
+     "frequency": 1,
      "growth": 0,
      "recency": 1
     },
@@ -8159,10 +8654,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "DORMANT",
+   "heat": "COOLING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": null,
    "debut": {
@@ -8175,7 +8670,16 @@
     "likes": 101,
     "url": null
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-25",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 22,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-09-24",
@@ -8215,6 +8719,10 @@
      "SOCIAL GRAPH": "NO"
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: last post >14 days ago or not captured | Timeline: no post history captured | Social: no character links observed"
+   },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
    },
    "ranks": null,
    "externalLinks": [],
@@ -9262,7 +9770,7 @@
    "firstPost": "2026-10-02",
    "firstPostBasis": "Oldest analysed post",
    "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
+   "daysSinceLastPost": 4,
    "posts7d": 39,
    "posts14d": 37,
    "posts30d": 37,
@@ -9312,10 +9820,10 @@
    "why": null,
    "scores": {
     "fame": 68.5,
-    "momentum": 84.1,
+    "momentum": 83.7,
     "distinctiveness": 35.0,
     "sufficiency": 0.6,
-    "index": 65.2,
+    "index": 65.1,
     "fameParts": {
      "followers": 0.7439521233063509,
      "engagement": 0.7434274008006618,
@@ -9329,7 +9837,7 @@
      "viral": 0.7223250053407817,
      "frequency": 1.0,
      "growth": 1.0,
-     "recency": 1.0
+     "recency": 0.9629629629629629
     },
     "distinctParts": {
      "visual": 2,
@@ -9341,8 +9849,8 @@
    },
    "heat": "ON FIRE",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
    },
    "phase": null,
    "debut": {
@@ -9413,8 +9921,8 @@
    },
    "ranks": {
     "index": 12,
-    "fame": 4,
-    "momentum": 2,
+    "fame": 3,
+    "momentum": 1,
     "distinctiveness": 40
    },
    "degree": 0,
@@ -9450,7 +9958,7 @@
    "firstPost": "2026-09-29",
    "firstPostBasis": "Oldest analysed post",
    "lastPost": "2026-10-09",
-   "daysSinceLastPost": 1,
+   "daysSinceLastPost": 4,
    "posts7d": 7,
    "posts14d": 12,
    "posts30d": 12,
@@ -9500,10 +10008,10 @@
    "why": null,
    "scores": {
     "fame": 46.7,
-    "momentum": 64.7,
+    "momentum": 63.7,
     "distinctiveness": 60.0,
     "sufficiency": 0.7,
-    "index": 58.3,
+    "index": 58.0,
     "fameParts": {
      "followers": 0.27515293820844744,
      "engagement": 0.6102823301286939,
@@ -9516,8 +10024,8 @@
      "engagement": 0.6102823301286939,
      "viral": 0.5557233184064962,
      "frequency": 0.8571428571428571,
-     "growth": 0.4402447011335161,
-     "recency": 1.0
+     "growth": 0.3946673602107813,
+     "recency": 0.9629629629629629
     },
     "distinctParts": {
      "visual": 4,
@@ -9529,8 +10037,8 @@
    },
    "heat": "RISING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
    },
    "phase": null,
    "debut": {
@@ -9607,9 +10115,9 @@
     "auto": false
    },
    "ranks": {
-    "index": 18,
-    "fame": 26,
-    "momentum": 8,
+    "index": 20,
+    "fame": 28,
+    "momentum": 9,
     "distinctiveness": 24
    },
    "degree": 0,
@@ -9645,7 +10153,7 @@
    "firstPost": "2026-10-01",
    "firstPostBasis": "Oldest analysed post",
    "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
+   "daysSinceLastPost": 4,
    "posts7d": 8,
    "posts14d": 11,
    "posts30d": 11,
@@ -9695,10 +10203,10 @@
    "why": null,
    "scores": {
     "fame": 51.2,
-    "momentum": 77.0,
+    "momentum": 75.8,
     "distinctiveness": 35.0,
     "sufficiency": 0.6,
-    "index": 57.0,
+    "index": 56.7,
     "fameParts": {
      "followers": 0.5905367056076252,
      "engagement": 0.7177603542262398,
@@ -9711,8 +10219,8 @@
      "engagement": 0.7177603542262398,
      "viral": 0.6144761486146801,
      "frequency": 0.7857142857142857,
-     "growth": 0.9836227341754228,
-     "recency": 1.0
+     "growth": 0.9283016549089101,
+     "recency": 0.9629629629629629
     },
     "distinctParts": {
      "visual": 2,
@@ -9724,8 +10232,8 @@
    },
    "heat": "HOT",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
    },
    "phase": null,
    "debut": {
@@ -9802,8 +10310,8 @@
     "auto": true
    },
    "ranks": {
-    "index": 20,
-    "fame": 17,
+    "index": 22,
+    "fame": 21,
     "momentum": 4,
     "distinctiveness": 41
    },
@@ -10333,8 +10841,8 @@
     "jean-phil",
     "archibald-brown",
     "benjamin-stachio",
-    "percival-ashcroft",
     "brigitte-macaron",
+    "percival-ashcroft",
     "imran-poppadumb"
    ],
    "hub": "jean-phil"
@@ -10345,8 +10853,8 @@
    "tagline": "Monkeys, greyhounds and a gorilla with running fight records and call-outs.",
    "members": [
     "abu-nutty",
-    "casper-the-italian-greyhound",
     "candy-the-greyhound",
+    "casper-the-italian-greyhound",
     "pik-vik",
     "don-gorillo-mkrtchyan"
    ],
@@ -10358,10 +10866,10 @@
    "tagline": "Characters that label themselves 'Made with @higgsfield.ai' or run its partner tag.",
    "members": [
     "charles-robinson",
-    "lord-farquaad",
-    "gru",
     "milton-bumford",
     "don-nuger",
+    "gru",
+    "lord-farquaad",
     "bill-smith-prince"
    ],
    "hub": "charles-robinson"
@@ -10371,8 +10879,8 @@
    "name": "Brazil AI",
    "tagline": "A Brazilian mini-universe of serialized episodes and a caramel-dog spin-off.",
    "members": [
-    "caramelinho",
-    "cuca-beludo"
+    "cuca-beludo",
+    "caramelinho"
    ],
    "hub": "cuca-beludo"
   },
@@ -10422,9 +10930,9 @@
    "tagline": "Pre-2026 CGI and agency-run virtual influencers: the category benchmarks.",
    "members": [
     "nobody-sausage",
+    "imma",
     "lil-miquela",
     "aitana-lopez",
-    "imma",
     "mia-zelu",
     "tilly-norwood",
     "kyra",
@@ -10438,10 +10946,10 @@
    "tagline": "Characters with no observed links to another universe yet.",
    "members": [
     "miron",
+    "tony-ravioliano",
     "vulu-zamal",
     "edmond-lebon",
-    "bigfoot-vlog",
-    "tony-ravioliano"
+    "bigfoot-vlog"
    ],
    "hub": "bigfoot-vlog"
   }
