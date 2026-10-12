@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "fit_aitana",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 404082,
+    "following": 494,
+    "posts": 378,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 5,
+    "posts14d": 6,
+    "posts30d": 12,
+    "postsPerWeek": 3,
+    "avgLikes": 697,
+    "medianLikes": 669,
+    "avgComments": 75,
+    "likesHidden": 2,
+    "engagementRate": 0.0019080285684588772,
+    "avgLikes14d": 727,
+    "maxLikes": 2697,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeHf1OyIzas/",
+      "date": "2026-10-05",
+      "likes": 2697,
+      "comments": 127,
+      "caption": "Just kee..."
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeHf1OyIzas/",
+      "date": "2026-10-05",
+      "likes": 999
+    },
+    "bio": "Virtual fitness & lifestyle \nPowered by @theclueless.ai \n@theclueless.tech Ambassador",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 47,
+    "momentum": 23.8,
+    "index": 44.1,
+    "fameParts": {
+      "followers": 0.6516173762615007,
+      "engagement": 0.2108081945245024,
+      "viral": 0.10772023661322283,
+      "consistency": 0.6,
+      "longevity": 0.6309967199348903,
+      "recognizability": 0.88
+    },
+    "momentumParts": {
+      "engagement": 0.2108081945245024,
+      "viral": 0,
+      "frequency": 0.42857142857142855,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "DORMANT",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2026-09-10",
+    "end": "2026-10-11",
+    "posts": 11,
+    "avgLikes": 665,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
