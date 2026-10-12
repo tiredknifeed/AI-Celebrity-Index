@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "abu.shalab",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 536200,
+    "following": 0,
+    "posts": 30,
+    "postsAnalysed": 28,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 5,
+    "posts14d": 19,
+    "posts30d": 27,
+    "postsPerWeek": 9.5,
+    "avgLikes": 22515,
+    "medianLikes": 9012,
+    "avgComments": 546,
+    "likesHidden": 0,
+    "engagementRate": 0.043009138381201045,
+    "avgLikes14d": 37347,
+    "maxLikes": 1392520,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dduf1zGNri-/",
+      "date": "2026-09-25",
+      "likes": 1392520,
+      "comments": 16271,
+      "caption": "Throwback to when i won red bull dance"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd4WBQrt48X/",
+      "date": "2026-09-29",
+      "likes": 291784
+    },
+    "bio": "Official $ABU👇",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 63.5,
+    "momentum": 76,
+    "index": 70.5,
+    "fameParts": {
+      "followers": 0.6823317024117153,
+      "engagement": 0.588117987824738,
+      "viral": 0.7859503603559232,
+      "consistency": 1,
+      "longevity": 0.19084850188786495,
+      "recognizability": 0.36
+    },
+    "momentumParts": {
+      "engagement": 0.588117987824738,
+      "viral": 0.6162653684090433,
+      "frequency": 1,
+      "growth": 0.9995511553074348,
+      "recency": 1
+    }
+  },
+  "heat": "HOT",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2026-10-10",
+    "end": "2026-10-11",
+    "posts": 3,
+    "avgLikes": 3893,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
