@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "handle": "jean_philanthrope",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 243988,
+    "following": 1,
+    "posts": 12,
+    "postsAnalysed": 12,
+    "lastPost": "2026-10-07",
+    "daysSinceLastPost": 5,
+    "posts7d": 1,
+    "posts14d": 3,
+    "posts30d": 12,
+    "postsPerWeek": 1.5,
+    "avgLikes": 298560,
+    "medianLikes": 73527,
+    "avgComments": 7858,
+    "likesHidden": 0,
+    "engagementRate": 1.2558752889486369,
+    "avgLikes14d": 8484,
+    "maxLikes": 1711091,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Ddb0QUyqnhG/",
+      "date": "2026-09-18",
+      "likes": 1711091,
+      "comments": 53170,
+      "caption": "Elle m’appelle le soir, elle t’appelle bout d’chou"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd9NfF5iq_Y/",
+      "date": "2026-10-01",
+      "likes": 9345
+    },
+    "bio": "Oui Madame.",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 63.8,
+    "momentum": 47.4,
+    "index": 70.6,
+    "fameParts": {
+      "followers": 0.5968421167671214,
+      "engagement": 0.8687579055166015,
+      "viral": 0.808318276749233,
+      "consistency": 0.6,
+      "longevity": 0.03424657534246575,
+      "recognizability": 0.6
+    },
+    "momentumParts": {
+      "engagement": 0.48215016496113106,
+      "viral": 0.24264482642871277,
+      "frequency": 0.21428571428571427,
+      "growth": 0.7957713833585792,
+      "recency": 0.9259259259259259
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 5d before capture"
+  },
+  "period": null,
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
