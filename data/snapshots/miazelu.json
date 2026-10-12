@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "miazelu",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 282850,
+    "following": 320,
+    "posts": 154,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-01",
+    "daysSinceLastPost": 11,
+    "posts7d": 0,
+    "posts14d": 1,
+    "posts30d": 3,
+    "postsPerWeek": 0.5,
+    "avgLikes": 1978,
+    "medianLikes": 1865,
+    "avgComments": 109,
+    "likesHidden": 0,
+    "engagementRate": 0.007377585292557893,
+    "avgLikes14d": 538,
+    "maxLikes": 69616,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DZk2MZdig1u/",
+      "date": "2026-06-14",
+      "likes": 69616,
+      "comments": 2598,
+      "caption": "zoomed in and emotionally unprepared 😂🫪 2-1 at the break. 🥳\n\nwhere are you watching from? drop your country and who you’ve got tonight.🤍"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd9JtnIC7AY/",
+      "date": "2026-10-01",
+      "likes": 538
+    },
+    "bio": "Endless Summer - out now ↓\nby @zeluhouse 📩",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 49.1,
+    "momentum": 14.5,
+    "index": 43.5,
+    "fameParts": {
+      "followers": 0.612889045769107,
+      "engagement": 0.32405657181529013,
+      "viral": 0.46067726648716034,
+      "consistency": 0.15,
+      "longevity": 0.47500828833458525,
+      "recognizability": 0.88
+    },
+    "momentumParts": {
+      "engagement": 0.18269556891659733,
+      "viral": 0,
+      "frequency": 0.07142857142857142,
+      "growth": 0,
+      "recency": 0.7037037037037037
+    }
+  },
+  "heat": "DORMANT",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 11d before capture"
+  },
+  "period": {
+    "start": "2026-06-12",
+    "end": "2026-10-01",
+    "posts": 30,
+    "avgLikes": 5795,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
