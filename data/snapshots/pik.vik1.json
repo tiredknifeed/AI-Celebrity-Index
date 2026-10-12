@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "pik.vik1",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 86992,
+    "following": 13,
+    "posts": 116,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 9,
+    "posts14d": 15,
+    "posts30d": 30,
+    "postsPerWeek": 7.5,
+    "avgLikes": 5641,
+    "medianLikes": 2594,
+    "avgComments": 56,
+    "likesHidden": 0,
+    "engagementRate": 0.06548878057752437,
+    "avgLikes14d": 10228,
+    "maxLikes": 197219,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdgdmnugF9W/",
+      "date": "2026-09-20",
+      "likes": 197219,
+      "comments": 1479,
+      "caption": "When the stack isn’t heavy enough, you pull the whole machine down! 🚣‍♂️💥😼\n\n•Shadow hitting the seated cable row! Signaled to stack the m"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd6Anomgs5t/",
+      "date": "2026-09-30",
+      "likes": 52953
+    },
+    "bio": "AI Stories • Real Characters\nShadow & Milo’s World\n💚 Higgsfield Creative Partner\n🚀 Start creating with Higgsfield ↓",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 55.4,
+    "momentum": 51.1,
+    "index": 60.2,
+    "fameParts": {
+      "followers": 0.4848698289144089,
+      "engagement": 0.4378390249313484,
+      "viral": 0.5737371880945863,
+      "consistency": 1,
+      "longevity": 0.42578319569076745,
+      "recognizability": 0.64
+    },
+    "momentumParts": {
+      "engagement": 0.4378390249313484,
+      "viral": 0.4309726424165332,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-09-16",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 19939,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
