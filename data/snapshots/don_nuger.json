@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "don_nuger",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 73073,
+    "following": 3,
+    "posts": 23,
+    "postsAnalysed": 18,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 2,
+    "posts7d": 8,
+    "posts14d": 13,
+    "posts30d": 18,
+    "postsPerWeek": 6.5,
+    "avgLikes": 43329,
+    "medianLikes": 7080,
+    "avgComments": 416,
+    "likesHidden": 0,
+    "engagementRate": 0.5986467870029515,
+    "avgLikes14d": 40586,
+    "maxLikes": 279278,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeVW54mhAtv/",
+      "date": "2026-10-11",
+      "likes": 279278,
+      "comments": 1570,
+      "caption": "👇\n\nOriginal biker and creator of the original video is: @laakeawong"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeVW54mhAtv/",
+      "date": "2026-10-11",
+      "likes": 279278
+    },
+    "bio": "Hi, Fellas!\nMade with:",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 51,
+    "momentum": 71.5,
+    "index": 58.3,
+    "fameParts": {
+      "followers": 0.46593923439994356,
+      "engagement": 0.6591946664918418,
+      "viral": 0.6115091814235354,
+      "consistency": 0.9,
+      "longevity": 0.14469113440703713,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.652094062758309,
+      "viral": 0.6115091814235354,
+      "frequency": 0.9285714285714286,
+      "growth": 0.6340013346587782,
+      "recency": 1
+    }
+  },
+  "heat": "HOT",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
+  },
+  "period": {
+    "start": "2026-09-23",
+    "end": "2026-10-11",
+    "posts": 18,
+    "avgLikes": 34129,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
