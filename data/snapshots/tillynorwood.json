@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "tillynorwood",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 183631,
+    "following": 69,
+    "posts": 43,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-06",
+    "daysSinceLastPost": 6,
+    "posts7d": 2,
+    "posts14d": 3,
+    "posts30d": 8,
+    "postsPerWeek": 1.5,
+    "avgLikes": 637,
+    "medianLikes": 189,
+    "avgComments": 118,
+    "likesHidden": 0,
+    "engagementRate": 0.004107421949452979,
+    "avgLikes14d": 123,
+    "maxLikes": 4248,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdbhN3RBgYT/",
+      "date": "2026-09-18",
+      "likes": 4248,
+      "comments": 653,
+      "caption": "EXCLUSIVE: AI actress @tillynorwood glitches and starts speaking CANTONESE during her interview with @piersmorgan and real-life actor Tom Co"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd6p3TAx8W1/",
+      "date": "2026-09-30",
+      "likes": 191
+    },
+    "bio": "Welcome to the Tillyverse! \nJust another AI Actor.\nYou’ll either get it or pretend you don’t.",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 40.7,
+    "momentum": 12.9,
+    "index": 39.1,
+    "fameParts": {
+      "followers": 0.5659864998160795,
+      "engagement": 0.2010348580838376,
+      "viral": 0.1570461270183532,
+      "consistency": 0.4,
+      "longevity": 0.25338738223183466,
+      "recognizability": 1
+    },
+    "momentumParts": {
+      "engagement": 0.022476277859849514,
+      "viral": 0,
+      "frequency": 0.21428571428571427,
+      "growth": 0,
+      "recency": 0.8888888888888888
+    }
+  },
+  "heat": "DORMANT",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 6d before capture"
+  },
+  "period": {
+    "start": "2025-07-30",
+    "end": "2026-10-06",
+    "posts": 30,
+    "avgLikes": 906,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
