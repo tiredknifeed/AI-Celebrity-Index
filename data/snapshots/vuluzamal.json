@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "vuluzamal",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 38932,
+    "following": 0,
+    "posts": 14,
+    "postsAnalysed": 14,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 8,
+    "posts14d": 13,
+    "posts30d": 13,
+    "postsPerWeek": 6.5,
+    "avgLikes": 5186,
+    "medianLikes": 1498,
+    "avgComments": 85,
+    "likesHidden": 0,
+    "engagementRate": 0.13540703448748245,
+    "avgLikes14d": 6613,
+    "maxLikes": 195840,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd5VDDURAPn/",
+      "date": "2026-09-30",
+      "likes": 195840,
+      "comments": 1887,
+      "caption": "felt slick"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd5J-VCx8GY/",
+      "date": "2026-09-30",
+      "likes": 23737
+    },
+    "bio": "ifa paris 22'\ndancer | singer | stylist\n👇 make videos like me!",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 40.2,
+    "momentum": 56.6,
+    "index": 49.6,
+    "fameParts": {
+      "followers": 0.39757667867583524,
+      "engagement": 0.42870812810833314,
+      "viral": 0.5729753501163668,
+      "consistency": 0.65,
+      "longevity": 0.05845121427129518,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.42870812810833314,
+      "viral": 0.3438564574480858,
+      "frequency": 0.9285714285714286,
+      "growth": 0.6044501874622863,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-09-30",
+    "end": "2026-10-12",
+    "posts": 14,
+    "avgLikes": 20130,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
