@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "tony_ravioliano",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 12737,
+    "following": 108,
+    "posts": 35,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 2,
+    "posts7d": 8,
+    "posts14d": 21,
+    "posts30d": 27,
+    "postsPerWeek": 10.5,
+    "avgLikes": 6729,
+    "medianLikes": 1053.5,
+    "avgComments": 63,
+    "likesHidden": 0,
+    "engagementRate": 0.5332626730522625,
+    "avgLikes14d": 4492,
+    "maxLikes": 81679,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeAQrgpT11j/",
+      "date": "2026-10-02",
+      "likes": 81679,
+      "comments": 1458,
+      "caption": "Can you jam like this?"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeGU32Zz3tn/",
+      "date": "2026-10-05",
+      "likes": 57219
+    },
+    "bio": "Espresso in one hand\nGilbert’s in the other 🥩 ☕️🕺\n10% off use code TONY 👇",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 41.6,
+    "momentum": 56.8,
+    "index": 50.6,
+    "fameParts": {
+      "followers": 0.27626678720253084,
+      "engagement": 0.4569876320756575,
+      "viral": 0.478027603005694,
+      "consistency": 1,
+      "longevity": 0.21762721774011026,
+      "recognizability": 0.24
+    },
+    "momentumParts": {
+      "engagement": 0.4131099368973551,
+      "viral": 0.43938506587396553,
+      "frequency": 1,
+      "growth": 0.4254697854607592,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
+  },
+  "period": {
+    "start": "2026-09-27",
+    "end": "2026-10-11",
+    "posts": 30,
+    "avgLikes": 6262,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
