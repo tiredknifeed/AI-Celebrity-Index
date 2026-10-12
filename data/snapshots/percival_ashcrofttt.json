@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "percival_ashcrofttt",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 9266,
+    "following": 1,
+    "posts": 54,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-10",
+    "daysSinceLastPost": 2,
+    "posts7d": 14,
+    "posts14d": 26,
+    "posts30d": 26,
+    "postsPerWeek": 13,
+    "avgLikes": 592,
+    "medianLikes": 108.5,
+    "avgComments": 6,
+    "likesHidden": 0,
+    "engagementRate": 0.06456399740988561,
+    "avgLikes14d": 1750,
+    "maxLikes": 56119,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd6zES-BvF5/",
+      "date": "2026-09-30",
+      "likes": 56119,
+      "comments": 701,
+      "caption": "Bobbinnnn n weavinnn\n\nReference video: @calebrownnnnn"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd_1HzNoS-L/",
+      "date": "2026-10-02",
+      "likes": 24239
+    },
+    "bio": "Road to 100K 🚀\n8.3K / 100K\nFollow the journey.\n• Made in @higgsfield.ai",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 34,
+    "momentum": 44.5,
+    "index": 50.8,
+    "fameParts": {
+      "followers": 0.24172307396678405,
+      "engagement": 0.19308042668073,
+      "viral": 0.4372774809029112,
+      "consistency": 1,
+      "longevity": 0.29295750392918746,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.19308042668073,
+      "viral": 0.3461286746714132,
+      "frequency": 1,
+      "growth": 0.2752554779657229,
+      "recency": 1
+    }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
+  },
+  "period": {
+    "start": "2026-09-23",
+    "end": "2026-10-10",
+    "posts": 30,
+    "avgLikes": 5640,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
