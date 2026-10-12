@@ -1,15 +1,76 @@
 {
   "schema": 1,
   "handle": "keekoiman",
-  "pending": {
-    "date": "2026-10-12",
-    "profile": {
-      "id": "sSYV3qNTwdkt2u2Sb",
-      "dataset": "OXwNn7sl9uMehkwdK"
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 35787,
+    "following": 24,
+    "posts": 101,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-09",
+    "daysSinceLastPost": 4,
+    "posts7d": 20,
+    "posts14d": 27,
+    "posts30d": 27,
+    "postsPerWeek": 13.5,
+    "avgLikes": 1236,
+    "medianLikes": 186,
+    "avgComments": 16,
+    "likesHidden": 0,
+    "engagementRate": 0.03495915649071823,
+    "avgLikes14d": 685,
+    "maxLikes": 56124,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd6zES-BvF5/",
+      "date": "2026-09-30",
+      "likes": 56124,
+      "comments": 701,
+      "caption": "Bobbinnnn n weavinnn\n\nReference video: @calebrownnnnn"
     },
-    "posts": {
-      "id": "wwZGhg0kQwMRMFWCn",
-      "dataset": "q3Ga1ed0BPWQUpAOA"
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeKzqNJNu74/",
+      "date": "2026-10-06",
+      "likes": 10064
+    },
+    "bio": "35k / 100k followers (Sunday)\n📥 DM me for collabs",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 41.1,
+    "momentum": 38.2,
+    "index": 36.3,
+    "fameParts": {
+      "followers": 0.3884313233258183,
+      "engagement": 0.2730046176881993,
+      "viral": 0.4372871539890322,
+      "consistency": 1,
+      "longevity": 0.40172854951305703,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.20892264287310636,
+      "viral": 0.2506926570252985,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 0.9629629629629629
     }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
+  },
+  "period": {
+    "start": "2026-09-28",
+    "end": "2026-10-09",
+    "posts": 30,
+    "avgLikes": 3078,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
   }
 }
