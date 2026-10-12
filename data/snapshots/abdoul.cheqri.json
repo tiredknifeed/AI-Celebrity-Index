@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "abdoul.cheqri",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 118907,
+    "following": 0,
+    "posts": 18,
+    "postsAnalysed": 18,
+    "lastPost": "2026-10-08",
+    "daysSinceLastPost": 4,
+    "posts7d": 4,
+    "posts14d": 17,
+    "posts30d": 17,
+    "postsPerWeek": 8.5,
+    "avgLikes": 6011,
+    "medianLikes": 2225,
+    "avgComments": 137,
+    "likesHidden": 0,
+    "engagementRate": 0.05170497391518863,
+    "avgLikes14d": 15310,
+    "maxLikes": 697221,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd9RXFtIbr1/",
+      "date": "2026-10-01",
+      "likes": 697221,
+      "comments": 54226,
+      "caption": "Yala... (pinned)"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd7IwUgMkba/",
+      "date": "2026-09-30",
+      "likes": 87469
+    },
+    "bio": "الأصل موجود، والباقي يحاول 😏\nActor • Dancer • Comedian\nBorn iconic. Here for the plot.\nCollabs 📩 abdoul.cheqri@gmail.com",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 50.6,
+    "momentum": 64.1,
+    "index": 58.9,
+    "fameParts": {
+      "followers": 0.5188018555215528,
+      "engagement": 0.4447366819921542,
+      "viral": 0.710842614850012,
+      "consistency": 0.85,
+      "longevity": 0.10210900204132241,
+      "recognizability": 0.24
+    },
+    "momentumParts": {
+      "engagement": 0.4447366819921542,
+      "viral": 0.4854635403572938,
+      "frequency": 1,
+      "growth": 0.7845056279117497,
+      "recency": 0.9629629629629629
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
+  },
+  "period": {
+    "start": "2026-09-29",
+    "end": "2026-10-08",
+    "posts": 18,
+    "avgLikes": 17424,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
