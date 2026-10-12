@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "handle": "kyraonig",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 247270,
+    "following": 1082,
+    "posts": 138,
+    "postsAnalysed": 30,
+    "lastPost": "2026-09-22",
+    "daysSinceLastPost": 20,
+    "posts7d": 0,
+    "posts14d": 0,
+    "posts30d": 1,
+    "postsPerWeek": 0,
+    "avgLikes": 3055,
+    "medianLikes": 1193,
+    "avgComments": 68,
+    "likesHidden": 0,
+    "engagementRate": 0.012632614820506599,
+    "avgLikes14d": null,
+    "maxLikes": 21888,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DaftyHNP0qz/",
+      "date": "2026-07-07",
+      "likes": 21888,
+      "comments": 309,
+      "caption": "somewhe... (photo)"
+    },
+    "topPost14d": null,
+    "bio": "India's first AI Influencer \nAs seen on Shark Tank India 🇮🇳 \ncollab - aihumankyra@gmail.com",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 48.8,
+    "momentum": 3.7,
+    "index": 37.7,
+    "fameParts": {
+      "followers": 0.5982928572092225,
+      "engagement": 0.3712528036446433,
+      "viral": 0.3350515200100055,
+      "consistency": 0.05,
+      "longevity": 0.8657534246575342,
+      "recognizability": 0.76
+    },
+    "momentumParts": {
+      "engagement": 0,
+      "viral": 0,
+      "frequency": 0,
+      "growth": 0,
+      "recency": 0.37037037037037035
+    }
+  },
+  "heat": "DORMANT",
+  "status": {
+    "code": "COOLING",
+    "basis": "Last post 20d before capture"
+  },
+  "period": {
+    "start": "2024-11-06",
+    "end": "2026-09-22",
+    "posts": 29,
+    "avgLikes": 3938,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
