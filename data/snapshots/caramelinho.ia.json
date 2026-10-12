@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "caramelinho.ia",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 37841,
+    "following": 14,
+    "posts": 16,
+    "postsAnalysed": 16,
+    "lastPost": "2026-10-10",
+    "daysSinceLastPost": 2,
+    "posts7d": 14,
+    "posts14d": 16,
+    "posts30d": 16,
+    "postsPerWeek": 8,
+    "avgLikes": 30512,
+    "medianLikes": 27559,
+    "avgComments": 337,
+    "likesHidden": 0,
+    "engagementRate": 0.8152136571443672,
+    "avgLikes14d": 23841,
+    "maxLikes": 74355,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeSqrPoxWk-/",
+      "date": "2026-10-09",
+      "likes": 74355,
+      "comments": 388,
+      "caption": "PARTE 03: hora de ver se o caramelinho aprendeu tudo certinha, caçando sozinho um skinwalker bizarro 🥊🐕\n\nFeito com: @higgsfield.ai #higgsf"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeSqrPoxWk-/",
+      "date": "2026-10-09",
+      "likes": 74355
+    },
+    "bio": "(empty)",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 44.8,
+    "momentum": 67.2,
+    "index": 62.3,
+    "fameParts": {
+      "followers": 0.39449065117625115,
+      "engagement": 0.6211176689254827,
+      "viral": 0.467827544490208,
+      "consistency": 0.8,
+      "longevity": 0.08164799306236992,
+      "recognizability": 0.24
+    },
+    "momentumParts": {
+      "engagement": 0.594331116934139,
+      "viral": 0.467827544490208,
+      "frequency": 1,
+      "growth": 0.649488038106272,
+      "recency": 1
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
+  },
+  "period": {
+    "start": "2026-10-04",
+    "end": "2026-10-10",
+    "posts": 16,
+    "avgLikes": 23841,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
