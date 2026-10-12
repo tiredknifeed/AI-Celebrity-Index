@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "lord.farquaad.sol",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 107212,
+    "following": 16,
+    "posts": 70,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 27,
+    "posts14d": 30,
+    "posts30d": 30,
+    "postsPerWeek": 15,
+    "avgLikes": 4024,
+    "medianLikes": 2799.5,
+    "avgComments": 45,
+    "likesHidden": 0,
+    "engagementRate": 0.03795050927135022,
+    "avgLikes14d": 7073,
+    "maxLikes": 379725,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdwhswgBSFq/",
+      "date": "2026-09-26",
+      "likes": 379725,
+      "comments": 2844,
+      "caption": "Feeling fresh"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeHIYfDh_Sa/",
+      "date": "2026-10-05",
+      "likes": 50353
+    },
+    "bio": "Some of you may die, but that is a sacrifice I am willing to make\nFarquaad parody\nEmail: lordfarquaadbusiness@gmail.com\nMade with @higgsfield.ai",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 53.1,
+    "momentum": 49.7,
+    "index": 55.5,
+    "fameParts": {
+      "followers": 0.5075608494224766,
+      "engagement": 0.40116449301196777,
+      "viral": 0.6448672976946352,
+      "consistency": 1,
+      "longevity": 0.33803921600570275,
+      "recognizability": 0.36
+    },
+    "momentumParts": {
+      "engagement": 0.40116449301196777,
+      "viral": 0.4255063376629875,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-10-10",
+    "end": "2026-10-12",
+    "posts": 9,
+    "avgLikes": 3680,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
