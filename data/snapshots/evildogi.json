@@ -1,15 +1,9 @@
 {
   "schema": 1,
   "handle": "evildogi",
-  "pending": {
+  "attempt": {
     "date": "2026-10-12",
-    "profile": {
-      "id": "qkYoqUp7AAhLen2B9",
-      "dataset": "0gNe21viBckwmrZHP"
-    },
-    "posts": {
-      "id": "aMrDqviPOKeZD0vQM",
-      "dataset": "txHdWT72xJUc4khbI"
-    }
+    "ok": false,
+    "error": "Apify runs ended SUCCEEDED / TIMED-OUT"
   }
 }
