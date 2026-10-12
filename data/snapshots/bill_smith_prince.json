@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "bill_smith_prince",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 15066,
+    "following": 2,
+    "posts": 14,
+    "postsAnalysed": 14,
+    "lastPost": "2026-10-09",
+    "daysSinceLastPost": 3,
+    "posts7d": 2,
+    "posts14d": 6,
+    "posts30d": 14,
+    "postsPerWeek": 3,
+    "avgLikes": 5849,
+    "medianLikes": 641,
+    "avgComments": 197,
+    "likesHidden": 0,
+    "engagementRate": 0.40130094251958054,
+    "avgLikes14d": 486,
+    "maxLikes": 52311,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Ddqo1FvtNyH/",
+      "date": "2026-09-24",
+      "likes": 52311,
+      "comments": 1767,
+      "caption": "No way he will survive this @gucci make me a new suit this one is 24 h old …is  becoming vintage stuff #boxing #gang #fashionstyle \n\nTag Guc"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd4VPIxN7SF/",
+      "date": "2026-09-29",
+      "likes": 2346
+    },
+    "bio": "Official $BillSmith \nCa:zYiF3rA8aWYUuDek3Z3po9NF4V5UDky5nji7Wr6pump\nMade with @higgsfield.ai",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 36.2,
+    "momentum": 30,
+    "index": 42.2,
+    "fameParts": {
+      "followers": 0.2944994907741414,
+      "engagement": 0.44177040534083056,
+      "viral": 0.42964825556760644,
+      "consistency": 0.7,
+      "longevity": 0.05845121427129518,
+      "recognizability": 0.24
+    },
+    "momentumParts": {
+      "engagement": 0.17165906731557334,
+      "viral": 0.09258200194487765,
+      "frequency": 0.42857142857142855,
+      "growth": 0.3507871869730339,
+      "recency": 1
+    }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 3d before capture"
+  },
+  "period": {
+    "start": "2026-09-22",
+    "end": "2026-10-09",
+    "posts": 14,
+    "avgLikes": 11883,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
