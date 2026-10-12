@@ -1,15 +1,76 @@
 {
   "schema": 1,
   "handle": "itsarchiepimm",
-  "pending": {
-    "date": "2026-10-12",
-    "profile": {
-      "id": "KIBFM2lsNmcuqggJM",
-      "dataset": "x07Hx9rxen5D0ZuOa"
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 5306,
+    "following": 5,
+    "posts": 35,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 14,
+    "posts14d": 30,
+    "posts30d": 30,
+    "postsPerWeek": 15,
+    "avgLikes": 888,
+    "medianLikes": 124,
+    "avgComments": 17,
+    "likesHidden": 0,
+    "engagementRate": 0.17049880638271142,
+    "avgLikes14d": 1095,
+    "maxLikes": 9203,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeKpnW3yv-p/",
+      "date": "2026-10-06",
+      "likes": 9203,
+      "comments": 169,
+      "caption": "Bang Gang 😂 #nyc #archiepimm #dancetrend #fyp #les"
     },
-    "posts": {
-      "id": "03kYgk2MiVDYOUMhe",
-      "dataset": "cUNvgB0gCn30Rolw6"
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeKpnW3yv-p/",
+      "date": "2026-10-06",
+      "likes": 9203
+    },
+    "bio": "UK lad finding myself in NYC 🇬🇧🗽\nNYC • fashion • culture • chaos\nBrands / collabs: DM ✉️",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 28.4,
+    "momentum": 43.7,
+    "index": 33.6,
+    "fameParts": {
+      "followers": 0.18119181141157759,
+      "engagement": 0.23710324144465023,
+      "viral": 0.2409823555066396,
+      "consistency": 1,
+      "longevity": 0.21762721774011026,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.23710324144465023,
+      "viral": 0.2409823555066396,
+      "frequency": 1,
+      "growth": 0.2899068982585241,
+      "recency": 1
     }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-10-03",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 1095,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
   }
 }
