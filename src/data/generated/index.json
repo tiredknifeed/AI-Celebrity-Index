@@ -8917,32 +8917,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 8220,
-   "following": null,
-   "posts": 54,
-   "postsAnalysed": null,
+   "followers": 8419,
+   "following": 0,
+   "posts": 61,
+   "postsAnalysed": 30,
    "fullHistory": null,
    "firstPost": null,
    "firstPostBasis": null,
-   "lastPost": "2026-10-09",
-   "daysSinceLastPost": 0,
-   "posts7d": null,
-   "posts14d": null,
-   "posts30d": null,
-   "postsPerWeek": null,
-   "avgLikes": 1382,
-   "medianLikes": null,
-   "avgComments": null,
-   "likesHidden": null,
-   "engagementRate": 0.168126520681265,
+   "lastPost": "2026-10-11",
+   "daysSinceLastPost": 1,
+   "posts7d": 16,
+   "posts14d": 27,
+   "posts30d": 27,
+   "postsPerWeek": 13.5,
+   "avgLikes": 1000,
+   "medianLikes": 43,
+   "avgComments": 13,
+   "likesHidden": 0,
+   "engagementRate": 0.12029338401235301,
    "engagementLevel": "Very high",
-   "avgLikes14d": null,
+   "avgLikes14d": 604,
    "avgComments14d": null,
-   "maxLikes": 17374,
-   "topPost": null,
-   "topPost14d": null,
+   "maxLikes": 17547,
+   "topPost": {
+    "url": "https://www.instagram.com/p/DdzqQqDsm7R/",
+    "date": "2026-09-27",
+    "likes": 17547,
+    "comments": 526,
+    "caption": "🕺🕺"
+   },
+   "topPost14d": {
+    "url": "https://www.instagram.com/p/DeKrMHcsl3d/",
+    "date": "2026-10-06",
+    "likes": 8729
+   },
    "topPostNote": null,
-   "bio": "Comedy • Dance • Entertainment / Road to 10K",
+   "bio": "Comedy • Dance • Entertainment🕺 \n🎯 Road to 10K followers (8K/10K)",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -8964,23 +8974,23 @@
    "notes": null,
    "why": null,
    "scores": {
-    "fame": 22.9,
-    "momentum": 10,
+    "fame": 32.5,
+    "momentum": 37.7,
     "distinctiveness": 30,
     "sufficiency": 0.3,
-    "index": 21.5,
+    "index": 33.2,
     "fameParts": {
-     "followers": 0.2287,
-     "engagement": 0.2851,
-     "viral": 0.31,
-     "consistency": 0,
-     "longevity": 0.293,
+     "followers": 0.23131512737985882,
+     "engagement": 0.25,
+     "viral": 0.3110507190207461,
+     "consistency": 1,
+     "longevity": 0.31413193400430683,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0,
-     "viral": 0,
-     "frequency": 0,
+     "engagement": 0.19525923465528294,
+     "viral": 0.2352411233731999,
+     "frequency": 1,
      "growth": 0,
      "recency": 1
     },
@@ -8992,10 +9002,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "DORMANT",
+   "heat": "COOLING",
    "status": {
-    "code": "ACTIVE_TODAY",
-    "basis": "Posted on capture day (09 Oct 2026)"
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
    },
    "phase": null,
    "debut": {
@@ -9008,7 +9018,16 @@
     "likes": 17374,
     "url": null
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-27",
+     "end": "2026-10-11",
+     "posts": 30,
+     "avgLikes": 1566,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-09",
@@ -9033,6 +9052,10 @@
      "SOCIAL GRAPH": "NO"
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: last post >14 days ago or not captured | Timeline: no post history captured | Social: no character links observed"
+   },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
    },
    "ranks": null,
    "externalLinks": [],
@@ -9063,32 +9086,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 23520,
-   "following": null,
-   "posts": 99,
-   "postsAnalysed": null,
+   "followers": 35787,
+   "following": 24,
+   "posts": 101,
+   "postsAnalysed": 30,
    "fullHistory": null,
    "firstPost": null,
    "firstPostBasis": null,
-   "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": null,
-   "posts14d": null,
-   "posts30d": null,
-   "postsPerWeek": null,
-   "avgLikes": 268,
-   "medianLikes": null,
-   "avgComments": null,
-   "likesHidden": null,
-   "engagementRate": 0.0113945578231293,
+   "lastPost": "2026-10-09",
+   "daysSinceLastPost": 4,
+   "posts7d": 20,
+   "posts14d": 27,
+   "posts30d": 27,
+   "postsPerWeek": 13.5,
+   "avgLikes": 1236,
+   "medianLikes": 186,
+   "avgComments": 16,
+   "likesHidden": 0,
+   "engagementRate": 0.03495915649071823,
    "engagementLevel": "Medium",
-   "avgLikes14d": null,
+   "avgLikes14d": 685,
    "avgComments14d": null,
-   "maxLikes": 55510,
-   "topPost": null,
-   "topPost14d": null,
+   "maxLikes": 56124,
+   "topPost": {
+    "url": "https://www.instagram.com/p/Dd6zES-BvF5/",
+    "date": "2026-09-30",
+    "likes": 56124,
+    "comments": 701,
+    "caption": "Bobbinnnn n weavinnn\n\nReference video: @calebrownnnnn"
+   },
+   "topPost14d": {
+    "url": "https://www.instagram.com/p/DeKzqNJNu74/",
+    "date": "2026-10-06",
+    "likes": 10064
+   },
    "topPostNote": null,
-   "bio": "20k / 100k followers / DM me for collabs",
+   "bio": "35k / 100k followers (Sunday)\n📥 DM me for collabs",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -9110,25 +9143,25 @@
    "notes": null,
    "why": null,
    "scores": {
-    "fame": 26.3,
-    "momentum": 10,
+    "fame": 41.1,
+    "momentum": 38.2,
     "distinctiveness": 30,
     "sufficiency": 0.3,
-    "index": 22.7,
+    "index": 36.3,
     "fameParts": {
-     "followers": 0.3429,
-     "engagement": 0.107,
-     "viral": 0.4361,
-     "consistency": 0,
-     "longevity": 0.3983,
+     "followers": 0.3884313233258183,
+     "engagement": 0.2730046176881993,
+     "viral": 0.4372871539890322,
+     "consistency": 1,
+     "longevity": 0.40172854951305703,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0,
-     "viral": 0,
-     "frequency": 0,
+     "engagement": 0.20892264287310636,
+     "viral": 0.2506926570252985,
+     "frequency": 1,
      "growth": 0,
-     "recency": 1
+     "recency": 0.9629629629629629
     },
     "distinctParts": {
      "visual": 2,
@@ -9138,10 +9171,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "DORMANT",
+   "heat": "COOLING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
    },
    "phase": null,
    "debut": {
@@ -9154,7 +9187,16 @@
     "likes": 55510,
     "url": null
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-28",
+     "end": "2026-10-09",
+     "posts": 30,
+     "avgLikes": 3078,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-08",
@@ -9179,6 +9221,10 @@
      "SOCIAL GRAPH": "NO"
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: last post >14 days ago or not captured | Timeline: no post history captured | Social: no character links observed"
+   },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
    },
    "ranks": null,
    "externalLinks": [],
@@ -9209,32 +9255,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 20917,
-   "following": null,
+   "followers": 21531,
+   "following": 0,
    "posts": 40,
-   "postsAnalysed": null,
+   "postsAnalysed": 30,
    "fullHistory": null,
    "firstPost": null,
    "firstPostBasis": null,
-   "lastPost": null,
-   "daysSinceLastPost": null,
-   "posts7d": null,
-   "posts14d": null,
-   "posts30d": null,
-   "postsPerWeek": null,
-   "avgLikes": null,
-   "medianLikes": null,
-   "avgComments": null,
-   "likesHidden": null,
-   "engagementRate": null,
+   "lastPost": "2026-10-11",
+   "daysSinceLastPost": 1,
+   "posts7d": 7,
+   "posts14d": 22,
+   "posts30d": 28,
+   "postsPerWeek": 11,
+   "avgLikes": 3960,
+   "medianLikes": 734,
+   "avgComments": 30,
+   "likesHidden": 5,
+   "engagementRate": 0.18531088065712562,
    "engagementLevel": "UNKNOWN",
-   "avgLikes14d": null,
+   "avgLikes14d": 3108,
    "avgComments14d": null,
-   "maxLikes": null,
-   "topPost": null,
-   "topPost14d": null,
+   "maxLikes": 81850,
+   "topPost": {
+    "url": "https://www.instagram.com/p/Dd0nZazNTVM/",
+    "date": "2026-09-28",
+    "likes": 81850,
+    "comments": 1647,
+    "caption": "You dare question my flow?"
+   },
+   "topPost14d": {
+    "url": "https://www.instagram.com/p/Dd4xYR-t0By/",
+    "date": "2026-09-29",
+    "likes": 13683
+   },
    "topPostNote": null,
-   "bio": null,
+   "bio": "Standing on business with immaculate manners\nCreative Partner @higgsfield.ai \n$LONGFORD",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -9256,25 +9312,25 @@
    "notes": null,
    "why": null,
    "scores": {
-    "fame": 13.5,
-    "momentum": 0,
+    "fame": 41.2,
+    "momentum": 51.6,
     "distinctiveness": 30,
     "sufficiency": 0.3,
-    "index": 15.2,
+    "index": 40.4,
     "fameParts": {
-     "followers": 0.3301,
-     "engagement": 0,
-     "viral": 0,
-     "consistency": 0,
-     "longevity": 0.2408,
+     "followers": 0.3332660502379947,
+     "engagement": 0.39942379648137805,
+     "viral": 0.47825467093699014,
+     "consistency": 1,
+     "longevity": 0.240823996531185,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0,
-     "viral": 0,
-     "frequency": 0,
-     "growth": 0,
-     "recency": 0
+     "engagement": 0.37312025253221914,
+     "viral": 0.2840453317401501,
+     "frequency": 1,
+     "growth": 0.431116678339469,
+     "recency": 1
     },
     "distinctParts": {
      "visual": 2,
@@ -9284,10 +9340,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "DORMANT",
+   "heat": "STEADY",
    "status": {
-    "code": "UNKNOWN",
-    "basis": "No dated post captured"
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
    },
    "phase": null,
    "debut": {
@@ -9296,7 +9352,16 @@
     "url": null
    },
    "peak": null,
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-24",
+     "end": "2026-10-10",
+     "posts": 25,
+     "avgLikes": 9123,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [],
    "evidence": [],
    "realPeopleTagged": [],
@@ -9313,6 +9378,10 @@
      "SOCIAL GRAPH": "NO"
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: last post >14 days ago or not captured | Timeline: no post history captured | Social: no character links observed"
+   },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
    },
    "ranks": null,
    "externalLinks": [],
@@ -9343,32 +9412,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 4831,
-   "following": null,
-   "posts": 31,
-   "postsAnalysed": null,
+   "followers": 5306,
+   "following": 5,
+   "posts": 35,
+   "postsAnalysed": 30,
    "fullHistory": null,
    "firstPost": null,
    "firstPostBasis": null,
-   "lastPost": null,
-   "daysSinceLastPost": null,
-   "posts7d": null,
-   "posts14d": null,
-   "posts30d": null,
-   "postsPerWeek": null,
-   "avgLikes": null,
-   "medianLikes": null,
-   "avgComments": null,
-   "likesHidden": null,
-   "engagementRate": null,
+   "lastPost": "2026-10-12",
+   "daysSinceLastPost": 0,
+   "posts7d": 14,
+   "posts14d": 30,
+   "posts30d": 30,
+   "postsPerWeek": 15,
+   "avgLikes": 888,
+   "medianLikes": 124,
+   "avgComments": 17,
+   "likesHidden": 0,
+   "engagementRate": 0.17049880638271142,
    "engagementLevel": "UNKNOWN",
-   "avgLikes14d": null,
+   "avgLikes14d": 1095,
    "avgComments14d": null,
-   "maxLikes": null,
-   "topPost": null,
-   "topPost14d": null,
+   "maxLikes": 9203,
+   "topPost": {
+    "url": "https://www.instagram.com/p/DeKpnW3yv-p/",
+    "date": "2026-10-06",
+    "likes": 9203,
+    "comments": 169,
+    "caption": "Bang Gang 😂 #nyc #archiepimm #dancetrend #fyp #les"
+   },
+   "topPost14d": {
+    "url": "https://www.instagram.com/p/DeKpnW3yv-p/",
+    "date": "2026-10-06",
+    "likes": 9203
+   },
    "topPostNote": null,
-   "bio": null,
+   "bio": "UK lad finding myself in NYC 🇬🇧🗽\nNYC • fashion • culture • chaos\nBrands / collabs: DM ✉️",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -9390,25 +9469,25 @@
    "notes": null,
    "why": null,
    "scores": {
-    "fame": 8.3,
-    "momentum": 0,
+    "fame": 28.4,
+    "momentum": 43.7,
     "distinctiveness": 30,
     "sufficiency": 0.3,
-    "index": 13.4,
+    "index": 33.6,
     "fameParts": {
-     "followers": 0.171,
-     "engagement": 0,
-     "viral": 0,
-     "consistency": 0,
-     "longevity": 0.1965,
+     "followers": 0.18119181141157759,
+     "engagement": 0.23710324144465023,
+     "viral": 0.2409823555066396,
+     "consistency": 1,
+     "longevity": 0.21762721774011026,
      "recognizability": 0.12
     },
     "momentumParts": {
-     "engagement": 0,
-     "viral": 0,
-     "frequency": 0,
-     "growth": 0,
-     "recency": 0
+     "engagement": 0.23710324144465023,
+     "viral": 0.2409823555066396,
+     "frequency": 1,
+     "growth": 0.2899068982585241,
+     "recency": 1
     },
     "distinctParts": {
      "visual": 2,
@@ -9418,10 +9497,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "DORMANT",
+   "heat": "COOLING",
    "status": {
-    "code": "UNKNOWN",
-    "basis": "No dated post captured"
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
    },
    "phase": null,
    "debut": {
@@ -9430,7 +9509,16 @@
     "url": null
    },
    "peak": null,
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-10-03",
+     "end": "2026-10-12",
+     "posts": 30,
+     "avgLikes": 1095,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [],
    "evidence": [],
    "realPeopleTagged": [],
@@ -9447,6 +9535,10 @@
      "SOCIAL GRAPH": "NO"
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: last post >14 days ago or not captured | Timeline: no post history captured | Social: no character links observed"
+   },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
    },
    "ranks": null,
    "externalLinks": [],
@@ -9477,32 +9569,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 2537,
-   "following": null,
-   "posts": 16,
-   "postsAnalysed": null,
+   "followers": 2693,
+   "following": 207,
+   "posts": 20,
+   "postsAnalysed": 20,
    "fullHistory": null,
    "firstPost": null,
    "firstPostBasis": null,
-   "lastPost": null,
-   "daysSinceLastPost": null,
-   "posts7d": null,
-   "posts14d": null,
-   "posts30d": null,
-   "postsPerWeek": null,
-   "avgLikes": 93,
-   "medianLikes": null,
-   "avgComments": null,
-   "likesHidden": null,
-   "engagementRate": 0.0366574694521088,
+   "lastPost": "2026-10-11",
+   "daysSinceLastPost": 1,
+   "posts7d": 5,
+   "posts14d": 11,
+   "posts30d": 17,
+   "postsPerWeek": 5.5,
+   "avgLikes": 420,
+   "medianLikes": 68.5,
+   "avgComments": 14,
+   "likesHidden": 0,
+   "engagementRate": 0.1610657259561827,
    "engagementLevel": "High",
-   "avgLikes14d": null,
+   "avgLikes14d": 449,
    "avgComments14d": null,
-   "maxLikes": 9693,
-   "topPost": null,
-   "topPost14d": null,
+   "maxLikes": 9715,
+   "topPost": {
+    "url": "https://www.instagram.com/p/Ddx7a8wM8Zj/",
+    "date": "2026-09-27",
+    "likes": 9715,
+    "comments": 339,
+    "caption": "🕺🌍 ABDUL IS HERE 😂🔥\nWhat should he dance next? 👇\n\nDance credits: @bbyshanzz \n\n#AbdulBigote #Dance #Funny #AI #aivideó"
+   },
+   "topPost14d": {
+    "url": "https://www.instagram.com/p/Dd36mX6sMkb/",
+    "date": "2026-09-29",
+    "likes": 2302
+   },
    "topPostNote": null,
-   "bio": null,
+   "bio": "Abdul Bigote 🥸 | Daily chaos 🕺\nThe Arab uncle you didn’t ask for 😂\n🎯 Road to 5K: 2,466 / 5,000\nFollow before Abdul finds you ↓",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -9524,25 +9626,25 @@
    "notes": null,
    "why": null,
    "scores": {
-    "fame": 14,
-    "momentum": 0,
+    "fame": 26.2,
+    "momentum": 31,
     "distinctiveness": 30,
     "sufficiency": 0.3,
-    "index": 15.4,
+    "index": 29,
     "fameParts": {
-     "followers": 0.1011,
-     "engagement": 0,
-     "viral": 0.2466,
-     "consistency": 0,
-     "longevity": 0.0816,
+     "followers": 0.10755908835287764,
+     "engagement": 0.15581232259947508,
+     "viral": 0.24686070123395032,
+     "consistency": 0.85,
+     "longevity": 0.1204119982655925,
      "recognizability": 0.52
     },
     "momentumParts": {
-     "engagement": 0,
-     "viral": 0,
-     "frequency": 0,
-     "growth": 0,
-     "recency": 0
+     "engagement": 0.15581232259947508,
+     "viral": 0.09052632982344322,
+     "frequency": 0.7857142857142857,
+     "growth": 0.10165803774233169,
+     "recency": 1
     },
     "distinctParts": {
      "visual": 2,
@@ -9552,10 +9654,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "DORMANT",
+   "heat": "COOLING",
    "status": {
-    "code": "UNKNOWN",
-    "basis": "No dated post captured"
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
    },
    "phase": null,
    "debut": {
@@ -9568,7 +9670,16 @@
     "likes": 9693,
     "url": null
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-09-27",
+     "end": "2026-10-11",
+     "posts": 20,
+     "avgLikes": 978,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [],
    "evidence": [],
    "realPeopleTagged": [],
@@ -9585,6 +9696,10 @@
      "SOCIAL GRAPH": "NO"
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: last post >14 days ago or not captured | Timeline: no post history captured | Social: no character links observed"
+   },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
    },
    "ranks": null,
    "externalLinks": [],
@@ -9615,32 +9730,42 @@
    "parodyOf": null,
    "disambiguation": null,
    "copycats": null,
-   "followers": 33674,
-   "following": null,
+   "followers": 33567,
+   "following": 4,
    "posts": 7,
-   "postsAnalysed": null,
+   "postsAnalysed": 7,
    "fullHistory": null,
    "firstPost": null,
    "firstPostBasis": null,
    "lastPost": "2026-10-08",
-   "daysSinceLastPost": 1,
-   "posts7d": null,
-   "posts14d": null,
-   "posts30d": null,
-   "postsPerWeek": null,
-   "avgLikes": 14,
-   "medianLikes": null,
-   "avgComments": null,
-   "likesHidden": null,
-   "engagementRate": 0.00041575102452931,
+   "daysSinceLastPost": 5,
+   "posts7d": 5,
+   "posts14d": 7,
+   "posts30d": 7,
+   "postsPerWeek": 3.5,
+   "avgLikes": 15,
+   "medianLikes": 6,
+   "avgComments": 0,
+   "likesHidden": 0,
+   "engagementRate": 0.0004340998174227238,
    "engagementLevel": "Low",
-   "avgLikes14d": null,
+   "avgLikes14d": 15,
    "avgComments14d": null,
-   "maxLikes": 30,
-   "topPost": null,
-   "topPost14d": null,
+   "maxLikes": 37,
+   "topPost": {
+    "url": "https://www.instagram.com/p/DeJHbk0x5qu/",
+    "date": "2026-10-06",
+    "likes": 37,
+    "comments": 0,
+    "caption": "Well, this one is really scary 💀 @higgsfield.creators"
+   },
+   "topPost14d": {
+    "url": "https://www.instagram.com/p/DeJHbk0x5qu/",
+    "date": "2026-10-06",
+    "likes": 37
+   },
    "topPostNote": null,
-   "bio": null,
+   "bio": "Main page : @nigelbattsol",
    "linkInBio": null,
    "token": {
     "status": "NONE",
@@ -9662,25 +9787,25 @@
    "notes": null,
    "why": null,
    "scores": {
-    "fame": 12.7,
-    "momentum": 10,
+    "fame": 16.2,
+    "momentum": 26.8,
     "distinctiveness": 30,
     "sufficiency": 0.3,
-    "index": 17.9,
+    "index": 24.2,
     "fameParts": {
-     "followers": 0.3818,
+     "followers": 0.381478132142018,
      "engagement": 0,
      "viral": 0,
-     "consistency": 0,
-     "longevity": 0,
+     "consistency": 0.35,
+     "longevity": 0.009589041095890411,
      "recognizability": 0.12
     },
     "momentumParts": {
      "engagement": 0,
      "viral": 0,
-     "frequency": 0,
-     "growth": 0,
-     "recency": 1
+     "frequency": 0.5,
+     "growth": 0.6723257954215262,
+     "recency": 0.9259259259259259
     },
     "distinctParts": {
      "visual": 2,
@@ -9690,10 +9815,10 @@
     },
     "recognizabilityInput": 1
    },
-   "heat": "DORMANT",
+   "heat": "COOLING",
    "status": {
-    "code": "POSTING",
-    "basis": "Last post 1d before capture"
+    "code": "STABLE",
+    "basis": "Last post 5d before capture"
    },
    "phase": null,
    "debut": {
@@ -9706,7 +9831,16 @@
     "likes": 30,
     "url": null
    },
-   "trajectory": [],
+   "trajectory": [
+    {
+     "start": "2026-10-05",
+     "end": "2026-10-08",
+     "posts": 7,
+     "avgLikes": 15,
+     "label": "Latest",
+     "live": true
+    }
+   ],
    "timeline": [
     {
      "date": "2026-10-08",
@@ -9731,6 +9865,10 @@
      "SOCIAL GRAPH": "NO"
     },
     "basis": "Identity: name/content match but no badge or cross-references; copycats or naming ambiguity exist | Fame: likes hidden or sample limited | Live: last post >14 days ago or not captured | Timeline: no post history captured | Social: no character links observed"
+   },
+   "refreshed": {
+    "capturedAt": "2026-10-12",
+    "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper"
    },
    "ranks": null,
    "externalLinks": [],
