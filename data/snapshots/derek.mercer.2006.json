@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "derek.mercer.2006",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 67034,
+    "following": 1,
+    "posts": 34,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 7,
+    "posts14d": 16,
+    "posts30d": 30,
+    "postsPerWeek": 8,
+    "avgLikes": 30403,
+    "medianLikes": 10386,
+    "avgComments": 290,
+    "likesHidden": 0,
+    "engagementRate": 0.4578683951427634,
+    "avgLikes14d": 226178,
+    "maxLikes": 3209419,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd1y2m2sMRB/",
+      "date": "2026-09-28",
+      "likes": 3209419,
+      "comments": 7841,
+      "caption": "Remember your gym bro."
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd1y2m2sMRB/",
+      "date": "2026-09-28",
+      "likes": 3209419
+    },
+    "bio": "Σ\nCA: 7Xgc5RacHtGzfhw2HukUBk5V986yBbvshr7rrCoopump",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 64.6,
+    "momentum": 77.9,
+    "index": 74,
+    "fameParts": {
+      "followers": 0.45657378376122004,
+      "engagement": 0.6207291098755678,
+      "viral": 0.8766066048355039,
+      "consistency": 1,
+      "longevity": 0.21259156681690206,
+      "recognizability": 0.88
+    },
+    "momentumParts": {
+      "engagement": 0.6207291098755678,
+      "viral": 0.8766066048355039,
+      "frequency": 1,
+      "growth": 0.6190166136368204,
+      "recency": 1
+    }
+  },
+  "heat": "HOT",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2026-10-11",
+    "end": "2026-10-11",
+    "posts": 1,
+    "avgLikes": 3741,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
