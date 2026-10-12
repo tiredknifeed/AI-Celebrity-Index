@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "ia.vacalha",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 205379,
+    "following": 122,
+    "posts": 184,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-10",
+    "daysSinceLastPost": 2,
+    "posts7d": 20,
+    "posts14d": 30,
+    "posts30d": 30,
+    "postsPerWeek": 15,
+    "avgLikes": 27166,
+    "medianLikes": 16173,
+    "avgComments": 317,
+    "likesHidden": 0,
+    "engagementRate": 0.1338115548976932,
+    "avgLikes14d": 30848,
+    "maxLikes": 233843,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd94Av3RhS0/",
+      "date": "2026-10-01",
+      "likes": 233843,
+      "comments": 2429,
+      "caption": "Cuca e candy foram parar em uma fazendo pra caçar um skinwalker🐒🐕‍🦺\n\nFeito com: @higgsfield.ai #higgsfieldai #skinwalker"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd94Av3RhS0/",
+      "date": "2026-10-01",
+      "likes": 233843
+    },
+    "bio": "📈+100M de views nos últimos 30 dias\n💼CPP: @higgsfield.ai , @syntx_ai e @roboneo_br \n📧contato: freakoncept@gmail.com\nHiggsfield Creative Partner",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 60,
+    "momentum": 61.1,
+    "index": 62.3,
+    "fameParts": {
+      "followers": 0.5781390087316081,
+      "engagement": 0.6085064240890616,
+      "viral": 0.5922310935003285,
+      "consistency": 1,
+      "longevity": 0.5059271292038146,
+      "recognizability": 0.36
+    },
+    "momentumParts": {
+      "engagement": 0.6085064240890616,
+      "viral": 0.5922310935003285,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
+  },
+  "period": {
+    "start": "2026-09-29",
+    "end": "2026-10-10",
+    "posts": 30,
+    "avgLikes": 30848,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
