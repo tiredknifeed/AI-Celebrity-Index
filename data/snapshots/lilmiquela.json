@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "lilmiquela",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 2247240,
+    "following": 2136,
+    "posts": 1501,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-06",
+    "daysSinceLastPost": 6,
+    "posts7d": 1,
+    "posts14d": 2,
+    "posts30d": 3,
+    "postsPerWeek": 1,
+    "avgLikes": 1123,
+    "medianLikes": 952,
+    "avgComments": 72,
+    "likesHidden": 3,
+    "engagementRate": 0.0005317510467160705,
+    "avgLikes14d": 1013,
+    "maxLikes": 3799,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DXE1ordFGu-/",
+      "date": "2026-04-13",
+      "likes": 3799,
+      "comments": 57,
+      "caption": "i lived a... (carousel; max within sample only)"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeKPiH-jtIG/",
+      "date": "2026-10-06",
+      "likes": 1236
+    },
+    "bio": "❤️‍🔥23\n📍L.A\n🖤Robot",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 53.5,
+    "momentum": 20.4,
+    "index": 53.3,
+    "fameParts": {
+      "followers": 0.8379123641338946,
+      "engagement": 0.26259493906536446,
+      "viral": 0.14491732338868002,
+      "consistency": 0.15,
+      "longevity": 0.8705522768973081,
+      "recognizability": 1
+    },
+    "momentumParts": {
+      "engagement": 0.2514023613400701,
+      "viral": 0.02300461768819928,
+      "frequency": 0.14285714285714285,
+      "growth": 0,
+      "recency": 0.8888888888888888
+    }
+  },
+  "heat": "DORMANT",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 6d before capture"
+  },
+  "period": {
+    "start": "2026-03-30",
+    "end": "2026-10-06",
+    "posts": 11,
+    "avgLikes": 1320,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
