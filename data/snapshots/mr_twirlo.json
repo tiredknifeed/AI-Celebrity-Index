@@ -1,15 +1,76 @@
 {
   "schema": 1,
   "handle": "mr_twirlo",
-  "pending": {
-    "date": "2026-10-12",
-    "profile": {
-      "id": "QHqmhMY8cj38Cicme",
-      "dataset": "6U0wW3YQWGezKBatC"
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 8419,
+    "following": 0,
+    "posts": 61,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 16,
+    "posts14d": 27,
+    "posts30d": 27,
+    "postsPerWeek": 13.5,
+    "avgLikes": 1000,
+    "medianLikes": 43,
+    "avgComments": 13,
+    "likesHidden": 0,
+    "engagementRate": 0.12029338401235301,
+    "avgLikes14d": 604,
+    "maxLikes": 17547,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdzqQqDsm7R/",
+      "date": "2026-09-27",
+      "likes": 17547,
+      "comments": 526,
+      "caption": "🕺🕺"
     },
-    "posts": {
-      "id": "DxwwfBaZg2coQ2dUk",
-      "dataset": "ts5QWbEgAC5fHvaAw"
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeKrMHcsl3d/",
+      "date": "2026-10-06",
+      "likes": 8729
+    },
+    "bio": "Comedy • Dance • Entertainment🕺 \n🎯 Road to 10K followers (8K/10K)",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 32.5,
+    "momentum": 37.7,
+    "index": 33.2,
+    "fameParts": {
+      "followers": 0.23131512737985882,
+      "engagement": 0.25,
+      "viral": 0.3110507190207461,
+      "consistency": 1,
+      "longevity": 0.31413193400430683,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.19525923465528294,
+      "viral": 0.2352411233731999,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
     }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2026-09-27",
+    "end": "2026-10-11",
+    "posts": 30,
+    "avgLikes": 1566,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
   }
 }
