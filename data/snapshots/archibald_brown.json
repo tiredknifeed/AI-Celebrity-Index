@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "archibald_brown",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 131631,
+    "following": 31,
+    "posts": 59,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-10",
+    "daysSinceLastPost": 2,
+    "posts7d": 6,
+    "posts14d": 19,
+    "posts30d": 27,
+    "postsPerWeek": 9.5,
+    "avgLikes": 1372,
+    "medianLikes": 617.5,
+    "avgComments": 27,
+    "likesHidden": 0,
+    "engagementRate": 0.01062946165163728,
+    "avgLikes14d": 1375,
+    "maxLikes": 1106935,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdmQOpyMNfr/",
+      "date": "2026-09-22",
+      "likes": 1106935,
+      "comments": 11486,
+      "caption": "Send me a dm for coaching"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd6ODvfMYjY/",
+      "date": "2026-09-30",
+      "likes": 4760
+    },
+    "bio": "DM if you need the 101 on throwing hands? 🥊",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 54.7,
+    "momentum": 49.8,
+    "index": 67.1,
+    "fameParts": {
+      "followers": 0.5298395451604514,
+      "engagement": 0.2843385278426832,
+      "viral": 0.7610305298876741,
+      "consistency": 1,
+      "longevity": 0.3083408046568577,
+      "recognizability": 0.48
+    },
+    "momentumParts": {
+      "engagement": 0.2843385278426832,
+      "viral": 0.16940173818012327,
+      "frequency": 1,
+      "growth": 0.7107741999278396,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
+  },
+  "period": {
+    "start": "2026-10-09",
+    "end": "2026-10-10",
+    "posts": 3,
+    "avgLikes": 359,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
