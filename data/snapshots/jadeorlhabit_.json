@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "jadeorlhabit_",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 76,
+    "following": 3,
+    "posts": 38,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 13,
+    "posts14d": 20,
+    "posts30d": 30,
+    "postsPerWeek": 10,
+    "avgLikes": 22,
+    "medianLikes": 12,
+    "avgComments": 1,
+    "likesHidden": 0,
+    "engagementRate": 0.30372807017543857,
+    "avgLikes14d": 25,
+    "maxLikes": 119,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeKDoR-MXg9/",
+      "date": "2026-10-06",
+      "likes": 119,
+      "comments": 5,
+      "caption": "Je me suis fait de nouveaux amis 🥰 avec @tony_ravioliano 💘"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeKDoR-MXg9/",
+      "date": "2026-10-06",
+      "likes": 119
+    },
+    "bio": "Oui Monsieur.\nCA : 8Ay16b69QA4vRoGry4sG6HvgnkZfAPBsLPkEEEkppump\n @jean_philanthrope Love U 💋\n@jakeorlhabit Sister 🤦",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 13.5,
+    "momentum": 25,
+    "index": 22.7,
+    "fameParts": {
+      "followers": 0,
+      "engagement": 0,
+      "viral": 0,
+      "consistency": 1,
+      "longevity": 0.23191343864672403,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0,
+      "viral": 0,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-09-25",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 22,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
