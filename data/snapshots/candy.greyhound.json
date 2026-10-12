@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "candy.greyhound",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 72889,
+    "following": 99,
+    "posts": 72,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 7,
+    "posts14d": 14,
+    "posts30d": 22,
+    "postsPerWeek": 7,
+    "avgLikes": 39376,
+    "medianLikes": 13833.5,
+    "avgComments": 467,
+    "likesHidden": 0,
+    "engagementRate": 0.5466268344103135,
+    "avgLikes14d": 37630,
+    "maxLikes": 804676,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dct28DASFLp/",
+      "date": "2026-08-31",
+      "likes": 804676,
+      "comments": 8915,
+      "caption": "Hold my 10th dan black belt 🥋 \n\n#taekwondo #martialarts #tkd #greyhound"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd94Av3RhS0/",
+      "date": "2026-10-01",
+      "likes": 233811
+    },
+    "bio": "📈 Sharing my side quests\n👑 Best fighter in the world\n🧩 Higgsfield Creative Partner\n🤝 Collabs: dogofads@gmail.com",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 62.5,
+    "momentum": 62.3,
+    "index": 68.1,
+    "fameParts": {
+      "followers": 0.46566549799252543,
+      "engagement": 0.6488078990896817,
+      "viral": 0.726405262099167,
+      "consistency": 1,
+      "longevity": 0.3429329985725074,
+      "recognizability": 0.76
+    },
+    "momentumParts": {
+      "engagement": 0.6438835545799662,
+      "viral": 0.5922162348404618,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-08-21",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 85679,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
