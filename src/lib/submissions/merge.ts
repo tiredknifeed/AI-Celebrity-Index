@@ -37,7 +37,7 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 /** "09 Oct 2026", as in build_data.py */
 const captureDay = (iso: string) => `${iso.slice(8, 10)} ${MONTHS[Number(iso.slice(5, 7)) - 1]} ${iso.slice(0, 4)}`;
 
-function statusFor(days: number | null, asof: string): Character["status"] {
+export function statusFor(days: number | null, asof: string): Character["status"] {
   if (days === null) return { code: "UNKNOWN", basis: "No dated post captured" };
   if (days > 30) return { code: "DORMANT", basis: `Last post ${days} days before capture` };
   if (days === 0) return { code: "ACTIVE_TODAY", basis: `Posted on capture day (${captureDay(asof)})` };

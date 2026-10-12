@@ -41,6 +41,8 @@ export interface TrajectoryPoint {
   posts: number | null;
   avgLikes: number;
   label: string;
+  /** Added from a fresh capture (data/snapshots), after the researched history. */
+  live?: boolean;
 }
 
 export type TokenVerification = "CONTRACT" | "PROFILE" | "UNVERIFIED" | "NONE";
@@ -170,6 +172,8 @@ export interface Character {
   sources: number[];
   /** User-added characters only. auto: published without an editor review. */
   submission?: { capturedAt: string; source: string | null; auto: boolean };
+  /** Numbers refreshed from Instagram after the research (data/snapshots). */
+  refreshed?: { capturedAt: string; source: string | null };
   seed?: {
     recentActivity: string | null;
     debutNote: string | null;

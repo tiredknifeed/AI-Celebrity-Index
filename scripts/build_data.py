@@ -452,6 +452,35 @@ def py_score(followers, posts, avg12, avg14, max_likes, top14, posts14, posts30,
     return fame, momentum, fp, mp
 
 
+SNAPSHOTS = ROOT / "data/snapshots"
+
+
+def apply_snapshots(characters, asof):
+    """Fresh Instagram numbers captured by /api/refresh (data/snapshots/*.json) over
+    the researched characters; twin of applySnapshots in src/lib/refresh/snapshot.ts.
+    Returns the index date, moved to the newest capture."""
+    snaps = [json.loads(f.read_text(encoding="utf-8")) for f in sorted(SNAPSHOTS.glob("*.json"))] if SNAPSHOTS.exists() else []
+    by_handle = {c["handle"]: c for c in characters}
+    n = 0
+    for snap in sorted(snaps, key=lambda x: x["handle"]):
+        c = by_handle.get(snap["handle"])
+        if not c or c.get("group") == "SUBMITTED" or not snap.get("patch") or not snap.get("scores") or not snap.get("capturedAt"):
+            continue
+        c.update(snap["patch"])
+        c["scores"] = {**c["scores"], **snap["scores"]}
+        if snap.get("heat"):
+            c["heat"] = snap["heat"]
+        if snap.get("status"):
+            c["status"] = snap["status"]
+        c["trajectory"] = [t for t in c["trajectory"] if not t.get("live")] + ([{**snap["period"], "live": True}] if snap.get("period") else [])
+        c["refreshed"] = {"capturedAt": snap["capturedAt"], "source": snap.get("source")}
+        asof = max(asof, snap["capturedAt"])
+        n += 1
+    if n:
+        print(f"applied {n} refreshed snapshot(s), index date {asof}")
+    return asof
+
+
 def load_submissions(existing_handles, asof):
     out = []
     if not SUBMISSIONS.exists():
@@ -874,6 +903,7 @@ def build(xlsx):
             }
         characters.append(ch)
 
+    asof = apply_snapshots(characters, asof)
     existing = {c["handle"] for c in characters} | {e["handle"] for e in excluded}
     for rec in load_submissions(existing, asof):
         ch = submission_character(rec, max(c["id"] for c in characters) + 1, asof)

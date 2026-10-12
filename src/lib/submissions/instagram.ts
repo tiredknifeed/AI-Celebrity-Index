@@ -66,10 +66,10 @@ function toPost(p: Obj): RawPost {
   };
 }
 
-export async function fetchProfile(handle: string): Promise<RawProfile> {
+export async function fetchProfile(handle: string, postsLimit = config.postsLimit): Promise<RawProfile> {
   const [profiles, posts] = await Promise.all([
     runActor(config.apifyProfileActor, { usernames: [handle] }),
-    runActor(config.apifyPostsActor, { username: [handle], resultsLimit: config.postsLimit }),
+    runActor(config.apifyPostsActor, { username: [handle], resultsLimit: postsLimit }),
   ]);
   const p = profiles.find((x) => String(str(x.username) ?? "").toLowerCase() === handle) ?? profiles[0];
   if (!p) throw new Error("Profile not found or not public");

@@ -14,6 +14,7 @@ import { makeData, STATIC_DATA, type Data } from "./data";
 import type { SubmissionRecord } from "./submissions/analyze";
 import { config } from "./submissions/config";
 import { mergeSubmissions } from "./submissions/merge";
+import { applySnapshots, type Snapshot } from "./refresh/snapshot";
 import type { Dataset } from "./types";
 
 export const LIVE_TAG = "live-submissions";
@@ -85,29 +86,31 @@ function portraitsFor(ds: Dataset, records: SubmissionRecord[], avatars: AvatarC
   return out;
 }
 
-let memo: { key: string; data: Data; portraits: Record<string, PortraitSpec> } | null = null;
+let memo: { key: string; data: Data; portraits: Record<string, PortraitSpec>; snapshots: Snapshot[] } | null = null;
 let warned = false;
 
-async function load(): Promise<{ data: Data; portraits: Record<string, PortraitSpec> }> {
-  if (!config.githubToken || process.env.LIVE_DATA === "off") return { data: STATIC_DATA, portraits: {} };
+async function load(): Promise<{ data: Data; portraits: Record<string, PortraitSpec>; snapshots: Snapshot[] }> {
+  if (!config.githubToken || process.env.LIVE_DATA === "off") return { data: STATIC_DATA, portraits: {}, snapshots: [] };
   try {
     const files = await tree();
     const subs = [...files].filter(([p]) => /^data\/submissions\/[^/]+\.json$/.test(p));
+    const snaps = [...files].filter(([p]) => /^data\/snapshots\/[^/]+\.json$/.test(p));
     const avatarsSha = files.get("scripts/avatars/avatars.json");
     const avatarFiles = [...files].filter(([p]) => p.startsWith("public/avatars/") || p.startsWith("data/avatars/source/"));
-    const key = JSON.stringify([subs, avatarsSha, avatarFiles]);
+    const key = JSON.stringify([subs, snaps, avatarsSha, avatarFiles]);
     if (memo?.key === key) return memo;
-    const [records, avatars] = await Promise.all([
+    const [records, snapshots, avatars] = await Promise.all([
       Promise.all(subs.map(([, sha]) => blob<SubmissionRecord>(sha))),
+      Promise.all(snaps.map(([, sha]) => blob<Snapshot>(sha))),
       avatarsSha ? blob<AvatarCfg>(avatarsSha) : Promise.resolve({} as AvatarCfg),
     ]);
-    const ds = mergeSubmissions(raw as unknown as Dataset, records);
-    memo = { key, data: makeData(ds), portraits: portraitsFor(ds, records, avatars, files) };
+    const ds = mergeSubmissions(applySnapshots(raw as unknown as Dataset, snapshots), records);
+    memo = { key, data: makeData(ds), portraits: portraitsFor(ds, records, avatars, files), snapshots };
     return memo;
   } catch (e) {
     if (!warned) console.error("live data unavailable, serving the build-time dataset:", (e as Error).message);
     warned = true;
-    return { data: STATIC_DATA, portraits: {} };
+    return { data: STATIC_DATA, portraits: {}, snapshots: [] };
   }
 }
 
@@ -117,6 +120,9 @@ export const getData = cache(async (): Promise<Data> => {
   setLivePortraits(portraits);
   return data;
 });
+
+/** Snapshot files on GitHub right now (for the refresh route). */
+export const getSnapshots = cache(async () => (await load()).snapshots);
 
 /** Portrait specs of live user-added characters, for the client registry. */
 export const getLivePortraits = cache(async () => (await load()).portraits);

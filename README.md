@@ -34,6 +34,10 @@ The script needs Python 3 with `openpyxl`. It:
 - derives live status from the last post date (never fake realtime), identity labels (verified / official / unverified / parody / unknown) and the token layer (verified only when the character's own Instagram shows it)
 - keeps the OBSERVED / INFERRED / UNKNOWN label on every derived claim
 
+### Refreshing the numbers
+
+The workbook is a research snapshot. To bring followers, likes, activity, scores and ranks up to date, run the **Refresh Instagram numbers** action (Actions tab → Run workflow). The site captures every researched character through Apify, one per call to `POST /api/refresh/`, and commits `data/snapshots/<handle>.json`; the site shows the new numbers within seconds, and the next build bakes them in (`build_data.py` applies the same snapshots; `npm run check:merge` checks both agree). Editorial fields (story, universe, ratings, first post, relationships) stay as researched. `GET /api/refresh/` shows how many characters still need today's capture.
+
 `src/lib/data.ts` is the only module that imports the JSON. To move to a backend, return the same shape (`src/lib/types.ts`) from an API and swap that import.
 
 ## Avatars

@@ -8,6 +8,7 @@ on:
       - "data/avatars/**"
       - "public/avatars/**"
       - "data/submissions/**"
+      - "data/snapshots/**"
   workflow_dispatch:
 
 jobs:

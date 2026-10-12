@@ -1,0 +1,45 @@
+# Brings every researched character's Instagram numbers up to date. GitHub's
+# runners cannot read Instagram, so the site does the capture with its own Apify
+# key: each POST /api/refresh/ captures one profile and commits
+# data/snapshots/<handle>.json ([skip netlify]); the site shows it within
+# seconds, no rebuild. Each character is captured at most once a day.
+# Cost: one Apify profile + posts run per character (about 50 per refresh).
+name: Refresh Instagram numbers
+
+on:
+  workflow_dispatch:
+  # Uncomment for a daily refresh (every run uses Apify credits):
+  # schedule:
+  #   - cron: "17 6 * * *"
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Capture every researched character through the site
+        env:
+          SITE: ${{ vars.SITE_URL || 'https://aiindexse.netlify.app' }}
+          # optional: set the same REFRESH_KEY on Netlify and as a repository secret
+          KEY: ${{ secrets.REFRESH_KEY }}
+        run: |
+          # wait for a deploy that has the route (up to 10 minutes)
+          for i in $(seq 1 40); do
+            curl -s -m 30 "$SITE/api/refresh/" | grep -q '"total"' && break
+            echo "waiting for the site to serve /api/refresh/ ..."; sleep 15
+          done
+          echo "before: $(curl -s -m 30 "$SITE/api/refresh/")"
+          fails=0
+          for i in $(seq 1 150); do
+            r=$(curl -s -m 100 -X POST -H "x-refresh-key: $KEY" "$SITE/api/refresh/" || true)
+            echo "$i: $r"
+            echo "$r" | grep -q '"done":true' && break
+            if echo "$r" | grep -q '"handle"'; then fails=0; else fails=$((fails + 1)); fi
+            if [ "$fails" -ge 5 ]; then echo "::error::the site failed 5 times in a row, stopping"; exit 1; fi
+            sleep 3
+          done
+          echo "after: $(curl -s -m 30 "$SITE/api/refresh/")"
