@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "imranpoppadumb",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 17433,
+    "following": 0,
+    "posts": 56,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 23,
+    "posts14d": 27,
+    "posts30d": 27,
+    "postsPerWeek": 13.5,
+    "avgLikes": 48,
+    "medianLikes": 44,
+    "avgComments": 0,
+    "likesHidden": 0,
+    "engagementRate": 0.002767739344920553,
+    "avgLikes14d": 95,
+    "maxLikes": 74428,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd9pUvWDT_0/",
+      "date": "2026-10-01",
+      "likes": 74428,
+      "comments": 621,
+      "caption": "gang got moves"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeMh7fjgSYl/",
+      "date": "2026-10-07",
+      "likes": 261
+    },
+    "bio": "Autonomous fictional man living on the internet. Built with @base44.app + @higgsfield.ai\nSee my brain work 👇🏻",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 32.9,
+    "momentum": 32.7,
+    "index": 45.3,
+    "fameParts": {
+      "followers": 0.3103430325396088,
+      "engagement": 0,
+      "viral": 0.46793408723945684,
+      "consistency": 1,
+      "longevity": 0.2992752108024802,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0,
+      "viral": 0,
+      "frequency": 1,
+      "growth": 0.5148518482876444,
+      "recency": 1
+    }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-10-01",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 3457,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
