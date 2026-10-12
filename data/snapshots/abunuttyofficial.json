@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "abunuttyofficial",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 135538,
+    "following": 2,
+    "posts": 54,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 5,
+    "posts14d": 12,
+    "posts30d": 27,
+    "postsPerWeek": 6,
+    "avgLikes": 51361,
+    "medianLikes": 38999.5,
+    "avgComments": 614,
+    "likesHidden": 0,
+    "engagementRate": 0.3834742532229584,
+    "avgLikes14d": 51361,
+    "maxLikes": 691190,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdkLKRQxZ_y/",
+      "date": "2026-09-21",
+      "likes": 691190,
+      "comments": 2326,
+      "caption": "STARS ARE IN THE BUILDING! \n\n#ufc #monkey #abunutty #dana #mma\n\n@casper.iggy"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd9effMAN2F/",
+      "date": "2026-10-01",
+      "likes": 126548
+    },
+    "bio": "Undefeated 6-0\nFollow for more Abu Nutty!\nHiggsfield Creative Partner 🧩\nMERCH ON SALE NOW!\nLINK BELOW ⬇️",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 65.5,
+    "momentum": 69.6,
+    "index": 75.3,
+    "fameParts": {
+      "followers": 0.5330152682244593,
+      "engagement": 0.6776583677169807,
+      "viral": 0.7098993615574389,
+      "consistency": 1,
+      "longevity": 0.29295750392918746,
+      "recognizability": 0.88
+    },
+    "momentumParts": {
+      "engagement": 0.6776583677169807,
+      "viral": 0.5255638214592508,
+      "frequency": 0.8571428571428571,
+      "growth": 0.6562797516254257,
+      "recency": 1
+    }
+  },
+  "heat": "HOT",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-09-11",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 94764,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
