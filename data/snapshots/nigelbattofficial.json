@@ -1,15 +1,76 @@
 {
   "schema": 1,
   "handle": "nigelbattofficial",
-  "pending": {
-    "date": "2026-10-12",
-    "profile": {
-      "id": "TjvROPfVAXBXBPCrt",
-      "dataset": "X3NsuCX7uYaSrPd4s"
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 33567,
+    "following": 4,
+    "posts": 7,
+    "postsAnalysed": 7,
+    "lastPost": "2026-10-08",
+    "daysSinceLastPost": 5,
+    "posts7d": 5,
+    "posts14d": 7,
+    "posts30d": 7,
+    "postsPerWeek": 3.5,
+    "avgLikes": 15,
+    "medianLikes": 6,
+    "avgComments": 0,
+    "likesHidden": 0,
+    "engagementRate": 0.0004340998174227238,
+    "avgLikes14d": 15,
+    "maxLikes": 37,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeJHbk0x5qu/",
+      "date": "2026-10-06",
+      "likes": 37,
+      "comments": 0,
+      "caption": "Well, this one is really scary 💀 @higgsfield.creators"
     },
-    "posts": {
-      "id": "iciAbgh4oSCOFgtol",
-      "dataset": "fYctArkzrbEtbTEgA"
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeJHbk0x5qu/",
+      "date": "2026-10-06",
+      "likes": 37
+    },
+    "bio": "Main page : @nigelbattsol",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 16.2,
+    "momentum": 26.8,
+    "index": 24.2,
+    "fameParts": {
+      "followers": 0.381478132142018,
+      "engagement": 0,
+      "viral": 0,
+      "consistency": 0.35,
+      "longevity": 0.009589041095890411,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0,
+      "viral": 0,
+      "frequency": 0.5,
+      "growth": 0.6723257954215262,
+      "recency": 0.9259259259259259
     }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 5d before capture"
+  },
+  "period": {
+    "start": "2026-10-05",
+    "end": "2026-10-08",
+    "posts": 7,
+    "avgLikes": 15,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
   }
 }
