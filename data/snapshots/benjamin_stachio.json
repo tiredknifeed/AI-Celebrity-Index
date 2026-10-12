@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "benjamin_stachio",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 102431,
+    "following": 0,
+    "posts": 16,
+    "postsAnalysed": 16,
+    "lastPost": "2026-10-10",
+    "daysSinceLastPost": 2,
+    "posts7d": 6,
+    "posts14d": 12,
+    "posts30d": 13,
+    "postsPerWeek": 6,
+    "avgLikes": 7859,
+    "medianLikes": 3169.5,
+    "avgComments": 411,
+    "likesHidden": 0,
+    "engagementRate": 0.08074215813572064,
+    "avgLikes14d": 7859,
+    "maxLikes": 849030,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd2joiwTDJv/",
+      "date": "2026-09-29",
+      "likes": 849030,
+      "comments": 76428,
+      "caption": "Dancing with friends"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd4BE9nMR7M/",
+      "date": "2026-09-29",
+      "likes": 43486
+    },
+    "bio": "Hello Darling\n⚠️No crypto affiliation yet⚠️",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 51.3,
+    "momentum": 60.7,
+    "index": 59.7,
+    "fameParts": {
+      "followers": 0.50260785315281,
+      "engagement": 0.4738418221933405,
+      "viral": 0.7322307590168984,
+      "consistency": 0.65,
+      "longevity": 0.08164799306236992,
+      "recognizability": 0.48
+    },
+    "momentumParts": {
+      "engagement": 0.4738418221933405,
+      "viral": 0.40958736538022733,
+      "frequency": 0.8571428571428571,
+      "growth": 0.7337360614222235,
+      "recency": 1
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 2d before capture"
+  },
+  "period": {
+    "start": "2026-10-09",
+    "end": "2026-10-10",
+    "posts": 2,
+    "avgLikes": 666,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
