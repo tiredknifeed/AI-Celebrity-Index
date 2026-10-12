@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "sickmanai",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 113065,
+    "following": 507,
+    "posts": 117,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 29,
+    "posts14d": 26,
+    "posts30d": 26,
+    "postsPerWeek": 13,
+    "avgLikes": 7998,
+    "medianLikes": 5820.5,
+    "avgComments": 76,
+    "likesHidden": 0,
+    "engagementRate": 0.07141172481905687,
+    "avgLikes14d": 39932,
+    "maxLikes": 993635,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DcUdF_fJ9M_/",
+      "date": "2026-08-21",
+      "likes": 993635,
+      "comments": 4468,
+      "caption": "🐱⚔🐉 pt.2\n\nComment \"guide\" for the prompts"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeHyCusN0ju/",
+      "date": "2026-10-05",
+      "likes": 506655
+    },
+    "bio": "Protecting meow island with 9 lives\nDYOR. No guarantees.\nOfficial $Knightcat token on PUMPFUN",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 61.8,
+    "momentum": 58.6,
+    "index": 66.7,
+    "fameParts": {
+      "followers": 0.5133320467678351,
+      "engagement": 0.4757453499493757,
+      "viral": 0.7493067201946284,
+      "consistency": 1,
+      "longevity": 0.4272743446984647,
+      "recognizability": 0.76
+    },
+    "momentumParts": {
+      "engagement": 0.4757453499493757,
+      "viral": 0.6761780832270221,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-08-21",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 108571,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
