@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "abu.yalla",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 67761,
+    "following": 0,
+    "posts": 12,
+    "postsAnalysed": 12,
+    "lastPost": "2026-10-08",
+    "daysSinceLastPost": 4,
+    "posts7d": 2,
+    "posts14d": 10,
+    "posts30d": 10,
+    "postsPerWeek": 5,
+    "avgLikes": 13220,
+    "medianLikes": 2209,
+    "avgComments": 359,
+    "likesHidden": 0,
+    "engagementRate": 0.20039993506589335,
+    "avgLikes14d": 13220,
+    "maxLikes": 161996,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd62X7dJbCD/",
+      "date": "2026-09-30",
+      "likes": 161996,
+      "comments": 18567,
+      "caption": "🫶"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd9YfOIRK85/",
+      "date": "2026-10-01",
+      "likes": 72445
+    },
+    "bio": "made with @higgsfield.ai \nthe shoulders speak🕺🏽\nRoad to 100k yalla followers [67k/100k]",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 43.1,
+    "momentum": 60.6,
+    "index": 52.8,
+    "fameParts": {
+      "followers": 0.4577449516449974,
+      "engagement": 0.5303078637874055,
+      "viral": 0.5523760727724254,
+      "consistency": 0.5,
+      "longevity": 0.031672498419049955,
+      "recognizability": 0.24
+    },
+    "momentumParts": {
+      "engagement": 0.5303078637874055,
+      "viral": 0.4650021041897452,
+      "frequency": 0.7142857142857143,
+      "growth": 0.6739407083607005,
+      "recency": 0.9629629629629629
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
+  },
+  "period": {
+    "start": "2026-09-28",
+    "end": "2026-10-08",
+    "posts": 12,
+    "avgLikes": 35954,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
