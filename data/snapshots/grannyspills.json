@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "grannyspills",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 2174713,
+    "following": 15,
+    "posts": 220,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 18,
+    "posts14d": 28,
+    "posts30d": 28,
+    "postsPerWeek": 14,
+    "avgLikes": 6102,
+    "medianLikes": 680.5,
+    "avgComments": 95,
+    "likesHidden": 0,
+    "engagementRate": 0.00284930318008246,
+    "avgLikes14d": 7225,
+    "maxLikes": 1027957,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DL8o9HPtwf0/",
+      "date": "2025-07-11",
+      "likes": 1027957,
+      "comments": 19060,
+      "caption": "@gr... (pinned)"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeCz8Bniv7e/",
+      "date": "2026-10-03",
+      "likes": 56718
+    },
+    "bio": "✨ Spilling tea & designer receipts since 1950\nBirthed by @blurstudios.ai\n📧 granny@blurstudios.ai",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 75.3,
+    "momentum": 51.6,
+    "index": 72.3,
+    "fameParts": {
+      "followers": 0.8343504876513341,
+      "engagement": 0.44636805082659703,
+      "viral": 0.7529937370662485,
+      "consistency": 1,
+      "longevity": 0.6273972602739726,
+      "recognizability": 1
+    },
+    "momentumParts": {
+      "engagement": 0.44636805082659703,
+      "viral": 0.43843022706932633,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2025-07-11",
+    "end": "2026-10-11",
+    "posts": 29,
+    "avgLikes": 55962,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
