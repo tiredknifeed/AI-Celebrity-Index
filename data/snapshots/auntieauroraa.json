@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "auntieauroraa",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 120143,
+    "following": 7,
+    "posts": 54,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 1,
+    "posts7d": 2,
+    "posts14d": 2,
+    "posts30d": 2,
+    "postsPerWeek": 1,
+    "avgLikes": 1966,
+    "medianLikes": 469.5,
+    "avgComments": 24,
+    "likesHidden": 0,
+    "engagementRate": 0.01655873972405106,
+    "avgLikes14d": 310,
+    "maxLikes": 19440,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DRX4OtqEq2A/",
+      "date": "2025-11-22",
+      "likes": 19440,
+      "comments": 331,
+      "caption": "@auntieauroraa always knows how to make you laugh😂💅#grannyspills #relationshipadvice #dating #advice"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeKPxSGCo-D/",
+      "date": "2026-10-06",
+      "likes": 613
+    },
+    "bio": "Auntie didn’t get rich knitting.\nBirthed by @blurstudios.ai \n📚 Not Financial Advice\n📧 aurora@blurstudios.ai",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 40.2,
+    "momentum": 16.4,
+    "index": 46.5,
+    "fameParts": {
+      "followers": 0.5199246180464558,
+      "engagement": 0.32339587837402917,
+      "viral": 0.32217406514756397,
+      "consistency": 0.1,
+      "longevity": 0.4328767123287671,
+      "recognizability": 0.64
+    },
+    "momentumParts": {
+      "engagement": 0.12284042345856816,
+      "viral": 0,
+      "frequency": 0.14285714285714285,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "DORMANT",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2025-08-06",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 3705,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
