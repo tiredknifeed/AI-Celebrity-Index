@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "miltonbumford",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 128657,
+    "following": 73,
+    "posts": 31,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-08",
+    "daysSinceLastPost": 4,
+    "posts7d": 3,
+    "posts14d": 10,
+    "posts30d": 27,
+    "postsPerWeek": 5,
+    "avgLikes": 13671,
+    "medianLikes": 7736.5,
+    "avgComments": 401,
+    "likesHidden": 0,
+    "engagementRate": 0.1093773884566457,
+    "avgLikes14d": 11726,
+    "maxLikes": 386903,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd0ONAHuI9A/",
+      "date": "2026-09-28",
+      "likes": 386903,
+      "comments": 11980,
+      "caption": "Spinnin’ da block fr gng 🥷🏿 ong I just hit my first lick\n\n#fwm #bumfordbusiness #gang\n\nSend a message from Milton to your friends on Cameo"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd8FTD8OSAo/",
+      "date": "2026-10-01",
+      "likes": 33309
+    },
+    "bio": "📈 Standing on Bumford Business\n🫪 Comedy/parody (AI)\n💻 Made With @higgsfield.ai \n👔 The Caddy Suit. Now Wearable.👇",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 55,
+    "momentum": 60.4,
+    "index": 60.4,
+    "fameParts": {
+      "followers": 0.5273583550961125,
+      "engagement": 0.5339500708255278,
+      "viral": 0.6469005243005583,
+      "consistency": 1,
+      "longevity": 0.19654467753370905,
+      "recognizability": 0.36
+    },
+    "momentumParts": {
+      "engagement": 0.5172874724621945,
+      "viral": 0.3806403986336091,
+      "frequency": 0.7142857142857143,
+      "growth": 0.8272162940904902,
+      "recency": 0.9629629629629629
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "STABLE",
+    "basis": "Last post 4d before capture"
+  },
+  "period": {
+    "start": "2026-09-23",
+    "end": "2026-10-08",
+    "posts": 30,
+    "avgLikes": 36600,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
