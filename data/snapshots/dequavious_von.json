@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "handle": "dequavious_von",
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "no profile data returned"
+  }
+}
