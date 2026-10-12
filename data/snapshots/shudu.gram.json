@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "handle": "shudu.gram",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 235606,
+    "following": 4811,
+    "posts": 211,
+    "postsAnalysed": 30,
+    "lastPost": "2026-09-02",
+    "daysSinceLastPost": 40,
+    "posts7d": 0,
+    "posts14d": 0,
+    "posts30d": 0,
+    "postsPerWeek": 0,
+    "avgLikes": 295,
+    "medianLikes": 242.5,
+    "avgComments": 45,
+    "likesHidden": 0,
+    "engagementRate": 0.0014427334900922162,
+    "avgLikes14d": null,
+    "maxLikes": 1083,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DV9MyM8iEAN/",
+      "date": "2026-03-16",
+      "likes": 1083,
+      "comments": 42,
+      "caption": "We used t..."
+    },
+    "topPost14d": null,
+    "bio": "The World’s First Digital Supermodel",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 34.4,
+    "momentum": 0,
+    "index": 35,
+    "fameParts": {
+      "followers": 0.5930465865263377,
+      "engagement": 0.11745550399454074,
+      "viral": 0.008657114156330081,
+      "consistency": 0,
+      "longevity": 0.529712982119077,
+      "recognizability": 0.88
+    },
+    "momentumParts": {
+      "engagement": 0,
+      "viral": 0,
+      "frequency": 0,
+      "growth": 0,
+      "recency": 0
+    }
+  },
+  "heat": "DORMANT",
+  "status": {
+    "code": "DORMANT",
+    "basis": "Last post 40 days before capture"
+  },
+  "period": {
+    "start": "2025-10-31",
+    "end": "2026-09-02",
+    "posts": 29,
+    "avgLikes": 354,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
