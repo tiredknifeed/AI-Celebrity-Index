@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "handle": "imma.gram",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 377754,
+    "following": 885,
+    "posts": 968,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-09",
+    "daysSinceLastPost": 3,
+    "posts7d": 2,
+    "posts14d": 3,
+    "posts30d": 6,
+    "postsPerWeek": 1.5,
+    "avgLikes": 51199,
+    "medianLikes": 51199,
+    "avgComments": 49,
+    "likesHidden": 11,
+    "engagementRate": 0.13566545070777983,
+    "avgLikes14d": null,
+    "maxLikes": 51199,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdjHD7akvR8/",
+      "date": "2026-09-21",
+      "likes": 51199,
+      "comments": 126,
+      "caption": "🧃🧢ギャルFUJIMOTO🧠⚡️\n\n@fujimoto1954 @ppgalclub"
+    },
+    "topPost14d": null,
+    "bio": "Virtual girl in 🇯🇵\n🧠⚡️🐋💫⛩️🎀",
+    "verifiedBadge": true
+  },
+  "scores": {
+    "fame": 61.2,
+    "momentum": 36.9,
+    "index": 56,
+    "fameParts": {
+      "followers": 0.6443022679342549,
+      "engagement": 0.6773153696447238,
+      "viral": 0.42731536964472383,
+      "consistency": 0.3,
+      "longevity": 0.7943501429233575,
+      "recognizability": 0.88
+    },
+    "momentumParts": {
+      "engagement": 0.6773153696447238,
+      "viral": 0,
+      "frequency": 0.21428571428571427,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "COOLING",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 3d before capture"
+  },
+  "period": {
+    "start": "2026-09-21",
+    "end": "2026-09-21",
+    "posts": 1,
+    "avgLikes": 51199,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
