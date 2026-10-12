@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "ms.stretchy",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 84441,
+    "following": 2,
+    "posts": 11,
+    "postsAnalysed": 11,
+    "lastPost": "2026-10-09",
+    "daysSinceLastPost": 3,
+    "posts7d": 2,
+    "posts14d": 2,
+    "posts30d": 7,
+    "postsPerWeek": 1,
+    "avgLikes": 69969,
+    "medianLikes": 39631.5,
+    "avgComments": 1916,
+    "likesHidden": 0,
+    "engagementRate": 0.8513020925853555,
+    "avgLikes14d": 22993,
+    "maxLikes": 666724,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdH9RnPNA_3/",
+      "date": "2026-09-10",
+      "likes": 666724,
+      "comments": 11695,
+      "caption": "🤪\n\n@cure_9997\n\n#reels #explorepage #explore #ai_video"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeR_s4vtETs/",
+      "date": "2026-10-09",
+      "likes": 31856
+    },
+    "bio": "✨ little stories from a magical AI world\n🎬 cozy characters • AI art\n📩 collabs & custom videos → DM me\nMarried 💍",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 49.3,
+    "momentum": 50,
+    "index": 57.3,
+    "fameParts": {
+      "followers": 0.4816383419592076,
+      "engagement": 0.711226416750204,
+      "viral": 0.7059865221659585,
+      "consistency": 0.35,
+      "longevity": 0.057534246575342465,
+      "recognizability": 0.24
+    },
+    "momentumParts": {
+      "engagement": 0.5903989098295586,
+      "viral": 0.3757978106708335,
+      "frequency": 0.14285714285714285,
+      "growth": 0.5213216309755719,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 3d before capture"
+  },
+  "period": {
+    "start": "2026-08-30",
+    "end": "2026-10-09",
+    "posts": 11,
+    "avgLikes": 124220,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
