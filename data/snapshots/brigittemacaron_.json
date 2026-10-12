@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "brigittemacaron_",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 4481,
+    "following": 1,
+    "posts": 19,
+    "postsAnalysed": 19,
+    "lastPost": "2026-10-09",
+    "daysSinceLastPost": 3,
+    "posts7d": 4,
+    "posts14d": 15,
+    "posts30d": 19,
+    "postsPerWeek": 7.5,
+    "avgLikes": 18163,
+    "medianLikes": 18163,
+    "avgComments": 16,
+    "likesHidden": 11,
+    "engagementRate": 4.056851149297032,
+    "avgLikes14d": 18163,
+    "maxLikes": 18163,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DeEZ0sEN_Hy/",
+      "date": "2026-10-04",
+      "likes": 18163,
+      "comments": 91,
+      "caption": "200K Macaronies on TikTok, in less than 1 week. I knew you had taste 🫦"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeEZ0sEN_Hy/",
+      "date": "2026-10-04",
+      "likes": 18163
+    },
+    "bio": "TikTok: brigittemacaron_ (360K)\n𝐓𝐨𝐦𝐨𝐫𝐫𝐨𝐰'𝐬 𝐨𝐮𝐭𝐟𝐢𝐭. 𝐈'𝐦 𝐥𝐞𝐭𝐭𝐢𝐧𝐠 𝐲𝐨𝐮 𝐝𝐞𝐜𝐢𝐝𝐞 👇🏻",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 36.7,
+    "momentum": 55.3,
+    "index": 53.9,
+    "fameParts": {
+      "followers": 0.16284373597826085,
+      "engagement": 0.5647968957357012,
+      "viral": 0.31479689573570124,
+      "consistency": 0.95,
+      "longevity": 0.11150144038113155,
+      "recognizability": 0.36
+    },
+    "momentumParts": {
+      "engagement": 0.5647968957357012,
+      "viral": 0.31479689573570124,
+      "frequency": 1,
+      "growth": 0.17890198450284736,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 3d before capture"
+  },
+  "period": {
+    "start": "2026-09-26",
+    "end": "2026-10-04",
+    "posts": 4,
+    "avgLikes": 7162,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
