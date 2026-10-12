@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "mr._stretchy",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 1048758,
+    "following": 1,
+    "posts": 103,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-12",
+    "daysSinceLastPost": 0,
+    "posts7d": 14,
+    "posts14d": 17,
+    "posts30d": 29,
+    "postsPerWeek": 8.5,
+    "avgLikes": 23886,
+    "medianLikes": 9658,
+    "avgComments": 802,
+    "likesHidden": 0,
+    "engagementRate": 0.023539828381126376,
+    "avgLikes14d": 45529,
+    "maxLikes": 518280,
+    "topPost": {
+      "url": "https://www.instagram.com/p/DdW8lunNb70/",
+      "date": "2026-09-16",
+      "likes": 518280,
+      "comments": 10654,
+      "caption": "🤨🍝\n\n@ksenia_velart \n\n#reels #explorepage #explore #ai #ai_video"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeAcjbDtnuT/",
+      "date": "2026-10-02",
+      "likes": 269721
+    },
+    "bio": "✨ little stories from a magical AI world\n🎬 cozy characters • visual stories • AI art\n📣 ads & promotions → DM",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 65.8,
+    "momentum": 61,
+    "index": 66.3,
+    "fameParts": {
+      "followers": 0.7551688216695833,
+      "engagement": 0.5945358569919355,
+      "viral": 0.6786411125237808,
+      "consistency": 1,
+      "longevity": 0.4051348898820688,
+      "recognizability": 0.36
+    },
+    "momentumParts": {
+      "engagement": 0.5945358569919355,
+      "viral": 0.6077286902923755,
+      "frequency": 1,
+      "growth": 0,
+      "recency": 1
+    }
+  },
+  "heat": "RISING",
+  "status": {
+    "code": "ACTIVE_TODAY",
+    "basis": "Posted on capture day (12 Oct 2026)"
+  },
+  "period": {
+    "start": "2026-09-12",
+    "end": "2026-10-12",
+    "posts": 30,
+    "avgLikes": 70663,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
