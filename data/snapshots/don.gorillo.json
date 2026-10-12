@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "don.gorillo",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 13303,
+    "following": 36,
+    "posts": 38,
+    "postsAnalysed": 30,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 11,
+    "posts14d": 19,
+    "posts30d": 30,
+    "postsPerWeek": 9.5,
+    "avgLikes": 3010,
+    "medianLikes": 1798.5,
+    "avgComments": 54,
+    "likesHidden": 0,
+    "engagementRate": 0.23032398707058557,
+    "avgLikes14d": 4696,
+    "maxLikes": 40518,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Ddvayy5Otjf/",
+      "date": "2026-09-26",
+      "likes": 40518,
+      "comments": 910,
+      "caption": "don’t mention their names in front of me!!"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/DeCiE4uuvch/",
+      "date": "2026-10-03",
+      "likes": 27644
+    },
+    "bio": "Armenian blood. Gorilla mentality. \nFollow me before I get famous.\nUFC RECORD 2-0\nMy coach,manager @arutyun.prod",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 37.4,
+    "momentum": 52.5,
+    "index": 54.8,
+    "fameParts": {
+      "followers": 0.2809873977704569,
+      "engagement": 0.3696416238984609,
+      "viral": 0.4019120000259566,
+      "consistency": 1,
+      "longevity": 0.23191343864672403,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.3696416238984609,
+      "viral": 0.36040022107423275,
+      "frequency": 1,
+      "growth": 0.367931843370361,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2026-09-23",
+    "end": "2026-10-11",
+    "posts": 30,
+    "avgLikes": 6583,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
