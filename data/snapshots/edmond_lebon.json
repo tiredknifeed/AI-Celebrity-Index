@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "handle": "edmond_lebon",
+  "capturedAt": "2026-10-12",
+  "source": "apify:apify~instagram-profile-scraper+apify~instagram-post-scraper",
+  "patch": {
+    "followers": 14734,
+    "following": 0,
+    "posts": 23,
+    "postsAnalysed": 23,
+    "lastPost": "2026-10-11",
+    "daysSinceLastPost": 1,
+    "posts7d": 7,
+    "posts14d": 17,
+    "posts30d": 23,
+    "postsPerWeek": 8.5,
+    "avgLikes": 886,
+    "medianLikes": 187.5,
+    "avgComments": 12,
+    "likesHidden": 0,
+    "engagementRate": 0.06088525406090223,
+    "avgLikes14d": 6831,
+    "maxLikes": 90835,
+    "topPost": {
+      "url": "https://www.instagram.com/p/Dd8LM0NscoW/",
+      "date": "2026-10-01",
+      "likes": 90835,
+      "comments": 1060,
+      "caption": "Bring back Tecktonik please #fyp"
+    },
+    "topPost14d": {
+      "url": "https://www.instagram.com/p/Dd8LM0NscoW/",
+      "date": "2026-10-01",
+      "likes": 90835
+    },
+    "bio": "Handsome and strong, what more could you ask for?                                                  X:Edmond_Lebon                             $EDMD",
+    "verifiedBadge": false
+  },
+  "scores": {
+    "fame": 35.9,
+    "momentum": 51.9,
+    "index": 45.1,
+    "fameParts": {
+      "followers": 0.29208016637971634,
+      "engagement": 0.2368584304717627,
+      "viral": 0.4895633051314956,
+      "consistency": 1,
+      "longevity": 0.14469113440703713,
+      "recognizability": 0.12
+    },
+    "momentumParts": {
+      "engagement": 0.2368584304717627,
+      "viral": 0.4895633051314956,
+      "frequency": 1,
+      "growth": 0.4217509252848114,
+      "recency": 1
+    }
+  },
+  "heat": "STEADY",
+  "status": {
+    "code": "POSTING",
+    "basis": "Last post 1d before capture"
+  },
+  "period": {
+    "start": "2026-09-23",
+    "end": "2026-10-11",
+    "posts": 23,
+    "avgLikes": 8986,
+    "label": "Latest",
+    "live": true
+  },
+  "attempt": {
+    "date": "2026-10-12",
+    "ok": true
+  }
+}
